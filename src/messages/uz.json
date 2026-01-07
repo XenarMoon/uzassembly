@@ -1,0 +1,1983 @@
+{
+  "metadata": {
+    "title": "O'zbekiston Iqtisodiyot Assambleyasi | Tadbirkorlar Uchun Yagona Ekotizim",
+    "description": "O'zbekiston Iqtisodiyot Assambleyasi — 46+ sanoat assotsiatsiyasini birlashtiruvchi, 8 ta strategik xizmat yo'nalishi va $20B+ investitsiya loyihalarini boshqaruvchi tashkilot.",
+    "keywords": ["O'zbekiston", "Iqtisodiyot", "Assambleyasi", "Tadbirkorlik", "Investitsiya", "Smart City", "Biznes", "GR", "Government Relations", "Assotsiatsiyalar"],
+    "author": "O'zbekiston Iqtisodiyot Assambleyasi",
+    "ogTitle": "O'zbekiston Iqtisodiyot Assambleyasi",
+    "ogDescription": "Tadbirkorlar Uchun Yagona Ekotizim — 8 ta strategik yo'nalish, 46+ assotsiatsiya",
+    "twitterTitle": "O'zbekiston Iqtisodiyot Assambleyasi",
+    "twitterDescription": "Tadbirkorlar Uchun Yagona Ekotizim"
+  },
+  "navigation": {
+    "about": "Biz Haqimizda",
+    "services": "Xizmatlar",
+    "associations": "Assotsiatsiyalar",
+    "projects": "Loyihalar",
+    "news": "Yangiliklar",
+    "contact": "Aloqa",
+    "careers": "Vakansiyalar",
+    "leadership": "Rahbariyat",
+    "membership": "A'zolik",
+    "becomeMember": "A'zo Bo'lish",
+    "selectLanguage": "Til tanlang",
+    "servicesSubmenu": {
+      "smartCity": "Smart City",
+      "biznesDarcha": "Biznes Darcha",
+      "investHub": "Invest Hub",
+      "eduJob": "Edu Job",
+      "reportajGo": "Reportaj GO",
+      "gr": "GR (Government Relations)",
+      "fr": "FR (Foreign Relations)",
+      "br": "BR (Business Relations)",
+      "networking": "Networking"
+    }
+  },
+  "hero": {
+    "badge": "O'zbekistonda ilk bor yangi format",
+    "headline": "Tadbirkorlar Uchun",
+    "headlineHighlight": "Yagona Ekotizim",
+    "subheadline": "8 ta strategik yo'nalish. 46+ sanoat assotsiatsiyasi.",
+    "subheadlineHighlight": "Barcha biznes ehtiyojlaringiz — bir joyda.",
+    "cta": {
+      "viewServices": "Xizmatlarni Ko'rish",
+      "becomeMember": "A'zo Bo'lish",
+      "watchVideo": "Video Ko'rish",
+      "closeVideo": "Yopish"
+    },
+    "stats": {
+      "associations": {
+        "value": "46+",
+        "label": "Assotsiatsiyalar",
+        "description": "Sanoat birlashmalari"
+      },
+      "services": {
+        "value": "8",
+        "label": "Xizmat Yo'nalishi",
+        "description": "Strategik xizmatlar"
+      },
+      "smartCity": {
+        "value": "6400",
+        "label": "ga Smart City",
+        "description": "Ohangaron, Toshkent"
+      },
+      "offices": {
+        "value": "3",
+        "label": "Xalqaro Ofis",
+        "description": "Tokio, Orlando, Anqara"
+      }
+    },
+    "bottomStats": {
+      "members": "faol a'zolar",
+      "investment": "investitsiya",
+      "since": "yildan beri"
+    }
+  },
+  "about": {
+    "badge": "Biz Haqimizda",
+    "headline": "O'zbekiston Biznes",
+    "headlineHighlight": "Ekotizimining",
+    "headlineSuffix": "Markazi",
+    "description1": "O'zbekiston Iqtisodiyot Assambleyasi — mamlakatning eng yirik tadbirkorlik tashkiloti bo'lib, 46+ sanoat assotsiatsiyasini birlashtiradi.",
+    "description2": "Biz davlat va biznes o'rtasida samarali dialog yaratamiz, xalqaro investitsiyalarni jalb qilamiz va tadbirkorlarimizning manfaatlarini himoya qilamiz.",
+    "features": [
+      "Davlat organlari bilan to'g'ridan-to'g'ri dialog",
+      "Xalqaro investorlar bilan aloqa",
+      "Ekspert va konsultatsiya xizmatlari",
+      "Networking va biznes uchrashuvlar",
+      "Huquqiy va moliyaviy yordam",
+      "Ta'lim va malaka oshirish dasturlari"
+    ],
+    "cta": "Batafsil Ma'lumot",
+    "highlights": {
+      "associations": {
+        "value": "46+",
+        "label": "Sanoat Assotsiatsiyalari",
+        "description": "Barcha sohalarni qamrab oluvchi"
+      },
+      "investment": {
+        "value": "$20B+",
+        "label": "Investitsiya Loyihalari",
+        "description": "Faol portfolio"
+      },
+      "offices": {
+        "value": "3",
+        "label": "Xalqaro Ofis",
+        "description": "Tokio, Orlando, Anqara"
+      },
+      "partners": {
+        "value": "15+",
+        "label": "Strategik Hamkor",
+        "description": "Xalqaro tashkilotlar"
+      }
+    },
+    "mission": {
+      "title": "Missiyamiz",
+      "text": "O'zbekiston tadbirkorligini xalqaro miqyosda raqobatbardosh qilish va iqtisodiy o'sishga hissa qo'shish."
+    },
+    "goal": {
+      "title": "Maqsadimiz",
+      "text": "2030 yilgacha O'zbekistonni Markaziy Osiyoning biznes markazi sifatida shakllantirish."
+    },
+    "values": {
+      "title": "Qadriyatlarimiz",
+      "text": "Shaffoflik, innovatsiya, hamkorlik va milliy manfaatlarni himoya qilish."
+    }
+  },
+  "services": {
+    "badge": "8 ta Strategik Yo'nalish",
+    "headline": "Xizmatlar",
+    "headlineHighlight": "Ekotizimi",
+    "description": "Tadbirkorlik faoliyatingizni rivojlantirish uchun barcha zarur xizmatlar — bir joyda",
+    "viewAll": "Barcha Xizmatlar",
+    "viewProject": "Loyihani Ko'rish",
+    "learnMore": "Batafsil",
+    "flagshipProject": "Flagship Loyiha",
+    "active": "Faol",
+    "planned": "Rejalashtirilmoqda",
+    "area": "Maydon",
+    "location": "Joylashuv",
+    "investment": "Investitsiya",
+    "status": "Status",
+    "items": {
+      "smartCity": {
+        "name": "Smart City",
+        "tagline": "Kelajak Shahri",
+        "description": "6,400 gektar maydonda qurilayotgan O'zbekistonning eng yirik smart city loyihasi. Zamonaviy infratuzilma va yashil texnologiyalar.",
+        "stats": {
+          "area": "6,400",
+          "unit": "gektar"
+        }
+      },
+      "biznesDarcha": {
+        "name": "Biznes Darcha",
+        "tagline": "Raqamli Platforma",
+        "description": "Barcha biznes xizmatlari bir joyda — litsenziyalar, ruxsatnomalar, konsultatsiyalar va davlat xizmatlari."
+      },
+      "investHub": {
+        "name": "Invest Hub",
+        "tagline": "Investitsiya Markazi",
+        "description": "Investorlar va loyihalar o'rtasida ko'prik. Investitsiya imkoniyatlari va loyiha taqdimotlari."
+      },
+      "eduJob": {
+        "name": "Edu Job",
+        "tagline": "Ta'lim va Ish",
+        "description": "Malaka oshirish dasturlari, karyera yo'naltirish va ish bilan ta'minlash xizmatlari."
+      },
+      "reportajGo": {
+        "name": "Reportaj GO",
+        "tagline": "Media Platforma",
+        "description": "Biznes yangiliklari, tadbirlar reportajlari va media kontentni yaratish platformasi."
+      },
+      "gr": {
+        "name": "GR",
+        "tagline": "Government Relations",
+        "description": "Davlat organlari bilan munosabatlar, qonunchilik tashabbuslarida ishtirok va lobbi faoliyati."
+      },
+      "fr": {
+        "name": "FR",
+        "tagline": "Foreign Relations",
+        "description": "Xalqaro hamkorlik, chet el investorlar bilan aloqa va eksport imkoniyatlari."
+      },
+      "br": {
+        "name": "BR",
+        "tagline": "Business Relations",
+        "description": "Biznes hamkorlik, networking tadbirlar va B2B uchrashuvlar."
+      },
+      "networking": {
+        "name": "Networking",
+        "tagline": "Biznes Aloqalar",
+        "description": "Professional networking, biznes klublari va hamkorlik imkoniyatlari."
+      }
+    }
+  },
+  "associations": {
+    "badge": "46+ Sanoat Assotsiatsiyasi",
+    "headline": "Barcha Sohalar",
+    "headlineHighlight": "Bir Joyda",
+    "description": "O'zbekiston iqtisodiyotining barcha tarmoqlarini birlashtiruvchi assotsiatsiyalar tarmog'i",
+    "viewAll": "Barcha Assotsiatsiyalarni Ko'rish",
+    "membersCount": "a'zolar",
+    "searchPlaceholder": "Assotsiatsiya qidirish...",
+    "allSectors": "Barcha sohalar",
+    "showMore": "Ko'proq ko'rsatish",
+    "noResults": "Hech narsa topilmadi",
+    "stats": {
+      "associations": "Assotsiatsiyalar",
+      "activeMembers": "Faol A'zolar",
+      "economicSectors": "Iqtisodiy Tarmoq",
+      "regionsCovered": "Viloyat Qamrovi"
+    },
+    "sectors": {
+      "industry": "Sanoat",
+      "agriculture": "Qishloq xo'jaligi",
+      "it": "IT",
+      "construction": "Qurilish",
+      "trade": "Savdo",
+      "services": "Xizmatlar",
+      "transport": "Transport",
+      "energy": "Energetika",
+      "tourism": "Turizm",
+      "lightIndustry": "Yengil sanoat",
+      "medicine": "Tibbiyot",
+      "automotive": "Mashinasozlik",
+      "food": "Oziq-ovqat sanoati"
+    },
+    "cards": {
+      "textile": { "name": "To'qimachilik Assotsiatsiyasi", "sector": "lightIndustry" },
+      "pharma": { "name": "Farmatsevtika Assotsiatsiyasi", "sector": "medicine" },
+      "construction": { "name": "Qurilish Materiallari", "sector": "construction" },
+      "it": { "name": "IT Assotsiatsiyasi", "sector": "it" },
+      "automotive": { "name": "Avtomobil Sanoati", "sector": "automotive" },
+      "agriculture": { "name": "Qishloq Xo'jaligi", "sector": "agriculture" },
+      "energy": { "name": "Energetika Sektori", "sector": "energy" },
+      "food": { "name": "Oziq-ovqat Sanoati", "sector": "food" }
+    }
+  },
+  "projects": {
+    "badge": "Strategik Loyihalar",
+    "headline": "Yirik",
+    "headlineHighlight": "Loyihalar",
+    "description": "O'zbekiston iqtisodiyotini rivojlantiruvchi strategik loyihalar",
+    "viewAll": "Barcha Loyihalar",
+    "readMore": "Batafsil",
+    "labels": {
+      "investment": "Investitsiya",
+      "location": "Joylashuv",
+      "status": "Status",
+      "year": "Yil"
+    },
+    "statuses": {
+      "active": "Faol",
+      "planned": "Rejalashtirilmoqda",
+      "completed": "Yakunlangan"
+    },
+    "categories": {
+      "smartCity": "Smart City",
+      "industrial": "Sanoat",
+      "agro": "Agro",
+      "manufacturing": "Ishlab chiqarish"
+    },
+    "items": {
+      "smartCity": {
+        "title": "Ohangaron Smart City",
+        "description": "6,400 gektar maydonda zamonaviy smart city qurilishi",
+        "location": "Toshkent viloyati"
+      },
+      "industrialPark": {
+        "title": "Industrial Park Jizzax",
+        "description": "Yangi sanoat zonasi va logistika markazi",
+        "location": "Jizzax viloyati"
+      },
+      "agroTechHub": {
+        "title": "Agro Tech Hub",
+        "description": "Qishloq xo'jaligida zamonaviy texnologiyalar markazi",
+        "location": "Farg'ona vodiysi"
+      },
+      "textileCenter": {
+        "title": "Textile Innovation Center",
+        "description": "To'qimachilik sohasida innovatsion ishlab chiqarish",
+        "location": "Namangan"
+      }
+    }
+  },
+  "news": {
+    "badge": "So'nggi Yangiliklar",
+    "headline": "Yangiliklar va",
+    "headlineHighlight": "Tadbirlar",
+    "description": "Assambleyaning so'nggi yangiliklari va tadbirlari",
+    "viewAll": "Barcha Yangiliklar",
+    "readMore": "O'qish",
+    "readTime": "daqiqa o'qish",
+    "months": {
+      "january": "yanvar",
+      "february": "fevral",
+      "march": "mart",
+      "april": "aprel",
+      "may": "may",
+      "june": "iyun",
+      "july": "iyul",
+      "august": "avgust",
+      "september": "sentabr",
+      "october": "oktabr",
+      "november": "noyabr",
+      "december": "dekabr"
+    },
+    "categories": {
+      "events": "Tadbirlar",
+      "projects": "Loyihalar",
+      "announcements": "E'lonlar",
+      "partnership": "Hamkorlik"
+    },
+    "articles": {
+      "investorsForum": {
+        "title": "Xalqaro investorlar forumi muvaffaqiyatli yakunlandi",
+        "excerpt": "Forumda $5 milliard dollarlik kelishuvlar imzolandi. 15 ta davlatdan 200+ investor ishtirok etdi."
+      },
+      "smartCityPhase": {
+        "title": "Smart City loyihasining birinchi bosqichi tugadi",
+        "excerpt": "Ohangaron Smart City loyihasining infratuzilma qurilishi muvaffaqiyatli yakunlandi."
+      },
+      "membershipProgram": {
+        "title": "Yangi a'zolik dasturi e'lon qilindi",
+        "excerpt": "Kichik va o'rta biznes uchun maxsus imtiyozli a'zolik dasturi ishga tushirildi."
+      },
+      "dubaiChamber": {
+        "title": "Dubai Chamber bilan hamkorlik memorandumi",
+        "excerpt": "Dubai Savdo Palatasi bilan strategik hamkorlik to'g'risida memorandum imzolandi."
+      }
+    }
+  },
+  "contact": {
+    "badge": "Biz Bilan Bog'laning",
+    "headline": "Biz Bilan",
+    "headlineHighlight": "Bog'laning",
+    "description": "Savollaringiz yoki takliflaringiz bo'lsa, biz bilan bog'laning",
+    "info": {
+      "address": {
+        "label": "Manzil",
+        "value": "Furqat ko'chasi 1/1, 100066, Toshkent"
+      },
+      "phone": {
+        "label": "Telefon",
+        "value": "+998 91 774 14 16"
+      },
+      "email": {
+        "label": "Email",
+        "value": "info@assembly.uz"
+      },
+      "hours": {
+        "label": "Ish vaqti",
+        "value": "Du-Sha: 09:00 - 18:00"
+      }
+    },
+    "form": {
+      "reason": {
+        "label": "Murojaat turi",
+        "options": {
+          "membership": "A'zolik",
+          "partnership": "Biznes Hamkorlik",
+          "press": "Matbuot",
+          "general": "Umumiy Savol"
+        }
+      },
+      "name": {
+        "label": "Ism-familiya",
+        "placeholder": "Ismingizni kiriting"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "email@example.com"
+      },
+      "phone": {
+        "label": "Telefon",
+        "placeholder": "+998 90 123 45 67"
+      },
+      "company": {
+        "label": "Kompaniya",
+        "placeholder": "Kompaniya nomi"
+      },
+      "message": {
+        "label": "Xabar",
+        "placeholder": "Xabaringizni yozing..."
+      },
+      "submit": "Xabar Yuborish",
+      "sending": "Yuborilmoqda...",
+      "success": {
+        "title": "Xabaringiz yuborildi!",
+        "message": "Tez orada siz bilan bog'lanamiz.",
+        "newMessage": "Yangi xabar yuborish"
+      }
+    },
+    "faq": {
+      "title": "Ko'p so'raladigan savollar",
+      "items": [
+        {
+          "question": "Assambleyaga qanday a'zo bo'lish mumkin?",
+          "answer": "A'zo bo'lish uchun ariza to'ldiring yoki biz bilan bog'laning. Jarayon oddiy va tezkor."
+        },
+        {
+          "question": "A'zolik to'lovi qancha?",
+          "answer": "A'zolik to'lovi kompaniya hajmiga qarab belgilanadi. Batafsil ma'lumot uchun biz bilan bog'laning."
+        },
+        {
+          "question": "Qanday xizmatlar taqdim etiladi?",
+          "answer": "Biz 8 ta strategik yo'nalishda xizmatlar ko'rsatamiz: Smart City, GR, FR, BR, Invest Hub va boshqalar."
+        },
+        {
+          "question": "Ofis ish vaqti qanday?",
+          "answer": "Dushanba-Shanba kunlari soat 09:00 dan 18:00 gacha ishlaymiz."
+        }
+      ]
+    },
+    "social": {
+      "title": "Ijtimoiy Tarmoqlar",
+      "quickContact": "Tezkor Aloqa"
+    }
+  },
+  "footer": {
+    "tagline": "O'zbekiston Iqtisodiyot Assambleyasi — tadbirkorlar uchun yagona ekotizim. 46+ assotsiatsiya, 8 strategik xizmat yo'nalishi.",
+    "columns": {
+      "services": "Xizmatlar",
+      "organization": "Tashkilot",
+      "members": "A'zolar"
+    },
+    "links": {
+      "smartCity": "Smart City",
+      "biznesDarcha": "Biznes Darcha",
+      "investHub": "Invest Hub",
+      "eduJob": "Edu Job",
+      "reportajGo": "Reportaj GO",
+      "aboutUs": "Biz Haqimizda",
+      "associations": "Assotsiatsiyalar",
+      "projects": "Loyihalar",
+      "news": "Yangiliklar",
+      "leadership": "Rahbariyat",
+      "careers": "Vakansiyalar",
+      "becomeMember": "A'zo Bo'lish",
+      "pricing": "Tariflar",
+      "benefits": "Imtiyozlar",
+      "forInvestors": "Investorlarga",
+      "faq": "FAQ"
+    },
+    "legal": {
+      "copyright": "O'zbekiston Iqtisodiyot Assambleyasi. Barcha huquqlar himoyalangan.",
+      "privacy": "Maxfiylik siyosati",
+      "terms": "Foydalanish shartlari"
+    },
+    "scrollToTop": "Yuqoriga"
+  },
+  "common": {
+    "readMore": "Batafsil",
+    "contactUs": "Bog'lanish",
+    "learnMore": "Ko'proq ma'lumot",
+    "backToServices": "Barcha xizmatlar",
+    "loading": "Yuklanmoqda...",
+    "error": "Xatolik yuz berdi",
+    "tryAgain": "Qayta urinish",
+    "close": "Yopish",
+    "open": "Ochish",
+    "back": "Orqaga",
+    "next": "Keyingi",
+    "previous": "Oldingi",
+    "search": "Qidirish",
+    "filter": "Filtrlash",
+    "all": "Barchasi",
+    "viewAll": "Barchasini ko'rish"
+  },
+  "aboutPage": {
+    "badge": "Biz Haqimizda",
+    "headline": "Fuqarolar, biznes va",
+    "headlineHighlight": "hukumatni birlashtiruvchi",
+    "description": "O'zbekiston Iqtisodiyot Assambleyasi — nodavlat notijorat tashkilot. Mamlakatimizning innovatsion xususiy sektorga intilishida muhim bosqich.",
+    "keyFacts": {
+      "founded": "Tashkil etilgan",
+      "associations": "Assotsiatsiyalar",
+      "members": "A'zo korxonalar",
+      "team": "Jamoa a'zolari"
+    },
+    "chairman": {
+      "since": "yildan beri",
+      "role": "Assotsiatsiya Raisi",
+      "quote": "Bizning qarashimiz hamma uchun yaxshiroq kelajak qurishni nazarda tutadi. Biz o'zbek xalqi, biznes rahbarlari, hukumat va butun dunyo mamlakatlari o'rtasida iloji boricha mustahkam aloqalarni o'rnatish tarafdorimiz."
+    },
+    "pillars": {
+      "title": "Faoliyat Yo'nalishlari",
+      "gr": {
+        "title": "Hukumat bilan Munosabatlar",
+        "subtitle": "Government Relations",
+        "description": "Prezident Administratsiyasi, Vazirlar Mahkamasi, Oliy Majlis Senati va vazirliklar bilan hamkorlik."
+      },
+      "fr": {
+        "title": "Biznes Diplomatiya",
+        "subtitle": "Business Diplomacy",
+        "description": "Xorijdagi tashkilotlar bilan aloqalar, ishbilarmonlik delegatsiyalari almashinuvi."
+      },
+      "local": {
+        "title": "Mahalliy Biznes",
+        "subtitle": "Local Business",
+        "description": "35+ assotsiatsiyalarni birlashtirish, samarali hamkorlik va muloqot."
+      },
+      "ppp": {
+        "title": "Davlat-Xususiy Sheriklik",
+        "subtitle": "PPP",
+        "description": "Davlat va xususiy sektor hamkorligini rivojlantirish, tadbirkorlarni qo'llab-quvvatlash."
+      }
+    },
+    "mission": {
+      "badge": "Missiyamiz",
+      "title": "Tadbirkorlar uchun",
+      "titleHighlight": "ishonchli hamkor",
+      "description": "Biz barcha hajmdagi biznesga yordam berish va O'zbekistonda iqtisodiy o'sishni oldinga surishga sodiqmiz.",
+      "points": [
+        "Tadbirkorlar manfaatlarini himoya qilish",
+        "Investitsiyalarni jalb qilish va himoya qilish",
+        "Qonunchilikni isloh qilish tashabbuslarida ishtirok",
+        "Ish o'rinlari yaratishga ko'maklashish"
+      ]
+    },
+    "team": {
+      "badge": "Rahbariyat",
+      "headline": "Bizning",
+      "headlineHighlight": "Jamoamiz",
+      "description": "Professional va tajribali mutaxassislar jamoasi O'zbekiston biznes muhitini rivojlantirish uchun xizmat qiladi.",
+      "members": {
+        "matyakubov": {
+          "role": "Rais O'rinbosari",
+          "roleEn": "Deputy Chairman"
+        },
+        "radjabova": {
+          "role": "Direktor",
+          "roleEn": "Director"
+        },
+        "aliyev": {
+          "role": "Xavfsizlik va Huquqiy Xizmatlar bo'yicha Rais O'rinbosari",
+          "roleEn": "Deputy Chairman for Security and Legal Services"
+        },
+        "ruzmatova": {
+          "role": "Ayollar Masalalari bo'yicha Rais O'rinbosari",
+          "roleEn": "Deputy Chairperson for Women's Affairs"
+        },
+        "ruziyeva": {
+          "role": "Matbuot Kotibi - Axborot Siyosati bo'yicha Rais O'rinbosari",
+          "roleEn": "Press Secretary - Deputy Chairperson for Information Policy"
+        },
+        "mirzarakhmatov": {
+          "role": "Davlat Idoralari bilan Ishlash Bo'limi Boshlig'i",
+          "roleEn": "Head of Department for work with State Agencies"
+        },
+        "ahmadova": {
+          "role": "Yoshlar Masalalari bo'yicha Rais Yordamchisi",
+          "roleEn": "Assistant to the Chairperson for Youth Affairs"
+        }
+      }
+    },
+    "timeline": {
+      "badge": "Bizning Tarix",
+      "headline": "Rivojlanish",
+      "headlineHighlight": "yo'li",
+      "description": "2021-yildan buyon O'zbekiston biznes muhitini rivojlantirishda qadam-baqadam",
+      "milestones": {
+        "2021": {
+          "title": "Tashkil etilish",
+          "event": "Adliya vazirligi tomonidan rasman ro'yxatdan o'tkazildi",
+          "details": "O'zbekiston Iqtisodiyot Assambleyasi nodavlat notijorat tashkilot sifatida asos solingan"
+        },
+        "2022": {
+          "title": "A'zolik kengayishi",
+          "event": "30+ a'zo korxonalarni jamladi",
+          "details": "Yetakchi korxonalar va tadbirkorlar bilan hamkorlik aloqalari o'rnatildi"
+        },
+        "2023": {
+          "title": "Assotsiatsiyalar birlashmasi",
+          "event": "35+ assotsiatsiyalarni birlashtirdi",
+          "details": "Turli soha va mintaqalardagi biznes uyushmalari bilan integratsiya"
+        },
+        "2024": {
+          "title": "Xalqaro hamkorlik",
+          "event": "Smart City va global loyihalar",
+          "details": "Innovatsion loyihalar va xorijiy investorlar bilan strategik sherikliklar"
+        }
+      },
+      "stats": {
+        "experience": "Yillik tajriba",
+        "associations": "Assotsiatsiyalar",
+        "members": "A'zo korxonalar",
+        "projects": "Loyihalar"
+      }
+    },
+    "cta": {
+      "headline": "Bizga",
+      "headlineHighlight": "qo'shiling",
+      "description": "O'zbekiston Iqtisodiyot Assambleyasi a'zosi bo'ling va 35+ assotsiatsiya, 30+ tadbirkor hamjamiyatiga kirish imkoniyatiga ega bo'ling.",
+      "button": "A'zo bo'lish",
+      "contact": "Bog'lanish"
+    }
+  },
+  "servicesPage": {
+    "hero": {
+      "badge": "Xizmatlar Ekotizimi",
+      "headline": "5 ta strategik",
+      "headlineHighlight": "yo'nalish",
+      "description": "Biznes sub'ektlarini birlashtirish, manfaatlarini himoya qilish va mahalliy korxonalarni global miqyosga olib chiqish uchun multi-funksional platforma."
+    },
+    "services": {
+      "investHub": {
+        "title": "Investment & Infrastructure",
+        "subtitle": "Invest Hub & Smart City",
+        "description": "Yirik investitsiya imkoniyatlari va zamonaviy sanoat infratuzilmasiga kirish. \"Central Asia Smart City\" mega-loyihasi ($20B) doirasida jahon darajasidagi sanoat zonalarida faoliyat yuritish.",
+        "features": [
+          "Smart City mega-loyihasiga kirish",
+          "Global investorlar bilan bevosita muloqot",
+          "Auditoriyadan o'tgan loyihalar bazasi",
+          "Moliyalashtirish imkoniyatlari"
+        ],
+        "statsLabel": "Loyihalar hajmi"
+      },
+      "governmentRelations": {
+        "title": "Government Relations",
+        "subtitle": "Davlat bilan munosabatlar (GR)",
+        "description": "Xususiy sektor va davlat o'rtasidagi ko'prik. Byurokratik to'siqlarni bartaraf etish va qonunchilik muammolarini hal qilish uchun konstruktiv dialog.",
+        "features": [
+          "Biznes manfaatlarini huquqiy himoya",
+          "Siyosat yaxshilash takliflari",
+          "Qonunchilik tashabbuslarida ishtirok",
+          "Qulay biznes muhitini yaratish"
+        ],
+        "statsLabel": "Legal Advocacy"
+      },
+      "eduJob": {
+        "title": "Human Capital Development",
+        "subtitle": "Edu-Job dasturi",
+        "description": "Xususiy sektordagi kadrlar tanqisligini hal qilish uchun maxsus tizim. Zamonaviy biznes ehtiyojlariga moslashtirilgan malakali mutaxassislarni tayyorlash.",
+        "features": [
+          "Real vaqt rejimida kadrlar tayyorlash",
+          "\"Bozorga tayyor\" mutaxassislar",
+          "Malaka oshirish dasturlari",
+          "Ish beruvchilar talablariga moslashish"
+        ],
+        "statsLabel": "Job Ready"
+      },
+      "international": {
+        "title": "International Diplomacy",
+        "subtitle": "Global Branding & Media",
+        "description": "O'zbek korxonalarining obro'sini global miqyosda oshirish. Xorijiy bozorlarga kirish va xalqaro hamkorlar bilan mustahkam aloqalar o'rnatish.",
+        "features": [
+          "Xorijiy bozorlarga kirish",
+          "Xalqaro hamkorliklar",
+          "Fikrat Online TV media platformasi",
+          "Brend targ'iboti va tahlil"
+        ],
+        "statsLabel": "Media Platform"
+      },
+      "networking": {
+        "title": "Sectoral Integration",
+        "subtitle": "Executive Networking",
+        "description": "35+ sanoat assotsiatsiyalarini birlashtirish va tarmoqlararo hamkorlikni rivojlantirish. Ekspert hamjamiyatiga kirish va tajriba almashish.",
+        "features": [
+          "35+ sanoat assotsiatsiyalari",
+          "Mashvarat Club - elita networking",
+          "Yuqori darajadagi yechimlar",
+          "Strategik ittifoqlar"
+        ],
+        "statsLabel": "Assotsiatsiyalar"
+      }
+    },
+    "featuredProjects": {
+      "smartCity": { "title": "Smart City" },
+      "investHub": { "title": "Invest Hub" },
+      "eduJob": { "title": "Mutaxassislar" }
+    },
+    "whyUs": {
+      "badge": "Nima uchun biz?",
+      "headline": "Yagona",
+      "headlineHighlight": "platforma",
+      "description": "Barcha biznes xizmatlari bir joyda — professional jamoa va tizimli yondashuv bilan."
+    },
+    "benefits": {
+      "legalProtection": {
+        "title": "Huquqiy Himoya",
+        "description": "Biznes manfaatlarini har tomonlama himoya"
+      },
+      "fastService": {
+        "title": "Tezkor Xizmat",
+        "description": "Barcha xizmatlar bir platformada"
+      },
+      "clearResults": {
+        "title": "Aniq Natija",
+        "description": "Maqsadga yo'naltirilgan yondashuv"
+      },
+      "expertTeam": {
+        "title": "Ekspert Jamoa",
+        "description": "Professional mutaxassislar xizmati"
+      }
+    },
+    "smartCity": {
+      "flagshipBadge": "Flagship Loyiha",
+      "activeBadge": "Faol",
+      "location": "Ohangaron, Toshkent viloyati",
+      "description": "6,400 gektar maydonda qurilayotgan O'zbekistonning eng yirik smart city loyihasi. Jahon darajasidagi sanoat zonalari, zamonaviy infratuzilma va yashil texnologiyalar.",
+      "learnMore": "Batafsil",
+      "stats": {
+        "area": { "label": "Gektar", "sublabel": "Umumiy maydon" },
+        "investment": { "label": "Investitsiya", "sublabel": "Loyiha hajmi" },
+        "timeline": { "label": "Muddat", "sublabel": "Qurilish davri" },
+        "jobs": { "label": "Ish o'rni", "sublabel": "Yaratiladi" }
+      }
+    },
+    "media": {
+      "badge": "Media Platforma",
+      "description": "Biznes tahlili va brend targ'iboti uchun maxsus media platforma. Professional va keng auditoriya orasida kompaniyangiz ko'rinishini ta'minlang.",
+      "learnMore": "Batafsil",
+      "features": {
+        "videoContent": { "title": "Video kontentlar", "description": "Professional suratga olish" },
+        "globalDistribution": { "title": "Xalqaro tarqatish", "description": "Global auditoriya" },
+        "businessAnalysis": { "title": "Biznes tahlil", "description": "Ekspert sharhlar" },
+        "brandPromotion": { "title": "Brend targ'iboti", "description": "Marketing xizmatlari" }
+      }
+    },
+    "mashvaratClub": {
+      "badge": "Elita Networking",
+      "description": "Yuqori darajadagi rahbarlar va qaror qabul qiluvchilar uchun eksklyuziv muhit. Strategik ittifoqlar tuzish va yuqori darajadagi yechimlar ustida ishlash."
+    },
+    "cta": {
+      "headline": "Biznesingizni",
+      "headlineHighlight": "rivojlantiring",
+      "description": "Barcha xizmatlarimizdan foydalanish uchun Assambleyaga a'zo bo'ling va professional jamoamiz yordamida maqsadlaringizga erishing.",
+      "membershipButton": "A'zo bo'lish",
+      "consultButton": "Maslahat olish"
+    }
+  },
+  "eduJobPage": {
+    "backToServices": "Barcha xizmatlar",
+    "hero": {
+      "badge": "03 — Ta'lim",
+      "activeBadge": "Faol",
+      "description": "Edu-Job platformasi orqali malakali kadrlar tayyorlash va ish bilan ta'minlash. Zamonaviy kasblar bo'yicha o'quv dasturlari va yetakchi kompaniyalarga ishga joylashish imkoniyati.",
+      "registerButton": "Ro'yxatdan o'tish",
+      "tracksButton": "Yo'nalishlar"
+    },
+    "stats": {
+      "students": { "label": "Talabalar", "description": "O'qitilgan" },
+      "companies": { "label": "Korxonalar", "description": "Hamkor" },
+      "employment": { "label": "Ishga joylashish", "description": "Darajasi" },
+      "courses": { "label": "Kurslar", "description": "Mavjud" }
+    },
+    "featuresSection": {
+      "headline": "Kadrlar",
+      "headlineHighlight": "ekotizimi"
+    },
+    "features": {
+      "professionalEducation": {
+        "title": "Kasbiy Ta'lim",
+        "description": "Zamonaviy kasblar bo'yicha professional o'quv dasturlari va treninglar"
+      },
+      "jobDatabase": {
+        "title": "Ish Joylari Bazasi",
+        "description": "Yetakchi kompaniyalardagi vakansiyalar va internship imkoniyatlari"
+      },
+      "mentoring": {
+        "title": "Mentorlik",
+        "description": "Tajribali mutaxassislar tomonidan individual yo'l-yo'riq va maslahatlar"
+      },
+      "certification": {
+        "title": "Sertifikatsiya",
+        "description": "Xalqaro standartlarga mos sertifikatlar va malaka oshirish"
+      }
+    },
+    "tracksSection": {
+      "badge": "O'quv yo'nalishlari",
+      "headline": "Kasbiy",
+      "headlineHighlight": "yo'nalishlar",
+      "description": "Bozor talablariga mos zamonaviy kasblar bo'yicha professional o'quv dasturlari va sertifikatsiya imkoniyatlari."
+    },
+    "tracks": {
+      "it": {
+        "title": "IT & Texnologiya",
+        "courses": ["Dasturlash asoslari", "Web development", "Data Science", "Cybersecurity"]
+      },
+      "business": {
+        "title": "Biznes & Menejment",
+        "courses": ["Project management", "Marketing", "Moliya asoslari", "HR management"]
+      },
+      "industry": {
+        "title": "Sanoat & Ishlab chiqarish",
+        "courses": ["Sifat nazorati", "Logistika", "Ishlab chiqarish texnologiyalari", "Xavfsizlik"]
+      }
+    },
+    "partnersTitle": "Hamkor korxonalar",
+    "partnerCompanies": [
+      "Yirik ishlab chiqarish korxonalari",
+      "IT kompaniyalar",
+      "Bank va moliya tashkilotlari",
+      "Savdo tarmoqlari",
+      "Logistika kompaniyalari",
+      "Xizmat ko'rsatish sohasi"
+    ],
+    "cta": {
+      "headline": "Kelajagingizni",
+      "headlineHighlight": "quring",
+      "description": "Edu-Job platformasiga qo'shiling va zamonaviy kasblar bo'yicha bilim oling, eng yaxshi kompaniyalarda ishlang.",
+      "registerButton": "Ro'yxatdan o'tish",
+      "companiesButton": "Korxonalar uchun"
+    }
+  },
+  "grPage": {
+    "backToServices": "Barcha xizmatlar",
+    "hero": {
+      "badge": "02 — GR",
+      "activeBadge": "Faol",
+      "description": "Biznes manfaatlarini himoya qilish va davlat organlari bilan konstruktiv muloqot. Qonunchilik va davlat siyosatida ishtirok etish orqali biznesingiz uchun qulay muhit yaratish.",
+      "consultButton": "Konsultatsiya",
+      "servicesButton": "Xizmatlar"
+    },
+    "stats": {
+      "laws": { "label": "Qonunlar", "description": "Tahlil qilingan" },
+      "ministries": { "label": "Vazirliklar", "description": "Hamkorlik" },
+      "meetings": { "label": "Uchrashuvlar", "description": "Yiliga" },
+      "efficiency": { "label": "Samaradorlik", "description": "Murojatlar" }
+    },
+    "servicesSection": {
+      "badge": "GR Xizmatlari",
+      "headline": "Davlat bilan",
+      "headlineHighlight": "munosabatlar"
+    },
+    "services": {
+      "legislativeMonitoring": {
+        "title": "Qonunchilik Monitoringi",
+        "description": "Biznesingizga ta'sir qiluvchi qonun loyihalari va normativ hujjatlarni kuzatish va tahlil qilish"
+      },
+      "economicAnalysis": {
+        "title": "Iqtisodiy Tahlil",
+        "description": "Davlat siyosatining biznesga ta'siri bo'yicha chuqur tahlil va prognozlar"
+      },
+      "lobbying": {
+        "title": "Lobbichilik",
+        "description": "Biznes manfaatlarini davlat darajasida himoya qilish va siyosat shakllantirish"
+      },
+      "stakeholderManagement": {
+        "title": "Stakeholder Management",
+        "description": "Davlat organlari, biznes va jamoat o'rtasidagi munosabatlarni boshqarish"
+      }
+    },
+    "processSection": {
+      "badge": "Jarayon",
+      "headline": "Qanday",
+      "headlineHighlight": "ishlaymiz"
+    },
+    "workProcess": {
+      "analysis": {
+        "title": "Muammo tahlili",
+        "description": "Biznesingiz duch kelayotgan tartibga solish muammolarini aniqlash"
+      },
+      "strategy": {
+        "title": "Strategiya ishlab chiqish",
+        "description": "Davlat organlari bilan ishlash strategiyasini tuzish"
+      },
+      "communication": {
+        "title": "Muloqot o'rnatish",
+        "description": "Tegishli vazirlik va idoralar bilan konstruktiv muloqot"
+      },
+      "results": {
+        "title": "Natijaga erishish",
+        "description": "Biznes manfaatlarini himoya qilish va ijobiy natijaga erishish"
+      }
+    },
+    "ministriesTitle": "Hamkorlik qiladigan organlar",
+    "ministries": [
+      "Iqtisodiyot va moliya vazirligi",
+      "Investitsiyalar, sanoat va savdo vazirligi",
+      "Soliq qo'mitasi",
+      "Bojxona qo'mitasi",
+      "Antimonopoliya qo'mitasi",
+      "Raqamli texnologiyalar vazirligi"
+    ],
+    "cta": {
+      "headline": "Professional",
+      "headlineHighlight": "GR xizmati",
+      "description": "Davlat organlari bilan munosabatlaringizni professional darajada boshqarish uchun biz bilan bog'laning.",
+      "contactButton": "Bog'lanish",
+      "membershipButton": "A'zo bo'lish"
+    }
+  },
+  "investHubPage": {
+    "backToServices": "Barcha xizmatlar",
+    "hero": {
+      "badge": "01 — Investitsiya",
+      "activeBadge": "Faol",
+      "description": "Yirik investitsiya imkoniyatlari va zamonaviy sanoat infratuzilmasiga kirish. \"Central Asia Smart City\" mega-loyihasi doirasida jahon darajasidagi sanoat zonalarida faoliyat yuritish.",
+      "contactButton": "Murojaat qilish"
+    },
+    "stats": {
+      "area": { "label": "Gektar", "description": "Umumiy maydon" },
+      "investment": { "label": "Investitsiya", "description": "Loyiha hajmi" },
+      "jobs": { "label": "Ish o'rni", "description": "Yaratiladi" },
+      "year": { "label": "Yil", "description": "Tugash muddati" }
+    },
+    "investHub": {
+      "headline": "Investitsiya",
+      "headlineHighlight": "platformasi"
+    },
+    "features": {
+      "projectsBase": {
+        "title": "Loyihalar Bazasi",
+        "description": "Auditoriyadan o'tgan, yuqori daromadli loyihalar bazasiga kirish"
+      },
+      "globalInvestors": {
+        "title": "Global Investorlar",
+        "description": "Jahon miqyosidagi investorlar bilan bevosita muloqot"
+      },
+      "dueDiligence": {
+        "title": "Due Diligence",
+        "description": "Professional tekshiruv va moliyaviy tahlil xizmatlari"
+      },
+      "investmentProtection": {
+        "title": "Investitsiya Himoyasi",
+        "description": "Huquqiy himoya va kafolatlar tizimi"
+      }
+    },
+    "smartCity": {
+      "flagshipBadge": "Flagship Loyiha",
+      "description": "Ohangaron tumanida qurilayotgan 6,400 gektarlik zamonaviy shahar loyihasi. Jahon standartlariga mos infratuzilma va yashil texnologiyalar."
+    },
+    "zones": {
+      "industrial": "Sanoat Zonasi",
+      "commercial": "Tijorat Zonasi",
+      "residential": "Turar-joy Zonasi",
+      "green": "Yashil Zonalar"
+    },
+    "infrastructureTitle": "Infratuzilma",
+    "infrastructure": [
+      "Zamonaviy yo'l tarmoqlari",
+      "5G aloqa infratuzilmasi",
+      "Yashil energiya tizimlari",
+      "Smart boshqaruv tizimi",
+      "Suv va kanalizatsiya",
+      "Chiqindi qayta ishlash"
+    ],
+    "cta": {
+      "headline": "Investitsiya",
+      "headlineHighlight": "imkoniyatlari",
+      "description": "Smart City loyihasiga investitsiya kiritish yoki Invest Hub platformasidan foydalanish uchun biz bilan bog'laning.",
+      "contactButton": "Bog'lanish",
+      "membershipButton": "A'zo bo'lish"
+    }
+  },
+  "biznesDarchaPage": {
+    "backToServices": "Barcha xizmatlar",
+    "hero": {
+      "badge": "Biznes Xizmatlar",
+      "activeBadge": "Faol",
+      "description": "Tadbirkorlar uchun yagona darcha — barcha biznes xizmatlarini bir joyda oling. Hujjatlashtirish, buxgalteriya, yuridik maslahat va litsenziyalash xizmatlari.",
+      "applyButton": "Murojaat qilish",
+      "servicesButton": "Xizmatlar"
+    },
+    "stats": {
+      "clients": { "label": "Mijozlar", "description": "Xizmat olgan" },
+      "services": { "label": "Xizmatlar", "description": "Mavjud" },
+      "support": { "label": "Qo'llab-quvvatlash", "description": "Doimiy" },
+      "satisfaction": { "label": "Mamnunlik", "description": "Darajasi" }
+    },
+    "servicesSection": { "badge": "Asosiy xizmatlar", "headline": "Biznes uchun", "headlineHighlight": "yechimlar" },
+    "services": {
+      "documentation": { "title": "Hujjatlarni rasmiylashtirish", "description": "Biznes uchun barcha turdagi hujjatlarni tayyorlash va rasmiylashtirish xizmati" },
+      "accounting": { "title": "Buxgalteriya xizmatlari", "description": "Professional buxgalteriya hisobi va moliyaviy hisobotlarni yuritish" },
+      "legal": { "title": "Yuridik maslahat", "description": "Biznes huquqi bo'yicha malakali yuridik yordam va maslahatlar" },
+      "licensing": { "title": "Litsenziya va ruxsatnomalar", "description": "Faoliyat uchun zarur litsenziya va ruxsatnomalarni olishda yordam" }
+    },
+    "categoriesSection": { "badge": "Xizmat turlari", "headline": "Kategoriyalar bo'yicha", "headlineHighlight": "xizmatlar" },
+    "categories": {
+      "registration": { "title": "Ro'yxatdan o'tish", "description": "Korxonani tashkil etish va ro'yxatdan o'tkazish", "items": ["YaTT ochish", "MChJ tashkil etish", "QK ro'yxatdan o'tkazish", "Filial ochish"] },
+      "tax": { "title": "Soliq xizmatlari", "description": "Soliq hisoboti va optimallashtirish", "items": ["Soliq deklaratsiyalari", "Soliq rejalashtirish", "Soliq auditi", "Imtiyozlar olish"] },
+      "hr": { "title": "Kadrlar bo'limi", "description": "HR va kadrlar hujjatlari", "items": ["Mehnat shartnomalari", "Kadrlar hisobi", "Ish haqi hisoblash", "HR konsalting"] }
+    },
+    "benefitsTitle": "Nima uchun Biznes Darcha?",
+    "benefits": {
+      "fast": { "title": "Tezkor xizmat", "description": "1-3 kun ichida natija" },
+      "manager": { "title": "Shaxsiy menejer", "description": "Doimiy aloqada" },
+      "guarantee": { "title": "Kafolat", "description": "100% qonuniy" },
+      "government": { "title": "Davlat organlari", "description": "Bevosita aloqa" }
+    },
+    "cta": { "headline": "Biznesingizni", "headlineHighlight": "boshlang", "description": "Barcha biznes xizmatlarini bir joyda oling. Professional jamoa sizning muvaffaqiyatingiz uchun ishlaydi.", "contactButton": "Bog'lanish", "membershipButton": "A'zo bo'lish" }
+  },
+  "reportajGoPage": {
+    "backToServices": "Barcha xizmatlar",
+    "hero": {
+      "badge": "Media",
+      "liveBadge": "LIVE",
+      "description": "Biznesingizni professional video kontentlar orqali targ'ib qiling. Reportajlar, intervyular va dokumentallar — barchasi bir joyda. Fikrat Online TV orqali minglab auditoriyaga yetib boring.",
+      "orderButton": "Buyurtma berish",
+      "samplesButton": "Namunalar"
+    },
+    "stats": {
+      "reports": { "label": "Reportajlar", "description": "Tayyorlangan" },
+      "views": { "label": "Ko'rishlar", "description": "Yetib borilgan" },
+      "companies": { "label": "Kompaniyalar", "description": "Hamkorlik" },
+      "quality": { "label": "Sifat", "description": "Professional" }
+    },
+    "servicesSection": { "badge": "Xizmatlarimiz", "headline": "Professional", "headlineHighlight": "video ishlab chiqarish" },
+    "services": {
+      "videoReports": { "title": "Video Reportajlar", "description": "Kompaniyangiz haqida professional video reportajlar tayyorlash" },
+      "corporatePhoto": { "title": "Korporativ Suratga Olish", "description": "Yuqori sifatli foto va video materiallar ishlab chiqarish" },
+      "interviews": { "title": "Intervyular", "description": "Rahbarlar va ekspertlar bilan eksklyuziv intervyular" },
+      "documentaries": { "title": "Dokumentallar", "description": "Korxona tarixi va muvaffaqiyat hikoyalari haqida filmlar" }
+    },
+    "contentSection": { "badge": "Kontent turlari", "headline": "Sizga mos", "headlineHighlight": "format", "popular": "Mashhur" },
+    "contentTypes": {
+      "businessReport": { "title": "Biznes Reportaj", "description": "Korxonangiz faoliyati haqida batafsil reportaj", "features": ["3-5 daqiqalik video", "4K sifatda suratga olish", "Professional montaj", "Musiqa va grafika"] },
+      "successStory": { "title": "Success Story", "description": "Muvaffaqiyat hikoyangizni dunyoga ulashing", "features": ["Intervyu format", "Arxiv materiallar", "Animatsion grafikalar", "Subtitles (3 til)"] },
+      "eventCoverage": { "title": "Tadbir Yoritish", "description": "Tadbirlaringizni professional yoritish", "features": ["Ko'p kamerali suratga olish", "Jonli efir imkoniyati", "Highlights video", "Foto reportaj"] }
+    },
+    "distributionSection": { "title": "Tarqatish kanallari", "description": "Kontentingiz qayerda ko'rsatiladi" },
+    "distribution": {
+      "fikratTv": { "name": "Fikrat Online TV", "reach": "200K+ auditoriya" },
+      "youtube": { "name": "YouTube kanal", "reach": "100K+ obunachi" },
+      "social": { "name": "Ijtimoiy tarmoqlar", "reach": "500K+ followers" },
+      "international": { "name": "Xalqaro media", "reach": "20+ davlat" }
+    },
+    "cta": { "headline": "Hikoyangizni", "headlineHighlight": "aytib bering", "description": "Professional video kontentlar orqali brendingizni kuchaytiring. Reportaj GO jamoasi sizning xizmatingizda.", "orderButton": "Buyurtma berish", "mediaButton": "Assembly Media" }
+  },
+  "foreignRelationsPage": {
+    "backToServices": "Barcha xizmatlar",
+    "hero": {
+      "badge": "FR — Xalqaro",
+      "globalBadge": "Global",
+      "description": "Xalqaro bozorlarga chiqish va xorijiy hamkorlar bilan aloqalarni yo'lga qo'yish. Biznes delegatsiyalar, elchixonalar bilan muloqot va xalqaro hujjatlashtirish xizmatlari.",
+      "consultButton": "Konsultatsiya",
+      "regionsButton": "Mintaqalar"
+    },
+    "stats": {
+      "countries": { "label": "Davlatlar", "description": "Hamkorlik" },
+      "delegations": { "label": "Delegatsiyalar", "description": "Tashkil etilgan" },
+      "embassies": { "label": "Elchixonalar", "description": "Aloqa" },
+      "contracts": { "label": "Shartnomalar", "description": "Imzolangan" }
+    },
+    "servicesSection": { "badge": "FR Xizmatlari", "headline": "Xalqaro", "headlineHighlight": "aloqalar" },
+    "services": {
+      "delegations": { "title": "Biznes Delegatsiyalar", "description": "Xorijiy mamlakatlarga biznes safarlari va delegatsiyalarni tashkil etish" },
+      "embassies": { "title": "Elchixonalar bilan aloqa", "description": "Xorijiy elchixonalar va savdo vakolatxonalari bilan muloqot" },
+      "translation": { "title": "Tarjima xizmatlari", "description": "Professional tarjima va lokalizatsiya xizmatlari" },
+      "documents": { "title": "Xalqaro hujjatlar", "description": "Eksport-import hujjatlarini rasmiylashtirish va legalizatsiya" }
+    },
+    "regionsSection": { "badge": "Geografiya", "headline": "Hamkorlik", "headlineHighlight": "mintaqalari" },
+    "regions": {
+      "europe": { "name": "Yevropa", "countries": ["Germaniya", "Fransiya", "Italiya", "Ispaniya", "Polsha"] },
+      "asia": { "name": "Osiyo", "countries": ["Xitoy", "Yaponiya", "Koreya", "Hindiston", "Turkiya"] },
+      "americas": { "name": "Amerika", "countries": ["AQSH", "Kanada", "Braziliya", "Meksika", "Argentina"] },
+      "cis": { "name": "MDH", "countries": ["Rossiya", "Qozog'iston", "Ozarbayjon", "Gruziya", "Belarus"] }
+    },
+    "partnersTitle": "Xalqaro hamkorlar",
+    "partnerships": ["Xorijiy savdo palatalari", "Xalqaro biznes assotsiatsiyalari", "Eksport agentliklari", "Investitsiya fondlari", "Xalqaro tashkilotlar", "Diplomatik vakolatxonalar"],
+    "cta": { "headline": "Global", "headlineHighlight": "bozorlarga chiqing", "description": "Xalqaro hamkorliklar va eksport imkoniyatlarini kengaytiring. FR jamoasi sizga yordam beradi.", "contactButton": "Bog'lanish", "membershipButton": "A'zo bo'lish" }
+  },
+  "businessRelationsPage": {
+    "backToServices": "Barcha xizmatlar",
+    "hero": {
+      "badge": "BR — Hamkorlik",
+      "activeBadge": "Faol",
+      "description": "B2B hamkorliklar va biznes aloqalarni rivojlantirish platformasi. Yetkazib beruvchilar, distribyutorlar va strategik hamkorlarni toping. 500+ kompaniya tarmoqiga qo'shiling.",
+      "findPartnerButton": "Hamkor topish",
+      "howItWorksButton": "Qanday ishlaydi"
+    },
+    "stats": {
+      "companies": { "label": "Kompaniyalar", "description": "Tarmoqda" },
+      "meetings": { "label": "Uchrashuvlar", "description": "Tashkil etilgan" },
+      "contracts": { "label": "Shartnomalar", "description": "Natija" },
+      "sectors": { "label": "Sektorlar", "description": "Qamrov" }
+    },
+    "servicesSection": { "badge": "BR Xizmatlari", "headline": "Biznes", "headlineHighlight": "hamkorlik" },
+    "services": {
+      "matching": { "title": "B2B Matching", "description": "Sizning biznesingizga mos hamkorlarni topish va ulash xizmati" },
+      "meetings": { "title": "Biznes Uchrashuvlar", "description": "Potensial hamkorlar bilan uchrashuvlarni tashkil etish" },
+      "supplyChain": { "title": "Ta'minot Zanjirlari", "description": "Yetkazib beruvchilar va xaridorlar bilan aloqalarni yo'lga qo'yish" },
+      "negotiation": { "title": "Biznes Muzokara", "description": "Professional muzokara va shartnoma tuzishda yordam" }
+    },
+    "processSection": { "badge": "B2B Matching", "headline": "Qanday", "headlineHighlight": "ishlaydi" },
+    "process": {
+      "step1": { "title": "Profil yaratish", "description": "Biznesingiz haqida batafsil ma'lumot to'plash va ehtiyojlarni aniqlash" },
+      "step2": { "title": "Hamkor qidirish", "description": "Bazamizdan sizga mos hamkorlarni tanlash va tahlil qilish" },
+      "step3": { "title": "Uchrashuv tashkil etish", "description": "Potensial hamkorlar bilan uchrashuvlarni rejalashtirish" },
+      "step4": { "title": "Natija", "description": "Shartnoma tuzish va uzoq muddatli hamkorlikni boshlash" }
+    },
+    "partnerTypesSection": { "headline": "Hamkor", "headlineHighlight": "turlari" },
+    "partnerTypes": {
+      "suppliers": { "title": "Yetkazib beruvchilar", "description": "Xom ashyo va materiallar yetkazib beruvchilarni topish" },
+      "distributors": { "title": "Distribyutorlar", "description": "Mahsulotlaringizni tarqatuvchi hamkorlar" },
+      "manufacturers": { "title": "Ishlab chiqaruvchilar", "description": "Buyurtma asosida ishlab chiqarish hamkorlari" },
+      "serviceProviders": { "title": "Xizmat ko'rsatuvchilar", "description": "Biznes xizmatlari bo'yicha hamkorlar" }
+    },
+    "sectorsTitle": "Qamrab olingan sektorlar",
+    "sectors": ["Oziq-ovqat sanoati", "To'qimachilik", "Qurilish materiallari", "IT va texnologiya", "Qishloq xo'jaligi", "Kimyo sanoati", "Mashinasozlik", "Farmatsevtika", "Mebel ishlab chiqarish", "Plastmassa mahsulotlari", "Elektrotexnika", "Logistika"],
+    "cta": { "headline": "Hamkor", "headlineHighlight": "tarmog'iga qo'shiling", "description": "500+ kompaniya tarmoqiga qo'shiling va biznesingiz uchun eng yaxshi hamkorlarni toping.", "registerButton": "Ro'yxatdan o'tish", "membershipButton": "A'zo bo'lish" }
+  },
+  "smartCityPage": {
+    "backToServices": "Barcha xizmatlar",
+    "hero": {
+      "badge": "Flagship Loyiha",
+      "activeBadge": "Faol qurilish",
+      "description": "Ohangaron tumanida qurilayotgan O'zbekistonning eng yirik va zamonaviy smart city loyihasi. 6,400 gektar maydonda jahon standartlariga mos shahar infratuzilmasi.",
+      "location": "Ohangaron tumani, Toshkent viloyati",
+      "investButton": "Investitsiya qilish",
+      "zonesButton": "Zonalar"
+    },
+    "stats": {
+      "area": { "label": "Gektar", "description": "Umumiy maydon" },
+      "investment": { "label": "Investitsiya", "description": "Loyiha hajmi" },
+      "jobs": { "label": "Ish o'rni", "description": "Yaratiladi" },
+      "completion": { "label": "Yil", "description": "Tugash muddati" }
+    },
+    "zonesSection": { "badge": "Master Plan", "headline": "Shahar", "headlineHighlight": "zonalari" },
+    "zones": {
+      "industrial": { "name": "Sanoat Zonasi", "description": "Zamonaviy ishlab chiqarish majmualari" },
+      "commercial": { "name": "Tijorat Zonasi", "description": "Biznes markazlar va ofislar" },
+      "residential": { "name": "Turar-joy Zonasi", "description": "Zamonaviy uy-joylar va kvartiralar" },
+      "green": { "name": "Yashil Zonalar", "description": "Bog'lar, parklar va dam olish maskanlari" }
+    },
+    "infrastructureSection": { "badge": "Smart Infrastructure", "headline": "Zamonaviy", "headlineHighlight": "infratuzilma" },
+    "infrastructure": {
+      "transport": { "title": "Transport", "items": ["Zamonaviy yo'llar", "Metro aloqasi", "Elektr avtobus", "Veloyo'laklar"] },
+      "energy": { "title": "Energiya", "items": ["Quyosh panellari", "Smart grid tizimi", "Yashil energiya", "Energiya tejash"] },
+      "digital": { "title": "Raqamli", "items": ["5G qamrov", "IoT infratuzilma", "Smart boshqaruv", "Raqamli xizmatlar"] },
+      "utilities": { "title": "Kommunal", "items": ["Suv tozalash", "Chiqindi qayta ishlash", "Markaziy isitish", "Kanalizatsiya"] }
+    },
+    "investmentSection": { "badge": "Invest", "headline": "Investitsiya", "headlineHighlight": "imkoniyatlari" },
+    "investment": {
+      "industrial": { "title": "Sanoat korxonalari", "description": "Ishlab chiqarish korxonalarini joylashtirish uchun tayyor maydonlar", "benefits": ["Soliq imtiyozlari", "Tayyor infratuzilma", "Logistik qulaylik"] },
+      "commercial": { "title": "Tijorat obyektlari", "description": "Savdo va xizmat ko'rsatish markazlari qurilishi", "benefits": ["Yuqori trafik", "Zamonaviy dizayn", "Parking maydonlari"] },
+      "residential": { "title": "Turar-joy qurilishi", "description": "Turli sinflardag uy-joy loyihalari", "benefits": ["Yashil muhit", "Smart home", "Ijtimoiy infratuzilma"] }
+    },
+    "timelineTitle": "Loyiha jadvali",
+    "timeline": {
+      "step1": { "title": "Loyiha boshlandi", "description": "Infratuzilma qurilishi boshlanishi" },
+      "step2": { "title": "Birinchi bosqich", "description": "Sanoat zonasi ishga tushirilishi" },
+      "step3": { "title": "Ikkinchi bosqich", "description": "Tijorat va turar-joy zonalari" },
+      "step4": { "title": "Tugallash", "description": "Loyihaning to'liq ishga tushishi" }
+    },
+    "cta": { "headline": "Kelajak shahrida", "headlineHighlight": "o'z o'rningizni egallang", "description": "Central Asia Smart City loyihasiga investitsiya kiriting va mintaqaning eng ilg'or shahri qurilishida ishtirok eting.", "investButton": "Investitsiya qilish", "investHubButton": "Invest Hub" }
+  },
+  "networkingPage": {
+    "backToServices": "Barcha xizmatlar",
+    "hero": {
+      "badge": "05 — Networking",
+      "exclusiveBadge": "Eksklyuziv",
+      "description": "Mashvarat klubi va sektorlararo integratsiya platformasi. Rahbarlar uchun eksklyuziv networking va strategik hamkorlik imkoniyatlari.",
+      "joinButton": "A'zo bo'lish",
+      "pricingButton": "Tariflar"
+    },
+    "stats": {
+      "members": { "label": "A'zolar", "description": "Top rahbarlar" },
+      "sectors": { "label": "Sektorlar", "description": "Qamrov" },
+      "meetings": { "label": "Yig'ilishlar", "description": "Yiliga" },
+      "projects": { "label": "Loyihalar", "description": "Hamkorlikda" }
+    },
+    "featuresSection": {
+      "badge": "Mashvarat Klubi",
+      "headline": "Eksklyuziv",
+      "headlineHighlight": "imkoniyatlar"
+    },
+    "features": {
+      "exclusiveMeetings": {
+        "title": "Eksklyuziv Uchrashuvlar",
+        "description": "Faqat top-menejment uchun mo'ljallangan yopiq formatdagi uchrashuvlar"
+      },
+      "crossSectorProjects": {
+        "title": "Sektorlararo Loyihalar",
+        "description": "Turli sektorlar o'rtasida strategik hamkorlik loyihalarini shakllantirish"
+      },
+      "vipNetworking": {
+        "title": "VIP Networking",
+        "description": "Yetakchi biznes rahbarlari va investorlar bilan bevosita muloqot"
+      },
+      "strategicPartnerships": {
+        "title": "Strategic Partnerships",
+        "description": "Uzoq muddatli strategik hamkorliklar va biznes aloqalarni rivojlantirish"
+      }
+    },
+    "benefitsSection": {
+      "badge": "A'zolik afzalliklari",
+      "headline": "Klub",
+      "headlineHighlight": "imtiyozlari"
+    },
+    "benefits": {
+      "mashvaratMeetings": {
+        "title": "Mashvarat yig'ilishlari",
+        "description": "Har oyda o'tkaziladigan strategik mashvarat yig'ilishlari"
+      },
+      "businessMatching": {
+        "title": "Biznes matching",
+        "description": "Sizning ehtiyojlaringizga mos hamkorlarni topish xizmati"
+      },
+      "priorityAccess": {
+        "title": "Prioritet kirish",
+        "description": "Barcha Assembly tadbirlariga VIP kirish huquqi"
+      }
+    },
+    "sectorsTitle": "Qamrab olingan sektorlar",
+    "sectors": [
+      "IT & Texnologiya",
+      "Moliya & Banking",
+      "Ishlab chiqarish",
+      "Qurilish & Infratuzilma",
+      "Qishloq xo'jaligi",
+      "Energetika",
+      "Savdo & Logistika",
+      "Xizmat ko'rsatish",
+      "Farmatsevtika",
+      "To'qimachilik",
+      "Turizm",
+      "Telekommunikatsiya"
+    ],
+    "membershipSection": {
+      "headline": "A'zolik",
+      "headlineHighlight": "darajalari",
+      "recommended": "Tavsiya etiladi"
+    },
+    "membershipLevels": {
+      "standard": {
+        "name": "Standard",
+        "description": "Yangi a'zolar uchun",
+        "features": ["Oylik yig'ilishlarga kirish", "Networking platformasi", "Newsletter"]
+      },
+      "premium": {
+        "name": "Premium",
+        "description": "Faol ishtirokchilar uchun",
+        "features": ["Barcha Standard imkoniyatlar", "VIP tadbirlarga kirish", "Biznes matching", "Mentorlik dasturi"]
+      },
+      "elite": {
+        "name": "Elite",
+        "description": "Top rahbarlar uchun",
+        "features": ["Barcha Premium imkoniyatlar", "Individual konsalting", "Board uchrashuvlari", "Global networking"]
+      }
+    },
+    "cta": {
+      "headline": "Mashvarat klubiga",
+      "headlineHighlight": "qo'shiling",
+      "description": "O'zbekistonning eng nufuzli biznes rahbarlari jamoasiga qo'shiling va yangi imkoniyatlarni kashf eting.",
+      "joinButton": "A'zo bo'lish",
+      "detailsButton": "Batafsil"
+    }
+  },
+  "internationalPage": {
+    "backToServices": "Barcha xizmatlar",
+    "hero": {
+      "badge": "04 — Xalqaro",
+      "activeBadge": "Faol",
+      "description": "O'zbek korxonalarining global miqyosdagi obro'sini oshirish. Media ishlab chiqarish, xalqaro tadbirlarni tashkil etish va diplomatik aloqalar.",
+      "partnershipButton": "Hamkorlik"
+    },
+    "stats": {
+      "countries": { "label": "Davlatlar", "description": "Mavjudlik" },
+      "audience": { "label": "Auditoriya", "description": "Qamrov" },
+      "events": { "label": "Tadbirlar", "description": "Tashkil etilgan" },
+      "media": { "label": "Media hamkorlar", "description": "Dunyo bo'ylab" }
+    },
+    "featuresSection": {
+      "headline": "Global",
+      "headlineHighlight": "Brending"
+    },
+    "features": {
+      "mediaContent": {
+        "title": "Media Kontent",
+        "description": "Global auditoriya uchun professional video ishlab chiqarish va kontent yaratish"
+      },
+      "internationalEvents": {
+        "title": "Xalqaro Tadbirlar",
+        "description": "Xalqaro maydonda biznes tadbirlarni tashkil etish va qo'llab-quvvatlash"
+      },
+      "diplomaticRelations": {
+        "title": "Diplomatik Aloqalar",
+        "description": "Xorijiy biznes hamjamiyatlari va hukumatlar bilan ko'prik qurish"
+      },
+      "brandStrategy": {
+        "title": "Brend Strategiyasi",
+        "description": "Strategik brend pozitsiyalash va global obro' boshqaruvi"
+      }
+    },
+    "mediaSection": {
+      "description": "O'zbek bizneslarini jahon sahnasida targ'ib qilish uchun professional kontent ishlab chiqarish va tarqatish orqali keng qamrovli media xizmatlari."
+    },
+    "mediaServices": {
+      "assemblyMedia": {
+        "title": "Assembly Media",
+        "description": "Professional video ishlab chiqarish va kontent yaratish platformasi",
+        "items": ["Korporativ hujjatli filmlar", "Tadbirlar reportajlari", "Reklama kontenti", "Intervyu seriallari"]
+      },
+      "internationalPR": {
+        "title": "Xalqaro PR",
+        "description": "Global matbuot munosabatlari va media aloqa xizmatlari",
+        "items": ["Press-relizlar", "Media munosabatlari", "Inqirozli kommunikatsiya", "Brend monitoringi"]
+      },
+      "events": {
+        "title": "Tadbirlar boshqaruvi",
+        "description": "To'liq tsiklli xalqaro tadbirlarni tashkil etish",
+        "items": ["Biznes forumlar", "Savdo missiyalari", "Networking tadbirlari", "Rasmiy marosimlar"]
+      }
+    },
+    "partnersTitle": "Diplomatik hamkorlar",
+    "diplomaticPartners": [
+      "BAA Savdo Palatasi",
+      "Singapur Biznes Federatsiyasi",
+      "Xitoy Xalqaro Hamkorlik Kengashi",
+      "Yevropa Biznes Assotsiatsiyasi",
+      "AQSh-Markaziy Osiyo Savdo Kengashi",
+      "Turkiya Eksportchilar Assambleyasi"
+    ],
+    "cta": {
+      "headline": "Globallashish",
+      "headlineHighlight": "yo'li",
+      "description": "Xalqaro mavjudligingizni kuchaytirish va global hamkorlar bilan aloqa o'rnatish uchun biz bilan bog'laning.",
+      "contactButton": "Bog'lanish",
+      "membershipButton": "A'zo bo'lish"
+    }
+  },
+  "careersPage": {
+    "badge": "Karyera",
+    "headline": "Bizning jamoaga",
+    "headlineHighlight": "qo'shiling",
+    "description": "O'zbekiston Iqtisodiyot Assambleyasi professional va g'ayratli mutaxassislarni kutib qolmoqda.",
+    "noVacancies": {
+      "title": "Hozirda ochiq vakansiyalar yo'q",
+      "description": "Lekin biz doimo iqtidorli mutaxassislarni qidiramiz. Rezyumeingizni yuborib qo'ying, biz siz bilan bog'lanamiz.",
+      "sendResume": "Rezyume yuborish"
+    },
+    "benefits": {
+      "title": "Nima uchun biz bilan ishlash kerak?",
+      "items": [
+        {
+          "title": "Professional o'sish",
+          "description": "Doimiy o'qish va rivojlanish imkoniyatlari"
+        },
+        {
+          "title": "Zamonaviy ofis",
+          "description": "Qulay va innovatsion ish muhiti"
+        },
+        {
+          "title": "Raqobatbardosh ish haqi",
+          "description": "Bozor standartlariga mos maosh"
+        },
+        {
+          "title": "Jamoaviy madaniyat",
+          "description": "Do'stona va qo'llab-quvvatlovchi jamoa"
+        }
+      ]
+    },
+    "culture": {
+      "title": "Bizning madaniyat",
+      "description": "Biz ochiqlik, innovatsiya va hamkorlikka asoslangan madaniyatni rivojlantiramiz."
+    }
+  },
+  "associationsPage": {
+    "hero": {
+      "badge": "Assotsiatsiyalar",
+      "headline": "Biznes",
+      "headlineHighlight": "Assotsiatsiyalari",
+      "description": "O'zbekiston Iqtisodiyot Assambleyasi tarkibidagi sanoat assotsiatsiyalari — har bir sektorda biznesingiz uchun kuchli hamkor va qo'llab-quvvatlash tizimi."
+    },
+    "stats": {
+      "associations": "Assotsiatsiyalar",
+      "members": "A'zo korxonalar",
+      "sectors": "Sanoat sektori",
+      "partners": "Xalqaro hamkorlar"
+    },
+    "featuredSection": {
+      "badge": "Yetakchi assotsiatsiyalar",
+      "headline": "Eng yirik",
+      "headlineHighlight": "a'zo tashkilotlar"
+    },
+    "directorySection": {
+      "badge": "Katalog",
+      "headline": "Barcha",
+      "headlineHighlight": "assotsiatsiyalar",
+      "searchPlaceholder": "Assotsiatsiya qidirish...",
+      "resultsFound": "ta assotsiatsiya topildi",
+      "loadMore": "Ko'proq ko'rsatish",
+      "noResults": "Hech narsa topilmadi",
+      "tryDifferentKeyword": "Boshqa kalit so'z bilan qidirib ko'ring"
+    },
+    "sectors": {
+      "all": "Barcha sektorlar",
+      "food": "Oziq-ovqat sanoati",
+      "textile": "To'qimachilik",
+      "agriculture": "Qishloq xo'jaligi",
+      "it": "IT & Texnologiya",
+      "manufacturing": "Ishlab chiqarish",
+      "construction": "Qurilish",
+      "energy": "Energetika",
+      "pharma": "Farmatsevtika"
+    },
+    "associations": {
+      "foodIndustry": { "name": "Oziq-ovqat Sanoati Assotsiatsiyasi", "description": "O'zbekiston oziq-ovqat ishlab chiqaruvchilarini birlashtiruvchi yetakchi assotsiatsiya" },
+      "textile": { "name": "To'qimachilik Sanoati Assotsiatsiyasi", "description": "To'qimachilik va tikuvchilik korxonalarining birlashmasi" },
+      "agroindustry": { "name": "Agrosanoat Majmuasi Assotsiatsiyasi", "description": "Qishloq xo'jaligi va agrosanoat korxonalari uyushmasi" },
+      "itPark": { "name": "IT Park Assotsiatsiyasi", "description": "IT kompaniyalar va startaplarni qo'llab-quvvatlash" },
+      "pharma": { "name": "Farmatsevtika Assotsiatsiyasi", "description": "Dori-darmon ishlab chiqaruvchilari assotsiatsiyasi" },
+      "construction": { "name": "Qurilish Materiallari Assotsiatsiyasi", "description": "Qurilish materiallari ishlab chiqaruvchilari" },
+      "greenEnergy": { "name": "Yashil Energetika Assotsiatsiyasi", "description": "Qayta tiklanadigan energiya manbalari" },
+      "logistics": { "name": "Logistika va Transport Assotsiatsiyasi", "description": "Logistika va transport xizmatlari" },
+      "machinery": { "name": "Mashinasozlik Assotsiatsiyasi", "description": "Mashina va uskunalar ishlab chiqarish" },
+      "dairy": { "name": "Sut Mahsulotlari Assotsiatsiyasi", "description": "Sut va sut mahsulotlari ishlab chiqaruvchilari" },
+      "fruitsVegetables": { "name": "Meva-sabzavot Eksportchilari Assotsiatsiyasi", "description": "Meva-sabzavot eksport qiluvchi korxonalar" },
+      "leatherFootwear": { "name": "Charm va Poyabzal Assotsiatsiyasi", "description": "Charm va poyabzal ishlab chiqaruvchilari" },
+      "plastics": { "name": "Plastmassa Mahsulotlari Assotsiatsiyasi", "description": "Plastmassa va polimer mahsulotlari" },
+      "electrical": { "name": "Elektrotexnika Assotsiatsiyasi", "description": "Elektr uskunalar ishlab chiqarish" },
+      "furniture": { "name": "Mebel Ishlab Chiqaruvchilari Assotsiatsiyasi", "description": "Mebel va yog'och mahsulotlari" },
+      "confectionery": { "name": "Konditer Mahsulotlari Assotsiatsiyasi", "description": "Shirinlik va konditer mahsulotlari" },
+      "meat": { "name": "Go'sht Mahsulotlari Assotsiatsiyasi", "description": "Go'sht qayta ishlash korxonalari" },
+      "beverages": { "name": "Ichimliklar Sanoati Assotsiatsiyasi", "description": "Ichimliklar ishlab chiqaruvchilari" },
+      "itOutsourcing": { "name": "IT Outsourcing Assotsiatsiyasi", "description": "IT xizmatlar va outsourcing kompaniyalari" },
+      "fintech": { "name": "FinTech Assotsiatsiyasi", "description": "Moliyaviy texnologiyalar startaplari" },
+      "agriTech": { "name": "Qishloq Xo'jaligi Texnikasi Assotsiatsiyasi", "description": "Agrar texnika va uskunalar" },
+      "cotton": { "name": "Paxta Qayta Ishlash Assotsiatsiyasi", "description": "Paxta va ip-gazlama sanoati" },
+      "cementConcrete": { "name": "Sement va Beton Assotsiatsiyasi", "description": "Sement va beton mahsulotlari" },
+      "solar": { "name": "Quyosh Energetikasi Assotsiatsiyasi", "description": "Quyosh energiyasi loyihalari" }
+    },
+    "benefitsSection": {
+      "badge": "A'zolik afzalliklari",
+      "headline": "Nima uchun",
+      "headlineHighlight": "a'zo bo'lish kerak?",
+      "description": "Assambleyaga a'zo bo'lgan korxonalar quyidagi imkoniyatlardan foydalanadi"
+    },
+    "benefits": {
+      "network": { "title": "Keng tarmoq", "description": "1500+ a'zo korxona bilan bevosita aloqa" },
+      "privileges": { "title": "Maxsus imtiyozlar", "description": "Chegirmalar va preferensial tariflar" },
+      "international": { "title": "Xalqaro aloqalar", "description": "30+ davlat bilan hamkorlik imkoniyati" },
+      "professional": { "title": "Professional xizmatlar", "description": "GR, FR, BR xizmatlari mavjud" },
+      "development": { "title": "Rivojlanish", "description": "O'quv dasturlari va treninglar" },
+      "legal": { "title": "Huquqiy yordam", "description": "Huquqiy maslahat va himoya" }
+    },
+    "common": {
+      "members": "a'zo",
+      "memberCompanies": "a'zo korxona"
+    },
+    "cta": {
+      "headline": "Assotsiatsiyangizni",
+      "headlineHighlight": "ro'yxatdan o'tkazing",
+      "description": "A'zolik mutlaqo bepul. Bugun arizangizni topshiring va Assambleyaning barcha imkoniyatlaridan foydalaning.",
+      "applyButton": "Ariza topshirish",
+      "membershipButton": "A'zolik haqida"
+    }
+  },
+  "projectsPage": {
+    "hero": {
+      "badge": "Strategik Loyihalar",
+      "headline": "Yirik",
+      "headlineHighlight": "Investitsiya",
+      "headlineSuffix": "Loyihalari",
+      "description": "O'zbekiston Iqtisodiyot Assambleyasining strategik loyihalari — mintaqadagi eng jozibador investitsiya imkoniyatlari."
+    },
+    "stats": {
+      "investment": "Umumiy investitsiyalar",
+      "activeProjects": "Faol loyihalar",
+      "partners": "Xalqaro hamkorlar",
+      "jobs": "Yaratilajak ish o'rinlari"
+    },
+    "categories": {
+      "all": "Barcha Loyihalar",
+      "infrastructure": "Infratuzilma",
+      "smartCity": "Smart City",
+      "industrial": "Sanoat",
+      "healthcare": "Sog'liqni saqlash",
+      "energy": "Energetika",
+      "education": "Ta'lim"
+    },
+    "projects": {
+      "tramway": {
+        "title": "Toshkent Tramvayi",
+        "titleEn": "Modern Tram System",
+        "description": "Toshkent shahri uchun zamonaviy tramvay tizimi. 56 km yo'l va 60 ta zamonaviy tramvay.",
+        "fullDescription": "Toshkent shahri jamoat transportini rivojlantirishga yo'naltirilgan yirik infratuzilma loyihasi. Loyiha doirasida 56 km tramvay yo'llari quriladi, 60 ta zamonaviy tramvay sotib olinadi va yo'lovchilar infratuzilmasi barpo etiladi. Loyiha transport qulayligini oshiradi va ekologik ifloslanishni kamaytiradi.",
+        "location": "Toshkent shahri",
+        "status": "Faol",
+        "partners": ["Islom Taraqqiyot Banki", "Toshkent shahar hokimligi", "Transport vazirligi"],
+        "benefits": ["Tirbandlikni kamaytirish", "Ekologik toza transport", "Arzon tariflar", "Zamonaviy infratuzilma", "Ish o'rinlari yaratish", "Shahar rivojlanishi"],
+        "stats": [
+          { "label": "Tramvaylar", "value": "60" },
+          { "label": "Yo'llar", "value": "56 km" },
+          { "label": "Bekatlar", "value": "80+" }
+        ]
+      },
+      "ringRoad": {
+        "title": "Toshkent Halqa Yo'li",
+        "titleEn": "Ring Road Project",
+        "description": "Toshkent atrofida halqa yo'l qurilishi. 6 qatorli magistral va zamonaviy infratuzilma.",
+        "fullDescription": "Toshkent shahri atrofida 160 km uzunlikdagi 6 qatorli halqa yo'l qurilishi. Loyiha shahar markazidagi tirbandlikni sezilarli darajada kamaytiradi, transport logistikasini yaxshilaydi va mintaqaviy savdo uchun muhim yo'lak bo'lib xizmat qiladi.",
+        "location": "Toshkent viloyati",
+        "status": "Rejalashtirilgan",
+        "partners": ["Transport vazirligi", "Dovus Group", "DSAK Group"],
+        "benefits": ["Shahar tirbandligini kamaytirish", "Logistika qulayligi", "Mintaqaviy savdo", "Iqtisodiy o'sish", "Transport xavfsizligi", "Zamonaviy yo'llar"],
+        "stats": [
+          { "label": "Uzunligi", "value": "160 km" },
+          { "label": "Qatorlar", "value": "6" },
+          { "label": "Almashinuv", "value": "12" }
+        ]
+      },
+      "smartCity": {
+        "title": "Markaziy Osiyo Smart City",
+        "titleEn": "Smart City Ohangaron",
+        "description": "6400 gektar maydonda mintaqaning eng katta smart city loyihasi. Barcha jahon darajasidagi shahar infratuzilmasi.",
+        "fullDescription": "Ohangaron tumanida 6400 gektar maydonda qurilayotgan Markaziy Osiyodagi eng ilg'or smart city. Loyiha jahon darajasidagi sanoat zonalari, zamonaviy turar-joy hududlari, tijorat markazlari va yashil zonalarni o'z ichiga oladi. Shaharda 5G infratuzilmasi, aqlli boshqaruv tizimlari va yashil energiya texnologiyalari joriy etiladi.",
+        "location": "Ohangaron, Toshkent viloyati",
+        "status": "Faol",
+        "partners": ["MIG", "Quwwat Group", "Iqtisodiyot vazirligi", "Xalqaro investorlar"],
+        "benefits": ["Zamonaviy infratuzilma", "Yashil texnologiyalar", "Ish o'rinlari yaratish", "Xorijiy investitsiyalarni jalb qilish", "Mintaqaviy rivojlanish", "Aqlli boshqaruv"],
+        "stats": [
+          { "label": "Maydon", "value": "6400 ga" },
+          { "label": "Investitsiya", "value": "$20B" },
+          { "label": "Ish o'rinlari", "value": "50K+" }
+        ]
+      },
+      "industrialPark": {
+        "title": "Ohangaron Sanoat Parki",
+        "titleEn": "Industrial Park",
+        "description": "Ishlab chiqarish korxonalari uchun tayyor infratuzilmali zamonaviy sanoat zonasi.",
+        "fullDescription": "Ohangaron tumanida joylashgan ishlab chiqarish korxonalari uchun tayyor infratuzilmali zamonaviy sanoat parki. Loyiha investorlar uchun soliq imtiyozlari, tayyor logistika infratuzilmasi va arzon energiya taklif etadi.",
+        "location": "Ohangaron, Toshkent viloyati",
+        "status": "Faol",
+        "partners": ["Investitsiya va sanoat vazirligi", "UZELTECHSANOAT"],
+        "benefits": ["Soliq imtiyozlari", "Tayyor infratuzilma", "Logistika qulayligi", "Arzon energiya", "Malakali ishchi kuchi", "Eksport imkoniyatlari"],
+        "stats": [
+          { "label": "Maydon", "value": "500 ga" },
+          { "label": "Korxonalar", "value": "50+" },
+          { "label": "Ish o'rinlari", "value": "10K+" }
+        ]
+      },
+      "stateHospital": {
+        "title": "Ko'p tarmoqli Davlat Shifoxonasi",
+        "titleEn": "State Medical Complex",
+        "description": "Zamonaviy 1000 o'rinli ko'p tarmoqli shifoxona. Jahon darajasidagi tibbiy uskunalar.",
+        "fullDescription": "Jahon darajasidagi tibbiy uskunalar bilan jihozlangan zamonaviy 1000 o'rinli ko'p tarmoqli shifoxona qurilishi. Loyiha Toshkent va atrofdagi hududlar aholisi uchun tibbiy xizmatlar sifatini oshirishga qaratilgan.",
+        "location": "Toshkent shahri",
+        "status": "Rejalashtirilgan",
+        "partners": ["Sog'liqni saqlash vazirligi", "Xalqaro tibbiy tashkilotlar"],
+        "benefits": ["Sifatli tibbiy xizmat", "Zamonaviy uskunalar", "Malakali shifokorlar", "Ilmiy tadqiqotlar", "Tibbiy turizm", "Aholi salomatligi"],
+        "stats": [
+          { "label": "O'rinlar", "value": "1000" },
+          { "label": "Bo'limlar", "value": "25+" },
+          { "label": "Xodimlar", "value": "2000+" }
+        ]
+      },
+      "privateClinic": {
+        "title": "Xalqaro Xususiy Klinika",
+        "titleEn": "Private Medical Center",
+        "description": "Xalqaro standartlarga mos premium-klass xususiy klinika.",
+        "fullDescription": "Toshkent shahrida premium tibbiy xizmatlar ko'rsatadigan xalqaro standartlarga mos xususiy klinika qurilishi. Klinika eng zamonaviy diagnostika va davolash uskunalari bilan jihozlanadi va malakali xalqaro shifokorlar xizmat ko'rsatadi.",
+        "location": "Toshkent shahri",
+        "status": "Faol",
+        "partners": ["Xalqaro tibbiy guruhlar", "Xususiy investorlar"],
+        "benefits": ["Premium xizmatlar", "Xalqaro shifokorlar", "Zamonaviy uskunalar", "Tibbiy turizm", "VIP xizmat", "24/7 ishlash"],
+        "stats": [
+          { "label": "O'rinlar", "value": "200" },
+          { "label": "Bo'limlar", "value": "15" },
+          { "label": "Shifokorlar", "value": "100+" }
+        ]
+      },
+      "solarEnergy": {
+        "title": "Quyosh Elektr Stansiyasi",
+        "titleEn": "Solar Energy Project",
+        "description": "200 MVt quvvatli quyosh elektr stansiyasi. Yashil va qayta tiklanadigan energiya.",
+        "fullDescription": "200 MVt quvvatli quyosh elektr stansiyasi qurilishi. Loyiha mamlakatning energetik mustaqilligini oshirishga va qayta tiklanadigan energiya ulushini ko'paytirishga xizmat qiladi. Zamonaviy quyosh panellari va energiya saqlash tizimlari qo'llaniladi.",
+        "location": "Navoiy viloyati",
+        "status": "Faol",
+        "partners": ["Energetika vazirligi", "Xalqaro investorlar", "MASDAR"],
+        "benefits": ["Yashil energiya", "Energetik mustaqillik", "Arzon elektr", "Emissiyalarni kamaytirish", "Zamonaviy texnologiyalar", "Uzoq muddatli shartnomalar"],
+        "stats": [
+          { "label": "Quvvat", "value": "200 MVt" },
+          { "label": "Panellar", "value": "500K+" },
+          { "label": "Uylar", "value": "100K+" }
+        ]
+      },
+      "eduJob": {
+        "title": "Edu-Job O'quv Markazi",
+        "titleEn": "Education & Employment Hub",
+        "description": "Yoshlarni o'qitish va ishga joylashtirish bo'yicha yirik markaz. Zamonaviy kasblar.",
+        "fullDescription": "Yoshlarni zamonaviy kasblarga o'qitish va ishga joylashtirishga mo'ljallangan yirik ta'lim markazi. Markaz IT, raqamli marketing, biznes boshqaruvi va boshqa talab yuqori kasblarda kurslar taklif etadi, ish beruvchilar bilan bevosita aloqa o'rnatadi.",
+        "location": "Toshkent shahri",
+        "status": "Faol",
+        "partners": ["Assambleya", "Xususiy kompaniyalar", "Ta'lim muassasalari"],
+        "benefits": ["Zamonaviy kasblar", "Ishga joylashish kafolati", "Amaliy ko'nikmalar", "Sanoat aloqalari", "Karyera yo'l-yo'riq", "Xalqaro sertifikatlar"],
+        "stats": [
+          { "label": "Talabalar", "value": "5K+" },
+          { "label": "Kurslar", "value": "50+" },
+          { "label": "Ishga joylashish", "value": "85%" }
+        ]
+      },
+      "kidsTime": {
+        "title": "Kids Time Ta'lim Markazi",
+        "titleEn": "Children's Development Center",
+        "description": "Bolalar uchun zamonaviy ta'lim markazi. Ijodiy va intellektual rivojlanish.",
+        "fullDescription": "Bolalarning ijodiy va intellektual rivojlanishi uchun zamonaviy ta'lim markazi. Markaz chet tillari, dasturlash, musiqa, san'at va boshqa yo'nalishlarda kurslar taklif etadi. Zamonaviy o'qitish metodlari va tajribali pedagoglar jamoasi.",
+        "location": "Toshkent shahri",
+        "status": "Faol",
+        "partners": ["Assambleya", "Ta'lim dasturlari"],
+        "benefits": ["Zamonaviy metodika", "Tajribali pedagoglar", "Ijodiy rivojlanish", "Chet tillari", "Interaktiv o'qitish", "Xavfsiz muhit"],
+        "stats": [
+          { "label": "Talabalar", "value": "1K+" },
+          { "label": "Dasturlar", "value": "20+" },
+          { "label": "O'qituvchilar", "value": "50+" }
+        ]
+      }
+    },
+    "featuredSection": {
+      "badge": "Tanlangan",
+      "headline": "Strategik",
+      "headlineHighlight": "Loyihalar"
+    },
+    "directory": {
+      "badge": "Barcha Loyihalar",
+      "headline": "Loyihalar",
+      "headlineHighlight": "Katalogi"
+    },
+    "labels": {
+      "investment": "Investitsiya",
+      "location": "Joylashuv",
+      "duration": "Muddat",
+      "status": "Holat"
+    },
+    "status": {
+      "active": "Faol",
+      "planned": "Rejalashtirilgan",
+      "completed": "Yakunlangan"
+    },
+    "partners": {
+      "badge": "Ishonchli Hamkorlar",
+      "headline": "Loyiha",
+      "headlineHighlight": "Hamkorlari",
+      "description": "Davlat tashkilotlari, xalqaro moliya institutlari va yetakchi xususiy kompaniyalar bilan hamkorlikda ishlaymiz.",
+      "list": [
+        "Islom Taraqqiyot Banki",
+        "Toshkent shahar hokimligi",
+        "Transport vazirligi",
+        "Dovus Group",
+        "DSAK Group",
+        "MIG",
+        "Quwwat Group"
+      ]
+    },
+    "cta": {
+      "headline": "Loyihalarga",
+      "headlineHighlight": "qo'shiling",
+      "description": "Strategik loyihalarimizda ishtirok etish va investitsiya imkoniyatlarini o'rganish uchun biz bilan bog'laning.",
+      "contactButton": "Bog'lanish",
+      "membershipButton": "A'zo bo'lish"
+    },
+    "modal": {
+      "aboutProject": "Loyiha haqida",
+      "benefits": "Afzalliklar",
+      "partners": "Hamkorlar",
+      "close": "Yopish"
+    },
+    "common": {
+      "details": "Batafsil"
+    }
+  },
+  "newsPage": {
+    "hero": {
+      "badge": "Yangiliklar Markazi",
+      "headline": "Yangiliklar va",
+      "headlineHighlight": "Tadbirlar",
+      "description": "O'zbekiston Iqtisodiyot Assambleyasi faoliyati, loyihalar, xalqaro hamkorlik va biznes muhitidagi so'nggi yangiliklar.",
+      "searchPlaceholder": "Yangiliklar qidirish..."
+    },
+    "months": {
+      "january": "yanvar",
+      "february": "fevral",
+      "march": "mart",
+      "april": "aprel",
+      "may": "may",
+      "june": "iyun",
+      "july": "iyul",
+      "august": "avgust",
+      "september": "sentyabr",
+      "october": "oktyabr",
+      "november": "noyabr",
+      "december": "dekabr"
+    },
+    "categories": {
+      "all": "Barcha",
+      "investment": "Investitsiya",
+      "events": "Tadbirlar",
+      "projects": "Loyihalar",
+      "international": "Xalqaro",
+      "education": "Ta'lim",
+      "announcements": "E'lonlar"
+    },
+    "featuredSection": {
+      "badge": "Asosiy Yangiliklar"
+    },
+    "allNewsSection": {
+      "badge": "Barcha Yangiliklar",
+      "headline": "Yangiliklar",
+      "headlineHighlight": "Arxivi",
+      "newsCount": "ta yangilik"
+    },
+    "mediaSection": {
+      "badge": "Media Kutubxonasi",
+      "headline": "Video va",
+      "headlineHighlight": "Foto",
+      "allMedia": "Barcha media",
+      "photos": "foto"
+    },
+    "newsletter": {
+      "badge": "Newsletter",
+      "headline": "Xabardor",
+      "headlineHighlight": "Bo'ling",
+      "description": "Iqtisodiy rivojlanish, investitsiya imkoniyatlari va Assambleya tashabbuslaridagi so'nggi yangiliklar uchun haftalik newsletter ga obuna bo'ling.",
+      "emailPlaceholder": "Email manzilingiz",
+      "subscribeButton": "Obuna Bo'lish",
+      "privacyNote": "\"Obuna bo'lish\" tugmasini bosish orqali maxfiylik siyosatimizga rozilik bildirasiz.",
+      "benefits": {
+        "free": "Bepul",
+        "noSpam": "Spam yo'q",
+        "unsubscribe": "Istalgan vaqtda bekor qilish"
+      },
+      "success": {
+        "title": "Obuna muvaffaqiyatli!",
+        "description": "Tez orada birinchi newsletter ni olasiz."
+      }
+    },
+    "modal": {
+      "views": "ko'rilgan",
+      "tags": "Teglar",
+      "share": "Ulashish",
+      "save": "Saqlash",
+      "close": "Yopish"
+    },
+    "common": {
+      "read": "O'qish"
+    },
+    "media": {
+      "smartCityPresentation": "Smart City Loyihasi Taqdimoti",
+      "economicForumHighlights": "Iqtisodiy Forum 2024 Highlights",
+      "investorsForumGallery": "Xalqaro Investorlar Forumi",
+      "assemblyInterview": "Assambleya Rahbariyati Intervyusi"
+    },
+    "articles": {
+      "smartCityInvestment": {
+        "title": "Smart City Loyihasiga $5 Milliard Yangi Investitsiya Jalb Qilindi",
+        "excerpt": "Xalqaro konsorsium Markaziy Osiyodagi eng yirik shahar qurilish loyihasi uchun muhim moliyalashtirish bosqichini e'lon qildi — bu O'zbekiston iqtisodiy modernizatsiyasida muhim qadam.",
+        "content": "Xalqaro investorlar guruhi O'zbekistonning flagship Smart City loyihasiga $5 milliard hajmida yangi investitsiya kiritish bo'yicha kelishuv imzoladi. Bu moliyalashtirish loyihaning ikkinchi bosqichini qamrab oladi va 2030-yilgacha amalga oshiriladi.",
+        "readTime": "5 daqiqa",
+        "tags": ["Smart City", "Investitsiya", "Infratuzilma"],
+        "author": "Assambleya Press"
+      },
+      "economicForum": {
+        "title": "2025-yilgi Markaziy Osiyo Iqtisodiy Forumi Muvaffaqiyatli Yakunlandi",
+        "excerpt": "15 davlat rahbarlari mintaqaviy iqtisodiy integratsiya bo'yicha uch kunlik sammit uchun Toshkentda yig'ildi. Forum doirasida 50+ memorandum imzolandi.",
+        "content": "Toshkentda o'tkazilgan Markaziy Osiyo Iqtisodiy Forumi muvaffaqiyatli yakunlandi. Tadbirda 15 davlatdan 500+ delegat ishtirok etdi va 50 dan ortiq hamkorlik memorandumi imzolandi.",
+        "readTime": "4 daqiqa",
+        "tags": ["Forum", "Xalqaro", "Hamkorlik"],
+        "author": "Assambleya Press"
+      },
+      "euTradeAgreement": {
+        "title": "Yevropa Ittifoqi Bilan Yangi Savdo Bitimi Imzolandi",
+        "excerpt": "O'zbekiston YI bilan keng qamrovli savdo sheriklarini imzoladi, asosiy eksport sektorlarida tariflarni sezilarli darajada kamaytirdi.",
+        "content": "O'zbekiston va Yevropa Ittifoqi o'rtasida yangi savdo bitimi imzolandi. Bitim doirasida to'qimachilik, qishloq xo'jaligi va sanoat mahsulotlari uchun tariflar kamaytirildi.",
+        "readTime": "4 daqiqa",
+        "tags": ["Yevropa Ittifoqi", "Savdo", "Eksport"],
+        "author": "Assambleya Press"
+      },
+      "textileExport": {
+        "title": "To'qimachilik Assotsiatsiyasi Rekord Eksport O'sishini Qayd Etdi",
+        "excerpt": "A'zo assotsiatsiya to'qimachilik va kiyim-kechak eksportida yildan-yilga 40% o'sishni nishonlamoqda.",
+        "content": "O'zbekiston To'qimachilik Sanoati Assotsiatsiyasi 2024-yilda rekord ko'rsatkichlarga erishdi. Eksport hajmi 40% ga oshdi va $3.5 milliardni tashkil etdi.",
+        "readTime": "3 daqiqa",
+        "tags": ["To'qimachilik", "Eksport", "Sanoat"],
+        "author": "Assambleya Press"
+      },
+      "skillsDevelopment": {
+        "title": "Milliy Malaka Rivojlantirish Tashabbusi Ishga Tushirildi",
+        "excerpt": "Assambleya Ta'lim vazirligi bilan keng qamrovli kadrlar tayyorlash dasturi bo'yicha hamkorlik bitimini imzoladi.",
+        "content": "Yangi milliy malaka rivojlantirish tashabbusi doirasida 100,000 dan ortiq mutaxassis tayyorlanadi. Dastur IT, sanoat va xizmat ko'rsatish sektorlarini qamrab oladi.",
+        "readTime": "4 daqiqa",
+        "tags": ["Ta'lim", "Kadrlar", "Malaka"],
+        "author": "Assambleya Press"
+      },
+      "dubaiPartnership": {
+        "title": "Dubai Savdo Palatasi Bilan Strategik Hamkorlik",
+        "excerpt": "Dubai Chamber bilan imzolangan memorandum O'zbek kompaniyalariga BAAda biznes yuritish imkoniyatlarini ochadi.",
+        "content": "O'zbekiston Iqtisodiyot Assambleyasi va Dubai Savdo Palatasi o'rtasida strategik hamkorlik memorandumi imzolandi. Bu O'zbek kompaniyalari uchun yangi bozorlarni ochadi.",
+        "readTime": "3 daqiqa",
+        "tags": ["Dubai", "BAA", "Hamkorlik"],
+        "author": "Assambleya Press"
+      },
+      "industrialParkPhase": {
+        "title": "Sanoat Parki Loyihasining Birinchi Bosqichi Tugadi",
+        "excerpt": "Chirchiq tumanidagi sanoat parki o'z faoliyatini boshladi. Birinchi 10 ta rezident kompaniya ishga tushdi.",
+        "content": "Chirchiq sanoat parkining birinchi bosqichi muvaffaqiyatli yakunlandi. 10 ta rezident kompaniya ishlab chiqarishni boshladi va 2,000 dan ortiq ish o'rni yaratildi.",
+        "readTime": "3 daqiqa",
+        "tags": ["Sanoat Parki", "Ishlab chiqarish", "Ish o'rinlari"],
+        "author": "Assambleya Press"
+      },
+      "membershipProgram": {
+        "title": "Yangi A'zolik Dasturi: Kichik Biznes Uchun Maxsus Imtiyozlar",
+        "excerpt": "Kichik va o'rta biznes uchun maxsus imtiyozli a'zolik dasturi e'lon qilindi. Yillik to'lov 50% kamaytrildi.",
+        "content": "Assambleya kichik va o'rta biznes uchun yangi a'zolik dasturini taqdim etdi. Dastur doirasida a'zolik to'lovi 50% ga kamaytirildi va qo'shimcha xizmatlar taqdim etiladi.",
+        "readTime": "2 daqiqa",
+        "tags": ["A'zolik", "KO'B", "Imtiyozlar"],
+        "author": "Assambleya Press"
+      },
+      "tramwayConstruction": {
+        "title": "Tramvay Loyihasi: Qurilish Ishlari Boshlandi",
+        "excerpt": "Toshkent tramvay liniyasining qurilishi rasman boshlandi. Birinchi bosqich 2026-yilda yakunlanadi.",
+        "content": "Toshkent viloyatini shahar markazi bilan bog'laydigan tramvay liniyasining qurilish ishlari boshlandi. Loyiha Islom Taraqqiyot Banki tomonidan moliyalashtirilmoqda.",
+        "readTime": "4 daqiqa",
+        "tags": ["Tramvay", "Transport", "Infratuzilma"],
+        "author": "Assambleya Press"
+      },
+      "solarStation": {
+        "title": "Quyosh Energiyasi Stansiyasi Ishga Tushdi",
+        "excerpt": "100 MW quvvatga ega quyosh elektr stansiyasi Toshkent viloyatida ishga tushdi. Yilda 50,000 uy uchun energiya ishlab chiqaradi.",
+        "content": "Toshkent viloyatidagi yangi quyosh elektr stansiyasi muvaffaqiyatli ishga tushdi. Stansiya 100 MW quvvatga ega va yilda 50,000 dan ortiq uyni energiya bilan ta'minlaydi.",
+        "readTime": "3 daqiqa",
+        "tags": ["Quyosh energiyasi", "Yashil energiya", "Ekologiya"],
+        "author": "Assambleya Press"
+      },
+      "itParkResidents": {
+        "title": "IT Park Rezidentlari Soni 500 ga Yetdi",
+        "excerpt": "O'zbekiston IT Parklari rezidentlar sonini 500 ga yetkazdi. Soha eksporti $500 millionni tashkil etdi.",
+        "content": "O'zbekiston IT Parklaridagi rezident kompaniyalar soni 500 ga yetdi. Soha eksporti $500 millionni tashkil etdi va 15,000 dan ortiq dasturchi faoliyat yuritmoqda.",
+        "readTime": "3 daqiqa",
+        "tags": ["IT", "Texnologiya", "Eksport"],
+        "author": "Assambleya Press"
+      },
+      "investorsForum": {
+        "title": "Xalqaro Investorlar Forumi: Natijalar va Kelishuvlar",
+        "excerpt": "Toshkentda o'tkazilgan xalqaro investorlar forumida $2 milliardlik kelishuvlar imzolandi.",
+        "content": "Xalqaro investorlar forumi muvaffaqiyatli yakunlandi. Forum doirasida 30 ta loyiha bo'yicha $2 milliardlik kelishuvlar imzolandi.",
+        "readTime": "5 daqiqa",
+        "tags": ["Forum", "Investitsiya", "Kelishuvlar"],
+        "author": "Assambleya Press"
+      },
+      "agroCluster": {
+        "title": "Agro-sanoat Klasteri Tashkil Etildi",
+        "excerpt": "Farg'ona vodiysida yangi agro-sanoat klasteri tashkil etildi. Klaster 50 ta korxonani birlashtiradi.",
+        "content": "Farg'ona vodiysida yangi agro-sanoat klasteri faoliyatini boshladi. Klaster 50 ta qishloq xo'jaligi va qayta ishlash korxonasini birlashtiradi.",
+        "readTime": "3 daqiqa",
+        "tags": ["Qishloq xo'jaligi", "Klaster", "Farg'ona"],
+        "author": "Assambleya Press"
+      },
+      "eduJobPlatform": {
+        "title": "EDU-JOB Platformasi: 10,000 Nafar Bitiruvchi",
+        "excerpt": "EDU-JOB ta'lim platformasi 10,000 nafar bitiruvchini nishonladi. 70% i ish bilan ta'minlandi.",
+        "content": "EDU-JOB platformasi 10,000 nafar bitiruvchiga erishdi. Bitiruvchilarning 70% dan ortig'i ish bilan ta'minlandi.",
+        "readTime": "3 daqiqa",
+        "tags": ["EDU-JOB", "Ta'lim", "Ish bilan ta'minlash"],
+        "author": "Assambleya Press"
+      },
+      "turkeyPartnership": {
+        "title": "Turkiya Bilan Yangi Hamkorlik Dasturi",
+        "excerpt": "O'zbekiston va Turkiya o'rtasida yangi iqtisodiy hamkorlik dasturi imzolandi.",
+        "content": "O'zbekiston va Turkiya o'rtasida yangi iqtisodiy hamkorlik dasturi imzolandi. Dastur savdo, investitsiya va turizm sohalarini qamrab oladi.",
+        "readTime": "3 daqiqa",
+        "tags": ["Turkiya", "Hamkorlik", "Savdo"],
+        "author": "Assambleya Press"
+      },
+      "taxBenefits": {
+        "title": "Yangi Soliq Imtiyozlari: Eksportchilar Uchun",
+        "excerpt": "Eksportchi korxonalar uchun yangi soliq imtiyozlari joriy etildi. Foyda solig'i 50% ga kamaytirildi.",
+        "content": "Hukumat eksportchi korxonalar uchun yangi soliq imtiyozlarini joriy etdi. Foyda solig'i stavkasi 50% ga kamaytirildi.",
+        "readTime": "2 daqiqa",
+        "tags": ["Soliq", "Imtiyozlar", "Eksport"],
+        "author": "Assambleya Press"
+      }
+    }
+  },
+  "contactPage": {
+    "hero": {
+      "badge": "Biz Bilan Bog'laning",
+      "headline": "Aloqa",
+      "headlineHighlight": "Ma'lumotlari",
+      "description": "Savollaringiz bormi? Biz bilan bog'laning — jamoamiz sizga yordam berishga tayyor."
+    },
+    "cards": {
+      "address": {
+        "title": "Manzil",
+        "city": "Toshkent shahri",
+        "viewOnMap": "Xaritada ko'rish"
+      },
+      "phone": {
+        "title": "Telefon",
+        "hours": "Du-Sha: 09:00 - 18:00"
+      },
+      "email": {
+        "title": "Email",
+        "responseTime": "24 soat ichida javob"
+      },
+      "hours": {
+        "title": "Ish Vaqti",
+        "weekdays": "Dushanba - Shanba",
+        "closed": "Yakshanba - dam olish"
+      }
+    },
+    "form": {
+      "badge": "Aloqa Formasi",
+      "headline": "Xabar",
+      "headlineHighlight": "Yuboring",
+      "labels": {
+        "reasonType": "Murojaat turi",
+        "name": "Ism-familiya",
+        "email": "Email",
+        "phone": "Telefon",
+        "company": "Kompaniya",
+        "message": "Xabar"
+      },
+      "placeholders": {
+        "name": "To'liq ismingiz",
+        "email": "email@example.com",
+        "phone": "+998 90 123 45 67",
+        "company": "Kompaniya nomi",
+        "message": "Xabaringizni yozing..."
+      },
+      "buttons": {
+        "submit": "Xabar Yuborish",
+        "sending": "Yuborilmoqda..."
+      },
+      "privacyNote": "Yuborish orqali maxfiylik siyosatimizga rozilik bildirasiz",
+      "success": {
+        "title": "Xabaringiz yuborildi!",
+        "description": "Tez orada siz bilan bog'lanamiz. Odatda 24 soat ichida javob beramiz.",
+        "newMessage": "Yangi xabar yuborish"
+      }
+    },
+    "reasons": {
+      "membership": {
+        "title": "A'zolik",
+        "description": "A'zo bo'lish yoki a'zolik haqida ma'lumot"
+      },
+      "business": {
+        "title": "Biznes Hamkorlik",
+        "description": "Hamkorlik va investitsiya takliflari"
+      },
+      "press": {
+        "title": "Matbuot",
+        "description": "OAV va media so'rovlari"
+      },
+      "general": {
+        "title": "Umumiy Savol",
+        "description": "Boshqa barcha savollar"
+      }
+    },
+    "map": {
+      "city": "Toshkent, O'zbekiston",
+      "openInMaps": "Google Maps da ochish"
+    },
+    "social": {
+      "title": "Ijtimoiy Tarmoqlar",
+      "description": "Bizni ijtimoiy tarmoqlarda kuzatib boring va so'nggi yangiliklerdan xabardor bo'ling."
+    },
+    "quickContact": {
+      "title": "Tezkor Aloqa",
+      "description": "Telegram orqali tezkor javob oling yoki telefon qiling.",
+      "call": "Qo'ng'iroq"
+    },
+    "faqSection": {
+      "badge": "Ko'p So'raladigan Savollar",
+      "headline": "FAQ"
+    },
+    "faq": {
+      "howToJoin": {
+        "question": "Assambleyaga qanday a'zo bo'lish mumkin?",
+        "answer": "A'zo bo'lish uchun onlayn ariza to'ldiring yoki ofisimizga tashrif buyuring. A'zolik arizasi ko'rib chiqilgandan so'ng siz bilan bog'lanamiz."
+      },
+      "membershipFee": {
+        "question": "A'zolik to'lovi qancha?",
+        "answer": "A'zolik to'lovi kompaniya hajmi va tanlangan tarifga qarab farqlanadi. Batafsil ma'lumot uchun a'zolik bo'limiga murojaat qiling."
+      },
+      "services": {
+        "question": "Qanday xizmatlar taqdim etiladi?",
+        "answer": "Biz GR (Government Relations), investitsiya jalb qilish, kadrlar tayyorlash, xalqaro hamkorlik va boshqa ko'plab xizmatlarni taqdim etamiz."
+      },
+      "officeHours": {
+        "question": "Ofis ish vaqti qanday?",
+        "answer": "Ofisimiz Dushanba - Shanba kunlari 09:00 - 18:00 da ishlaydi. Dam olish kunlari - Yakshanba."
+      }
+    },
+    "cta": {
+      "headline": "Assambleyaga",
+      "headlineHighlight": "qo'shiling",
+      "description": "46+ sanoat assotsiatsiyasi bilan birga biznesingizni rivojlantiring va yangi imkoniyatlardan foydalaning.",
+      "membershipButton": "A'zo bo'lish",
+      "learnMore": "Batafsil"
+    }
+  }
+}

@@ -2,73 +2,78 @@
 
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import Link from 'next/link'
+import { Link } from '@/lib/navigation'
 import { ArrowRight, Calendar, Clock, Tag } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import { cn } from '@/lib/utils'
 
-const news = [
+const newsConfig = [
   {
     id: 1,
-    title: "Xalqaro investorlar forumi muvaffaqiyatli yakunlandi",
-    excerpt: "Forumda $5 milliard dollarlik kelishuvlar imzolandi. 15 ta davlatdan 200+ investor ishtirok etdi.",
-    category: "Tadbirlar",
+    key: 'investorsForum',
+    categoryKey: 'events',
     date: "2024-12-28",
-    readTime: "5 daqiqa",
+    readTime: 5,
     featured: true,
     image: "/images/news/forum.jpg",
   },
   {
     id: 2,
-    title: "Smart City loyihasining birinchi bosqichi tugadi",
-    excerpt: "Ohangaron Smart City loyihasining infratuzilma qurilishi muvaffaqiyatli yakunlandi.",
-    category: "Loyihalar",
+    key: 'smartCityPhase',
+    categoryKey: 'projects',
     date: "2024-12-25",
-    readTime: "3 daqiqa",
+    readTime: 3,
     image: "/images/news/smart-city.jpg",
   },
   {
     id: 3,
-    title: "Yangi a'zolik dasturi e'lon qilindi",
-    excerpt: "Kichik va o'rta biznes uchun maxsus imtiyozli a'zolik dasturi ishga tushirildi.",
-    category: "E'lonlar",
+    key: 'membershipProgram',
+    categoryKey: 'announcements',
     date: "2024-12-22",
-    readTime: "4 daqiqa",
+    readTime: 4,
     image: "/images/news/membership.jpg",
   },
   {
     id: 4,
-    title: "Dubai Chamber bilan hamkorlik memorandumi",
-    excerpt: "Dubai Savdo Palatasi bilan strategik hamkorlik to'g'risida memorandum imzolandi.",
-    category: "Hamkorlik",
+    key: 'dubaiChamber',
+    categoryKey: 'partnership',
     date: "2024-12-20",
-    readTime: "3 daqiqa",
+    readTime: 3,
     image: "/images/news/dubai.jpg",
   },
 ]
 
-const months: Record<string, string> = {
-  '01': 'yanvar',
-  '02': 'fevral',
-  '03': 'mart',
-  '04': 'aprel',
+const monthKeys: Record<string, string> = {
+  '01': 'january',
+  '02': 'february',
+  '03': 'march',
+  '04': 'april',
   '05': 'may',
-  '06': 'iyun',
-  '07': 'iyul',
-  '08': 'avgust',
-  '09': 'sentyabr',
-  '10': 'oktyabr',
-  '11': 'noyabr',
-  '12': 'dekabr',
-}
-
-function formatDate(dateString: string) {
-  const [year, month, day] = dateString.split('-')
-  return `${parseInt(day)}-${months[month]}, ${year}`
+  '06': 'june',
+  '07': 'july',
+  '08': 'august',
+  '09': 'september',
+  '10': 'october',
+  '11': 'november',
+  '12': 'december',
 }
 
 export default function News() {
+  const t = useTranslations('news')
   const sectionRef = useRef<HTMLElement>(null)
   const isInView = useInView(sectionRef, { once: true, amount: 0.2 })
+
+  const formatDate = (dateString: string) => {
+    const [year, month, day] = dateString.split('-')
+    return `${parseInt(day)} ${t(`months.${monthKeys[month]}`)}, ${year}`
+  }
+
+  const news = newsConfig.map((item) => ({
+    ...item,
+    title: t(`articles.${item.key}.title`),
+    excerpt: t(`articles.${item.key}.excerpt`),
+    category: t(`categories.${item.categoryKey}`),
+  }))
 
   const featuredNews = news[0]
   const otherNews = news.slice(1)
@@ -96,16 +101,16 @@ export default function News() {
           <div className="max-w-2xl">
             <span className="badge-gold mb-6">
               <span className="w-2 h-2 rounded-full bg-gold-500" />
-              So'nggi Yangiliklar
+              {t('badge')}
             </span>
 
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-semibold text-white" style={{ letterSpacing: '-0.025em' }}>
-              Yangiliklar va <span className="text-gradient-gold font-display">Tadbirlar</span>
+              {t('headline')} <span className="text-gradient-gold font-display">{t('headlineHighlight')}</span>
             </h2>
           </div>
 
           <Link href="/news" className="btn-secondary inline-flex items-center gap-2 self-start md:self-auto">
-            <span>Barcha Yangiliklar</span>
+            <span>{t('viewAll')}</span>
             <ArrowRight className="w-5 h-5" />
           </Link>
         </motion.div>
@@ -138,7 +143,7 @@ export default function News() {
                     </span>
                     <span className="text-white/40 text-sm flex items-center gap-1.5">
                       <Clock className="w-3.5 h-3.5" />
-                      {featuredNews.readTime}
+                      {featuredNews.readTime} {t('readTime')}
                     </span>
                   </div>
 
@@ -161,7 +166,7 @@ export default function News() {
                       <span className="text-sm">{formatDate(featuredNews.date)}</span>
                     </div>
                     <div className="flex items-center gap-2 text-gold-400 group-hover:text-gold-300 transition-colors">
-                      <span className="font-medium">O'qish</span>
+                      <span className="font-medium">{t('readMore')}</span>
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </div>
                   </div>
@@ -191,7 +196,7 @@ export default function News() {
                       </span>
                       <span className="text-white/30 text-xs flex items-center gap-1">
                         <Clock className="w-3 h-3" />
-                        {item.readTime}
+                        {item.readTime} {t('readTime')}
                       </span>
                     </div>
 

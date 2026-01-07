@@ -42,10 +42,12 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: #030712;
   }
 
   body {
     @apply font-body antialiased bg-navy-900 text-white;
+    background-color: #030712;
     font-feature-settings: "rlig" 1, "calt" 1, "ss01" 1;
     letter-spacing: -0.01em;
   }

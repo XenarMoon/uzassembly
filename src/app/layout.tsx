@@ -32,37 +32,8 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "O'zbekiston Iqtisodiyot Assambleyasi | Tadbirkorlar Uchun Yagona Ekotizim",
-  description: "O'zbekiston Iqtisodiyot Assambleyasi — 46+ sanoat assotsiatsiyasini birlashtiruvchi, 8 ta strategik xizmat yo'nalishi va $20B+ investitsiya loyihalarini boshqaruvchi tashkilot. Smart City, GR, FR, BR xizmatlari.",
-  keywords: [
-    "O'zbekiston",
-    'Iqtisodiyot',
-    'Assambleyasi',
-    'Tadbirkorlik',
-    'Investitsiya',
-    'Smart City',
-    'Biznes',
-    'GR',
-    'Government Relations',
-    'Assotsiatsiyalar'
-  ],
-  authors: [{ name: "O'zbekiston Iqtisodiyot Assambleyasi" }],
-  openGraph: {
-    title: "O'zbekiston Iqtisodiyot Assambleyasi",
-    description: "Tadbirkorlar Uchun Yagona Ekotizim — 8 ta strategik yo'nalish, 46+ assotsiatsiya",
-    type: 'website',
-    locale: 'uz_UZ',
-    siteName: "Assembly.uz",
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: "O'zbekiston Iqtisodiyot Assambleyasi",
-    description: "Tadbirkorlar Uchun Yagona Ekotizim",
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
+  title: "O'zbekiston Iqtisodiyot Assambleyasi",
+  description: "Tadbirkorlar Uchun Yagona Ekotizim",
 }
 
 export default function RootLayout({
@@ -72,10 +43,11 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang="uz"
       className={`scroll-smooth ${inter.variable} ${dmSerifDisplay.variable} ${dmSans.variable} ${jetbrainsMono.variable}`}
+      suppressHydrationWarning
+      style={{ backgroundColor: '#030712' }}
     >
-      <body className="font-body bg-navy-900 text-white overflow-x-hidden antialiased">
+      <body className="font-body bg-[#030712] text-white overflow-x-hidden antialiased" style={{ backgroundColor: '#030712' }}>
         {children}
       </body>
     </html>

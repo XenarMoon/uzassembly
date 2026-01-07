@@ -2,61 +2,64 @@
 
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import Link from 'next/link'
+import { Link } from '@/lib/navigation'
 import { ArrowRight, MapPin, DollarSign, Calendar, Building2 } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import { cn } from '@/lib/utils'
 
-const projects = [
+const projectsConfig = [
   {
     id: 1,
-    title: "Ohangaron Smart City",
-    description: "6,400 gektar maydonda zamonaviy smart city qurilishi",
-    location: "Toshkent viloyati",
+    key: 'smartCity',
     investment: "$2.5B",
-    status: "Faol",
+    statusKey: 'active',
     year: "2024-2030",
     featured: true,
     image: "/images/smart-city.jpg",
-    category: "Smart City",
+    categoryKey: 'smartCity',
   },
   {
     id: 2,
-    title: "Industrial Park Jizzax",
-    description: "Yangi sanoat zonasi va logistika markazi",
-    location: "Jizzax viloyati",
+    key: 'industrialPark',
     investment: "$800M",
-    status: "Rejalashtirilmoqda",
+    statusKey: 'planned',
     year: "2025-2028",
     image: "/images/industrial.jpg",
-    category: "Sanoat",
+    categoryKey: 'industrial',
   },
   {
     id: 3,
-    title: "Agro Tech Hub",
-    description: "Qishloq xo'jaligida zamonaviy texnologiyalar markazi",
-    location: "Farg'ona vodiysi",
+    key: 'agroTechHub',
     investment: "$350M",
-    status: "Faol",
+    statusKey: 'active',
     year: "2024-2027",
     image: "/images/agro.jpg",
-    category: "Agro",
+    categoryKey: 'agro',
   },
   {
     id: 4,
-    title: "Textile Innovation Center",
-    description: "To'qimachilik sohasida innovatsion ishlab chiqarish",
-    location: "Namangan",
+    key: 'textileCenter',
     investment: "$500M",
-    status: "Faol",
+    statusKey: 'active',
     year: "2024-2026",
     image: "/images/textile.jpg",
-    category: "Ishlab chiqarish",
+    categoryKey: 'manufacturing',
   },
 ]
 
 export default function Projects() {
+  const t = useTranslations('projects')
   const sectionRef = useRef<HTMLElement>(null)
   const isInView = useInView(sectionRef, { once: true, amount: 0.2 })
+
+  const projects = projectsConfig.map((project) => ({
+    ...project,
+    title: t(`items.${project.key}.title`),
+    description: t(`items.${project.key}.description`),
+    location: t(`items.${project.key}.location`),
+    status: t(`statuses.${project.statusKey}`),
+    category: t(`categories.${project.categoryKey}`),
+  }))
 
   return (
     <section
@@ -97,16 +100,16 @@ export default function Projects() {
           <div className="max-w-2xl">
             <span className="badge-gold mb-6">
               <span className="w-2 h-2 rounded-full bg-gold-500" />
-              Strategik Loyihalar
+              {t('badge')}
             </span>
 
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-semibold text-white" style={{ letterSpacing: '-0.025em' }}>
-              Yirik <span className="text-gradient-gold font-display">Loyihalar</span>
+              {t('headline')} <span className="text-gradient-gold font-display">{t('headlineHighlight')}</span>
             </h2>
           </div>
 
           <Link href="/projects" className="btn-secondary inline-flex items-center gap-2 self-start md:self-auto">
-            <span>Barcha Loyihalar</span>
+            <span>{t('viewAll')}</span>
             <ArrowRight className="w-5 h-5" />
           </Link>
         </motion.div>
@@ -163,14 +166,14 @@ export default function Projects() {
                     <div className="glass rounded-xl p-4">
                       <div className="flex items-center gap-2 text-gold-400 mb-2">
                         <DollarSign className="w-5 h-5" />
-                        <span className="text-sm text-white/50">Investitsiya</span>
+                        <span className="text-sm text-white/50">{t('labels.investment')}</span>
                       </div>
                       <p className="font-mono text-2xl font-bold text-white tracking-tight">{projects[0].investment}</p>
                     </div>
                     <div className="glass rounded-xl p-4">
                       <div className="flex items-center gap-2 text-gold-400 mb-2">
                         <MapPin className="w-5 h-5" />
-                        <span className="text-sm text-white/50">Joylashuv</span>
+                        <span className="text-sm text-white/50">{t('labels.location')}</span>
                       </div>
                       <p className="font-heading text-lg font-semibold text-white">{projects[0].location}</p>
                     </div>
@@ -178,7 +181,7 @@ export default function Projects() {
 
                   {/* CTA */}
                   <div className="mt-6 flex items-center gap-2 text-gold-400 group-hover:text-gold-300 transition-colors">
-                    <span className="font-medium">Batafsil</span>
+                    <span className="font-medium">{t('readMore')}</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
                   </div>
                 </div>
@@ -207,7 +210,7 @@ export default function Projects() {
                       </span>
                       <span className={cn(
                         'text-xs font-medium px-2 py-1 rounded-full',
-                        project.status === 'Faol' ? 'bg-emerald-500/20 text-emerald-400' : 'bg-amber-500/20 text-amber-400'
+                        project.statusKey === 'active' ? 'bg-emerald-500/20 text-emerald-400' : 'bg-amber-500/20 text-amber-400'
                       )}>
                         {project.status}
                       </span>

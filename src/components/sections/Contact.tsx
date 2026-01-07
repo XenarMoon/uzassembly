@@ -2,25 +2,27 @@
 
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import Link from 'next/link'
+import { Link } from '@/lib/navigation'
 import { MapPin, Phone, Mail, Clock, ArrowRight, Globe2 } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import { cn } from '@/lib/utils'
 
-const offices = [
-  {
-    city: "Toshkent",
-    country: "O'zbekiston",
-    address: "Furqat ko'chasi 1/1, 100066",
-    phone: "+998 91 774 14 16",
-    email: "info@uzassembly.uz",
-    hours: "Du-Sha: 09:00 - 18:00",
-    main: true,
-  },
-]
-
 export default function Contact() {
+  const t = useTranslations('contact')
   const sectionRef = useRef<HTMLElement>(null)
   const isInView = useInView(sectionRef, { once: true, amount: 0.2 })
+
+  const offices = [
+    {
+      city: "Toshkent",
+      country: "O'zbekiston",
+      address: t('info.address.value'),
+      phone: t('info.phone.value'),
+      email: t('info.email.value'),
+      hours: t('info.hours.value'),
+      main: true,
+    },
+  ]
 
   return (
     <section
@@ -43,15 +45,15 @@ export default function Contact() {
         >
           <span className="badge-gold mb-4 sm:mb-6 text-xs sm:text-sm">
             <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-gold-500" />
-            Biz Bilan Bog'laning
+            {t('badge')}
           </span>
 
           <h2 className="font-heading text-2xl sm:text-3xl lg:text-5xl xl:text-6xl font-semibold text-white mb-4 sm:mb-6" style={{ letterSpacing: '-0.025em' }}>
-            Biz Bilan <span className="text-gradient-gold font-display">Bog'laning</span>
+            {t('headline')} <span className="text-gradient-gold font-display">{t('headlineHighlight')}</span>
           </h2>
 
           <p className="text-base sm:text-lg lg:text-xl text-white/60 max-w-2xl mx-auto">
-            Savollaringiz bormi? Jamoamiz sizga yordam berishga tayyor
+            {t('description')}
           </p>
         </motion.div>
 
@@ -88,7 +90,7 @@ export default function Contact() {
                   </div>
                   {office.main && (
                     <span className="px-2 py-1 rounded-full bg-gold-500/20 text-gold-400 text-[10px] sm:text-xs font-medium">
-                      Bosh Ofis
+                      {t('info.address.label')}
                     </span>
                   )}
                 </div>
@@ -129,7 +131,7 @@ export default function Contact() {
           className="text-center"
         >
           <Link href="/contact" className="btn-primary inline-flex text-sm sm:text-base">
-            <span>Aloqa Formasi</span>
+            <span>{t('form.submit')}</span>
             <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
           </Link>
         </motion.div>

@@ -2,7 +2,7 @@
 
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import Link from 'next/link'
+import { Link } from '@/lib/navigation'
 import {
   Building2,
   TrendingUp,
@@ -16,18 +16,15 @@ import {
   Sparkles,
   ArrowUpRight
 } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import { cn } from '@/lib/utils'
 
-const services = [
+const servicesConfig = [
   {
     id: 'smart-city',
-    name: 'Smart City',
-    tagline: 'Kelajak Shahri',
-    description: "6,400 gektar maydonda qurilayotgan O'zbekistonning eng yirik smart city loyihasi. Zamonaviy infratuzilma, yashil texnologiyalar.",
+    key: 'smartCity',
     icon: MapPin,
     href: '/services/smart-city',
-    stats: { value: '6,400', label: 'gektar' },
-    location: 'Ohangaron, Toshkent',
     featured: true,
     gradient: 'from-gold-500/20 via-gold-400/10 to-transparent',
     iconBg: 'bg-gold-500/20',
@@ -35,9 +32,7 @@ const services = [
   },
   {
     id: 'biznes-darcha',
-    name: 'Biznes Darcha',
-    tagline: 'Raqamli Platforma',
-    description: "Barcha biznes xizmatlari bir joyda — litsenziyalar, ruxsatnomalar, konsultatsiyalar",
+    key: 'biznesDarcha',
     icon: Building2,
     href: '/services/biznes-darcha',
     gradient: 'from-turquoise-500/20 via-turquoise-400/10 to-transparent',
@@ -46,9 +41,7 @@ const services = [
   },
   {
     id: 'invest-hub',
-    name: 'Invest Hub',
-    tagline: 'Investitsiya Markazi',
-    description: "Investorlar va loyihalar uchun yagona platforma. $20B+ loyihalar bazasi",
+    key: 'investHub',
     icon: TrendingUp,
     href: '/services/invest-hub',
     gradient: 'from-emerald-500/20 via-emerald-400/10 to-transparent',
@@ -57,9 +50,7 @@ const services = [
   },
   {
     id: 'edu-job',
-    name: 'Edu Job',
-    tagline: "Ta'lim va Ish",
-    description: "Kadrlar tayyorlash, malaka oshirish va ish joylarini yaratish dasturlari",
+    key: 'eduJob',
     icon: GraduationCap,
     href: '/services/edu-job',
     gradient: 'from-amber-500/20 via-amber-400/10 to-transparent',
@@ -68,9 +59,7 @@ const services = [
   },
   {
     id: 'reportaj-go',
-    name: 'Reportaj GO',
-    tagline: 'Media Platforma',
-    description: "Tadbirkorlik yangiliklari, voqealar va media kontentni yaratish xizmati",
+    key: 'reportajGo',
     icon: Video,
     href: '/services/reportaj-go',
     gradient: 'from-rose-500/20 via-rose-400/10 to-transparent',
@@ -79,9 +68,7 @@ const services = [
   },
   {
     id: 'government-relations',
-    name: 'GR',
-    tagline: 'Government Relations',
-    description: "Davlat organlari bilan munosabatlar, qonunchilik tashabbuslarida ishtirok",
+    key: 'gr',
     icon: Landmark,
     href: '/services/government-relations',
     gradient: 'from-blue-500/20 via-blue-400/10 to-transparent',
@@ -90,9 +77,7 @@ const services = [
   },
   {
     id: 'foreign-relations',
-    name: 'FR',
-    tagline: 'Foreign Relations',
-    description: "Xalqaro aloqalar, eksport ko'magi, xorijiy delegatsiyalar bilan hamkorlik",
+    key: 'fr',
     icon: Globe2,
     href: '/services/foreign-relations',
     gradient: 'from-purple-500/20 via-purple-400/10 to-transparent',
@@ -101,9 +86,7 @@ const services = [
   },
   {
     id: 'business-relations',
-    name: 'BR',
-    tagline: 'Business Relations',
-    description: "B2B aloqalar, biznes networking, hamkorlik imkoniyatlari",
+    key: 'br',
     icon: Handshake,
     href: '/services/business-relations',
     gradient: 'from-cyan-500/20 via-cyan-400/10 to-transparent',
@@ -113,10 +96,22 @@ const services = [
 ]
 
 export default function Services() {
+  const t = useTranslations('services')
   const sectionRef = useRef<HTMLElement>(null)
   const isInView = useInView(sectionRef, { once: true, amount: 0.1 })
 
-  const featuredService = services[0]
+  const services = servicesConfig.map((service) => ({
+    ...service,
+    name: t(`items.${service.key}.name`),
+    tagline: t(`items.${service.key}.tagline`),
+    description: t(`items.${service.key}.description`),
+  }))
+
+  const featuredService = {
+    ...services[0],
+    stats: { value: t('items.smartCity.stats.area'), label: t('items.smartCity.stats.unit') },
+    location: 'Ohangaron, Toshkent',
+  }
   const otherServices = services.slice(1)
 
   return (
@@ -162,20 +157,20 @@ export default function Services() {
           <div className="max-w-2xl">
             <span className="badge-gold mb-6">
               <span className="w-2 h-2 rounded-full bg-gold-500" />
-              8 ta Strategik Yo'nalish
+              {t('badge')}
             </span>
 
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-semibold text-white mb-4 lg:mb-6" style={{ letterSpacing: '-0.025em' }}>
-              Xizmatlar <span className="text-gradient-gold font-display">Ekotizimi</span>
+              {t('headline')} <span className="text-gradient-gold font-display">{t('headlineHighlight')}</span>
             </h2>
 
             <p className="text-lg lg:text-xl text-white/60">
-              Tadbirkorlik faoliyatingizni rivojlantirish uchun barcha zarur xizmatlar — bir joyda
+              {t('description')}
             </p>
           </div>
 
           <Link href="/services" className="btn-secondary inline-flex items-center gap-2 self-start lg:self-auto">
-            <span>Barcha Xizmatlar</span>
+            <span>{t('viewAll')}</span>
             <ArrowRight className="w-5 h-5" />
           </Link>
         </motion.div>
@@ -209,11 +204,11 @@ export default function Services() {
                   <div className="flex items-center gap-3 mb-6">
                     <span className="px-3 py-1.5 rounded-full bg-gold-500/20 text-gold-400 text-sm font-medium flex items-center gap-1.5">
                       <Sparkles className="w-3.5 h-3.5" />
-                      Flagship Loyiha
+                      {t('flagshipProject')}
                     </span>
                     <span className="px-3 py-1.5 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-medium flex items-center gap-1.5">
                       <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                      Faol
+                      {t('active')}
                     </span>
                   </div>
 
@@ -234,7 +229,7 @@ export default function Services() {
                   </p>
 
                   <div className="flex items-center gap-3 text-gold-400 group-hover:text-gold-300 transition-colors">
-                    <span className="font-semibold text-lg">Loyihani Ko'rish</span>
+                    <span className="font-semibold text-lg">{t('viewProject')}</span>
                     <ArrowUpRight className="w-6 h-6 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                   </div>
                 </div>
@@ -243,24 +238,24 @@ export default function Services() {
                 <div className="lg:col-span-5 xl:col-span-4">
                   <div className="grid grid-cols-2 gap-4">
                     <div className="glass rounded-2xl p-5 lg:p-6">
-                      <p className="text-white/40 text-sm mb-2">Maydon</p>
+                      <p className="text-white/40 text-sm mb-2">{t('area')}</p>
                       <p className="font-display text-3xl lg:text-4xl font-bold text-gold-400">
                         {featuredService.stats?.value}
                       </p>
                       <p className="text-gold-400/60 text-sm">{featuredService.stats?.label}</p>
                     </div>
                     <div className="glass rounded-2xl p-5 lg:p-6">
-                      <p className="text-white/40 text-sm mb-2">Joylashuv</p>
+                      <p className="text-white/40 text-sm mb-2">{t('location')}</p>
                       <p className="text-white font-semibold text-lg lg:text-xl">{featuredService.location}</p>
                     </div>
                     <div className="glass rounded-2xl p-5 lg:p-6">
-                      <p className="text-white/40 text-sm mb-2">Investitsiya</p>
+                      <p className="text-white/40 text-sm mb-2">{t('investment')}</p>
                       <p className="font-display text-2xl lg:text-3xl font-bold text-emerald-400">$2.5B</p>
                     </div>
                     <div className="glass rounded-2xl p-5 lg:p-6">
-                      <p className="text-white/40 text-sm mb-2">Status</p>
+                      <p className="text-white/40 text-sm mb-2">{t('status')}</p>
                       <p className="text-white font-semibold">2024-2030</p>
-                      <p className="text-white/40 text-sm">Qurilish</p>
+                      <p className="text-white/40 text-sm">{t('planned')}</p>
                     </div>
                   </div>
                 </div>

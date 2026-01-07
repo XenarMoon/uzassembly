@@ -1,48 +1,47 @@
 'use client'
 
-import { useEffect, useState, useRef } from 'react'
-import { motion, useScroll, useTransform } from 'framer-motion'
-import Link from 'next/link'
-import { ArrowRight, ChevronDown, Building2, Compass, MapPin, Globe2, Play } from 'lucide-react'
-import AnimatedBackground from '@/components/animations/AnimatedBackground'
+import { useEffect, useState, useRef, useCallback } from 'react'
+import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
+import { Link } from '@/lib/navigation'
+import { ArrowRight, ChevronDown, Building2, Compass, MapPin, Globe2, Play, X } from 'lucide-react'
+import { useTranslations } from 'next-intl'
+import ParticleGlobe from '@/components/animations/ParticleGlobe'
 import { cn, formatNumber } from '@/lib/utils'
 
-const stats = [
+const YOUTUBE_VIDEO_ID = 'pwGThTieavI'
+
+const statsConfig = [
   {
+    key: 'associations',
     value: 46,
     suffix: '+',
-    label: 'Assotsiatsiyalar',
-    description: 'Sanoat birlashmalari',
     icon: Building2,
     gradient: 'from-gold-400 via-gold-500 to-amber-500',
     glowColor: 'rgba(212, 175, 55, 0.4)',
     bgGradient: 'from-gold-500/10 via-gold-500/5 to-transparent',
   },
   {
+    key: 'services',
     value: 8,
     suffix: '',
-    label: 'Xizmat Yo\'nalishi',
-    description: 'Strategik xizmatlar',
     icon: Compass,
     gradient: 'from-turquoise-400 via-turquoise-500 to-emerald-500',
     glowColor: 'rgba(13, 148, 136, 0.4)',
     bgGradient: 'from-turquoise-500/10 via-turquoise-500/5 to-transparent',
   },
   {
+    key: 'smartCity',
     value: 6400,
     suffix: '',
-    label: 'ga Smart City',
-    description: 'Ohangaron, Toshkent',
     icon: MapPin,
     gradient: 'from-gold-400 via-amber-500 to-orange-500',
     glowColor: 'rgba(245, 158, 11, 0.4)',
     bgGradient: 'from-amber-500/10 via-amber-500/5 to-transparent',
   },
   {
+    key: 'offices',
     value: 3,
     suffix: '',
-    label: 'Xalqaro Ofis',
-    description: 'Dubay, Singapur, Pekin',
     icon: Globe2,
     gradient: 'from-purple-400 via-violet-500 to-indigo-500',
     glowColor: 'rgba(139, 92, 246, 0.4)',
@@ -109,7 +108,9 @@ function AnimatedCounter({
 }
 
 export default function Hero() {
+  const t = useTranslations('hero')
   const containerRef = useRef<HTMLDivElement>(null)
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false)
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ['start start', 'end start'],
@@ -118,14 +119,44 @@ export default function Hero() {
   const y = useTransform(scrollYProgress, [0, 1], ['0%', '30%'])
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
 
+  // Handle escape key to close modal
+  const handleKeyDown = useCallback((e: KeyboardEvent) => {
+    if (e.key === 'Escape') {
+      setIsVideoModalOpen(false)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (isVideoModalOpen) {
+      document.addEventListener('keydown', handleKeyDown)
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown)
+      document.body.style.overflow = ''
+    }
+  }, [isVideoModalOpen, handleKeyDown])
+
+  const stats = statsConfig.map((stat) => ({
+    ...stat,
+    label: t(`stats.${stat.key}.label`),
+    description: t(`stats.${stat.key}.description`),
+  }))
+
   return (
     <section
       ref={containerRef}
-      className="relative min-h-screen flex flex-col"
+      className="relative min-h-screen flex flex-col bg-[#030712]"
+      style={{ transform: 'translateZ(0)', backfaceVisibility: 'hidden' }}
     >
-      {/* Animated Background */}
-      <div className="absolute inset-0 overflow-hidden">
-        <AnimatedBackground />
+      {/* 3D Particle Globe Background */}
+      <div
+        className="absolute inset-0 overflow-hidden bg-[#030712]"
+        style={{ transform: 'translateZ(0)', willChange: 'transform' }}
+      >
+        <ParticleGlobe />
       </div>
 
       {/* Main Content */}
@@ -148,7 +179,7 @@ export default function Hero() {
                 >
                   <span className="badge-gold text-xs sm:text-sm">
                     <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-gold-500 animate-pulse" />
-                    <span>O'zbekistonda ilk bor yangi format</span>
+                    <span>{t('badge')}</span>
                   </span>
                 </motion.div>
 
@@ -160,9 +191,9 @@ export default function Hero() {
                   className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-semibold leading-[1.1] mb-4 sm:mb-6"
                   style={{ letterSpacing: '-0.03em' }}
                 >
-                  <span className="text-white">Tadbirkorlar Uchun</span>
+                  <span className="text-gradient-gold font-display" style={{ letterSpacing: '-0.02em' }}>{t('headline')}</span>
                   <br />
-                  <span className="text-gradient-gold font-display" style={{ letterSpacing: '-0.02em' }}>Yagona Ekotizim</span>
+                  <span className="text-white">{t('headlineHighlight')}</span>
                 </motion.h1>
 
                 {/* Subheadline */}
@@ -172,8 +203,8 @@ export default function Hero() {
                   transition={{ duration: 0.6, delay: 0.5 }}
                   className="text-base sm:text-lg md:text-xl lg:text-lg xl:text-xl text-white/60 max-w-xl mx-auto lg:mx-0 mb-6 sm:mb-8 leading-relaxed"
                 >
-                  8 ta strategik yo'nalish. 46+ sanoat assotsiatsiyasi.
-                  <span className="text-white/80 font-medium"> Barcha biznes ehtiyojlaringiz — bir joyda.</span>
+                  {t('subheadline')}
+                  <span className="text-white/80 font-medium"> {t('subheadlineHighlight')}</span>
                 </motion.p>
 
                 {/* CTA Buttons */}
@@ -184,17 +215,20 @@ export default function Hero() {
                   className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4"
                 >
                   <Link href="/services" className="btn-primary group w-full sm:w-auto justify-center">
-                    <span>Xizmatlarni Ko'rish</span>
+                    <span>{t('cta.viewServices')}</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                   <Link href="/contact" className="btn-secondary w-full sm:w-auto justify-center">
-                    A'zo Bo'lish
+                    {t('cta.becomeMember')}
                   </Link>
-                  <button className="flex items-center gap-3 px-4 py-3 text-white/60 hover:text-white transition-colors group">
+                  <button
+                    onClick={() => setIsVideoModalOpen(true)}
+                    className="flex items-center gap-3 px-4 py-3 text-white/60 hover:text-white transition-colors group"
+                  >
                     <span className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-gold-500/20 transition-colors">
                       <Play className="w-4 h-4 sm:w-5 sm:h-5 text-gold-400 ml-0.5" />
                     </span>
-                    <span className="font-medium text-sm sm:text-base">Video Ko'rish</span>
+                    <span className="font-medium text-sm sm:text-base">{t('cta.watchVideo')}</span>
                   </button>
                 </motion.div>
               </div>
@@ -318,21 +352,21 @@ export default function Hero() {
               <div className="flex items-center gap-2 sm:gap-3">
                 <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-emerald-500 animate-pulse" />
                 <span className="text-white/60 text-xs sm:text-sm">
-                  <span className="text-emerald-400 font-mono font-semibold">15,000+</span> faol a'zolar
+                  <span className="text-emerald-400 font-mono font-semibold">15,000+</span> {t('bottomStats.members')}
                 </span>
               </div>
               <div className="hidden sm:block w-px h-4 bg-white/10" />
               <div className="flex items-center gap-2 sm:gap-3">
                 <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-gold-500 animate-pulse" />
                 <span className="text-white/60 text-xs sm:text-sm">
-                  <span className="text-gold-400 font-mono font-semibold">$20B+</span> investitsiya
+                  <span className="text-gold-400 font-mono font-semibold">$20B+</span> {t('bottomStats.investment')}
                 </span>
               </div>
               <div className="hidden sm:block w-px h-4 bg-white/10" />
               <div className="flex items-center gap-2 sm:gap-3">
                 <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-turquoise-400 animate-pulse" />
                 <span className="text-white/60 text-xs sm:text-sm">
-                  <span className="text-turquoise-400 font-mono font-semibold">2015</span> yildan beri
+                  <span className="text-turquoise-400 font-mono font-semibold">10+</span> {t('bottomStats.since')}
                 </span>
               </div>
             </div>
@@ -353,10 +387,66 @@ export default function Hero() {
           transition={{ duration: 2, repeat: Infinity }}
           className="flex flex-col items-center gap-1.5 sm:gap-2 text-white/30 hover:text-gold-400 transition-colors cursor-pointer"
         >
-          <span className="text-[9px] sm:text-[10px] font-medium uppercase tracking-[0.2em]">Pastga</span>
           <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5" />
         </motion.a>
       </motion.div>
+
+      {/* Video Modal */}
+      <AnimatePresence>
+        {isVideoModalOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6"
+            onClick={() => setIsVideoModalOpen(false)}
+          >
+            {/* Backdrop */}
+            <div className="absolute inset-0 bg-navy-950/95 backdrop-blur-md" />
+
+            {/* Modal Content */}
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+              className="relative w-full max-w-5xl aspect-video"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Close Button */}
+              <button
+                onClick={() => setIsVideoModalOpen(false)}
+                className="absolute -top-12 right-0 sm:-top-14 sm:-right-2 p-2 text-white/60 hover:text-white transition-colors group"
+              >
+                <span className="flex items-center gap-2 text-sm font-medium">
+                  <span className="hidden sm:inline">{t('cta.closeVideo')}</span>
+                  <X className="w-6 h-6 group-hover:rotate-90 transition-transform duration-300" />
+                </span>
+              </button>
+
+              {/* Video Container with Glow */}
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                {/* Glow Effect */}
+                <div className="absolute -inset-1 bg-gradient-to-r from-gold-500/20 via-turquoise-500/20 to-gold-500/20 rounded-2xl blur-xl opacity-60" />
+
+                {/* Border */}
+                <div className="relative rounded-2xl p-[1px] bg-gradient-to-r from-gold-500/40 via-white/20 to-turquoise-500/40">
+                  <div className="rounded-2xl overflow-hidden bg-navy-900">
+                    <iframe
+                      src={`https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1&rel=0&modestbranding=1`}
+                      title="Assembly Video"
+                      className="w-full aspect-video"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   )
 }

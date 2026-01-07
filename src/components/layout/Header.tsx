@@ -2,45 +2,43 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import Link from 'next/link'
+import { Link } from '@/lib/navigation'
 import Image from 'next/image'
-import { MoreVertical, X, ChevronDown, Globe } from 'lucide-react'
+import { useLocale, useTranslations } from 'next-intl'
+import { MoreVertical, X, ChevronDown } from 'lucide-react'
 import { cn } from '@/lib/utils'
-
-const navLinks = [
-  { name: 'Biz Haqimizda', href: '/about' },
-  {
-    name: 'Xizmatlar',
-    href: '/services',
-    submenu: [
-      { name: 'Biznes Darcha', href: '/services/biznes-darcha' },
-      { name: 'Invest Hub', href: '/services/invest-hub' },
-      { name: 'Edu Job', href: '/services/edu-job' },
-      { name: 'Reportaj GO', href: '/services/reportaj-go' },
-      { name: 'GR', href: '/services/government-relations' },
-      { name: 'FR', href: '/services/foreign-relations' },
-      { name: 'BR', href: '/services/business-relations' },
-      { name: 'Smart City', href: '/services/smart-city' },
-    ]
-  },
-  { name: 'Assotsiatsiyalar', href: '/associations' },
-  { name: 'Loyihalar', href: '/projects' },
-  { name: 'Yangiliklar', href: '/news' },
-  { name: 'Aloqa', href: '/contact' },
-]
-
-const languages = [
-  { code: 'uz', name: "O'zbekcha", flag: '🇺🇿' },
-  { code: 'ru', name: 'Русский', flag: '🇷🇺' },
-  { code: 'en', name: 'English', flag: '🇬🇧' },
-]
+import LanguageSwitcher from '@/components/ui/LanguageSwitcher'
+import type { Locale } from '@/i18n/config'
 
 export default function Header() {
+  const locale = useLocale() as Locale
+  const t = useTranslations('navigation')
+
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null)
-  const [currentLang, setCurrentLang] = useState('uz')
-  const [isLangOpen, setIsLangOpen] = useState(false)
+
+  const navLinks = [
+    { name: t('about'), href: '/about' },
+    {
+      name: t('services'),
+      href: '/services',
+      submenu: [
+        { name: t('servicesSubmenu.biznesDarcha'), href: '/services/biznes-darcha' },
+        { name: t('servicesSubmenu.investHub'), href: '/services/invest-hub' },
+        { name: t('servicesSubmenu.eduJob'), href: '/services/edu-job' },
+        { name: t('servicesSubmenu.reportajGo'), href: '/services/reportaj-go' },
+        { name: t('servicesSubmenu.gr'), href: '/services/government-relations' },
+        { name: t('servicesSubmenu.fr'), href: '/services/foreign-relations' },
+        { name: t('servicesSubmenu.br'), href: '/services/business-relations' },
+        { name: t('servicesSubmenu.smartCity'), href: '/services/smart-city' },
+      ]
+    },
+    { name: t('associations'), href: '/associations' },
+    { name: t('projects'), href: '/projects' },
+    { name: t('news'), href: '/news' },
+    { name: t('contact'), href: '/contact' },
+  ]
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,9 +65,10 @@ export default function Header() {
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-500',
         isScrolled
-          ? 'bg-navy-900/90 backdrop-blur-xl border-b border-white/5 py-3'
-          : 'bg-transparent py-5'
+          ? 'bg-[#030712] backdrop-blur-xl border-b border-white/[0.02] py-3'
+          : 'bg-[#030712]/0 py-5'
       )}
+      style={{ transform: 'translateZ(0)', willChange: 'transform', backfaceVisibility: 'hidden' }}
     >
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-12 xl:px-16 2xl:px-24">
         <nav className="flex items-center justify-between">
@@ -81,7 +80,7 @@ export default function Header() {
               className="relative h-12 w-40 sm:h-16 sm:w-52 md:h-20 md:w-64 lg:h-24 lg:w-80 xl:h-28 xl:w-[380px]"
             >
               <Image
-                src={currentLang === 'en' ? '/images/logo/assembly-logo-en.png' : '/images/logo/assembly-logo-uz.png'}
+                src={locale === 'en' ? '/images/logo/assembly-logo-en.png' : '/images/logo/assembly-logo-uz.png'}
                 alt="Iqtisodiyot Assambleyasi"
                 fill
                 sizes="(max-width: 640px) 160px, (max-width: 768px) 208px, (max-width: 1024px) 256px, (max-width: 1280px) 320px, 380px"
@@ -127,12 +126,12 @@ export default function Header() {
                         transition={{ duration: 0.2 }}
                         className="absolute top-full left-0 pt-2 w-56"
                       >
-                        <div className="glass rounded-xl p-2 shadow-2xl">
+                        <div className="bg-[#0a1628] border border-white/10 rounded-xl p-2 shadow-2xl backdrop-blur-xl">
                           {link.submenu.map((sublink) => (
                             <Link
                               key={sublink.name}
                               href={sublink.href}
-                              className="block px-4 py-2.5 text-sm text-white/70 hover:text-gold-400 hover:bg-white/5 rounded-lg transition-colors"
+                              className="block px-4 py-2.5 text-sm text-white/80 hover:text-gold-400 hover:bg-white/5 rounded-lg transition-colors"
                             >
                               {sublink.name}
                             </Link>
@@ -146,52 +145,15 @@ export default function Header() {
             ))}
 
             {/* Language Selector */}
-            <div className="relative ml-2">
-              <button
-                onClick={() => setIsLangOpen(!isLangOpen)}
-                className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
-              >
-                <Globe className="w-4 h-4" />
-                <span className="uppercase">{currentLang}</span>
-                <ChevronDown className={cn('w-3 h-3 transition-transform', isLangOpen && 'rotate-180')} />
-              </button>
-
-              <AnimatePresence>
-                {isLangOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                    className="absolute right-0 top-full mt-2 w-40 glass rounded-xl p-2 shadow-2xl"
-                  >
-                    {languages.map((lang) => (
-                      <button
-                        key={lang.code}
-                        onClick={() => {
-                          setCurrentLang(lang.code)
-                          setIsLangOpen(false)
-                        }}
-                        className={cn(
-                          'w-full flex items-center gap-3 px-4 py-2.5 text-sm rounded-lg transition-colors text-left',
-                          currentLang === lang.code
-                            ? 'bg-gold-500/20 text-gold-400'
-                            : 'text-white/70 hover:text-white hover:bg-white/5'
-                        )}
-                      >
-                        <span>{lang.flag}</span>
-                        <span>{lang.name}</span>
-                      </button>
-                    ))}
-                  </motion.div>
-                )}
-              </AnimatePresence>
+            <div className="ml-2">
+              <LanguageSwitcher variant="desktop" />
             </div>
           </div>
 
           {/* CTA + Mobile Menu Button */}
           <div className="flex items-center gap-4">
-            <Link href="/membership" className="hidden xl:inline-flex btn-primary text-sm px-6 py-2.5">
-              A'zo Bo'lish
+            <Link href="/contact" className="hidden xl:inline-flex btn-primary text-sm px-6 py-2.5">
+              {t('becomeMember')}
             </Link>
 
             {/* Mobile Menu Button - 3 Dots */}
@@ -297,23 +259,9 @@ export default function Header() {
 
                 {/* Language Selector */}
                 <div className="mb-4">
-                  <p className="px-4 text-xs text-white/40 uppercase tracking-wider mb-2">Til tanlang</p>
-                  <div className="flex gap-2 px-2">
-                    {languages.map((lang) => (
-                      <button
-                        key={lang.code}
-                        onClick={() => setCurrentLang(lang.code)}
-                        className={cn(
-                          'flex-1 flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl text-sm font-medium transition-all',
-                          currentLang === lang.code
-                            ? 'bg-gold-500 text-navy-900 shadow-lg shadow-gold-500/20'
-                            : 'bg-white/5 text-white/60 hover:text-white hover:bg-white/10'
-                        )}
-                      >
-                        <span>{lang.flag}</span>
-                        <span>{lang.code.toUpperCase()}</span>
-                      </button>
-                    ))}
+                  <p className="px-4 text-xs text-white/40 uppercase tracking-wider mb-2">{t('selectLanguage')}</p>
+                  <div className="px-2">
+                    <LanguageSwitcher variant="mobile" />
                   </div>
                 </div>
 
@@ -323,7 +271,7 @@ export default function Header() {
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="btn-primary w-full justify-center text-sm"
                 >
-                  A'zo Bo'lish
+                  {t('becomeMember')}
                 </Link>
               </div>
             </motion.div>

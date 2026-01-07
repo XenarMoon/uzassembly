@@ -2,49 +2,31 @@
 
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import Link from 'next/link'
+import { Link } from '@/lib/navigation'
 import { ArrowRight, Award, Users, TrendingUp, Globe2, Shield, Target, Zap, CheckCircle2 } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import { cn } from '@/lib/utils'
 
-const highlights = [
-  {
-    icon: Users,
-    value: '46+',
-    label: 'Sanoat Assotsiatsiyalari',
-    description: 'Barcha sohalarni qamrab oluvchi',
-  },
-  {
-    icon: TrendingUp,
-    value: '$20B+',
-    label: 'Investitsiya Loyihalari',
-    description: 'Faol portfolio',
-  },
-  {
-    icon: Globe2,
-    value: '3',
-    label: 'Xalqaro Ofis',
-    description: 'Dubay, Singapur, Pekin',
-  },
-  {
-    icon: Award,
-    value: '15+',
-    label: 'Strategik Hamkor',
-    description: 'Xalqaro tashkilotlar',
-  },
-]
-
-const features = [
-  'Davlat organlari bilan to\'g\'ridan-to\'g\'ri dialog',
-  'Xalqaro investorlar bilan aloqa',
-  'Ekspert va konsultatsiya xizmatlari',
-  'Networking va biznes uchrashuvlar',
-  'Huquqiy va moliyaviy yordam',
-  'Ta\'lim va malaka oshirish dasturlari',
+const highlightsConfig = [
+  { key: 'associations', icon: Users },
+  { key: 'investment', icon: TrendingUp },
+  { key: 'offices', icon: Globe2 },
+  { key: 'partners', icon: Award },
 ]
 
 export default function About() {
+  const t = useTranslations('about')
   const sectionRef = useRef<HTMLElement>(null)
   const isInView = useInView(sectionRef, { once: true, amount: 0.2 })
+
+  const highlights = highlightsConfig.map((item) => ({
+    ...item,
+    value: t(`highlights.${item.key}.value`),
+    label: t(`highlights.${item.key}.label`),
+    description: t(`highlights.${item.key}.description`),
+  }))
+
+  const features = t.raw('features') as string[]
 
   return (
     <section
@@ -79,21 +61,19 @@ export default function About() {
           >
             <span className="badge-gold mb-6">
               <span className="w-2 h-2 rounded-full bg-gold-500" />
-              Biz Haqimizda
+              {t('badge')}
             </span>
 
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-semibold text-white mb-6 leading-tight" style={{ letterSpacing: '-0.025em' }}>
-              O'zbekiston Biznes <span className="text-gradient-gold font-display">Ekotizimining</span> Markazi
+              {t('headline')} <span className="text-gradient-gold font-display">{t('headlineHighlight')}</span> {t('headlineSuffix')}
             </h2>
 
             <p className="text-lg lg:text-xl text-white/60 mb-6 leading-relaxed">
-              O'zbekiston Iqtisodiyot Assambleyasi — mamlakatning eng yirik tadbirkorlik tashkiloti
-              bo'lib, 46+ sanoat assotsiatsiyasini birlashtiradi.
+              {t('description1')}
             </p>
 
             <p className="text-white/50 mb-8 leading-relaxed">
-              Biz davlat va biznes o'rtasida samarali dialog yaratamiz, xalqaro investitsiyalarni
-              jalb qilamiz va O'zbekiston iqtisodiyotining raqobatbardoshligini oshiramiz.
+              {t('description2')}
             </p>
 
             {/* Features List */}
@@ -113,7 +93,7 @@ export default function About() {
             </div>
 
             <Link href="/about" className="btn-primary inline-flex">
-              <span>Batafsil Ma'lumot</span>
+              <span>{t('cta')}</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
           </motion.div>
@@ -170,27 +150,27 @@ export default function About() {
                 <div className="w-14 h-14 rounded-2xl bg-gold-500/10 flex items-center justify-center mb-5">
                   <Shield className="w-7 h-7 text-gold-400" />
                 </div>
-                <h3 className="font-heading text-xl lg:text-2xl font-semibold text-white mb-3">Missiyamiz</h3>
+                <h3 className="font-heading text-xl lg:text-2xl font-semibold text-white mb-3">{t('mission.title')}</h3>
                 <p className="text-white/60 leading-relaxed">
-                  O'zbekiston tadbirkorligini xalqaro miqyosda raqobatbardosh qilish va barqaror iqtisodiy o'sishni ta'minlash.
+                  {t('mission.text')}
                 </p>
               </div>
               <div className="lg:border-r border-white/10 lg:pr-12">
                 <div className="w-14 h-14 rounded-2xl bg-turquoise-500/10 flex items-center justify-center mb-5">
                   <Target className="w-7 h-7 text-turquoise-400" />
                 </div>
-                <h3 className="font-heading text-xl lg:text-2xl font-semibold text-white mb-3">Maqsadimiz</h3>
+                <h3 className="font-heading text-xl lg:text-2xl font-semibold text-white mb-3">{t('goal.title')}</h3>
                 <p className="text-white/60 leading-relaxed">
-                  2030 yilgacha O'zbekistonni Markaziy Osiyoning biznes markazi sifatida shakllantirish.
+                  {t('goal.text')}
                 </p>
               </div>
               <div>
                 <div className="w-14 h-14 rounded-2xl bg-emerald-500/10 flex items-center justify-center mb-5">
                   <Zap className="w-7 h-7 text-emerald-400" />
                 </div>
-                <h3 className="font-heading text-xl lg:text-2xl font-semibold text-white mb-3">Qadriyatlarimiz</h3>
+                <h3 className="font-heading text-xl lg:text-2xl font-semibold text-white mb-3">{t('values.title')}</h3>
                 <p className="text-white/60 leading-relaxed">
-                  Shaffoflik, innovatsiya, hamkorlik va milliy manfaatlarni himoya qilish.
+                  {t('values.text')}
                 </p>
               </div>
             </div>

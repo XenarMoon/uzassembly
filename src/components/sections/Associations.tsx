@@ -2,27 +2,46 @@
 
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import Link from 'next/link'
+import { Link } from '@/lib/navigation'
 import { ArrowRight, Building2, Factory, Wheat, Cpu, Car, Shirt, Pill, Construction, Zap } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import { cn } from '@/lib/utils'
 
-const associations = [
-  { name: "To'qimachilik Assotsiatsiyasi", icon: Shirt, members: 450, sector: "Yengil sanoat" },
-  { name: "Farmatsevtika Assotsiatsiyasi", icon: Pill, members: 120, sector: "Tibbiyot" },
-  { name: "Qurilish Materiallari", icon: Construction, members: 380, sector: "Qurilish" },
-  { name: "IT Assotsiatsiyasi", icon: Cpu, members: 890, sector: "Texnologiya" },
-  { name: "Avtomobil Sanoati", icon: Car, members: 85, sector: "Mashinasozlik" },
-  { name: "Qishloq Xo'jaligi", icon: Wheat, members: 1200, sector: "Agro" },
-  { name: "Energetika Sektori", icon: Zap, members: 95, sector: "Energetika" },
-  { name: "Oziq-ovqat Sanoati", icon: Factory, members: 650, sector: "Ishlab chiqarish" },
+const associationsConfig = [
+  { key: 'textile', icon: Shirt, members: 450 },
+  { key: 'pharma', icon: Pill, members: 120 },
+  { key: 'construction', icon: Construction, members: 380 },
+  { key: 'it', icon: Cpu, members: 890 },
+  { key: 'automotive', icon: Car, members: 85 },
+  { key: 'agriculture', icon: Wheat, members: 1200 },
+  { key: 'energy', icon: Zap, members: 95 },
+  { key: 'food', icon: Factory, members: 650 },
 ]
 
-// Duplicate for seamless loop
-const duplicatedAssociations = [...associations, ...associations]
-
 export default function Associations() {
+  const t = useTranslations('associations')
   const sectionRef = useRef<HTMLElement>(null)
   const isInView = useInView(sectionRef, { once: true, amount: 0.2 })
+
+  const sectorKeyMap: Record<string, string> = {
+    textile: 'lightIndustry',
+    pharma: 'medicine',
+    construction: 'construction',
+    it: 'it',
+    automotive: 'automotive',
+    agriculture: 'agriculture',
+    energy: 'energy',
+    food: 'food',
+  }
+
+  const associations = associationsConfig.map((assoc) => ({
+    ...assoc,
+    name: t(`cards.${assoc.key}.name`),
+    sector: t(`sectors.${sectorKeyMap[assoc.key]}`),
+  }))
+
+  // Duplicate for seamless loop
+  const duplicatedAssociations = [...associations, ...associations]
 
   return (
     <section
@@ -45,15 +64,15 @@ export default function Associations() {
         >
           <span className="badge-gold mb-6">
             <span className="w-2 h-2 rounded-full bg-gold-500" />
-            46+ Sanoat Assotsiatsiyasi
+            {t('badge')}
           </span>
 
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-semibold text-white mb-6" style={{ letterSpacing: '-0.025em' }}>
-            Barcha Sohalar <span className="text-gradient-gold font-display">Bir Joyda</span>
+            {t('headline')} <span className="text-gradient-gold font-display">{t('headlineHighlight')}</span>
           </h2>
 
           <p className="text-xl text-white/60 max-w-2xl mx-auto">
-            O'zbekiston iqtisodiyotining barcha tarmoqlarini birlashtiruvchi assotsiatsiyalar tarmog'i
+            {t('description')}
           </p>
         </motion.div>
       </div>
@@ -92,7 +111,7 @@ export default function Associations() {
                     </h3>
                     <p className="text-white/40 text-sm">{assoc.sector}</p>
                     <p className="text-gold-400/80 text-sm mt-1">
-                      {assoc.members}+ a'zolar
+                      {assoc.members}+ {t('membersCount')}
                     </p>
                   </div>
                 </div>
@@ -129,7 +148,7 @@ export default function Associations() {
                     </h3>
                     <p className="text-white/40 text-sm">{assoc.sector}</p>
                     <p className="text-turquoise-400/80 text-sm mt-1">
-                      {assoc.members}+ a'zolar
+                      {assoc.members}+ {t('membersCount')}
                     </p>
                   </div>
                 </div>
@@ -150,19 +169,19 @@ export default function Associations() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="font-mono text-3xl md:text-4xl font-bold text-gold-400 mb-2 tracking-tight">46+</div>
-              <p className="text-white/50 text-sm">Assotsiatsiyalar</p>
+              <p className="text-white/50 text-sm">{t('stats.associations')}</p>
             </div>
             <div>
               <div className="font-mono text-3xl md:text-4xl font-bold text-turquoise-400 mb-2 tracking-tight">15K+</div>
-              <p className="text-white/50 text-sm">Faol A'zolar</p>
+              <p className="text-white/50 text-sm">{t('stats.activeMembers')}</p>
             </div>
             <div>
               <div className="font-mono text-3xl md:text-4xl font-bold text-gold-400 mb-2 tracking-tight">28</div>
-              <p className="text-white/50 text-sm">Iqtisodiy Tarmoq</p>
+              <p className="text-white/50 text-sm">{t('stats.economicSectors')}</p>
             </div>
             <div>
               <div className="font-mono text-3xl md:text-4xl font-bold text-turquoise-400 mb-2 tracking-tight">14</div>
-              <p className="text-white/50 text-sm">Viloyat Qamrovi</p>
+              <p className="text-white/50 text-sm">{t('stats.regionsCovered')}</p>
             </div>
           </div>
         </motion.div>
@@ -176,7 +195,7 @@ export default function Associations() {
         >
           <Link href="/associations" className="btn-secondary inline-flex items-center gap-2">
             <Building2 className="w-5 h-5" />
-            <span>Barcha Assotsiatsiyalarni Ko'rish</span>
+            <span>{t('viewAll')}</span>
             <ArrowRight className="w-5 h-5" />
           </Link>
         </motion.div>
