@@ -1,0 +1,335 @@
+'use client'
+
+import { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import Link from 'next/link'
+import Image from 'next/image'
+import { MoreVertical, X, ChevronDown, Globe } from 'lucide-react'
+import { cn } from '@/lib/utils'
+
+const navLinks = [
+  { name: 'Biz Haqimizda', href: '/about' },
+  {
+    name: 'Xizmatlar',
+    href: '/services',
+    submenu: [
+      { name: 'Biznes Darcha', href: '/services/biznes-darcha' },
+      { name: 'Invest Hub', href: '/services/invest-hub' },
+      { name: 'Edu Job', href: '/services/edu-job' },
+      { name: 'Reportaj GO', href: '/services/reportaj-go' },
+      { name: 'GR', href: '/services/government-relations' },
+      { name: 'FR', href: '/services/foreign-relations' },
+      { name: 'BR', href: '/services/business-relations' },
+      { name: 'Smart City', href: '/services/smart-city' },
+    ]
+  },
+  { name: 'Assotsiatsiyalar', href: '/associations' },
+  { name: 'Loyihalar', href: '/projects' },
+  { name: 'Yangiliklar', href: '/news' },
+  { name: 'Aloqa', href: '/contact' },
+]
+
+const languages = [
+  { code: 'uz', name: "O'zbekcha", flag: '🇺🇿' },
+  { code: 'ru', name: 'Русский', flag: '🇷🇺' },
+  { code: 'en', name: 'English', flag: '🇬🇧' },
+]
+
+export default function Header() {
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null)
+  const [currentLang, setCurrentLang] = useState('uz')
+  const [isLangOpen, setIsLangOpen] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  // Close menu on escape key
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setIsMobileMenuOpen(false)
+    }
+    document.addEventListener('keydown', handleEscape)
+    return () => document.removeEventListener('keydown', handleEscape)
+  }, [])
+
+  return (
+    <motion.header
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+      className={cn(
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-500',
+        isScrolled
+          ? 'bg-navy-900/90 backdrop-blur-xl border-b border-white/5 py-3'
+          : 'bg-transparent py-5'
+      )}
+    >
+      <div className="w-full mx-auto px-4 sm:px-6 lg:px-12 xl:px-16 2xl:px-24">
+        <nav className="flex items-center justify-between">
+          {/* Logo - Responsive sizing */}
+          <Link href="/" className="group flex-shrink-0">
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="relative h-12 w-40 sm:h-16 sm:w-52 md:h-20 md:w-64 lg:h-24 lg:w-80 xl:h-28 xl:w-[380px]"
+            >
+              <Image
+                src={currentLang === 'en' ? '/images/logo/assembly-logo-en.png' : '/images/logo/assembly-logo-uz.png'}
+                alt="Iqtisodiyot Assambleyasi"
+                fill
+                sizes="(max-width: 640px) 160px, (max-width: 768px) 208px, (max-width: 1024px) 256px, (max-width: 1280px) 320px, 380px"
+                className="object-contain object-left"
+                priority
+              />
+            </motion.div>
+          </Link>
+
+          {/* Desktop Navigation - Centered */}
+          <div className="hidden xl:flex items-center justify-center flex-1 gap-1">
+            {navLinks.map((link) => (
+              <div
+                key={link.name}
+                className="relative group"
+                onMouseEnter={() => link.submenu && setActiveSubmenu(link.name)}
+                onMouseLeave={() => setActiveSubmenu(null)}
+              >
+                <Link
+                  href={link.href}
+                  className={cn(
+                    'flex items-center gap-1 px-4 py-2 text-sm font-medium transition-colors rounded-lg',
+                    'text-white/70 hover:text-white hover:bg-white/5'
+                  )}
+                >
+                  {link.name}
+                  {link.submenu && (
+                    <ChevronDown className={cn(
+                      'w-3.5 h-3.5 transition-transform',
+                      activeSubmenu === link.name && 'rotate-180'
+                    )} />
+                  )}
+                </Link>
+
+                {/* Submenu */}
+                {link.submenu && (
+                  <AnimatePresence>
+                    {activeSubmenu === link.name && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 10 }}
+                        transition={{ duration: 0.2 }}
+                        className="absolute top-full left-0 pt-2 w-56"
+                      >
+                        <div className="glass rounded-xl p-2 shadow-2xl">
+                          {link.submenu.map((sublink) => (
+                            <Link
+                              key={sublink.name}
+                              href={sublink.href}
+                              className="block px-4 py-2.5 text-sm text-white/70 hover:text-gold-400 hover:bg-white/5 rounded-lg transition-colors"
+                            >
+                              {sublink.name}
+                            </Link>
+                          ))}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                )}
+              </div>
+            ))}
+
+            {/* Language Selector */}
+            <div className="relative ml-2">
+              <button
+                onClick={() => setIsLangOpen(!isLangOpen)}
+                className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
+              >
+                <Globe className="w-4 h-4" />
+                <span className="uppercase">{currentLang}</span>
+                <ChevronDown className={cn('w-3 h-3 transition-transform', isLangOpen && 'rotate-180')} />
+              </button>
+
+              <AnimatePresence>
+                {isLangOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    className="absolute right-0 top-full mt-2 w-40 glass rounded-xl p-2 shadow-2xl"
+                  >
+                    {languages.map((lang) => (
+                      <button
+                        key={lang.code}
+                        onClick={() => {
+                          setCurrentLang(lang.code)
+                          setIsLangOpen(false)
+                        }}
+                        className={cn(
+                          'w-full flex items-center gap-3 px-4 py-2.5 text-sm rounded-lg transition-colors text-left',
+                          currentLang === lang.code
+                            ? 'bg-gold-500/20 text-gold-400'
+                            : 'text-white/70 hover:text-white hover:bg-white/5'
+                        )}
+                      >
+                        <span>{lang.flag}</span>
+                        <span>{lang.name}</span>
+                      </button>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          </div>
+
+          {/* CTA + Mobile Menu Button */}
+          <div className="flex items-center gap-4">
+            <Link href="/membership" className="hidden xl:inline-flex btn-primary text-sm px-6 py-2.5">
+              A'zo Bo'lish
+            </Link>
+
+            {/* Mobile Menu Button - 3 Dots */}
+            <motion.button
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className={cn(
+                "xl:hidden p-2.5 rounded-xl transition-all duration-300",
+                isMobileMenuOpen
+                  ? "bg-gold-500 text-navy-900"
+                  : "bg-white/10 text-white hover:bg-white/20"
+              )}
+            >
+              {isMobileMenuOpen ? <X className="w-5 h-5" /> : <MoreVertical className="w-5 h-5" />}
+            </motion.button>
+          </div>
+        </nav>
+      </div>
+
+      {/* Mobile Menu Dropdown */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <>
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="xl:hidden fixed inset-0 bg-black/60 z-[998]"
+              onClick={() => setIsMobileMenuOpen(false)}
+            />
+
+            {/* Dropdown Menu */}
+            <motion.div
+              initial={{ opacity: 0, y: -10, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -10, scale: 0.95 }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
+              className="xl:hidden fixed right-4 sm:right-6 top-20 w-[calc(100%-2rem)] sm:w-72 md:w-80 max-h-[75vh] overflow-y-auto bg-navy-900 rounded-2xl border border-white/10 shadow-2xl z-[999]"
+            >
+              <div className="p-4">
+                {/* Navigation Links */}
+                <div className="space-y-1">
+                  {navLinks.map((link, index) => (
+                    <motion.div
+                      key={link.name}
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.03 }}
+                    >
+                      {link.submenu ? (
+                        <div>
+                          <button
+                            onClick={() => setActiveSubmenu(activeSubmenu === link.name ? null : link.name)}
+                            className="w-full flex items-center justify-between px-4 py-3 text-base font-medium text-white/80 hover:text-gold-400 hover:bg-white/5 rounded-xl transition-colors"
+                          >
+                            {link.name}
+                            <ChevronDown className={cn(
+                              'w-4 h-4 transition-transform',
+                              activeSubmenu === link.name && 'rotate-180'
+                            )} />
+                          </button>
+                          <AnimatePresence>
+                            {activeSubmenu === link.name && (
+                              <motion.div
+                                initial={{ opacity: 0, height: 0 }}
+                                animate={{ opacity: 1, height: 'auto' }}
+                                exit={{ opacity: 0, height: 0 }}
+                                className="overflow-hidden"
+                              >
+                                <div className="ml-4 pl-4 py-1 border-l border-white/10 space-y-0.5">
+                                  {link.submenu.map((sublink) => (
+                                    <Link
+                                      key={sublink.name}
+                                      href={sublink.href}
+                                      onClick={() => setIsMobileMenuOpen(false)}
+                                      className="block px-3 py-2 text-sm text-white/60 hover:text-gold-400 rounded-lg transition-colors"
+                                    >
+                                      {sublink.name}
+                                    </Link>
+                                  ))}
+                                </div>
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </div>
+                      ) : (
+                        <Link
+                          href={link.href}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className="block px-4 py-3 text-base font-medium text-white/80 hover:text-gold-400 hover:bg-white/5 rounded-xl transition-colors"
+                        >
+                          {link.name}
+                        </Link>
+                      )}
+                    </motion.div>
+                  ))}
+                </div>
+
+                {/* Divider */}
+                <div className="my-4 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+
+                {/* Language Selector */}
+                <div className="mb-4">
+                  <p className="px-4 text-xs text-white/40 uppercase tracking-wider mb-2">Til tanlang</p>
+                  <div className="flex gap-2 px-2">
+                    {languages.map((lang) => (
+                      <button
+                        key={lang.code}
+                        onClick={() => setCurrentLang(lang.code)}
+                        className={cn(
+                          'flex-1 flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl text-sm font-medium transition-all',
+                          currentLang === lang.code
+                            ? 'bg-gold-500 text-navy-900 shadow-lg shadow-gold-500/20'
+                            : 'bg-white/5 text-white/60 hover:text-white hover:bg-white/10'
+                        )}
+                      >
+                        <span>{lang.flag}</span>
+                        <span>{lang.code.toUpperCase()}</span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* CTA Button */}
+                <Link
+                  href="/contact"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="btn-primary w-full justify-center text-sm"
+                >
+                  A'zo Bo'lish
+                </Link>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+    </motion.header>
+  )
+}
