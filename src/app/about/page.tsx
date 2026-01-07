@@ -12,10 +12,8 @@ import {
   Globe2,
   Landmark,
   Handshake,
-  MapPin,
   Calendar,
   Sparkles,
-  Star,
   ArrowUpRight,
   CheckCircle2
 } from 'lucide-react'
@@ -147,11 +145,6 @@ const milestones = [
   { year: '2022', event: "30+ a'zo korxonalarni jamladi" },
   { year: '2023', event: '35+ assotsiatsiyalarni birlashtirdi' },
   { year: '2024', event: 'Smart City va xalqaro hamkorliklar' },
-]
-
-// Office
-const offices = [
-  { city: 'Toshkent', country: "O'zbekiston", address: "Furqat ko'chasi 1/1, 100066", main: true },
 ]
 
 export default function AboutPage() {
@@ -491,7 +484,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* === TIMELINE + OFFICES COMBINED === */}
+        {/* === HORIZONTAL TIMELINE === */}
         <section className="relative py-16 lg:py-20">
           <div className="absolute inset-0">
             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
@@ -499,88 +492,56 @@ export default function AboutPage() {
           </div>
 
           <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
-              {/* Timeline */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-              >
-                <span className="text-gold-400 font-mono text-xs tracking-widest uppercase mb-3 block">
-                  Tarix
-                </span>
-                <h2 className="font-heading text-2xl lg:text-3xl font-semibold text-white mb-6">
-                  Rivojlanish <span className="text-gradient-gold font-display">yo'li</span>
-                </h2>
+            {/* Section Header */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <span className="text-gold-400 font-mono text-xs tracking-widest uppercase mb-3 block">
+                Tarix
+              </span>
+              <h2 className="font-heading text-2xl lg:text-3xl font-semibold text-white">
+                Rivojlanish <span className="text-gradient-gold font-display">yo'li</span>
+              </h2>
+            </motion.div>
 
-                <div className="relative pl-6 border-l border-white/10">
-                  {milestones.map((milestone, index) => (
-                    <motion.div
-                      key={milestone.year}
-                      initial={{ opacity: 0, x: -10 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.3, delay: index * 0.1 }}
-                      className="relative pb-6 last:pb-0"
-                    >
-                      <div className="absolute -left-[25px] top-1 w-2 h-2 rounded-full bg-gold-500" />
-                      <span className="font-mono text-gold-400 text-sm">{milestone.year}</span>
-                      <p className="text-white mt-1">{milestone.event}</p>
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
+            {/* Horizontal Timeline */}
+            <div className="relative">
+              {/* Timeline Line */}
+              <div className="absolute top-8 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent hidden sm:block" />
 
-              {/* Office */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-              >
-                <span className="text-gold-400 font-mono text-xs tracking-widest uppercase mb-3 block">
-                  Bosh Ofis
-                </span>
-                <h2 className="font-heading text-2xl lg:text-3xl font-semibold text-white mb-6">
-                  Bizning <span className="text-gradient-gold font-display">Manzil</span>
-                </h2>
-
-                <div className="space-y-3">
-                  {offices.map((office, index) => (
-                    <motion.div
-                      key={office.city}
-                      initial={{ opacity: 0, y: 10 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.3, delay: index * 0.1 }}
-                      className={cn(
-                        'p-4 rounded-xl border transition-all',
-                        office.main
-                          ? 'bg-gold-500/5 border-gold-500/20'
-                          : 'bg-white/[0.02] border-white/5'
-                      )}
-                    >
-                      <div className="flex items-start justify-between">
-                        <div className="flex items-start gap-3">
-                          <MapPin className={cn(
-                            'w-4 h-4 mt-1',
-                            office.main ? 'text-gold-400' : 'text-white/30'
-                          )} />
-                          <div>
-                            <p className="font-semibold text-white">{office.city}</p>
-                            <p className="text-white/40 text-sm">{office.address}</p>
-                          </div>
-                        </div>
-                        {office.main && (
-                          <span className="px-2 py-1 rounded-full bg-gold-500/20 text-gold-400 text-[10px] font-medium">
-                            Bosh ofis
-                          </span>
-                        )}
+              {/* Timeline Items */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
+                {milestones.map((milestone, index) => (
+                  <motion.div
+                    key={milestone.year}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                    className="relative text-center"
+                  >
+                    {/* Dot */}
+                    <div className="hidden sm:flex items-center justify-center mb-6">
+                      <div className="w-4 h-4 rounded-full bg-navy-900 border-2 border-gold-500 relative z-10">
+                        <div className="absolute inset-1 rounded-full bg-gold-500" />
                       </div>
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
+                    </div>
+
+                    {/* Card */}
+                    <div className="p-4 sm:p-5 rounded-xl bg-white/[0.03] border border-white/5 hover:border-gold-500/30 transition-all group">
+                      <span className="font-mono text-2xl sm:text-3xl font-bold text-gold-400 block mb-2 group-hover:scale-110 transition-transform">
+                        {milestone.year}
+                      </span>
+                      <p className="text-white/70 text-xs sm:text-sm leading-relaxed">
+                        {milestone.event}
+                      </p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
