@@ -519,7 +519,7 @@ export default function NewsPage() {
                                   {article.date.split('-')[2]}
                                 </span>
                                 <span className="text-white/40 text-xs uppercase">
-                                  {months[article.date.split('-')[1]]?.slice(0, 3)}
+                                  {t(`months.${monthKeys[article.date.split('-')[1]]}`)?.slice(0, 3)}
                                 </span>
                               </div>
 
