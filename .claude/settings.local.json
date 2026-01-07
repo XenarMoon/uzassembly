@@ -5,7 +5,8 @@
       "Bash(if not exist \"D:\\\\Projects\\\\assembly.uz\\\\public\\\\images\\\\logo\" mkdir \"D:\\\\Projects\\\\assembly.uz\\\\public\\\\images\\\\logo\")",
       "Bash(mkdir:*)",
       "Bash(git init:*)",
-      "Bash(git remote add:*)"
+      "Bash(git remote add:*)",
+      "Bash(git branch:*)"
     ]
   }
 }

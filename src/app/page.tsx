@@ -5,7 +5,6 @@ import Services from '@/components/sections/Services'
 import Associations from '@/components/sections/Associations'
 import Projects from '@/components/sections/Projects'
 import News from '@/components/sections/News'
-import Membership from '@/components/sections/Membership'
 import Contact from '@/components/sections/Contact'
 import Footer from '@/components/sections/Footer'
 
@@ -19,7 +18,6 @@ export default function Home() {
       <Associations />
       <Projects />
       <News />
-      <Membership />
       <Contact />
       <Footer />
     </main>
