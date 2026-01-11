@@ -32,19 +32,19 @@ export default function About() {
     <section
       id="about"
       ref={sectionRef}
-      className="relative py-20 lg:py-32 bg-navy-900 overflow-hidden"
+      className="relative py-20 lg:py-32 bg-primary-500 overflow-hidden"
     >
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 left-0 w-[800px] h-[800px] rounded-full -translate-y-1/2 -translate-x-1/2"
           style={{
-            background: 'radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(62, 158, 238, 0.08) 0%, transparent 70%)',
             filter: 'blur(100px)',
           }}
         />
         <div className="absolute bottom-0 right-0 w-[600px] h-[600px] rounded-full translate-x-1/4 translate-y-1/4"
           style={{
-            background: 'radial-gradient(circle, rgba(13, 148, 136, 0.05) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(0, 94, 133, 0.08) 0%, transparent 70%)',
             filter: 'blur(100px)',
           }}
         />
@@ -59,13 +59,13 @@ export default function About() {
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -40 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="badge-gold mb-6">
-              <span className="w-2 h-2 rounded-full bg-gold-500" />
+            <span className="badge-primary mb-6">
+              <span className="w-2 h-2 rounded-full bg-sky-500" />
               {t('badge')}
             </span>
 
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-semibold text-white mb-6 leading-tight" style={{ letterSpacing: '-0.025em' }}>
-              {t('headline')} <span className="text-gradient-gold font-display">{t('headlineHighlight')}</span> {t('headlineSuffix')}
+              {t('headline')} <span className="text-gradient-primary font-display">{t('headlineHighlight')}</span> {t('headlineSuffix')}
             </h2>
 
             <p className="text-lg lg:text-xl text-white/60 mb-6 leading-relaxed">
@@ -86,7 +86,7 @@ export default function About() {
                   transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
                   className="flex items-center gap-3"
                 >
-                  <CheckCircle2 className="w-5 h-5 text-gold-400 flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-sky-400 flex-shrink-0" />
                   <span className="text-white/70 text-sm">{feature}</span>
                 </motion.div>
               ))}
@@ -119,13 +119,13 @@ export default function About() {
                 >
                   <div className={cn(
                     'glass rounded-2xl lg:rounded-3xl p-6 lg:p-8 h-full',
-                    'border border-white/5 hover:border-gold-500/20 transition-all duration-500',
-                    'hover:bg-gold-500/5'
+                    'border border-white/10 hover:border-sky-500/30 transition-all duration-500',
+                    'hover:bg-sky-500/10'
                   )}>
-                    <div className="w-14 h-14 lg:w-16 lg:h-16 rounded-xl lg:rounded-2xl bg-gold-500/10 flex items-center justify-center mb-5 group-hover:bg-gold-500/20 transition-colors">
-                      <item.icon className="w-7 h-7 lg:w-8 lg:h-8 text-gold-400" />
+                    <div className="w-14 h-14 lg:w-16 lg:h-16 rounded-xl lg:rounded-2xl bg-sky-500/20 flex items-center justify-center mb-5 group-hover:bg-sky-500/30 transition-colors">
+                      <item.icon className="w-7 h-7 lg:w-8 lg:h-8 text-sky-400" />
                     </div>
-                    <div className="font-mono text-4xl lg:text-5xl xl:text-6xl font-bold text-gold-400 mb-2 tracking-tight">
+                    <div className="font-mono text-4xl lg:text-5xl xl:text-6xl font-bold text-sky-400 mb-2 tracking-tight">
                       {item.value}
                     </div>
                     <p className="text-white font-semibold text-lg mb-1">{item.label}</p>
@@ -147,8 +147,8 @@ export default function About() {
           <div className="glass rounded-2xl lg:rounded-3xl p-8 lg:p-12 border border-white/5">
             <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
               <div className="lg:border-r border-white/10 lg:pr-12">
-                <div className="w-14 h-14 rounded-2xl bg-gold-500/10 flex items-center justify-center mb-5">
-                  <Shield className="w-7 h-7 text-gold-400" />
+                <div className="w-14 h-14 rounded-2xl bg-sky-500/20 flex items-center justify-center mb-5">
+                  <Shield className="w-7 h-7 text-sky-400" />
                 </div>
                 <h3 className="font-heading text-xl lg:text-2xl font-semibold text-white mb-3">{t('mission.title')}</h3>
                 <p className="text-white/60 leading-relaxed">
@@ -156,8 +156,8 @@ export default function About() {
                 </p>
               </div>
               <div className="lg:border-r border-white/10 lg:pr-12">
-                <div className="w-14 h-14 rounded-2xl bg-turquoise-500/10 flex items-center justify-center mb-5">
-                  <Target className="w-7 h-7 text-turquoise-400" />
+                <div className="w-14 h-14 rounded-2xl bg-orange-500/20 flex items-center justify-center mb-5">
+                  <Target className="w-7 h-7 text-orange-400" />
                 </div>
                 <h3 className="font-heading text-xl lg:text-2xl font-semibold text-white mb-3">{t('goal.title')}</h3>
                 <p className="text-white/60 leading-relaxed">

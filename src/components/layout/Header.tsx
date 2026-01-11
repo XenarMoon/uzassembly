@@ -65,8 +65,8 @@ export default function Header() {
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-500',
         isScrolled
-          ? 'bg-[#030712] backdrop-blur-xl border-b border-white/[0.02] py-3'
-          : 'bg-[#030712]/0 py-5'
+          ? 'bg-primary-500/95 backdrop-blur-xl border-b border-white/10 py-3'
+          : 'bg-primary-500/0 py-5'
       )}
       style={{ transform: 'translateZ(0)', willChange: 'transform', backfaceVisibility: 'hidden' }}
     >
@@ -126,12 +126,12 @@ export default function Header() {
                         transition={{ duration: 0.2 }}
                         className="absolute top-full left-0 pt-2 w-56"
                       >
-                        <div className="bg-[#0a1628] border border-white/10 rounded-xl p-2 shadow-2xl backdrop-blur-xl">
+                        <div className="bg-primary-600 border border-white/20 rounded-xl p-2 shadow-2xl backdrop-blur-xl">
                           {link.submenu.map((sublink) => (
                             <Link
                               key={sublink.name}
                               href={sublink.href}
-                              className="block px-4 py-2.5 text-sm text-white/80 hover:text-gold-400 hover:bg-white/5 rounded-lg transition-colors"
+                              className="block px-4 py-2.5 text-sm text-white/80 hover:text-sky-400 hover:bg-white/5 rounded-lg transition-colors"
                             >
                               {sublink.name}
                             </Link>
@@ -163,7 +163,7 @@ export default function Header() {
               className={cn(
                 "xl:hidden p-2.5 rounded-xl transition-all duration-300",
                 isMobileMenuOpen
-                  ? "bg-gold-500 text-navy-900"
+                  ? "bg-sky-500 text-white"
                   : "bg-white/10 text-white hover:bg-white/20"
               )}
             >
@@ -193,7 +193,7 @@ export default function Header() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -10, scale: 0.95 }}
               transition={{ duration: 0.2, ease: "easeOut" }}
-              className="xl:hidden fixed right-4 sm:right-6 top-20 w-[calc(100%-2rem)] sm:w-72 md:w-80 max-h-[75vh] overflow-y-auto bg-navy-900 rounded-2xl border border-white/10 shadow-2xl z-[999]"
+              className="xl:hidden fixed right-4 sm:right-6 top-20 w-[calc(100%-2rem)] sm:w-72 md:w-80 max-h-[75vh] overflow-y-auto bg-primary-600 rounded-2xl border border-white/20 shadow-2xl z-[999]"
             >
               <div className="p-4">
                 {/* Navigation Links */}
@@ -209,7 +209,7 @@ export default function Header() {
                         <div>
                           <button
                             onClick={() => setActiveSubmenu(activeSubmenu === link.name ? null : link.name)}
-                            className="w-full flex items-center justify-between px-4 py-3 text-base font-medium text-white/80 hover:text-gold-400 hover:bg-white/5 rounded-xl transition-colors"
+                            className="w-full flex items-center justify-between px-4 py-3 text-base font-medium text-white/80 hover:text-sky-400 hover:bg-white/5 rounded-xl transition-colors"
                           >
                             {link.name}
                             <ChevronDown className={cn(
@@ -225,13 +225,13 @@ export default function Header() {
                                 exit={{ opacity: 0, height: 0 }}
                                 className="overflow-hidden"
                               >
-                                <div className="ml-4 pl-4 py-1 border-l border-white/10 space-y-0.5">
+                                <div className="ml-4 pl-4 py-1 border-l border-white/20 space-y-0.5">
                                   {link.submenu.map((sublink) => (
                                     <Link
                                       key={sublink.name}
                                       href={sublink.href}
                                       onClick={() => setIsMobileMenuOpen(false)}
-                                      className="block px-3 py-2 text-sm text-white/60 hover:text-gold-400 rounded-lg transition-colors"
+                                      className="block px-3 py-2 text-sm text-white/60 hover:text-sky-400 rounded-lg transition-colors"
                                     >
                                       {sublink.name}
                                     </Link>
@@ -245,7 +245,7 @@ export default function Header() {
                         <Link
                           href={link.href}
                           onClick={() => setIsMobileMenuOpen(false)}
-                          className="block px-4 py-3 text-base font-medium text-white/80 hover:text-gold-400 hover:bg-white/5 rounded-xl transition-colors"
+                          className="block px-4 py-3 text-base font-medium text-white/80 hover:text-sky-400 hover:bg-white/5 rounded-xl transition-colors"
                         >
                           {link.name}
                         </Link>

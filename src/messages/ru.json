@@ -416,13 +416,19 @@
     }
   },
   "footer": {
-    "tagline": "Экономическая Ассамблея Узбекистана — единая экосистема для предпринимателей. 46+ ассоциаций, 8 стратегических направлений.",
+    "tagline": "Помощь предпринимателям // Помощь Родине",
+    "contactTitle": "КОНТАКТЫ",
+    "workingHours": "РЕЖИМ РАБОТЫ",
+    "siteLinks": "САЙТ",
     "columns": {
       "services": "Услуги",
       "organization": "Организация",
       "members": "Членам"
     },
     "links": {
+      "home": "Главная",
+      "activities": "Наша деятельность",
+      "contact": "Контакты",
       "smartCity": "Smart City",
       "biznesDarcha": "Biznes Darcha",
       "investHub": "Invest Hub",
@@ -439,6 +445,13 @@
       "benefits": "Преимущества",
       "forInvestors": "Инвесторам",
       "faq": "FAQ"
+    },
+    "form": {
+      "title": "Оставьте ваши данные",
+      "subtitle": "для обратной связи",
+      "namePlaceholder": "Имя",
+      "emailPlaceholder": "Email",
+      "submit": "Отправить"
     },
     "legal": {
       "copyright": "Экономическая Ассамблея Узбекистана. Все права защищены.",

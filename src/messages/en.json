@@ -416,13 +416,19 @@
     }
   },
   "footer": {
-    "tagline": "Economic Assembly of Uzbekistan — unified ecosystem for entrepreneurs. 46+ associations, 8 strategic service directions.",
+    "tagline": "Help to entrepreneurs // Help to the Motherland",
+    "contactTitle": "CONTACT",
+    "workingHours": "WORKING HOURS",
+    "siteLinks": "SITE",
     "columns": {
       "services": "Services",
       "organization": "Organization",
       "members": "Members"
     },
     "links": {
+      "home": "Home",
+      "activities": "Our Activities",
+      "contact": "Contact",
       "smartCity": "Smart City",
       "biznesDarcha": "Biznes Darcha",
       "investHub": "Invest Hub",
@@ -439,6 +445,13 @@
       "benefits": "Benefits",
       "forInvestors": "For Investors",
       "faq": "FAQ"
+    },
+    "form": {
+      "title": "Leave your details",
+      "subtitle": "to get back to you",
+      "namePlaceholder": "Name",
+      "emailPlaceholder": "Email",
+      "submit": "Send"
     },
     "legal": {
       "copyright": "Economic Assembly of Uzbekistan. All rights reserved.",

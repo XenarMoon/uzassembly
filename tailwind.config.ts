@@ -9,55 +9,91 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // === PRIMARY COLORS ===
-        navy: {
-          900: '#030712',  // Deepest - backgrounds
-          800: '#0B1426',  // Dark sections
-          700: '#111B2E',  // Cards dark
-          600: '#1A2744',  // Elevated surfaces
-          500: '#243B67',  // Borders, lines
+        // ═══════════════════════════════════════════════════════════════
+        // OFFICIAL ASSEMBLY BRAND COLORS
+        // Source: Brend Qo'llanmasi (Brand Guidelines Document)
+        // ═══════════════════════════════════════════════════════════════
+
+        // PRIMARY COLORS (Asosiy ranglar)
+        assembly: {
+          primary: '#005E85',      // Main petrol/teal blue - PRIMARY BRAND COLOR
+          secondary: '#3E9EEE',    // Bright sky blue - Secondary accent
+          gray: '#9D9E9E',         // Medium gray - Supporting
+          light: '#EEEEEE',        // Light gray - Backgrounds
+          orange: '#F27A21',       // Orange accent - Used in highlights/CTAs
+          'dark-blue': '#1A4B6E',  // Darker shade of primary
+          charcoal: '#3C3C3C',     // Dark backgrounds
+          slate: '#5A5A5A',        // Card backgrounds
+          dark: '#2D2D2D',         // Deepest dark
         },
-        // === GOLD SPECTRUM ===
-        gold: {
-          50: '#FFFDF5',   // Lightest
-          100: '#FEF9E7',  // Very light
-          200: '#FCF0C3',  // Light
-          300: '#F9E48F',  // Light-medium
-          400: '#F5D779',  // Light gold
-          500: '#D4AF37',  // Primary gold
-          600: '#B8941F',  // Dark gold
-          700: '#96780F',  // Darker
-          800: '#745C0A',  // Very dark
-          900: '#523F06',  // Darkest
+
+        // PRIMARY BLUE SPECTRUM - #005E85 is the MAIN background color
+        primary: {
+          50: '#E6F3F8',
+          100: '#CCE7F1',
+          200: '#99CFE3',
+          300: '#66B7D5',
+          400: '#339FC7',
+          500: '#005E85',   // Base - PRIMARY BRAND COLOR (main backgrounds)
+          600: '#004D6D',
+          700: '#003D57',   // Darker shade for gradients
+          800: '#002C40',
+          900: '#001C2A',   // Darkest (use sparingly)
         },
-        // === ACCENT COLORS ===
-        turquoise: {
-          400: '#14B8A6',
-          500: '#0D9488',  // Uzbek ceramics inspired
+
+        // SKY BLUE SPECTRUM (Secondary)
+        sky: {
+          50: '#EBF6FE',
+          100: '#D7EDFD',
+          200: '#AFDAFB',
+          300: '#87C8F9',
+          400: '#5FB5F7',
+          500: '#3E9EEE',   // Base - SECONDARY BRAND COLOR
+          600: '#327EBE',
+          700: '#265F8F',
+          800: '#193F5F',
+          900: '#0D2030',
         },
-        emerald: {
-          500: '#10B981',  // Success, growth
+
+        // ORANGE SPECTRUM (Accent)
+        orange: {
+          50: '#FEF3E8',
+          100: '#FDE7D1',
+          200: '#FBCFA3',
+          300: '#F9B775',
+          400: '#F79F47',
+          500: '#F27A21',   // Base - ACCENT COLOR
+          600: '#C2621A',
+          700: '#914914',
+          800: '#61310D',
+          900: '#301807',
         },
-        amber: {
-          500: '#F59E0B',  // Warmth, energy
-        },
-        rose: {
-          500: '#F43F5E',  // Alerts, important
-        },
-        // === NEUTRAL ===
+
+        // SEMANTIC COLORS
+        success: '#10B981',
+        warning: '#F59E0B',
+        error: '#EF4444',
+        info: '#3E9EEE',
+
+        // NEUTRAL PALETTE
         slate: {
-          50: '#F8FAFC',
-          100: '#F1F5F9',
-          200: '#E2E8F0',
-          300: '#CBD5E1',
-          400: '#94A3B8',
-          500: '#64748B',
+          50: '#FAFAFA',
+          100: '#F5F5F5',
+          200: '#EEEEEE',
+          300: '#E0E0E0',
+          400: '#BDBDBD',
+          500: '#9D9E9E',
+          600: '#757575',
+          700: '#5A5A5A',
+          800: '#3C3C3C',
+          900: '#2D2D2D',
         },
       },
       fontFamily: {
-        display: ['var(--font-display)', 'Georgia', 'serif'],
-        heading: ['var(--font-heading)', 'system-ui', 'sans-serif'],
-        body: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+        // Official Assembly Typography
+        display: ['var(--font-bebas)', 'Oswald', 'Anton', 'sans-serif'], // Bebas Neue for headlines
+        heading: ['var(--font-dm-sans)', 'system-ui', 'sans-serif'],      // DM Sans for headings
+        body: ['var(--font-dm-sans)', 'system-ui', 'sans-serif'],         // DM Sans for body
         mono: ['var(--font-mono)', 'monospace'],
       },
       letterSpacing: {
@@ -145,8 +181,16 @@ const config: Config = {
           '50%': { transform: 'translateY(-20px) rotate(2deg)' },
         },
         pulseGlow: {
-          '0%, 100%': { boxShadow: '0 0 20px rgba(212, 175, 55, 0.3)' },
-          '50%': { boxShadow: '0 0 40px rgba(212, 175, 55, 0.6)' },
+          '0%, 100%': { boxShadow: '0 0 20px rgba(0, 94, 133, 0.3)' },
+          '50%': { boxShadow: '0 0 40px rgba(0, 94, 133, 0.6)' },
+        },
+        pulseGlowSky: {
+          '0%, 100%': { boxShadow: '0 0 20px rgba(62, 158, 238, 0.3)' },
+          '50%': { boxShadow: '0 0 40px rgba(62, 158, 238, 0.6)' },
+        },
+        pulseGlowOrange: {
+          '0%, 100%': { boxShadow: '0 0 20px rgba(242, 122, 33, 0.3)' },
+          '50%': { boxShadow: '0 0 40px rgba(242, 122, 33, 0.6)' },
         },
         gradient: {
           '0%, 100%': { backgroundPosition: '0% 50%' },
@@ -182,14 +226,19 @@ const config: Config = {
         },
       },
       backgroundImage: {
-        'gold-gradient': 'linear-gradient(135deg, #F5D779 0%, #D4AF37 50%, #B8941F 100%)',
-        'navy-gradient': 'linear-gradient(180deg, #030712 0%, #0B1426 50%, #030712 100%)',
-        'turquoise-gradient': 'linear-gradient(135deg, #14B8A6 0%, #0D9488 100%)',
+        // Official Assembly Gradients
+        'primary-gradient': 'linear-gradient(135deg, #3E9EEE 0%, #005E85 100%)',
+        'dark-gradient': 'linear-gradient(180deg, #2D2D2D 0%, #3C3C3C 100%)',
+        'orange-gradient': 'linear-gradient(135deg, #F27A21 0%, #C2621A 100%)',
+        'sky-gradient': 'linear-gradient(135deg, #5FB5F7 0%, #3E9EEE 100%)',
         'glass-gradient': 'linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)',
+        'hero-gradient': 'linear-gradient(135deg, #001A25 0%, #005E85 50%, #1A4B6E 100%)',
       },
       boxShadow: {
-        'glow-gold': '0 0 60px rgba(212, 175, 55, 0.4)',
-        'glow-turquoise': '0 0 60px rgba(13, 148, 136, 0.4)',
+        // Official Assembly Glows
+        'glow-primary': '0 0 60px rgba(0, 94, 133, 0.4)',
+        'glow-sky': '0 0 60px rgba(62, 158, 238, 0.4)',
+        'glow-orange': '0 0 40px rgba(242, 122, 33, 0.3)',
         'glow-white': '0 0 60px rgba(255, 255, 255, 0.2)',
         'glass': '0 8px 32px rgba(0, 0, 0, 0.3)',
       },

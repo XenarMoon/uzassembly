@@ -28,11 +28,11 @@ export default function Contact() {
     <section
       id="contact"
       ref={sectionRef}
-      className="relative py-12 sm:py-16 lg:py-32 bg-navy-800"
+      className="relative py-12 sm:py-16 lg:py-32 bg-primary-500"
     >
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold-500/20 to-transparent" />
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-sky-500/20 to-transparent" />
       </div>
 
       <div className="container-custom px-4 sm:px-6 relative z-10">
@@ -43,13 +43,13 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="text-center mb-8 sm:mb-12 lg:mb-16"
         >
-          <span className="badge-gold mb-4 sm:mb-6 text-xs sm:text-sm">
-            <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-gold-500" />
+          <span className="badge-primary mb-4 sm:mb-6 text-xs sm:text-sm">
+            <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-sky-500" />
             {t('badge')}
           </span>
 
           <h2 className="font-heading text-2xl sm:text-3xl lg:text-5xl xl:text-6xl font-semibold text-white mb-4 sm:mb-6" style={{ letterSpacing: '-0.025em' }}>
-            {t('headline')} <span className="text-gradient-gold font-display">{t('headlineHighlight')}</span>
+            {t('headline')} <span className="text-gradient-primary font-display">{t('headlineHighlight')}</span>
           </h2>
 
           <p className="text-base sm:text-lg lg:text-xl text-white/60 max-w-2xl mx-auto">
@@ -71,8 +71,8 @@ export default function Contact() {
                 'glass rounded-xl sm:rounded-2xl p-4 sm:p-6 h-full',
                 'border transition-all duration-300',
                 office.main
-                  ? 'border-gold-500/30 hover:border-gold-500/50'
-                  : 'border-white/5 hover:border-turquoise-500/30'
+                  ? 'border-sky-500/30 hover:border-sky-500/50'
+                  : 'border-white/10 hover:border-sky-500/30'
               )}>
                 {/* Header */}
                 <div className="flex items-start justify-between mb-4 sm:mb-6">
@@ -80,7 +80,7 @@ export default function Contact() {
                     <div className="flex items-center gap-2 mb-1">
                       <Globe2 className={cn(
                         'w-4 h-4 sm:w-5 sm:h-5',
-                        office.main ? 'text-gold-400' : 'text-turquoise-400'
+                        office.main ? 'text-sky-400' : 'text-sky-400'
                       )} />
                       <span className="text-white/40 text-xs sm:text-sm">{office.country}</span>
                     </div>
@@ -89,7 +89,7 @@ export default function Contact() {
                     </h3>
                   </div>
                   {office.main && (
-                    <span className="px-2 py-1 rounded-full bg-gold-500/20 text-gold-400 text-[10px] sm:text-xs font-medium">
+                    <span className="px-2 py-1 rounded-full bg-sky-500/20 text-sky-400 text-[10px] sm:text-xs font-medium">
                       {t('info.address.label')}
                     </span>
                   )}
@@ -103,13 +103,13 @@ export default function Contact() {
                   </div>
                   <div className="flex items-center gap-2 sm:gap-3">
                     <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-white/30 flex-shrink-0" />
-                    <a href={`tel:${office.phone}`} className="text-white/60 text-xs sm:text-sm hover:text-gold-400 transition-colors">
+                    <a href={`tel:${office.phone}`} className="text-white/60 text-xs sm:text-sm hover:text-sky-400 transition-colors">
                       {office.phone}
                     </a>
                   </div>
                   <div className="flex items-center gap-2 sm:gap-3">
                     <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-white/30 flex-shrink-0" />
-                    <a href={`mailto:${office.email}`} className="text-white/60 text-xs sm:text-sm hover:text-gold-400 transition-colors">
+                    <a href={`mailto:${office.email}`} className="text-white/60 text-xs sm:text-sm hover:text-sky-400 transition-colors">
                       {office.email}
                     </a>
                   </div>

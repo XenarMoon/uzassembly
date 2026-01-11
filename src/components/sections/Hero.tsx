@@ -10,42 +10,51 @@ import { cn, formatNumber } from '@/lib/utils'
 
 const YOUTUBE_VIDEO_ID = 'pwGThTieavI'
 
+// Assembly Brand Color Stats Configuration
 const statsConfig = [
   {
     key: 'associations',
     value: 46,
     suffix: '+',
     icon: Building2,
-    gradient: 'from-gold-400 via-gold-500 to-amber-500',
-    glowColor: 'rgba(212, 175, 55, 0.4)',
-    bgGradient: 'from-gold-500/10 via-gold-500/5 to-transparent',
+    gradient: 'from-sky-400 via-sky-500 to-primary-500',
+    glowColor: 'rgba(62, 158, 238, 0.4)',
+    bgGradient: 'from-sky-500/10 via-sky-500/5 to-transparent',
+    iconColor: 'text-sky-400',
+    numberColor: 'text-sky-400',
   },
   {
     key: 'services',
     value: 8,
     suffix: '',
     icon: Compass,
-    gradient: 'from-turquoise-400 via-turquoise-500 to-emerald-500',
-    glowColor: 'rgba(13, 148, 136, 0.4)',
-    bgGradient: 'from-turquoise-500/10 via-turquoise-500/5 to-transparent',
+    gradient: 'from-primary-400 via-primary-500 to-primary-600',
+    glowColor: 'rgba(0, 94, 133, 0.4)',
+    bgGradient: 'from-primary-500/10 via-primary-500/5 to-transparent',
+    iconColor: 'text-primary-400',
+    numberColor: 'text-primary-400',
   },
   {
     key: 'smartCity',
     value: 6400,
     suffix: '',
     icon: MapPin,
-    gradient: 'from-gold-400 via-amber-500 to-orange-500',
-    glowColor: 'rgba(245, 158, 11, 0.4)',
-    bgGradient: 'from-amber-500/10 via-amber-500/5 to-transparent',
+    gradient: 'from-orange-400 via-orange-500 to-orange-600',
+    glowColor: 'rgba(242, 122, 33, 0.4)',
+    bgGradient: 'from-orange-500/10 via-orange-500/5 to-transparent',
+    iconColor: 'text-orange-400',
+    numberColor: 'text-orange-400',
   },
   {
     key: 'offices',
     value: 3,
     suffix: '',
     icon: Globe2,
-    gradient: 'from-purple-400 via-violet-500 to-indigo-500',
-    glowColor: 'rgba(139, 92, 246, 0.4)',
-    bgGradient: 'from-violet-500/10 via-violet-500/5 to-transparent',
+    gradient: 'from-sky-300 via-sky-400 to-sky-500',
+    glowColor: 'rgba(62, 158, 238, 0.3)',
+    bgGradient: 'from-sky-400/10 via-sky-400/5 to-transparent',
+    iconColor: 'text-sky-300',
+    numberColor: 'text-sky-300',
   },
 ]
 
@@ -148,12 +157,12 @@ export default function Hero() {
   return (
     <section
       ref={containerRef}
-      className="relative min-h-screen flex flex-col bg-[#030712]"
+      className="relative min-h-screen flex flex-col bg-primary-500"
       style={{ transform: 'translateZ(0)', backfaceVisibility: 'hidden' }}
     >
       {/* 3D Particle Globe Background */}
       <div
-        className="absolute inset-0 overflow-hidden bg-[#030712]"
+        className="absolute inset-0 overflow-hidden bg-primary-500"
         style={{ transform: 'translateZ(0)', willChange: 'transform' }}
       >
         <ParticleGlobe />
@@ -177,8 +186,8 @@ export default function Hero() {
                   transition={{ duration: 0.6, delay: 0.2 }}
                   className="mb-6 sm:mb-8 flex justify-center lg:justify-start"
                 >
-                  <span className="badge-gold text-xs sm:text-sm">
-                    <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-gold-500 animate-pulse" />
+                  <span className="badge-primary text-xs sm:text-sm">
+                    <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-sky-500 animate-pulse" />
                     <span>{t('badge')}</span>
                   </span>
                 </motion.div>
@@ -225,8 +234,8 @@ export default function Hero() {
                     onClick={() => setIsVideoModalOpen(true)}
                     className="flex items-center gap-3 px-4 py-3 text-white/60 hover:text-white transition-colors group"
                   >
-                    <span className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-gold-500/20 transition-colors">
-                      <Play className="w-4 h-4 sm:w-5 sm:h-5 text-gold-400 ml-0.5" />
+                    <span className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-orange-500/20 transition-colors">
+                      <Play className="w-4 h-4 sm:w-5 sm:h-5 text-orange-400 ml-0.5" />
                     </span>
                     <span className="font-medium text-sm sm:text-base">{t('cta.watchVideo')}</span>
                   </button>
@@ -273,7 +282,7 @@ export default function Hero() {
                         )} />
 
                         {/* Card Body */}
-                        <div className="relative rounded-2xl bg-navy-900/95 backdrop-blur-2xl p-4 sm:p-5 lg:p-6 overflow-hidden">
+                        <div className="relative rounded-2xl bg-primary-600/95 backdrop-blur-2xl p-4 sm:p-5 lg:p-6 overflow-hidden">
                           {/* Background gradient on hover */}
                           <div className={cn(
                             'absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500',
@@ -302,20 +311,14 @@ export default function Hero() {
                             )}>
                               <stat.icon className={cn(
                                 'w-5 h-5 sm:w-6 sm:h-6 transition-all duration-300',
-                                index === 0 && 'text-gold-400',
-                                index === 1 && 'text-turquoise-400',
-                                index === 2 && 'text-amber-400',
-                                index === 3 && 'text-violet-400'
+                                stat.iconColor
                               )} />
                             </div>
 
                             {/* Number */}
                             <div className={cn(
                               'font-mono text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-1',
-                              index === 0 && 'text-gold-400',
-                              index === 1 && 'text-turquoise-400',
-                              index === 2 && 'text-amber-400',
-                              index === 3 && 'text-violet-400'
+                              stat.numberColor
                             )}>
                               <AnimatedCounter value={stat.value} suffix={stat.suffix} />
                             </div>
@@ -345,28 +348,28 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.2 }}
-          className="relative z-10 py-4 sm:py-6 lg:py-8 border-t border-white/5 bg-navy-900/50 backdrop-blur-sm"
+          className="relative z-10 py-4 sm:py-6 lg:py-8 border-t border-white/10 bg-primary-600/50 backdrop-blur-sm"
         >
           <div className="container-custom px-4 sm:px-6">
             <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-8 lg:gap-16">
               <div className="flex items-center gap-2 sm:gap-3">
-                <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-emerald-500 animate-pulse" />
+                <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-success animate-pulse" />
                 <span className="text-white/60 text-xs sm:text-sm">
-                  <span className="text-emerald-400 font-mono font-semibold">15,000+</span> {t('bottomStats.members')}
+                  <span className="text-success font-mono font-semibold">15,000+</span> {t('bottomStats.members')}
                 </span>
               </div>
               <div className="hidden sm:block w-px h-4 bg-white/10" />
               <div className="flex items-center gap-2 sm:gap-3">
-                <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-gold-500 animate-pulse" />
+                <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-sky-500 animate-pulse" />
                 <span className="text-white/60 text-xs sm:text-sm">
-                  <span className="text-gold-400 font-mono font-semibold">$20B+</span> {t('bottomStats.investment')}
+                  <span className="text-sky-400 font-mono font-semibold">$20B+</span> {t('bottomStats.investment')}
                 </span>
               </div>
               <div className="hidden sm:block w-px h-4 bg-white/10" />
               <div className="flex items-center gap-2 sm:gap-3">
-                <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-turquoise-400 animate-pulse" />
+                <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-orange-400 animate-pulse" />
                 <span className="text-white/60 text-xs sm:text-sm">
-                  <span className="text-turquoise-400 font-mono font-semibold">10+</span> {t('bottomStats.since')}
+                  <span className="text-orange-400 font-mono font-semibold">10+</span> {t('bottomStats.since')}
                 </span>
               </div>
             </div>
@@ -385,7 +388,7 @@ export default function Hero() {
           href="#services"
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="flex flex-col items-center gap-1.5 sm:gap-2 text-white/30 hover:text-gold-400 transition-colors cursor-pointer"
+          className="flex flex-col items-center gap-1.5 sm:gap-2 text-white/30 hover:text-sky-400 transition-colors cursor-pointer"
         >
           <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5" />
         </motion.a>
@@ -400,10 +403,10 @@ export default function Hero() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6"
-            onClick={() => setIsVideoModalOpen(false)}
+            onClick={(e) => { e.stopPropagation(); setIsVideoModalOpen(false) }}
           >
             {/* Backdrop */}
-            <div className="absolute inset-0 bg-navy-950/95 backdrop-blur-md" />
+            <div className="absolute inset-0 bg-primary-500/95 backdrop-blur-md" />
 
             {/* Modal Content */}
             <motion.div
@@ -416,23 +419,21 @@ export default function Hero() {
             >
               {/* Close Button */}
               <button
-                onClick={() => setIsVideoModalOpen(false)}
-                className="absolute -top-12 right-0 sm:-top-14 sm:-right-2 p-2 text-white/60 hover:text-white transition-colors group"
+                onClick={(e) => { e.stopPropagation(); setIsVideoModalOpen(false) }}
+                className="absolute -top-16 right-0 z-50 flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white/80 hover:text-white transition-all duration-300 group border border-white/20 backdrop-blur-sm cursor-pointer"
               >
-                <span className="flex items-center gap-2 text-sm font-medium">
-                  <span className="hidden sm:inline">{t('cta.closeVideo')}</span>
-                  <X className="w-6 h-6 group-hover:rotate-90 transition-transform duration-300" />
-                </span>
+                <span className="text-sm font-medium">{t('cta.closeVideo')}</span>
+                <X className="w-5 h-5 group-hover:rotate-90 transition-transform duration-300" />
               </button>
 
               {/* Video Container with Glow */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 {/* Glow Effect */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-gold-500/20 via-turquoise-500/20 to-gold-500/20 rounded-2xl blur-xl opacity-60" />
+                <div className="absolute -inset-1 bg-gradient-to-r from-sky-500/20 via-primary-500/20 to-sky-500/20 rounded-2xl blur-xl opacity-60" />
 
                 {/* Border */}
-                <div className="relative rounded-2xl p-[1px] bg-gradient-to-r from-gold-500/40 via-white/20 to-turquoise-500/40">
-                  <div className="rounded-2xl overflow-hidden bg-navy-900">
+                <div className="relative rounded-2xl p-[1px] bg-gradient-to-r from-sky-500/40 via-white/20 to-primary-500/40">
+                  <div className="rounded-2xl overflow-hidden bg-primary-800">
                     <iframe
                       src={`https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1&rel=0&modestbranding=1`}
                       title="Assembly Video"

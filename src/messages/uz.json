@@ -416,13 +416,19 @@
     }
   },
   "footer": {
-    "tagline": "O'zbekiston Iqtisodiyot Assambleyasi — tadbirkorlar uchun yagona ekotizim. 46+ assotsiatsiya, 8 strategik xizmat yo'nalishi.",
+    "tagline": "Tadbirkorga ko'mak // Vatanga ko'mak",
+    "contactTitle": "ALOQA",
+    "workingHours": "ISH VAQTI",
+    "siteLinks": "SAYT",
     "columns": {
       "services": "Xizmatlar",
       "organization": "Tashkilot",
       "members": "A'zolar"
     },
     "links": {
+      "home": "Bosh sahifa",
+      "activities": "Faoliyatimiz",
+      "contact": "Aloqa uchun",
       "smartCity": "Smart City",
       "biznesDarcha": "Biznes Darcha",
       "investHub": "Invest Hub",
@@ -439,6 +445,13 @@
       "benefits": "Imtiyozlar",
       "forInvestors": "Investorlarga",
       "faq": "FAQ"
+    },
+    "form": {
+      "title": "Qayta bog'lanish uchun",
+      "subtitle": "ma'lumotlaringizni yozib qoldiring",
+      "namePlaceholder": "Ism",
+      "emailPlaceholder": "Email",
+      "submit": "Yuborish"
     },
     "legal": {
       "copyright": "O'zbekiston Iqtisodiyot Assambleyasi. Barcha huquqlar himoyalangan.",

@@ -210,8 +210,8 @@ export default function ParticleGlobe() {
       const mobile = checkMobile()
       const tablet = checkTablet()
 
-      // Clear canvas
-      ctx.fillStyle = '#030712'
+      // Clear canvas - Assembly Brand Color
+      ctx.fillStyle = '#005E85'
       ctx.fillRect(0, 0, width, height)
 
       const time = Date.now() * 0.001
@@ -258,53 +258,53 @@ export default function ParticleGlobe() {
       const longitudeParticles = generateLongitudeLines(longLineCount, longPointsPerLine, globeRadius)
       const arcParticles = generateArcs(arcCount, arcPointsPerArc, globeRadius)
 
-      // Draw background particles (sparse on mobile)
+      // Draw background particles (sparse on mobile) - Assembly Brand
       if (!mobile) {
         bgParticles.forEach(p => {
           const projected = project(p.x, p.y, p.z, width / 2, height / 2)
           if (projected.scale > 0) {
-            drawParticle(projected.x, projected.y, 1.5 * projected.scale, 'rgba(30, 58, 95', 0.3)
+            drawParticle(projected.x, projected.y, 1.5 * projected.scale, 'rgba(0, 77, 109', 0.3)
           }
         })
       }
 
-      // Draw arcs (turquoise)
+      // Draw arcs (Sky Blue - Assembly Secondary)
       arcParticles.forEach(p => {
         const rotated = rotateY(p, rotation * 1.15)
         const projected = project(rotated.x, rotated.y, rotated.z, centerX, centerY)
         if (projected.scale > 0.3) {
           const opacity = Math.min(0.7, projected.scale * 0.8) * particleScale
-          drawParticle(projected.x, projected.y, 2.2 * projected.scale * particleScale, 'rgba(13, 148, 136', opacity)
+          drawParticle(projected.x, projected.y, 2.2 * projected.scale * particleScale, 'rgba(62, 158, 238', opacity)
         }
       })
 
-      // Draw longitude lines (lighter gold)
+      // Draw longitude lines (Light Sky Blue)
       longitudeParticles.forEach(p => {
         const rotated = rotateY(p, rotation)
         const projected = project(rotated.x, rotated.y, rotated.z, centerX, centerY)
         if (projected.scale > 0.3) {
           const opacity = Math.min(0.45, projected.scale * 0.55) * particleScale
-          drawParticle(projected.x, projected.y, 1.6 * projected.scale * particleScale, 'rgba(245, 215, 121', opacity)
+          drawParticle(projected.x, projected.y, 1.6 * projected.scale * particleScale, 'rgba(95, 181, 247', opacity)
         }
       })
 
-      // Draw latitude lines (lighter gold)
+      // Draw latitude lines (Light Sky Blue)
       latitudeParticles.forEach(p => {
         const rotated = rotateY(p, rotation)
         const projected = project(rotated.x, rotated.y, rotated.z, centerX, centerY)
         if (projected.scale > 0.3) {
           const opacity = Math.min(0.45, projected.scale * 0.55) * particleScale
-          drawParticle(projected.x, projected.y, 1.6 * projected.scale * particleScale, 'rgba(245, 215, 121', opacity)
+          drawParticle(projected.x, projected.y, 1.6 * projected.scale * particleScale, 'rgba(95, 181, 247', opacity)
         }
       })
 
-      // Draw main sphere (gold)
+      // Draw main sphere (Primary Blue - Assembly Primary)
       sphereParticles.forEach(p => {
         const rotated = rotateY(p, rotation)
         const projected = project(rotated.x, rotated.y, rotated.z, centerX, centerY)
         if (projected.scale > 0.3) {
           const opacity = Math.min(0.8, projected.scale * 0.95) * particleScale
-          drawParticle(projected.x, projected.y, 2 * projected.scale * particleScale, 'rgba(212, 175, 55', opacity)
+          drawParticle(projected.x, projected.y, 2 * projected.scale * particleScale, 'rgba(0, 94, 133', opacity)
         }
       })
 
@@ -320,56 +320,56 @@ export default function ParticleGlobe() {
   }, [mounted])
 
   if (!mounted) {
-    return <div className="absolute inset-0 bg-[#030712]" />
+    return <div className="absolute inset-0 bg-primary-500" />
   }
 
   return (
     <div className="absolute inset-0">
-      {/* Solid background */}
-      <div className="absolute inset-0 bg-[#030712]" style={{ top: '-20px', bottom: '-20px' }} />
+      {/* Solid background - Assembly Brand */}
+      <div className="absolute inset-0 bg-primary-500" style={{ top: '-20px', bottom: '-20px' }} />
 
       <canvas
         ref={canvasRef}
         className="absolute inset-0"
         style={{
-          background: '#030712',
+          background: '#005E85',
           transform: 'translateZ(0)',
           willChange: 'transform',
           backfaceVisibility: 'hidden',
         }}
       />
 
-      {/* Desktop: Strong left gradient for text readability */}
+      {/* Desktop: Strong left gradient for text readability - Assembly Brand */}
       <div
         className="absolute inset-0 pointer-events-none hidden md:block"
         style={{
-          background: 'linear-gradient(90deg, rgba(3, 7, 18, 0.98) 0%, rgba(3, 7, 18, 0.95) 20%, rgba(3, 7, 18, 0.8) 35%, rgba(3, 7, 18, 0.4) 50%, transparent 70%)',
+          background: 'linear-gradient(90deg, rgba(0, 94, 133, 0.95) 0%, rgba(0, 94, 133, 0.85) 20%, rgba(0, 94, 133, 0.6) 35%, rgba(0, 94, 133, 0.3) 50%, transparent 70%)',
         }}
       />
 
-      {/* Mobile: Full overlay gradient for readability */}
+      {/* Mobile: Full overlay gradient for readability - Assembly Brand */}
       <div
         className="absolute inset-0 pointer-events-none md:hidden"
         style={{
-          background: 'linear-gradient(180deg, rgba(3, 7, 18, 0.9) 0%, rgba(3, 7, 18, 0.6) 30%, rgba(3, 7, 18, 0.4) 50%, rgba(3, 7, 18, 0.7) 80%, rgba(3, 7, 18, 0.95) 100%)',
+          background: 'linear-gradient(180deg, rgba(0, 94, 133, 0.9) 0%, rgba(0, 94, 133, 0.5) 30%, rgba(0, 94, 133, 0.3) 50%, rgba(0, 94, 133, 0.6) 80%, rgba(0, 94, 133, 0.95) 100%)',
         }}
       />
 
-      {/* Bottom gradient */}
+      {/* Bottom gradient - Assembly Brand */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'linear-gradient(0deg, rgba(3, 7, 18, 0.95) 0%, rgba(3, 7, 18, 0.5) 15%, transparent 35%)',
+          background: 'linear-gradient(0deg, rgba(0, 94, 133, 0.95) 0%, rgba(0, 94, 133, 0.4) 15%, transparent 35%)',
         }}
       />
 
-      {/* Top gradient - covers header area */}
+      {/* Top gradient - covers header area - Assembly Brand */}
       <div
         className="absolute left-0 right-0 pointer-events-none"
         style={{
           top: '-10px',
           height: '120px',
-          background: 'linear-gradient(180deg, #030712 0%, rgba(3, 7, 18, 0.95) 40%, rgba(3, 7, 18, 0.7) 70%, transparent 100%)',
+          background: 'linear-gradient(180deg, #005E85 0%, rgba(0, 94, 133, 0.95) 40%, rgba(0, 94, 133, 0.7) 70%, transparent 100%)',
         }}
       />
     </div>

@@ -65,14 +65,14 @@ export default function Projects() {
     <section
       id="projects"
       ref={sectionRef}
-      className="relative py-20 lg:py-32 bg-navy-900"
+      className="relative py-20 lg:py-32 bg-primary-500"
     >
       {/* Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
           className="absolute w-[600px] h-[600px] rounded-full"
           style={{
-            background: 'radial-gradient(circle, rgba(13, 148, 136, 0.08) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(62, 158, 238, 0.08) 0%, transparent 70%)',
             filter: 'blur(100px)',
             bottom: '10%',
             left: '-10%',
@@ -98,13 +98,13 @@ export default function Projects() {
           className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12"
         >
           <div className="max-w-2xl">
-            <span className="badge-gold mb-6">
-              <span className="w-2 h-2 rounded-full bg-gold-500" />
+            <span className="badge-primary mb-6">
+              <span className="w-2 h-2 rounded-full bg-sky-500" />
               {t('badge')}
             </span>
 
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-semibold text-white" style={{ letterSpacing: '-0.025em' }}>
-              {t('headline')} <span className="text-gradient-gold font-display">{t('headlineHighlight')}</span>
+              {t('headline')} <span className="text-gradient-primary font-display">{t('headlineHighlight')}</span>
             </h2>
           </div>
 
@@ -126,14 +126,14 @@ export default function Projects() {
             <Link href={`/projects/${projects[0].id}`} className="group block h-full">
               <div className={cn(
                 'relative h-full min-h-[500px] rounded-3xl overflow-hidden',
-                'bg-gradient-to-br from-gold-500/20 via-navy-700/80 to-navy-800',
-                'border border-gold-500/20 hover:border-gold-500/40 transition-all duration-500'
+                'bg-gradient-to-br from-orange-500/20 via-primary-600/80 to-primary-700',
+                'border border-orange-500/20 hover:border-orange-500/40 transition-all duration-500'
               )}>
                 {/* Background Pattern */}
                 <div className="absolute inset-0 opacity-30"
                   style={{
-                    backgroundImage: `linear-gradient(rgba(212, 175, 55, 0.1) 1px, transparent 1px),
-                                      linear-gradient(90deg, rgba(212, 175, 55, 0.1) 1px, transparent 1px)`,
+                    backgroundImage: `linear-gradient(rgba(242, 122, 33, 0.1) 1px, transparent 1px),
+                                      linear-gradient(90deg, rgba(242, 122, 33, 0.1) 1px, transparent 1px)`,
                     backgroundSize: '40px 40px',
                   }}
                 />
@@ -142,7 +142,7 @@ export default function Projects() {
                 <div className="relative z-10 p-8 h-full flex flex-col">
                   {/* Status Badge */}
                   <div className="flex items-center gap-3 mb-6">
-                    <span className="px-3 py-1 rounded-full bg-gold-500/20 text-gold-400 text-sm font-medium">
+                    <span className="px-3 py-1 rounded-full bg-orange-500/20 text-orange-400 text-sm font-medium">
                       {projects[0].category}
                     </span>
                     <span className="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-medium flex items-center gap-1">
@@ -152,7 +152,7 @@ export default function Projects() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="font-heading text-3xl md:text-4xl font-semibold text-white mb-4 group-hover:text-gold-400 transition-colors" style={{ letterSpacing: '-0.02em' }}>
+                  <h3 className="font-heading text-3xl md:text-4xl font-semibold text-white mb-4 group-hover:text-orange-400 transition-colors" style={{ letterSpacing: '-0.02em' }}>
                     {projects[0].title}
                   </h3>
 
@@ -164,14 +164,14 @@ export default function Projects() {
                   <div className="flex-1" />
                   <div className="grid grid-cols-2 gap-4 mt-auto">
                     <div className="glass rounded-xl p-4">
-                      <div className="flex items-center gap-2 text-gold-400 mb-2">
+                      <div className="flex items-center gap-2 text-orange-400 mb-2">
                         <DollarSign className="w-5 h-5" />
                         <span className="text-sm text-white/50">{t('labels.investment')}</span>
                       </div>
                       <p className="font-mono text-2xl font-bold text-white tracking-tight">{projects[0].investment}</p>
                     </div>
                     <div className="glass rounded-xl p-4">
-                      <div className="flex items-center gap-2 text-gold-400 mb-2">
+                      <div className="flex items-center gap-2 text-orange-400 mb-2">
                         <MapPin className="w-5 h-5" />
                         <span className="text-sm text-white/50">{t('labels.location')}</span>
                       </div>
@@ -180,7 +180,7 @@ export default function Projects() {
                   </div>
 
                   {/* CTA */}
-                  <div className="mt-6 flex items-center gap-2 text-gold-400 group-hover:text-gold-300 transition-colors">
+                  <div className="mt-6 flex items-center gap-2 text-orange-400 group-hover:text-orange-300 transition-colors">
                     <span className="font-medium">{t('readMore')}</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
                   </div>
@@ -201,11 +201,11 @@ export default function Projects() {
                 <Link href={`/projects/${project.id}`} className="group block">
                   <div className={cn(
                     'glass rounded-2xl p-5 lg:p-6 h-full',
-                    'border border-white/5 hover:border-turquoise-500/30 transition-all duration-300',
-                    'hover:bg-turquoise-500/5'
+                    'border border-white/10 hover:border-sky-500/30 transition-all duration-300',
+                    'hover:bg-sky-500/10'
                   )}>
                     <div className="flex items-start justify-between mb-3">
-                      <span className="px-3 py-1 rounded-full bg-turquoise-500/20 text-turquoise-400 text-sm font-medium">
+                      <span className="px-3 py-1 rounded-full bg-sky-500/20 text-sky-400 text-sm font-medium">
                         {project.category}
                       </span>
                       <span className={cn(
@@ -216,7 +216,7 @@ export default function Projects() {
                       </span>
                     </div>
 
-                    <h3 className="font-heading text-lg lg:text-xl font-semibold text-white mb-2 group-hover:text-turquoise-400 transition-colors">
+                    <h3 className="font-heading text-lg lg:text-xl font-semibold text-white mb-2 group-hover:text-sky-400 transition-colors">
                       {project.title}
                     </h3>
 
@@ -229,7 +229,7 @@ export default function Projects() {
                         <MapPin className="w-4 h-4" />
                         <span>{project.location}</span>
                       </div>
-                      <div className="flex items-center gap-1 text-turquoise-400">
+                      <div className="flex items-center gap-1 text-sky-400">
                         <DollarSign className="w-4 h-4" />
                         <span className="font-semibold">{project.investment}</span>
                       </div>

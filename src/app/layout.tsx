@@ -1,26 +1,24 @@
 import type { Metadata } from 'next'
-import { Inter, DM_Serif_Display, DM_Sans, JetBrains_Mono } from 'next/font/google'
+import { Bebas_Neue, DM_Sans, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 
-// Primary body font - clean, professional, highly readable
-const inter = Inter({
-  subsets: ['latin', 'cyrillic'],
-  variable: '--font-inter',
-  display: 'swap',
-})
+// ═══════════════════════════════════════════════════════════════
+// OFFICIAL ASSEMBLY TYPOGRAPHY
+// Source: Brend Qo'llanmasi - Tipografiya section
+// ═══════════════════════════════════════════════════════════════
 
-// Display font for headlines - elegant, authoritative
-const dmSerifDisplay = DM_Serif_Display({
+// Display font for headlines - Bebas Neue (Official Brand Font)
+const bebasNeue = Bebas_Neue({
   weight: '400',
   subsets: ['latin'],
-  variable: '--font-display',
+  variable: '--font-bebas',
   display: 'swap',
 })
 
-// Heading font - modern, professional
+// Body/Heading font - DM Sans (Clean, professional)
 const dmSans = DM_Sans({
-  subsets: ['latin'],
-  variable: '--font-heading',
+  subsets: ['latin', 'latin-ext'],
+  variable: '--font-dm-sans',
   display: 'swap',
 })
 
@@ -43,11 +41,11 @@ export default function RootLayout({
 }) {
   return (
     <html
-      className={`scroll-smooth ${inter.variable} ${dmSerifDisplay.variable} ${dmSans.variable} ${jetbrainsMono.variable}`}
+      className={`scroll-smooth ${bebasNeue.variable} ${dmSans.variable} ${jetbrainsMono.variable}`}
       suppressHydrationWarning
-      style={{ backgroundColor: '#030712' }}
+      style={{ backgroundColor: '#005E85' }}
     >
-      <body className="font-body bg-[#030712] text-white overflow-x-hidden antialiased" style={{ backgroundColor: '#030712' }}>
+      <body className="font-body bg-primary-500 text-white overflow-x-hidden antialiased" style={{ backgroundColor: '#005E85' }}>
         {children}
       </body>
     </html>

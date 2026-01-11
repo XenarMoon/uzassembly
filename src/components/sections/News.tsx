@@ -82,12 +82,12 @@ export default function News() {
     <section
       id="news"
       ref={sectionRef}
-      className="relative py-20 lg:py-32 bg-navy-800"
+      className="relative py-20 lg:py-32 bg-assembly-light"
     >
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold-500/20 to-transparent" />
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold-500/20 to-transparent" />
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary-500/20 to-transparent" />
+        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary-500/20 to-transparent" />
       </div>
 
       <div className="container-custom relative z-10">
@@ -99,17 +99,17 @@ export default function News() {
           className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12"
         >
           <div className="max-w-2xl">
-            <span className="badge-gold mb-6">
-              <span className="w-2 h-2 rounded-full bg-gold-500" />
+            <span className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium tracking-wide bg-primary-500/10 border border-primary-500/30 text-primary-500 mb-6">
+              <span className="w-2 h-2 rounded-full bg-primary-500" />
               {t('badge')}
             </span>
 
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-semibold text-white" style={{ letterSpacing: '-0.025em' }}>
-              {t('headline')} <span className="text-gradient-gold font-display">{t('headlineHighlight')}</span>
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-semibold text-primary-500" style={{ letterSpacing: '-0.025em' }}>
+              {t('headline')} <span className="text-gradient-primary font-display">{t('headlineHighlight')}</span>
             </h2>
           </div>
 
-          <Link href="/news" className="btn-secondary inline-flex items-center gap-2 self-start md:self-auto">
+          <Link href="/news" className="inline-flex items-center gap-2 self-start md:self-auto px-5 py-3 sm:px-8 sm:py-4 border border-primary-500/30 text-primary-500 font-heading font-semibold text-sm sm:text-base rounded-full tracking-wide transition-all duration-300 hover:bg-primary-500 hover:text-white">
             <span>{t('viewAll')}</span>
             <ArrowRight className="w-5 h-5" />
           </Link>
@@ -127,17 +127,17 @@ export default function News() {
             <Link href={`/news/${featuredNews.id}`} className="group block h-full">
               <div className={cn(
                 'relative h-full min-h-[450px] rounded-3xl overflow-hidden',
-                'bg-gradient-to-br from-gold-500/10 via-navy-700/80 to-navy-800',
-                'border border-white/5 hover:border-gold-500/30 transition-all duration-500'
+                'bg-gradient-to-br from-primary-500/10 via-primary-600/80 to-primary-700',
+                'border border-primary-500/20 hover:border-primary-500/40 transition-all duration-500'
               )}>
                 {/* Background */}
-                <div className="absolute inset-0 bg-navy-900/60" />
+                <div className="absolute inset-0 bg-primary-600/60" />
 
                 {/* Content */}
                 <div className="relative z-10 p-8 h-full flex flex-col">
                   {/* Meta */}
                   <div className="flex items-center gap-3 mb-6">
-                    <span className="px-3 py-1 rounded-full bg-gold-500/20 text-gold-400 text-sm font-medium flex items-center gap-1.5">
+                    <span className="px-3 py-1 rounded-full bg-sky-500/20 text-sky-400 text-sm font-medium flex items-center gap-1.5">
                       <Tag className="w-3.5 h-3.5" />
                       {featuredNews.category}
                     </span>
@@ -148,7 +148,7 @@ export default function News() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="font-heading text-2xl md:text-3xl font-semibold text-white mb-4 group-hover:text-gold-400 transition-colors leading-tight" style={{ letterSpacing: '-0.02em' }}>
+                  <h3 className="font-heading text-2xl md:text-3xl font-semibold text-white mb-4 group-hover:text-sky-400 transition-colors leading-tight" style={{ letterSpacing: '-0.02em' }}>
                     {featuredNews.title}
                   </h3>
 
@@ -165,7 +165,7 @@ export default function News() {
                       <Calendar className="w-4 h-4" />
                       <span className="text-sm">{formatDate(featuredNews.date)}</span>
                     </div>
-                    <div className="flex items-center gap-2 text-gold-400 group-hover:text-gold-300 transition-colors">
+                    <div className="flex items-center gap-2 text-sky-400 group-hover:text-sky-300 transition-colors">
                       <span className="font-medium">{t('readMore')}</span>
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </div>
@@ -186,34 +186,34 @@ export default function News() {
               >
                 <Link href={`/news/${item.id}`} className="group block">
                   <div className={cn(
-                    'glass rounded-2xl p-5 lg:p-6',
-                    'border border-white/5 hover:border-turquoise-500/30 transition-all duration-300',
-                    'hover:bg-turquoise-500/5'
+                    'bg-white rounded-2xl p-5 lg:p-6',
+                    'border border-primary-500/10 hover:border-sky-500/30 transition-all duration-300',
+                    'hover:bg-sky-50 shadow-sm hover:shadow-md'
                   )}>
                     <div className="flex items-center gap-3 mb-3">
-                      <span className="px-2.5 py-1 rounded-full bg-turquoise-500/20 text-turquoise-400 text-xs font-medium">
+                      <span className="px-2.5 py-1 rounded-full bg-sky-500/20 text-sky-500 text-xs font-medium">
                         {item.category}
                       </span>
-                      <span className="text-white/30 text-xs flex items-center gap-1">
+                      <span className="text-primary-500/40 text-xs flex items-center gap-1">
                         <Clock className="w-3 h-3" />
                         {item.readTime} {t('readTime')}
                       </span>
                     </div>
 
-                    <h3 className="font-heading text-lg font-semibold text-white mb-2 group-hover:text-turquoise-400 transition-colors line-clamp-2">
+                    <h3 className="font-heading text-lg font-semibold text-primary-700 mb-2 group-hover:text-sky-500 transition-colors line-clamp-2">
                       {item.title}
                     </h3>
 
-                    <p className="text-white/50 text-sm line-clamp-2 mb-3">
+                    <p className="text-primary-500/60 text-sm line-clamp-2 mb-3">
                       {item.excerpt}
                     </p>
 
                     <div className="flex items-center justify-between">
-                      <span className="text-white/30 text-xs flex items-center gap-1">
+                      <span className="text-primary-500/40 text-xs flex items-center gap-1">
                         <Calendar className="w-3 h-3" />
                         {formatDate(item.date)}
                       </span>
-                      <ArrowRight className="w-4 h-4 text-white/30 group-hover:text-turquoise-400 group-hover:translate-x-1 transition-all" />
+                      <ArrowRight className="w-4 h-4 text-primary-500/30 group-hover:text-sky-500 group-hover:translate-x-1 transition-all" />
                     </div>
                   </div>
                 </Link>
