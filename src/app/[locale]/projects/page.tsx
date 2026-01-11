@@ -65,6 +65,7 @@ const colorClasses = {
     text: 'text-gold-400',
     badge: 'bg-gold-500/20 text-gold-400',
     gradient: 'from-gold-500/20 via-navy-800/50 to-navy-900',
+    modalGradient: 'from-gold-500/30 via-[#0c1929] to-[#0c1929]',
     hover: 'hover:border-gold-500/50',
   },
   turquoise: {
@@ -73,6 +74,7 @@ const colorClasses = {
     text: 'text-turquoise-400',
     badge: 'bg-turquoise-500/20 text-turquoise-400',
     gradient: 'from-turquoise-500/20 via-navy-800/50 to-navy-900',
+    modalGradient: 'from-turquoise-500/30 via-[#0c1929] to-[#0c1929]',
     hover: 'hover:border-turquoise-500/50',
   },
   emerald: {
@@ -81,6 +83,7 @@ const colorClasses = {
     text: 'text-emerald-400',
     badge: 'bg-emerald-500/20 text-emerald-400',
     gradient: 'from-emerald-500/20 via-navy-800/50 to-navy-900',
+    modalGradient: 'from-emerald-500/30 via-[#0c1929] to-[#0c1929]',
     hover: 'hover:border-emerald-500/50',
   },
   violet: {
@@ -89,6 +92,7 @@ const colorClasses = {
     text: 'text-violet-400',
     badge: 'bg-violet-500/20 text-violet-400',
     gradient: 'from-violet-500/20 via-navy-800/50 to-navy-900',
+    modalGradient: 'from-violet-500/30 via-[#0c1929] to-[#0c1929]',
     hover: 'hover:border-violet-500/50',
   },
   rose: {
@@ -97,6 +101,7 @@ const colorClasses = {
     text: 'text-rose-400',
     badge: 'bg-rose-500/20 text-rose-400',
     gradient: 'from-rose-500/20 via-navy-800/50 to-navy-900',
+    modalGradient: 'from-rose-500/30 via-[#0c1929] to-[#0c1929]',
     hover: 'hover:border-rose-500/50',
   },
   amber: {
@@ -105,6 +110,7 @@ const colorClasses = {
     text: 'text-amber-400',
     badge: 'bg-amber-500/20 text-amber-400',
     gradient: 'from-amber-500/20 via-navy-800/50 to-navy-900',
+    modalGradient: 'from-amber-500/30 via-[#0c1929] to-[#0c1929]',
     hover: 'hover:border-amber-500/50',
   },
 }
@@ -661,14 +667,14 @@ export default function ProjectsPage() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-navy-900/90 backdrop-blur-sm"
+              className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md"
               onClick={() => setSelectedProject(null)}
             >
               <motion.div
                 initial={{ opacity: 0, scale: 0.95, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95, y: 20 }}
-                className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl bg-navy-800 border border-white/10"
+                className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl bg-[#0c1929] border border-white/10 shadow-2xl"
                 onClick={(e) => e.stopPropagation()}
               >
                 {(() => {
@@ -678,7 +684,7 @@ export default function ProjectsPage() {
                   return (
                     <>
                       {/* Header */}
-                      <div className={cn('p-6 lg:p-8 bg-gradient-to-br', colors.gradient)}>
+                      <div className={cn('p-6 lg:p-8 bg-gradient-to-br', colors.modalGradient)}>
                         <div className="flex items-start gap-4">
                           <div className={cn('w-14 h-14 rounded-xl flex items-center justify-center', colors.bg)}>
                             <IconComponent className={cn('w-7 h-7', colors.text)} />

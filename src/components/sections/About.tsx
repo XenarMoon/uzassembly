@@ -32,7 +32,7 @@ export default function About() {
     <section
       id="about"
       ref={sectionRef}
-      className="relative py-20 lg:py-32 bg-primary-500 overflow-hidden"
+      className="relative py-20 lg:py-32 bg-gradient-to-b from-primary-700 via-primary-600 to-primary-500 overflow-hidden"
     >
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none">

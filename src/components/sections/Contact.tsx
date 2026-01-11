@@ -28,7 +28,7 @@ export default function Contact() {
     <section
       id="contact"
       ref={sectionRef}
-      className="relative py-12 sm:py-16 lg:py-32 bg-primary-500"
+      className="relative py-12 sm:py-16 lg:py-32 bg-gradient-to-b from-primary-700 via-primary-600 to-primary-700"
     >
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none">

@@ -82,12 +82,31 @@ export default function News() {
     <section
       id="news"
       ref={sectionRef}
-      className="relative py-20 lg:py-32 bg-assembly-light"
+      className="relative py-20 lg:py-32 bg-gradient-to-b from-primary-500 via-primary-600 to-primary-700"
     >
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary-500/20 to-transparent" />
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary-500/20 to-transparent" />
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-sky-500/20 to-transparent" />
+
+        {/* Floating Orb */}
+        <motion.div
+          className="absolute w-[500px] h-[500px] rounded-full"
+          style={{
+            background: 'radial-gradient(circle, rgba(62, 158, 238, 0.1) 0%, transparent 70%)',
+            filter: 'blur(80px)',
+            bottom: '10%',
+            right: '-10%',
+          }}
+          animate={{
+            x: [0, -30, 0],
+            y: [0, 20, 0],
+          }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+            ease: 'easeInOut',
+          }}
+        />
       </div>
 
       <div className="container-custom relative z-10">
@@ -99,17 +118,17 @@ export default function News() {
           className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12"
         >
           <div className="max-w-2xl">
-            <span className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium tracking-wide bg-primary-500/10 border border-primary-500/30 text-primary-500 mb-6">
-              <span className="w-2 h-2 rounded-full bg-primary-500" />
+            <span className="badge-primary mb-6">
+              <span className="w-2 h-2 rounded-full bg-sky-400 animate-pulse" />
               {t('badge')}
             </span>
 
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-semibold text-primary-500" style={{ letterSpacing: '-0.025em' }}>
-              {t('headline')} <span className="text-gradient-primary font-display">{t('headlineHighlight')}</span>
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-semibold text-white" style={{ letterSpacing: '-0.025em' }}>
+              {t('headline')} <span className="text-gradient-sky font-display">{t('headlineHighlight')}</span>
             </h2>
           </div>
 
-          <Link href="/news" className="inline-flex items-center gap-2 self-start md:self-auto px-5 py-3 sm:px-8 sm:py-4 border border-primary-500/30 text-primary-500 font-heading font-semibold text-sm sm:text-base rounded-full tracking-wide transition-all duration-300 hover:bg-primary-500 hover:text-white">
+          <Link href="/news" className="btn-secondary self-start md:self-auto">
             <span>{t('viewAll')}</span>
             <ArrowRight className="w-5 h-5" />
           </Link>
@@ -127,11 +146,11 @@ export default function News() {
             <Link href={`/news/${featuredNews.id}`} className="group block h-full">
               <div className={cn(
                 'relative h-full min-h-[450px] rounded-3xl overflow-hidden',
-                'bg-gradient-to-br from-primary-500/10 via-primary-600/80 to-primary-700',
-                'border border-primary-500/20 hover:border-primary-500/40 transition-all duration-500'
+                'bg-gradient-to-br from-sky-500/10 via-primary-700/80 to-primary-800',
+                'border border-sky-500/20 hover:border-sky-500/40 transition-all duration-500'
               )}>
                 {/* Background */}
-                <div className="absolute inset-0 bg-primary-600/60" />
+                <div className="absolute inset-0 bg-primary-700/60" />
 
                 {/* Content */}
                 <div className="relative z-10 p-8 h-full flex flex-col">
@@ -186,34 +205,34 @@ export default function News() {
               >
                 <Link href={`/news/${item.id}`} className="group block">
                   <div className={cn(
-                    'bg-white rounded-2xl p-5 lg:p-6',
-                    'border border-primary-500/10 hover:border-sky-500/30 transition-all duration-300',
-                    'hover:bg-sky-50 shadow-sm hover:shadow-md'
+                    'bg-white/[0.03] rounded-2xl p-5 lg:p-6',
+                    'border border-white/10 hover:border-sky-500/30 transition-all duration-300',
+                    'hover:bg-white/[0.06] backdrop-blur-sm'
                   )}>
                     <div className="flex items-center gap-3 mb-3">
-                      <span className="px-2.5 py-1 rounded-full bg-sky-500/20 text-sky-500 text-xs font-medium">
+                      <span className="px-2.5 py-1 rounded-full bg-sky-500/20 text-sky-400 text-xs font-medium">
                         {item.category}
                       </span>
-                      <span className="text-primary-500/40 text-xs flex items-center gap-1">
+                      <span className="text-white/40 text-xs flex items-center gap-1">
                         <Clock className="w-3 h-3" />
                         {item.readTime} {t('readTime')}
                       </span>
                     </div>
 
-                    <h3 className="font-heading text-lg font-semibold text-primary-700 mb-2 group-hover:text-sky-500 transition-colors line-clamp-2">
+                    <h3 className="font-heading text-lg font-semibold text-white mb-2 group-hover:text-sky-400 transition-colors line-clamp-2">
                       {item.title}
                     </h3>
 
-                    <p className="text-primary-500/60 text-sm line-clamp-2 mb-3">
+                    <p className="text-white/50 text-sm line-clamp-2 mb-3">
                       {item.excerpt}
                     </p>
 
                     <div className="flex items-center justify-between">
-                      <span className="text-primary-500/40 text-xs flex items-center gap-1">
+                      <span className="text-white/40 text-xs flex items-center gap-1">
                         <Calendar className="w-3 h-3" />
                         {formatDate(item.date)}
                       </span>
-                      <ArrowRight className="w-4 h-4 text-primary-500/30 group-hover:text-sky-500 group-hover:translate-x-1 transition-all" />
+                      <ArrowRight className="w-4 h-4 text-white/30 group-hover:text-sky-400 group-hover:translate-x-1 transition-all" />
                     </div>
                   </div>
                 </Link>

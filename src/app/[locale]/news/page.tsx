@@ -892,14 +892,14 @@ export default function NewsPage() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-navy-900/90 backdrop-blur-sm"
+              className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md"
               onClick={() => setSelectedArticle(null)}
             >
               <motion.div
                 initial={{ opacity: 0, scale: 0.95, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95, y: 20 }}
-                className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl bg-navy-800 border border-white/10"
+                className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl bg-[#0c1929] border border-white/10 shadow-2xl"
                 onClick={(e) => e.stopPropagation()}
               >
                 {(() => {
@@ -908,7 +908,7 @@ export default function NewsPage() {
                   return (
                     <>
                       {/* Header */}
-                      <div className="relative p-6 lg:p-8 bg-gradient-to-br from-gold-500/10 via-navy-800/80 to-navy-900">
+                      <div className="relative p-6 lg:p-8 bg-gradient-to-br from-gold-500/20 via-[#0c1929] to-[#0c1929]">
                         {/* Close Button */}
                         <button
                           onClick={() => setSelectedArticle(null)}

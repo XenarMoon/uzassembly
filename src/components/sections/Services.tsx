@@ -36,9 +36,9 @@ const servicesConfig = [
     key: 'biznesDarcha',
     icon: Building2,
     href: '/services/biznes-darcha',
-    gradient: 'from-primary-500/20 via-primary-400/10 to-transparent',
-    iconBg: 'bg-primary-500/20',
-    iconColor: 'text-primary-400',
+    gradient: 'from-sky-500/20 via-sky-400/10 to-transparent',
+    iconBg: 'bg-sky-500/20',
+    iconColor: 'text-sky-400',
   },
   {
     id: 'invest-hub',
@@ -72,9 +72,9 @@ const servicesConfig = [
     key: 'gr',
     icon: Landmark,
     href: '/services/government-relations',
-    gradient: 'from-primary-500/20 via-primary-400/10 to-transparent',
-    iconBg: 'bg-primary-500/20',
-    iconColor: 'text-primary-400',
+    gradient: 'from-sky-500/20 via-sky-400/10 to-transparent',
+    iconBg: 'bg-sky-500/20',
+    iconColor: 'text-sky-400',
   },
   {
     id: 'foreign-relations',
@@ -90,9 +90,9 @@ const servicesConfig = [
     key: 'br',
     icon: Handshake,
     href: '/services/business-relations',
-    gradient: 'from-slate-500/20 via-slate-400/10 to-transparent',
-    iconBg: 'bg-slate-500/20',
-    iconColor: 'text-slate-400',
+    gradient: 'from-slate-400/20 via-slate-300/10 to-transparent',
+    iconBg: 'bg-slate-400/20',
+    iconColor: 'text-slate-300',
   },
 ]
 
@@ -119,21 +119,31 @@ export default function Services() {
     <section
       id="services"
       ref={sectionRef}
-      className="relative py-20 lg:py-32 pb-24 lg:pb-40 bg-assembly-light"
+      className="relative py-20 lg:py-32 pb-24 lg:pb-40 bg-gradient-to-b from-primary-500 via-primary-600 to-primary-700"
     >
-      {/* Background Decoration - Light Section */}
+      {/* Background Decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary-500/20 to-transparent" />
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary-500/20 to-transparent" />
+        {/* Top gradient fade from hero */}
+        <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-primary-500 to-transparent" />
 
-        {/* Floating Orb - Light Section */}
+        {/* Grid Pattern */}
+        <div
+          className="absolute inset-0 opacity-[0.02]"
+          style={{
+            backgroundImage: `linear-gradient(rgba(62, 158, 238, 0.5) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(62, 158, 238, 0.5) 1px, transparent 1px)`,
+            backgroundSize: '60px 60px',
+          }}
+        />
+
+        {/* Floating Orb */}
         <motion.div
           className="absolute w-[600px] h-[600px] rounded-full"
           style={{
-            background: 'radial-gradient(circle, rgba(0, 94, 133, 0.05) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(62, 158, 238, 0.15) 0%, transparent 70%)',
             filter: 'blur(80px)',
             top: '10%',
-            right: '-5%',
+            right: '-10%',
           }}
           animate={{
             x: [0, -50, 0],
@@ -141,6 +151,26 @@ export default function Services() {
           }}
           transition={{
             duration: 20,
+            repeat: Infinity,
+            ease: 'easeInOut',
+          }}
+        />
+
+        {/* Second Orb */}
+        <motion.div
+          className="absolute w-[400px] h-[400px] rounded-full"
+          style={{
+            background: 'radial-gradient(circle, rgba(242, 122, 33, 0.1) 0%, transparent 70%)',
+            filter: 'blur(60px)',
+            bottom: '20%',
+            left: '-5%',
+          }}
+          animate={{
+            x: [0, 30, 0],
+            y: [0, -20, 0],
+          }}
+          transition={{
+            duration: 15,
             repeat: Infinity,
             ease: 'easeInOut',
           }}
@@ -156,21 +186,21 @@ export default function Services() {
           className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12 lg:mb-16"
         >
           <div className="max-w-2xl">
-            <span className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium tracking-wide bg-primary-500/10 border border-primary-500/30 text-primary-500 mb-6">
-              <span className="w-2 h-2 rounded-full bg-primary-500" />
+            <span className="badge-primary mb-6">
+              <span className="w-2 h-2 rounded-full bg-sky-400 animate-pulse" />
               {t('badge')}
             </span>
 
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-semibold text-primary-500 mb-4 lg:mb-6" style={{ letterSpacing: '-0.025em' }}>
-              {t('headline')} <span className="text-gradient-primary font-display">{t('headlineHighlight')}</span>
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-semibold text-white mb-4 lg:mb-6" style={{ letterSpacing: '-0.025em' }}>
+              {t('headline')} <span className="text-gradient-sky font-display">{t('headlineHighlight')}</span>
             </h2>
 
-            <p className="text-lg lg:text-xl text-primary-500/70">
+            <p className="text-lg lg:text-xl text-white/60">
               {t('description')}
             </p>
           </div>
 
-          <Link href="/services" className="inline-flex items-center gap-2 self-start lg:self-auto px-5 py-3 sm:px-8 sm:py-4 border border-primary-500/30 text-primary-500 font-heading font-semibold text-sm sm:text-base rounded-full tracking-wide transition-all duration-300 hover:bg-primary-500 hover:text-white">
+          <Link href="/services" className="btn-secondary self-start lg:self-auto">
             <span>{t('viewAll')}</span>
             <ArrowRight className="w-5 h-5" />
           </Link>
@@ -190,7 +220,7 @@ export default function Services() {
               'border border-orange-500/20 hover:border-orange-500/40 transition-all duration-500',
               'p-6 lg:p-10 xl:p-12'
             )}>
-              {/* Background Pattern - Assembly Brand */}
+              {/* Background Pattern */}
               <div className="absolute inset-0 opacity-20"
                 style={{
                   backgroundImage: `linear-gradient(rgba(242, 122, 33, 0.1) 1px, transparent 1px),
@@ -278,10 +308,10 @@ export default function Services() {
               <Link href={service.href} className="block h-full">
                 <div className={cn(
                   'relative h-full rounded-xl overflow-hidden transition-all duration-500',
-                  'bg-white border border-primary-500/10',
-                  'hover:border-primary-500/30 hover:bg-primary-50',
+                  'bg-white/[0.03] border border-white/10',
+                  'hover:border-sky-500/30 hover:bg-white/[0.06]',
                   'hover:shadow-xl hover:-translate-y-1',
-                  'p-4'
+                  'backdrop-blur-sm p-4'
                 )}>
                   {/* Background Gradient on Hover */}
                   <div className={cn(
@@ -302,7 +332,7 @@ export default function Services() {
                     <p className={cn('text-[10px] font-medium uppercase tracking-wider mb-1', service.iconColor)}>
                       {service.tagline}
                     </p>
-                    <h3 className="font-heading font-semibold text-base text-primary-700 group-hover:text-primary-500 transition-colors">
+                    <h3 className="font-heading font-semibold text-base text-white group-hover:text-sky-400 transition-colors">
                       {service.name}
                     </h3>
                   </div>

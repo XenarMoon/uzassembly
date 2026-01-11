@@ -65,7 +65,7 @@ export default function Projects() {
     <section
       id="projects"
       ref={sectionRef}
-      className="relative py-20 lg:py-32 bg-primary-500"
+      className="relative py-20 lg:py-32 bg-gradient-to-b from-primary-700 via-primary-600 to-primary-500"
     >
       {/* Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
