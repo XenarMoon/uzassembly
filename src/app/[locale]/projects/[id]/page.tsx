@@ -37,7 +37,7 @@ import { useParams } from 'next/navigation'
 const projectsConfig = [
   { id: 1, key: 'tramway', investment: "$500M+", year: "2024-2028", category: "infrastructure", icon: Train, color: "sky" },
   { id: 2, key: 'ringRoad', investment: "$800M+", year: "2025-2029", category: "infrastructure", icon: Car, color: "orange" },
-  { id: 3, key: 'smartCity', investment: "$20B+", year: "2024-2035", category: "smart-city", icon: Cpu, color: "sky" },
+  { id: 3, key: 'smartCity', investment: "$20B+", year: "2024-2035", category: "smartCity", icon: Cpu, color: "sky" },
   { id: 4, key: 'industrialPark', investment: "$350M", year: "2024-2027", category: "industrial", icon: Factory, color: "emerald" },
   { id: 5, key: 'stateHospital', investment: "$400M", year: "2025-2028", category: "healthcare", icon: Heart, color: "rose" },
   { id: 6, key: 'privateClinic', investment: "$80M", year: "2024-2026", category: "healthcare", icon: Heart, color: "violet" },
