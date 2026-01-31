@@ -343,38 +343,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Bottom Stats Bar - Minimal */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.2 }}
-          className="relative z-10 py-4 sm:py-6 lg:py-8 border-t border-white/10 bg-primary-600/50 backdrop-blur-sm"
-        >
-          <div className="container-custom px-4 sm:px-6">
-            <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-8 lg:gap-16">
-              <div className="flex items-center gap-2 sm:gap-3">
-                <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-success animate-pulse" />
-                <span className="text-white/60 text-xs sm:text-sm">
-                  <span className="text-success font-mono font-semibold">15,000+</span> {t('bottomStats.members')}
-                </span>
-              </div>
-              <div className="hidden sm:block w-px h-4 bg-white/10" />
-              <div className="flex items-center gap-2 sm:gap-3">
-                <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-sky-500 animate-pulse" />
-                <span className="text-white/60 text-xs sm:text-sm">
-                  <span className="text-sky-400 font-mono font-semibold">$20B+</span> {t('bottomStats.investment')}
-                </span>
-              </div>
-              <div className="hidden sm:block w-px h-4 bg-white/10" />
-              <div className="flex items-center gap-2 sm:gap-3">
-                <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-orange-400 animate-pulse" />
-                <span className="text-white/60 text-xs sm:text-sm">
-                  <span className="text-orange-400 font-mono font-semibold">10+</span> {t('bottomStats.since')}
-                </span>
-              </div>
-            </div>
-          </div>
-        </motion.div>
+   
       </motion.div>
 
       {/* Scroll Indicator */}

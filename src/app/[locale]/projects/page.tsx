@@ -35,26 +35,12 @@ import { cn } from '@/lib/utils'
 
 // Project categories config
 const categoriesConfig = [
-  { id: 'all', key: 'all', count: 9 },
-  { id: 'infrastructure', key: 'infrastructure', count: 2 },
   { id: 'smart-city', key: 'smartCity', count: 1 },
-  { id: 'industrial', key: 'industrial', count: 1 },
-  { id: 'healthcare', key: 'healthcare', count: 2 },
-  { id: 'energy', key: 'energy', count: 1 },
-  { id: 'education', key: 'education', count: 2 },
 ]
 
 // Projects config with translation keys
 const projectsConfig = [
-  { id: 1, key: 'tramway', investment: "$500M+", year: "2024-2028", category: "infrastructure", icon: Train, color: "turquoise", featured: true },
-  { id: 2, key: 'ringRoad', investment: "$800M+", year: "2025-2029", category: "infrastructure", icon: Car, color: "gold", featured: false },
   { id: 3, key: 'smartCity', investment: "$20B+", year: "2024-2035", category: "smart-city", icon: Cpu, color: "gold", featured: true },
-  { id: 4, key: 'industrialPark', investment: "$350M", year: "2024-2027", category: "industrial", icon: Factory, color: "emerald", featured: false },
-  { id: 5, key: 'stateHospital', investment: "$400M", year: "2025-2028", category: "healthcare", icon: Heart, color: "rose", featured: false },
-  { id: 6, key: 'privateClinic', investment: "$80M", year: "2024-2026", category: "healthcare", icon: Heart, color: "violet", featured: false },
-  { id: 7, key: 'solarEnergy', investment: "$200M", year: "2024-2026", category: "energy", icon: Sun, color: "amber", featured: false },
-  { id: 8, key: 'eduJob', investment: "$15M", year: "2023-ongoing", category: "education", icon: GraduationCap, color: "violet", featured: true },
-  { id: 9, key: 'kidsTime', investment: "$5M", year: "2023-ongoing", category: "education", icon: Baby, color: "rose", featured: false },
 ]
 
 // Color mappings
@@ -232,7 +218,7 @@ export default function ProjectsPage() {
             >
               {[
                 { value: '$25B+', label: t('stats.investment') },
-                { value: '9', label: t('stats.activeProjects') },
+                { value: '1', label: t('stats.activeProjects') },
                 { value: '20+', label: t('stats.partners') },
                 { value: '60K+', label: t('stats.jobs') },
               ].map((stat, index) => (
@@ -248,117 +234,7 @@ export default function ProjectsPage() {
           </div>
         </section>
 
-        {/* === FEATURED PROJECTS === */}
-        <section className="relative py-12 lg:py-16">
-          <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-8"
-            >
-              <span className="text-gold-400 font-mono text-xs tracking-widest uppercase mb-2 block">
-                {t('featuredSection.badge')}
-              </span>
-              <h2 className="font-heading text-2xl lg:text-3xl font-semibold text-white">
-                {t('featuredSection.headline')}{' '}
-                <span className="text-gradient-gold font-display">{t('featuredSection.headlineHighlight')}</span>
-              </h2>
-            </motion.div>
-
-            <div className="grid lg:grid-cols-3 gap-6">
-              {featuredProjects.map((project, index) => {
-                const colors = colorClasses[project.color as keyof typeof colorClasses]
-                const IconComponent = project.icon
-
-                return (
-                  <motion.div
-                    key={project.id}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                  >
-                    <div
-                      className={cn(
-                        'group relative h-full rounded-2xl overflow-hidden cursor-pointer',
-                        'bg-gradient-to-br border transition-all duration-500',
-                        colors.gradient,
-                        colors.border,
-                        colors.hover
-                      )}
-                      onClick={() => setSelectedProject(project)}
-                    >
-                      {/* Background Pattern */}
-                      <div className="absolute inset-0 opacity-20"
-                        style={{
-                          backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-                                            linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px)`,
-                          backgroundSize: '30px 30px',
-                        }}
-                      />
-
-                      <div className="relative p-6 lg:p-8 h-full flex flex-col">
-                        {/* Icon & Status */}
-                        <div className="flex items-start justify-between mb-4">
-                          <div className={cn('w-12 h-12 rounded-xl flex items-center justify-center', colors.bg)}>
-                            <IconComponent className={cn('w-6 h-6', colors.text)} />
-                          </div>
-                          <span className={cn(
-                            'px-3 py-1 rounded-full text-xs font-medium flex items-center gap-1',
-                            project.status === t('status.active')
-                              ? 'bg-emerald-500/20 text-emerald-400'
-                              : 'bg-amber-500/20 text-amber-400'
-                          )}>
-                            {project.status === t('status.active') && <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />}
-                            {project.status}
-                          </span>
-                        </div>
-
-                        {/* Title & Description */}
-                        <h3 className="font-heading text-xl lg:text-2xl font-semibold text-white mb-2 group-hover:text-gold-400 transition-colors">
-                          {project.title}
-                        </h3>
-                        <p className="text-white/50 text-sm mb-4 flex-grow">
-                          {project.description}
-                        </p>
-
-                        {/* Location & Investment */}
-                        <div className="space-y-3 pt-4 border-t border-white/10">
-                          <div className="flex items-center justify-between">
-                            <div className="flex items-center gap-2 text-white/40 text-sm">
-                              <MapPin className="w-4 h-4" />
-                              <span>{project.location}</span>
-                            </div>
-                            <span className={cn('font-mono font-bold', colors.text)}>
-                              {project.investment}
-                            </span>
-                          </div>
-
-                          {/* Mini Stats */}
-                          <div className="grid grid-cols-3 gap-2">
-                            {project.stats.map((stat) => (
-                              <div key={stat.label} className="text-center p-2 rounded-lg bg-navy-900/50">
-                                <p className="font-mono text-sm font-bold text-white">{stat.value}</p>
-                                <p className="text-white/30 text-xs">{stat.label}</p>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-
-                        {/* CTA */}
-                        <div className="mt-4 flex items-center gap-2 text-gold-400 group-hover:text-gold-300 transition-colors">
-                          <span className="text-sm font-medium">{t('common.details')}</span>
-                          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                        </div>
-                      </div>
-                    </div>
-                  </motion.div>
-                )
-              })}
-            </div>
-          </div>
-        </section>
+       
 
         {/* === ALL PROJECTS WITH FILTER === */}
         <section className="relative py-12 lg:py-16">

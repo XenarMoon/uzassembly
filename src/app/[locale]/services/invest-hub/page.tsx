@@ -122,63 +122,6 @@ export default function InvestHubPage() {
                 {t('backToServices')}
               </Link>
             </motion.div>
-
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="badge-gold">
-                    <TrendingUp className="w-4 h-4" />
-                    {t('hero.badge')}
-                  </span>
-                  <span className="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-medium flex items-center gap-1">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                    {t('hero.activeBadge')}
-                  </span>
-                </div>
-
-                <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-semibold text-white leading-tight mb-4">
-                  Investment &{' '}
-                  <span className="text-gradient-gold font-display">Infrastructure</span>
-                </h1>
-
-                <p className="text-lg text-white/50 mb-6 leading-relaxed">
-                  {t('hero.description')}
-                </p>
-
-                <div className="flex flex-wrap gap-3">
-                  <Link href="/contact" className="btn-primary">
-                    <span>{t('hero.contactButton')}</span>
-                    <ArrowRight className="w-5 h-5" />
-                  </Link>
-                  <Link href="#smart-city" className="btn-secondary">
-                    Smart City
-                  </Link>
-                </div>
-              </motion.div>
-
-              {/* Stats */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="grid grid-cols-2 gap-4"
-              >
-                {smartCityStats.map((stat, index) => (
-                  <div
-                    key={stat.label}
-                    className="p-5 rounded-2xl bg-white/[0.03] border border-white/5"
-                  >
-                    <p className="font-mono text-3xl font-bold text-gold-400">{stat.value}</p>
-                    <p className="text-white font-medium">{stat.label}</p>
-                    <p className="text-white/40 text-sm">{stat.description}</p>
-                  </div>
-                ))}
-              </motion.div>
-            </div>
           </div>
         </section>
 
@@ -289,37 +232,6 @@ export default function InvestHubPage() {
             </motion.div>
           </div>
         </section>
-
-        {/* CTA */}
-        <section className="relative py-16">
-          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-
-          <div className="relative z-10 max-w-2xl mx-auto px-6 lg:px-8 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="font-heading text-2xl lg:text-3xl font-semibold text-white mb-4">
-                {t('cta.headline')}{' '}
-                <span className="text-gradient-gold font-display">{t('cta.headlineHighlight')}</span>
-              </h2>
-              <p className="text-white/50 mb-8">
-                {t('cta.description')}
-              </p>
-              <div className="flex flex-wrap justify-center gap-3">
-                <Link href="/contact" className="btn-primary">
-                  <span>{t('cta.contactButton')}</span>
-                  <ArrowUpRight className="w-5 h-5" />
-                </Link>
-                <Link href="/membership" className="btn-secondary">
-                  {t('cta.membershipButton')}
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
       </main>
       <Footer />
     </>

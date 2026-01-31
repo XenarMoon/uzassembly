@@ -159,24 +159,7 @@ export default function GovernmentRelationsPage() {
                 </div>
               </motion.div>
 
-              {/* Stats */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="grid grid-cols-2 gap-4"
-              >
-                {grStats.map((stat) => (
-                  <div
-                    key={stat.key}
-                    className="p-5 rounded-2xl bg-white/[0.03] border border-white/5"
-                  >
-                    <p className="font-mono text-3xl font-bold text-turquoise-400">{stat.value}</p>
-                    <p className="text-white font-medium">{stat.label}</p>
-                    <p className="text-white/40 text-sm">{stat.description}</p>
-                  </div>
-                ))}
-              </motion.div>
+             
             </div>
           </div>
         </section>
@@ -315,9 +298,7 @@ export default function GovernmentRelationsPage() {
                   <span>{t('cta.contactButton')}</span>
                   <ArrowUpRight className="w-5 h-5" />
                 </Link>
-                <Link href="/membership" className="btn-secondary">
-                  {t('cta.membershipButton')}
-                </Link>
+                
               </div>
             </motion.div>
           </div>

@@ -9,7 +9,12 @@
       "Bash(git branch:*)",
       "Bash(powershell -Command:*)",
       "Bash(node -e:*)",
-      "WebFetch(domain:cryptoexecutives.io)"
+      "WebFetch(domain:cryptoexecutives.io)",
+      "Bash(dir /s \"c:\\\\Users\\\\Admin\\\\Desktop\\\\BRN\\\\uzassembly\\\\src\")",
+      "Bash(npm run dev:*)",
+      "Bash(npm install)",
+      "Bash(unzip:*)",
+      "Bash(npm run build:*)"
     ]
   }
 }

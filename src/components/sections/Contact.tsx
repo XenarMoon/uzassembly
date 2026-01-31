@@ -14,8 +14,8 @@ export default function Contact() {
 
   const offices = [
     {
-      city: "Toshkent",
-      country: "O'zbekiston",
+      city: t('info.city'),
+      country: t('info.country'),
       address: t('info.address.value'),
       phone: t('info.phone.value'),
       email: t('info.email.value'),

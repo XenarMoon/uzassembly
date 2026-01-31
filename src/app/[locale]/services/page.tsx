@@ -189,24 +189,6 @@ export default function ServicesPage() {
                 {t('hero.description')}
               </p>
             </motion.div>
-
-            {/* Quick Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="flex flex-wrap justify-center gap-6 mb-8"
-            >
-              {featuredProjects.map((project, index) => (
-                <div
-                  key={project.title}
-                  className="flex items-center gap-3 px-5 py-3 rounded-full bg-white/[0.03] border border-white/5"
-                >
-                  <span className="font-mono text-lg font-bold text-gold-400">{project.value}</span>
-                  <span className="text-white/50 text-sm">{project.title}</span>
-                </div>
-              ))}
-            </motion.div>
           </div>
         </section>
 
@@ -292,19 +274,7 @@ export default function ServicesPage() {
 
                           {/* Right: Stats + Arrow */}
                           <div className="lg:col-span-2 flex items-center justify-between lg:justify-end gap-4">
-                            <div className="text-right">
-                              <p className={cn(
-                                'font-mono text-2xl font-bold',
-                                service.color === 'gold' && 'text-gold-400',
-                                service.color === 'turquoise' && 'text-turquoise-400',
-                                service.color === 'violet' && 'text-violet-400',
-                                service.color === 'emerald' && 'text-emerald-400',
-                                service.color === 'rose' && 'text-rose-400',
-                              )}>
-                                {service.statsValue}
-                              </p>
-                              <p className="text-white/30 text-xs">{service.statsLabel}</p>
-                            </div>
+                           
                             <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-gold-500 transition-all">
                               <ArrowUpRight className="w-5 h-5 text-white/40 group-hover:text-navy-900 transition-colors" />
                             </div>
@@ -452,74 +422,7 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        {/* === MEDIA PLATFORM === */}
-        <section className="relative py-12 lg:py-16">
-          <div className="absolute inset-0">
-            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-          </div>
-
-          <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-8 items-center">
-              {/* Left */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-              >
-                <span className="text-gold-400 font-mono text-xs tracking-widest uppercase mb-3 block">
-                  {t('media.badge')}
-                </span>
-                <h2 className="font-heading text-2xl lg:text-3xl font-semibold text-white mb-4">
-                  Fikrat{' '}
-                  <span className="text-gradient-gold font-display">Online TV</span>
-                </h2>
-                <p className="text-white/50 mb-6 leading-relaxed">
-                  {t('media.description')}
-                </p>
-                <div className="flex flex-wrap gap-3">
-                  <Link
-                    href="/services/reportaj-go"
-                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/5 text-white rounded-full font-semibold text-sm border border-white/10 hover:border-white/20 transition-colors"
-                  >
-                    <Play className="w-4 h-4" />
-                    <span>Reportaj GO</span>
-                  </Link>
-                  <Link
-                    href="/services/international"
-                    className="inline-flex items-center gap-2 px-5 py-2.5 text-gold-400 font-semibold text-sm hover:text-gold-300 transition-colors"
-                  >
-                    <span>{t('media.learnMore')}</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              </motion.div>
-
-              {/* Right: Features */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="grid grid-cols-2 gap-3"
-              >
-                {[
-                  { icon: Video, key: 'videoContent' },
-                  { icon: Globe2, key: 'globalDistribution' },
-                  { icon: TrendingUp, key: 'businessAnalysis' },
-                  { icon: Award, key: 'brandPromotion' },
-                ].map((item) => (
-                  <div
-                    key={item.key}
-                    className="p-4 rounded-xl bg-white/[0.02] border border-white/5"
-                  >
-                    <item.icon className="w-5 h-5 text-turquoise-400 mb-2" />
-                    <h4 className="font-semibold text-white text-sm mb-1">{t(`media.features.${item.key}.title`)}</h4>
-                    <p className="text-white/40 text-xs">{t(`media.features.${item.key}.description`)}</p>
-                  </div>
-                ))}
-              </motion.div>
-            </div>
-          </div>
-        </section>
+      
 
         {/* === MASHVARAT CLUB === */}
         <section className="relative py-12 lg:py-16">
@@ -583,9 +486,7 @@ export default function ServicesPage() {
                   <span>{t('cta.membershipButton')}</span>
                   <ArrowUpRight className="w-5 h-5" />
                 </Link>
-                <Link href="/contact" className="btn-secondary">
-                  {t('cta.consultButton')}
-                </Link>
+                
               </div>
             </motion.div>
           </div>

@@ -32,10 +32,10 @@ import Footer from '@/components/sections/Footer'
 import { cn } from '@/lib/utils'
 
 const statsConfig = [
-  { key: 'associations', value: '35+', icon: Building2 },
-  { key: 'members', value: '1,500+', icon: Users },
-  { key: 'sectors', value: '9', icon: Factory },
-  { key: 'partners', value: '30+', icon: Globe2 },
+  { key: 'associations', value: '46+', icon: Building2 },
+  { key: 'members', value: '100+', icon: Users },
+  { key: 'sectors', value: '10', icon: Factory },
+  { key: 'partners', value: '50+', icon: Globe2 },
 ]
 
 const sectorsConfig = [
@@ -228,63 +228,7 @@ export default function AssociationsPage() {
         </section>
 
         {/* Featured Associations */}
-        <section className="relative py-20">
-          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-b from-gold-500/[0.02] via-transparent to-transparent" />
-
-          <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="flex items-center justify-between mb-12"
-            >
-              <div>
-                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold-500/10 text-gold-400 text-sm font-medium mb-4">
-                  <Star className="w-4 h-4" />
-                  {t('featuredSection.badge')}
-                </span>
-                <h2 className="font-heading text-2xl lg:text-3xl font-semibold text-white">
-                  {t('featuredSection.headline')}{' '}
-                  <span className="text-gradient-gold font-display">{t('featuredSection.headlineHighlight')}</span>
-                </h2>
-              </div>
-            </motion.div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {featuredAssociations.map((assoc, index) => (
-                <motion.div
-                  key={assoc.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="group p-6 rounded-2xl bg-gradient-to-br from-gold-500/5 to-transparent border border-gold-500/10 hover:border-gold-500/30 transition-all cursor-pointer"
-                >
-                  <div className="flex items-start justify-between mb-4">
-                    <span className="text-5xl">{assoc.logo}</span>
-                    <span className="px-3 py-1 rounded-full bg-gold-500/10 text-gold-400 text-xs font-mono">
-                      {assoc.shortName}
-                    </span>
-                  </div>
-                  <h3 className="text-white font-semibold text-lg mb-2 group-hover:text-gold-400 transition-colors">
-                    {assoc.name}
-                  </h3>
-                  <p className="text-white/50 text-sm mb-4 line-clamp-2">
-                    {assoc.description}
-                  </p>
-                  <div className="flex items-center justify-between pt-4 border-t border-white/5">
-                    <div className="flex items-center gap-2 text-white/40 text-sm">
-                      <Users className="w-4 h-4" />
-                      <span>{assoc.members} {t('common.members')}</span>
-                    </div>
-                    <ArrowUpRight className="w-5 h-5 text-gold-400 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
+      
 
         {/* All Associations Directory */}
         <section className="relative py-20">
@@ -362,11 +306,8 @@ export default function AssociationsPage() {
                       <span className="text-4xl">{assoc.logo}</span>
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center gap-2 mb-1">
-                          <span className="px-2 py-0.5 rounded bg-white/5 text-white/50 text-xs font-mono">
-                            {assoc.shortName}
-                          </span>
                           <span className="text-white/30 text-xs">{assoc.founded}</span>
-                        </div>
+                          </div>
                         <h3 className="text-white font-semibold group-hover:text-gold-400 transition-colors line-clamp-2">
                           {assoc.name}
                         </h3>
@@ -467,44 +408,6 @@ export default function AssociationsPage() {
             </div>
           </div>
         </section>
-
-        {/* CTA Section */}
-        <section className="relative py-20">
-          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-
-          <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="relative p-8 lg:p-12 rounded-3xl overflow-hidden"
-            >
-              {/* Background */}
-              <div className="absolute inset-0 bg-gradient-to-br from-gold-500/10 via-gold-500/5 to-transparent" />
-              <div className="absolute inset-0 border border-gold-500/20 rounded-3xl" />
-
-              <div className="relative z-10 text-center">
-                <h2 className="font-heading text-2xl lg:text-4xl font-semibold text-white mb-4">
-                  {t('cta.headline')}{' '}
-                  <span className="text-gradient-gold font-display">{t('cta.headlineHighlight')}</span>
-                </h2>
-                <p className="text-white/60 text-lg mb-8 max-w-xl mx-auto">
-                  {t('cta.description')}
-                </p>
-                <div className="flex flex-wrap justify-center gap-4">
-                  <Link href="/contact" className="btn-primary">
-                    <span>{t('cta.applyButton')}</span>
-                    <ArrowRight className="w-5 h-5" />
-                  </Link>
-                  <Link href="/membership" className="btn-secondary">
-                    {t('cta.membershipButton')}
-                  </Link>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
       </main>
       <Footer />
     </>

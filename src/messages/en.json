@@ -2,7 +2,18 @@
   "metadata": {
     "title": "Economic Assembly of Uzbekistan | Unified Ecosystem for Entrepreneurs",
     "description": "Economic Assembly of Uzbekistan — uniting 46+ industry associations, 8 strategic service directions and managing $20B+ investment projects.",
-    "keywords": ["Uzbekistan", "Economy", "Assembly", "Entrepreneurship", "Investment", "Smart City", "Business", "GR", "Government Relations", "Associations"],
+    "keywords": [
+      "Uzbekistan",
+      "Economy",
+      "Assembly",
+      "Entrepreneurship",
+      "Investment",
+      "Smart City",
+      "Business",
+      "GR",
+      "Government Relations",
+      "Associations"
+    ],
     "author": "Economic Assembly of Uzbekistan",
     "ogTitle": "Economic Assembly of Uzbekistan",
     "ogDescription": "Unified Ecosystem for Entrepreneurs — 8 strategic directions, 46+ associations",
@@ -78,15 +89,15 @@
     "headline": "Center of Uzbekistan",
     "headlineHighlight": "Business",
     "headlineSuffix": "Ecosystem",
-    "description1": "Economic Assembly of Uzbekistan is the largest entrepreneurial organization in the country, uniting 46+ industry associations.",
-    "description2": "We create effective dialogue between government and business, attract international investments, and protect the interests of our entrepreneurs.",
+    "description1": "The Assembly of Economy of the Republic of Uzbekistan is the country's largest non-governmental non-profit organization, bringing together more than 46 industry associations.",
+    "description2": "We create an effective dialogue between the state and business, facilitate the attraction of international investments, and ensure the protection of entrepreneurs' interests.",
     "features": [
-      "Direct dialogue with government agencies",
-      "Connection with international investors",
+      "Direct and constructive dialogue with government authorities",
+      "Direct interaction with international investors",
       "Expert and consulting services",
       "Networking and business meetings",
-      "Legal and financial support",
-      "Training and skill development programs"
+      "Legal, financial, and economic support",
+      "Educational programs and professional development"
     ],
     "cta": "Learn More",
     "highlights": {
@@ -103,7 +114,7 @@
       "offices": {
         "value": "3",
         "label": "International Offices",
-        "description": "Tokyo, Orlando, Ankara"
+        "description": "Tokyo, Seoul, Ankara"
       },
       "partners": {
         "value": "15+",
@@ -113,15 +124,15 @@
     },
     "mission": {
       "title": "Our Mission",
-      "text": "To make Uzbekistan's entrepreneurship internationally competitive and contribute to economic growth."
+      "text": "To make Uzbekistan's entrepreneurship competitive in the international arena and to make a sustainable contribution to the country's economic growth."
     },
     "goal": {
       "title": "Our Goal",
-      "text": "To establish Uzbekistan as the business center of Central Asia by 2030."
+      "text": "By 2030, to establish Uzbekistan as the leading business hub of Central Asia."
     },
     "values": {
       "title": "Our Values",
-      "text": "Transparency, innovation, collaboration, and protection of national interests."
+      "text": "Transparency, innovative thinking, partnership, and protection of national interests."
     }
   },
   "services": {
@@ -147,7 +158,8 @@
         "stats": {
           "area": "6,400",
           "unit": "hectares"
-        }
+        },
+        "location": "Ohangaron, Tashkent"
       },
       "biznesDarcha": {
         "name": "Biznes Darcha",
@@ -224,14 +236,38 @@
       "food": "Food Industry"
     },
     "cards": {
-      "textile": { "name": "Textile Association", "sector": "lightIndustry" },
-      "pharma": { "name": "Pharmaceutical Association", "sector": "medicine" },
-      "construction": { "name": "Construction Materials", "sector": "construction" },
-      "it": { "name": "IT Association", "sector": "it" },
-      "automotive": { "name": "Automotive Industry", "sector": "automotive" },
-      "agriculture": { "name": "Agriculture", "sector": "agriculture" },
-      "energy": { "name": "Energy Sector", "sector": "energy" },
-      "food": { "name": "Food Industry", "sector": "food" }
+      "textile": {
+        "name": "Textile Association",
+        "sector": "lightIndustry"
+      },
+      "pharma": {
+        "name": "Pharmaceutical Association",
+        "sector": "medicine"
+      },
+      "construction": {
+        "name": "Construction Materials",
+        "sector": "construction"
+      },
+      "it": {
+        "name": "IT Association",
+        "sector": "it"
+      },
+      "automotive": {
+        "name": "Automotive Industry",
+        "sector": "automotive"
+      },
+      "agriculture": {
+        "name": "Agriculture",
+        "sector": "agriculture"
+      },
+      "energy": {
+        "name": "Energy Sector",
+        "sector": "energy"
+      },
+      "food": {
+        "name": "Food Industry",
+        "sector": "food"
+      }
     }
   },
   "projects": {
@@ -332,7 +368,7 @@
     "badge": "Contact Us",
     "headline": "Get in",
     "headlineHighlight": "Touch",
-    "description": "If you have questions or suggestions, contact us",
+    "description": "If you have any questions or suggestions, contact us",
     "info": {
       "address": {
         "label": "Address",
@@ -340,7 +376,7 @@
       },
       "phone": {
         "label": "Phone",
-        "value": "+998 91 774 14 16"
+        "value": "+998 77 736 55 60"
       },
       "email": {
         "label": "Email",
@@ -349,7 +385,9 @@
       "hours": {
         "label": "Working Hours",
         "value": "Mon-Sat: 09:00 - 18:00"
-      }
+      },
+      "city": "Tashkent",
+      "country": "Uzbekistan"
     },
     "form": {
       "reason": {
@@ -482,7 +520,7 @@
     "badge": "About Us",
     "headline": "Uniting citizens, business and",
     "headlineHighlight": "government",
-    "description": "Economic Assembly of Uzbekistan is a non-governmental non-profit organization. An important step in the country's pursuit of an innovative private sector.",
+    "description": "We unite citizens, the business community, and the state in the shared pursuit of building a strong and competitive economy. The Economic Assembly of Uzbekistan is a non-governmental non-profit organization dedicated to fostering entrepreneurship, supporting the private sector, and cultivating a favorable investment environment across the nation.",
     "keyFacts": {
       "founded": "Founded",
       "associations": "Associations",
@@ -492,48 +530,48 @@
     "chairman": {
       "since": "years in office",
       "role": "Chairman of the Assembly",
-      "quote": "Our vision is to build a better future for everyone. We advocate for establishing the strongest possible ties between the Uzbek people, business leaders, government, and countries around the world."
+      "quote": "Our vision is to shape a better future for everyone. We strive to foster strong and trust-based relationships between the people of Uzbekistan, business leaders, the state, and the international community, uniting our efforts for the sake of sustainable development and global cooperation."
     },
     "pillars": {
       "title": "Areas of Activity",
       "gr": {
-        "title": "Government Relations",
+        "title": "Interaction with Government Authorities",
         "subtitle": "Government Relations",
-        "description": "Cooperation with the Presidential Administration, Cabinet of Ministers, Senate of Oliy Majlis, and ministries."
+        "description": "The Assembly of Economy of the Republic of Uzbekistan ensures direct communication with key government entities, including the Administration of the President of the Republic of Uzbekistan, the Cabinet of Ministers, the Senate of the Oliy Majlis, and relevant line ministries."
       },
       "fr": {
         "title": "Business Diplomacy",
         "subtitle": "Business Diplomacy",
-        "description": "Relations with foreign organizations, exchange of business delegations."
+        "description": "Developing international relations with foreign organizations, establishing partnerships, and organizing business delegation exchanges."
       },
       "local": {
-        "title": "Local Business",
+        "title": "Strengthening Ties with Local Entrepreneurs",
         "subtitle": "Local Business",
-        "description": "Uniting 35+ associations, effective cooperation and communication."
+        "description": "The Assembly of Economy brings together more than 46 industry associations, creating a robust platform for harmonious and mutually beneficial cooperation."
       },
       "ppp": {
         "title": "Public-Private Partnership",
         "subtitle": "PPP",
-        "description": "Developing public-private sector cooperation, supporting entrepreneurs."
+        "description": "We promote effective interaction between the state and business, providing entrepreneurs with expert support and the conditions necessary for creating sustainable projects."
       }
     },
     "mission": {
       "badge": "Our Mission",
       "title": "Trusted partner",
       "titleHighlight": "for entrepreneurs",
-      "description": "We are committed to helping businesses of all sizes and advancing economic growth in Uzbekistan.",
+      "description": "We are committed to supporting businesses of all sizes and fostering sustainable economic growth in the Republic of Uzbekistan. <br>Key Areas of Our Activity:",
       "points": [
-        "Protecting entrepreneurs' interests",
+        "Protecting the interests of entrepreneurs",
         "Attracting and protecting investments",
-        "Participating in legislative reforms",
-        "Facilitating job creation"
+        "Participating in the development and improvement of legislative reforms",
+        "Promoting job creation"
       ]
     },
     "team": {
       "badge": "Leadership",
       "headline": "Our",
       "headlineHighlight": "Team",
-      "description": "A professional and experienced team of specialists serves the development of Uzbekistan's business environment.",
+      "description": "A team of professionals united by a common mission — to create opportunities, strengthen businesses, and shape the future of entrepreneurship in Uzbekistan.",
       "members": {
         "matyakubov": {
           "role": "Deputy Chairman",
@@ -544,8 +582,8 @@
           "roleEn": "Director"
         },
         "aliyev": {
-          "role": "Deputy Chairman for Security and Legal Services",
-          "roleEn": "Deputy Chairman for Security and Legal Services"
+          "role": "Deputy Chairman for Security and Legal Support",
+          "roleEn": "Deputy Chairman for Security and Legal Support"
         },
         "ruzmatova": {
           "role": "Deputy Chairperson for Women's Affairs",
@@ -569,27 +607,27 @@
       "badge": "Our History",
       "headline": "Path of",
       "headlineHighlight": "Development",
-      "description": "Step by step developing Uzbekistan's business environment since 2021",
+      "description": "Since 2021, we have been consistently and confidently shaping a modern, open, and sustainable business environment in Uzbekistan.",
       "milestones": {
         "2021": {
           "title": "Foundation",
-          "event": "Officially registered by the Ministry of Justice",
-          "details": "Economic Assembly of Uzbekistan was established as a non-governmental non-profit organization"
+          "event": "The Economic Assembly of Uzbekistan is officially registered by the Ministry of Justice",
+          "details": "It operates as a non-governmental non-profit organization (NGO)"
         },
         "2022": {
           "title": "Membership Expansion",
-          "event": "United 30+ member companies",
-          "details": "Partnership relations established with leading companies and entrepreneurs"
+          "event": "The Assembly has brought together over 100 member companies",
+          "details": "Established strategic partnerships with leading enterprises and entrepreneurs"
         },
         "2023": {
           "title": "Association Union",
-          "event": "United 35+ associations",
-          "details": "Integration of business associations from various industries and regions"
+          "event": "The Assembly has brought together 46 industry associations",
+          "details": "Ensured the integration of business unions across various sectors and regions of the country"
         },
         "2024": {
           "title": "International Cooperation",
           "event": "Smart City and global projects",
-          "details": "Strategic partnerships with innovative projects and foreign investors"
+          "details": "Developing strategic partnerships with international innovative projects and foreign investors"
         }
       },
       "stats": {
@@ -602,7 +640,7 @@
     "cta": {
       "headline": "Join",
       "headlineHighlight": "Us",
-      "description": "Become a member of the Economic Assembly of Uzbekistan and gain access to a community of 35+ associations and 30+ entrepreneurs.",
+      "description": "Join the Economic Assembly of Uzbekistan and gain exclusive access to a robust business community that unites 46 industry associations and over 100 of the nation's leading entrepreneurs and corporations.",
       "button": "Become a Member",
       "contact": "Contact Us"
     }
@@ -610,9 +648,9 @@
   "servicesPage": {
     "hero": {
       "badge": "Services Ecosystem",
-      "headline": "5 strategic",
-      "headlineHighlight": "directions",
-      "description": "A multi-functional platform for uniting businesses, protecting interests, and bringing local enterprises to the global stage."
+      "headline": "Strategic",
+      "headlineHighlight": "Directions",
+      "description": "A multifunctional platform that unites businesses, ensures the protection of entrepreneurs' interests, and creates opportunities for local companies to expand onto the global stage."
     },
     "services": {
       "investHub": {
@@ -642,7 +680,7 @@
       "eduJob": {
         "title": "Human Capital Development",
         "subtitle": "Edu-Job Program",
-        "description": "A specialized system for addressing the talent shortage in the private sector. Training qualified specialists adapted to modern business needs.",
+        "description": "Empowering qualified workforce development and employment through the Edu-Job platform. We deliver educational programs in high-demand modern professions, ensuring direct placement within industry-leading companies.",
         "features": [
           "Real-time talent development",
           "\"Market-ready\" specialists",
@@ -653,22 +691,21 @@
       },
       "international": {
         "title": "International Diplomacy",
-        "subtitle": "Global Branding & Media",
+        "subtitle": "Global Recognition & Market Expansion",
         "description": "Enhancing the reputation of Uzbek enterprises on a global scale. Entering foreign markets and establishing strong relationships with international partners.",
         "features": [
           "Access to foreign markets",
           "International partnerships",
-          "Fikrat Online TV media platform",
           "Brand promotion and analytics"
         ],
-        "statsLabel": "Media Platform"
+        "statsLabel": "Global Partnerships"
       },
       "networking": {
         "title": "Sectoral Integration",
         "subtitle": "Executive Networking",
-        "description": "Uniting 35+ industry associations and developing cross-sector cooperation. Access to an expert community and experience sharing.",
+        "description": "Uniting 46+ industry associations and developing cross-sector cooperation. Access to an expert community and experience sharing.",
         "features": [
-          "35+ industry associations",
+          "46+ industry associations",
           "Mashvarat Club - elite networking",
           "High-level solutions",
           "Strategic alliances"
@@ -677,45 +714,63 @@
       }
     },
     "featuredProjects": {
-      "smartCity": { "title": "Smart City" },
-      "investHub": { "title": "Invest Hub" },
-      "eduJob": { "title": "Specialists" }
+      "smartCity": {
+        "title": "Smart City"
+      },
+      "investHub": {
+        "title": "Invest Hub"
+      },
+      "eduJob": {
+        "title": "Specialists"
+      }
     },
     "whyUs": {
       "badge": "Why Us?",
       "headline": "Single",
       "headlineHighlight": "Platform",
-      "description": "All business services in one place — with a professional team and systematic approach."
+      "description": "Comprehensive business solutions in one place — delivered by an expert team with a systematic, results-driven approach."
     },
     "benefits": {
       "legalProtection": {
         "title": "Legal Protection",
-        "description": "Comprehensive protection of business interests"
+        "description": "Comprehensive and all-round protection of business interests"
       },
       "fastService": {
         "title": "Fast Service",
-        "description": "All services on one platform"
+        "description": "Expeditious delivery of all services within a single platform"
       },
       "clearResults": {
         "title": "Clear Results",
-        "description": "Goal-oriented approach"
+        "description": "A targeted and result-oriented approach focused on achieving specific outcomes."
       },
       "expertTeam": {
         "title": "Expert Team",
-        "description": "Professional specialist services"
+        "description": "Services provided by highly qualified specialists with industry-specific and practical expertise"
       }
     },
     "smartCity": {
       "flagshipBadge": "Flagship Project",
       "activeBadge": "Active",
       "location": "Ohangaron, Tashkent Region",
-      "description": "Uzbekistan's largest smart city project on 6,400 hectares. World-class industrial zones, modern infrastructure, and green technologies.",
+      "description": "A flagship urban development project located in the Ohangaron district, representing the most advanced and expansive /Smart City/ initiative in the country. Spanning over 6,400 hectares, the project is designed to establish world-class urban infrastructure and a sustainable living ecosystem.",
       "learnMore": "Learn More",
       "stats": {
-        "area": { "label": "Hectares", "sublabel": "Total Area" },
-        "investment": { "label": "Investment", "sublabel": "Project Volume" },
-        "timeline": { "label": "Timeline", "sublabel": "Construction Period" },
-        "jobs": { "label": "Jobs", "sublabel": "To Be Created" }
+        "area": {
+          "label": "Hectares",
+          "sublabel": "Total Area"
+        },
+        "investment": {
+          "label": "Investment",
+          "sublabel": "Project Volume"
+        },
+        "timeline": {
+          "label": "Timeline",
+          "sublabel": "Construction Period"
+        },
+        "jobs": {
+          "label": "Jobs",
+          "sublabel": "To Be Created"
+        }
       }
     },
     "media": {
@@ -723,20 +778,32 @@
       "description": "A specialized media platform for business analytics and brand promotion. Ensure your company's visibility among professional and wide audiences.",
       "learnMore": "Learn More",
       "features": {
-        "videoContent": { "title": "Video Content", "description": "Professional filming" },
-        "globalDistribution": { "title": "Global Distribution", "description": "Global audience" },
-        "businessAnalysis": { "title": "Business Analysis", "description": "Expert commentary" },
-        "brandPromotion": { "title": "Brand Promotion", "description": "Marketing services" }
+        "videoContent": {
+          "title": "Video Content",
+          "description": "Professional filming"
+        },
+        "globalDistribution": {
+          "title": "Global Distribution",
+          "description": "Global audience"
+        },
+        "businessAnalysis": {
+          "title": "Business Analysis",
+          "description": "Expert commentary"
+        },
+        "brandPromotion": {
+          "title": "Brand Promotion",
+          "description": "Marketing services"
+        }
       }
     },
     "mashvaratClub": {
       "badge": "Elite Networking",
-      "description": "An exclusive environment for top executives and decision-makers. Building strategic alliances and working on high-level solutions."
+      "description": "An exclusive platform for C-level executives and key decision-makers, focused on building strategic alliances and developing high-level solutions"
     },
     "cta": {
       "headline": "Grow Your",
       "headlineHighlight": "Business",
-      "description": "Become a member of the Assembly to access all our services and achieve your goals with a professional team.",
+      "description": "Become a member of the Assembly and gain access to all our services, expert support, and opportunities to achieve your strategic goals.",
       "membershipButton": "Become a Member",
       "consultButton": "Get Consultation"
     }
@@ -744,58 +811,85 @@
   "eduJobPage": {
     "backToServices": "All Services",
     "hero": {
-      "badge": "03 — Education",
+      "badge": "Education",
       "activeBadge": "Active",
-      "description": "Training qualified personnel and employment through the Edu-Job platform. Educational programs in modern professions and opportunities for employment at leading companies.",
+      "description": "A talent ecosystem for the training, professional development, and placement of qualified specialists.",
       "registerButton": "Register",
-      "tracksButton": "Tracks"
+      "tracksButton": "Directions"
     },
     "stats": {
-      "students": { "label": "Students", "description": "Trained" },
-      "companies": { "label": "Companies", "description": "Partners" },
-      "employment": { "label": "Employment", "description": "Rate" },
-      "courses": { "label": "Courses", "description": "Available" }
+      "students": {
+        "label": "Students",
+        "description": "Trained"
+      },
+      "companies": {
+        "label": "Companies",
+        "description": "Partners"
+      },
+      "employment": {
+        "label": "Employment",
+        "description": "Rate"
+      },
+      "courses": {
+        "label": "Courses",
+        "description": "Available"
+      }
     },
     "featuresSection": {
-      "headline": "Talent",
+      "headline": "Human Capital",
       "headlineHighlight": "Ecosystem"
     },
     "features": {
       "professionalEducation": {
         "title": "Professional Education",
-        "description": "Professional training programs and courses in modern professions"
+        "description": "Modern educational programs and professional training in high-demand specialties"
       },
       "jobDatabase": {
-        "title": "Job Database",
-        "description": "Vacancies and internship opportunities at leading companies"
+        "title": "Job Vacancy Database",
+        "description": "Current job openings and internship programs within industry-leading companies"
       },
       "mentoring": {
-        "title": "Mentoring",
-        "description": "Individual guidance and advice from experienced professionals"
+        "title": "Expert Guidance",
+        "description": "Individual mentorship and professional consultations provided by experienced experts"
       },
       "certification": {
         "title": "Certification",
-        "description": "International standard certificates and professional development"
+        "description": "Obtaining international standard certifications and enhancing professional qualifications"
       }
     },
     "tracksSection": {
       "badge": "Educational Tracks",
       "headline": "Professional",
       "headlineHighlight": "Tracks",
-      "description": "Professional educational programs and certification opportunities in modern professions that meet market demands."
+      "description": "Professional educational programs and certification opportunities in modern specialties that meet current labor market demands."
     },
     "tracks": {
       "it": {
-        "title": "IT & Technology",
-        "courses": ["Programming Basics", "Web Development", "Data Science", "Cybersecurity"]
+        "title": "Finance Management",
+        "courses": [
+          "Corporate Finance",
+          "Investment Management",
+          "Financial Planning & Analysis - FP&A",
+          "Financial Risk Management"
+        ]
       },
       "business": {
         "title": "Business & Management",
-        "courses": ["Project Management", "Marketing", "Finance Basics", "HR Management"]
+        "courses": [
+          "Project Management",
+          "Marketing",
+          "Finance Basics",
+          "HR Management"
+        ]
       },
       "industry": {
-        "title": "Industry & Manufacturing",
-        "courses": ["Quality Control", "Logistics", "Manufacturing Technologies", "Safety"]
+        "title": "Supply Chain",
+        "courses": [
+          "Planning",
+          "Sourcing",
+          "Manufacturing",
+          "Delivery"
+        ]
       }
     },
     "partnersTitle": "Partner Companies",
@@ -818,17 +912,29 @@
   "grPage": {
     "backToServices": "All Services",
     "hero": {
-      "badge": "02 — GR",
+      "badge": "GR",
       "activeBadge": "Active",
-      "description": "Protecting business interests and constructive dialogue with government agencies. Creating a favorable environment for your business through participation in legislation and government policy.",
+      "description": "Protecting business interests and building a constructive dialogue with government authorities. Fostering a favorable business environment by actively participating in legislative processes and the development of public policy.",
       "consultButton": "Consultation",
       "servicesButton": "Services"
     },
     "stats": {
-      "laws": { "label": "Laws", "description": "Analyzed" },
-      "ministries": { "label": "Ministries", "description": "Cooperation" },
-      "meetings": { "label": "Meetings", "description": "Per Year" },
-      "efficiency": { "label": "Efficiency", "description": "Appeals" }
+      "laws": {
+        "label": "Laws",
+        "description": "Analyzed"
+      },
+      "ministries": {
+        "label": "Ministries",
+        "description": "Cooperation"
+      },
+      "meetings": {
+        "label": "Meetings",
+        "description": "Per Year"
+      },
+      "efficiency": {
+        "label": "Efficiency",
+        "description": "Appeals"
+      }
     },
     "servicesSection": {
       "badge": "GR Services",
@@ -838,19 +944,19 @@
     "services": {
       "legislativeMonitoring": {
         "title": "Legislative Monitoring",
-        "description": "Tracking and analyzing bills and regulations affecting your business"
+        "description": "Systematic tracking and analysis of laws, legislative proposals and regulatory acts that impact business operations"
       },
       "economicAnalysis": {
         "title": "Economic Analysis",
-        "description": "In-depth analysis and forecasts of government policy impact on business"
+        "description": "Delivering advanced analytics and strategic projections on the influence of public policy on business growth"
       },
       "lobbying": {
-        "title": "Lobbying",
-        "description": "Protecting business interests at the government level and shaping policy"
+        "title": "Representation & Advocacy",
+        "description": "Facilitating the protection of business interests at the governmental level and actively participating in the shaping of economic and industry-specific policies"
       },
       "stakeholderManagement": {
         "title": "Stakeholder Management",
-        "description": "Managing relationships between government agencies, business, and society"
+        "description": "Effective management and coordination of relationships between government authorities, the business community, and public institutions"
       }
     },
     "processSection": {
@@ -861,34 +967,34 @@
     "workProcess": {
       "analysis": {
         "title": "Problem Analysis",
-        "description": "Identifying regulatory issues facing your business"
+        "description": "Identification and systematic assessment of regulatory barriers and legal challenges encountered by your business"
       },
       "strategy": {
         "title": "Strategy Development",
-        "description": "Creating a strategy for working with government agencies"
+        "description": "Creating an effective strategy for engagement and interaction with government authorities"
       },
       "communication": {
         "title": "Establishing Dialogue",
-        "description": "Constructive dialogue with relevant ministries and agencies"
+        "description": "Building constructive engagement with relevant ministries and government agencies"
       },
       "results": {
         "title": "Achieving Results",
-        "description": "Protecting business interests and achieving positive outcomes"
+        "description": "Effective protection of business interests and the achievement of positive, practical outcomes"
       }
     },
     "ministriesTitle": "Partner Agencies",
     "ministries": [
-      "Ministry of Economy and Finance",
-      "Ministry of Investment, Industry and Trade",
-      "Tax Committee",
-      "Customs Committee",
-      "Antimonopoly Committee",
-      "Ministry of Digital Technologies"
+      "Ministry of Economy and Finance of the Republic of Uzbekistan",
+      "State Customs Committee of the Republic of Uzbekistan",
+      "Ministry of Investments, Industry and Trade of the Republic of Uzbekistan",
+      "Committee for Competition Promotion and Consumer Protection of the Republic of Uzbekistan",
+      "Tax Committee of the Republic of Uzbekistan",
+      "Ministry of Digital Technologies of the Republic of Uzbekistan"
     ],
     "cta": {
       "headline": "Professional",
       "headlineHighlight": "GR Services",
-      "description": "Contact us for professional management of your government relations.",
+      "description": "Contact us for effective and professional management of your relations with government authorities",
       "contactButton": "Contact Us",
       "membershipButton": "Become a Member"
     }
@@ -902,10 +1008,22 @@
       "contactButton": "Contact Us"
     },
     "stats": {
-      "area": { "label": "Hectares", "description": "Total Area" },
-      "investment": { "label": "Investment", "description": "Project Volume" },
-      "jobs": { "label": "Jobs", "description": "To Be Created" },
-      "year": { "label": "Year", "description": "Completion Date" }
+      "area": {
+        "label": "Hectares",
+        "description": "Total Area"
+      },
+      "investment": {
+        "label": "Investment",
+        "description": "Project Volume"
+      },
+      "jobs": {
+        "label": "Jobs",
+        "description": "To Be Created"
+      },
+      "year": {
+        "label": "Year",
+        "description": "Completion Date"
+      }
     },
     "investHub": {
       "headline": "Investment",
@@ -966,10 +1084,22 @@
       "servicesButton": "Services"
     },
     "stats": {
-      "clients": { "label": "Clients", "description": "Served" },
-      "services": { "label": "Services", "description": "Available" },
-      "support": { "label": "Support", "description": "Permanent" },
-      "satisfaction": { "label": "Satisfaction", "description": "Rate" }
+      "clients": {
+        "label": "Clients",
+        "description": "Served"
+      },
+      "services": {
+        "label": "Services",
+        "description": "Available"
+      },
+      "support": {
+        "label": "Support",
+        "description": "Permanent"
+      },
+      "satisfaction": {
+        "label": "Satisfaction",
+        "description": "Rate"
+      }
     },
     "servicesSection": {
       "badge": "Main Services",
@@ -977,10 +1107,22 @@
       "headlineHighlight": "Solutions"
     },
     "services": {
-      "documentation": { "title": "Documentation", "description": "Preparation and processing of all types of business documents" },
-      "accounting": { "title": "Accounting Services", "description": "Professional accounting and financial reporting" },
-      "legal": { "title": "Legal Consultation", "description": "Qualified legal assistance and advice on business law" },
-      "licensing": { "title": "Licenses & Permits", "description": "Assistance in obtaining necessary licenses and permits" }
+      "documentation": {
+        "title": "Documentation",
+        "description": "Preparation and processing of all types of business documents"
+      },
+      "accounting": {
+        "title": "Accounting Services",
+        "description": "Professional accounting and financial reporting"
+      },
+      "legal": {
+        "title": "Legal Consultation",
+        "description": "Qualified legal assistance and advice on business law"
+      },
+      "licensing": {
+        "title": "Licenses & Permits",
+        "description": "Assistance in obtaining necessary licenses and permits"
+      }
     },
     "categoriesSection": {
       "badge": "Service Types",
@@ -988,21 +1130,60 @@
       "headlineHighlight": "Categories"
     },
     "categories": {
-      "registration": { "title": "Registration", "description": "Company formation and registration", "items": ["Sole Proprietorship", "LLC Formation", "Joint Stock Company", "Branch Opening"] },
-      "tax": { "title": "Tax Services", "description": "Tax reporting and optimization", "items": ["Tax Declarations", "Tax Planning", "Tax Audit", "Obtaining Benefits"] },
-      "hr": { "title": "HR Department", "description": "HR and personnel documents", "items": ["Employment Contracts", "Personnel Records", "Payroll Calculation", "HR Consulting"] }
+      "registration": {
+        "title": "Registration",
+        "description": "Company formation and registration",
+        "items": [
+          "Sole Proprietorship",
+          "LLC Formation",
+          "Joint Stock Company",
+          "Branch Opening"
+        ]
+      },
+      "tax": {
+        "title": "Tax Services",
+        "description": "Tax reporting and optimization",
+        "items": [
+          "Tax Declarations",
+          "Tax Planning",
+          "Tax Audit",
+          "Obtaining Benefits"
+        ]
+      },
+      "hr": {
+        "title": "HR Department",
+        "description": "HR and personnel documents",
+        "items": [
+          "Employment Contracts",
+          "Personnel Records",
+          "Payroll Calculation",
+          "HR Consulting"
+        ]
+      }
     },
     "benefitsTitle": "Why Biznes Darcha?",
     "benefits": {
-      "fast": { "title": "Fast Service", "description": "Results in 1-3 days" },
-      "manager": { "title": "Personal Manager", "description": "Always in touch" },
-      "guarantee": { "title": "Guarantee", "description": "100% Legal" },
-      "government": { "title": "Government Bodies", "description": "Direct connection" }
+      "fast": {
+        "title": "Fast Service",
+        "description": "Prompt and timely execution of all services"
+      },
+      "manager": {
+        "title": "Personal Manager",
+        "description": "An individual approach and personal accompaniment for every client"
+      },
+      "guarantee": {
+        "title": "Guarantee",
+        "description": "Guaranteed high standards and quality of the services provided"
+      },
+      "government": {
+        "title": "Interaction with Government Authorities",
+        "description": "Direct and effective interaction with relevant government agencies"
+      }
     },
     "cta": {
       "headline": "Start Your",
       "headlineHighlight": "Business",
-      "description": "Get all business services in one place. A professional team works for your success.",
+      "description": "Contact us to receive professional business services and expert consultations.",
       "contactButton": "Contact",
       "membershipButton": "Become a Member"
     }
@@ -1012,15 +1193,27 @@
     "hero": {
       "badge": "Media",
       "liveBadge": "LIVE",
-      "description": "Promote your business through professional video content. Reports, interviews, and documentaries — all in one place. Reach thousands through Fikrat Online TV.",
+      "description": "Promote your business through professional video content. Reports, interviews, and documentaries — all in one place.",
       "orderButton": "Order",
       "samplesButton": "Samples"
     },
     "stats": {
-      "reports": { "label": "Reports", "description": "Produced" },
-      "views": { "label": "Views", "description": "Reached" },
-      "companies": { "label": "Companies", "description": "Partnership" },
-      "quality": { "label": "Quality", "description": "Professional" }
+      "reports": {
+        "label": "Reports",
+        "description": "Produced"
+      },
+      "views": {
+        "label": "Views",
+        "description": "Reached"
+      },
+      "companies": {
+        "label": "Companies",
+        "description": "Partnership"
+      },
+      "quality": {
+        "label": "Quality",
+        "description": "Professional"
+      }
     },
     "servicesSection": {
       "badge": "Our Services",
@@ -1028,98 +1221,322 @@
       "headlineHighlight": "Video Production"
     },
     "services": {
-      "videoReports": { "title": "Video Reports", "description": "Professional video reports about your company" },
-      "corporatePhoto": { "title": "Corporate Shooting", "description": "High-quality photo and video materials" },
-      "interviews": { "title": "Interviews", "description": "Exclusive interviews with executives and experts" },
-      "documentaries": { "title": "Documentaries", "description": "Films about company history and success stories" }
+      "videoReports": {
+        "title": "Video Reports",
+        "description": "Professional video reports about your company"
+      },
+      "corporatePhoto": {
+        "title": "Corporate Shooting",
+        "description": "High-quality photo and video materials"
+      },
+      "interviews": {
+        "title": "Interviews",
+        "description": "Exclusive interviews with executives and experts"
+      },
+      "documentaries": {
+        "title": "Documentaries",
+        "description": "Films about company history and success stories"
+      }
     },
-    "contentSection": { "badge": "Content Types", "headline": "The Right", "headlineHighlight": "Format", "popular": "Popular" },
+    "contentSection": {
+      "badge": "Content Types",
+      "headline": "The Right",
+      "headlineHighlight": "Format",
+      "popular": "Popular"
+    },
     "contentTypes": {
-      "businessReport": { "title": "Business Report", "description": "Detailed report about your company's activities", "features": ["3-5 minute video", "4K shooting", "Professional editing", "Music and graphics"] },
-      "successStory": { "title": "Success Story", "description": "Share your success story with the world", "features": ["Interview format", "Archive materials", "Animated graphics", "Subtitles (3 languages)"] },
-      "eventCoverage": { "title": "Event Coverage", "description": "Professional coverage of your events", "features": ["Multi-camera shooting", "Live stream option", "Highlights video", "Photo report"] }
+      "businessReport": {
+        "title": "Business Report",
+        "description": "Detailed report about your company's activities",
+        "features": [
+          "3-5 minute video",
+          "4K shooting",
+          "Professional editing",
+          "Music and graphics"
+        ]
+      },
+      "successStory": {
+        "title": "Success Story",
+        "description": "Share your success story with the world",
+        "features": [
+          "Interview format",
+          "Archive materials",
+          "Animated graphics",
+          "Subtitles (3 languages)"
+        ]
+      },
+      "eventCoverage": {
+        "title": "Event Coverage",
+        "description": "Professional coverage of your events",
+        "features": [
+          "Multi-camera shooting",
+          "Live stream option",
+          "Highlights video",
+          "Photo report"
+        ]
+      }
     },
-    "distributionSection": { "title": "Distribution Channels", "description": "Where your content will be shown" },
+    "distributionSection": {
+      "title": "Distribution Channels",
+      "description": "Where your content will be shown"
+    },
     "distribution": {
-      "fikratTv": { "name": "Fikrat Online TV", "reach": "200K+ audience" },
-      "youtube": { "name": "YouTube Channel", "reach": "100K+ subscribers" },
-      "social": { "name": "Social Media", "reach": "500K+ followers" },
-      "international": { "name": "International Media", "reach": "20+ countries" }
+      "fikratTv": {
+        "name": "Fikrat Online TV",
+        "reach": "200K+ audience"
+      },
+      "youtube": {
+        "name": "YouTube Channel",
+        "reach": "100K+ subscribers"
+      },
+      "social": {
+        "name": "Social Media",
+        "reach": "500K+ followers"
+      },
+      "international": {
+        "name": "International Media",
+        "reach": "20+ countries"
+      }
     },
-    "cta": { "headline": "Tell Your", "headlineHighlight": "Story", "description": "Strengthen your brand through professional video content. Reportaj GO team is at your service.", "orderButton": "Order", "mediaButton": "Assembly Media" }
+    "cta": {
+      "headline": "Tell Your",
+      "headlineHighlight": "Story",
+      "description": "Strengthen your brand with professional video content. The Reportaj GO team is ready to help you create a powerful and compelling story.",
+      "orderButton": "Order",
+      "mediaButton": "Assembly Media"
+    }
   },
   "foreignRelationsPage": {
     "backToServices": "All Services",
     "hero": {
       "badge": "FR — International",
       "globalBadge": "Global",
-      "description": "Entering international markets and establishing connections with foreign partners. Business delegations, embassy communications, and international documentation services.",
+      "description": "Assistance in entering international markets and establishing sustainable ties with foreign partners, including organizing business delegations, interacting with embassies, and supporting international documentation.",
       "consultButton": "Consultation",
       "regionsButton": "Regions"
     },
     "stats": {
-      "countries": { "label": "Countries", "description": "Partnership" },
-      "delegations": { "label": "Delegations", "description": "Organized" },
-      "embassies": { "label": "Embassies", "description": "Connections" },
-      "contracts": { "label": "Contracts", "description": "Signed" }
+      "countries": {
+        "label": "Countries",
+        "description": "Partnership"
+      },
+      "delegations": {
+        "label": "Delegations",
+        "description": "Organized"
+      },
+      "embassies": {
+        "label": "Embassies",
+        "description": "Connections"
+      },
+      "contracts": {
+        "label": "Contracts",
+        "description": "Signed"
+      }
     },
-    "servicesSection": { "badge": "FR Services", "headline": "International", "headlineHighlight": "Relations" },
+    "servicesSection": {
+      "badge": "FR Services",
+      "headline": "International",
+      "headlineHighlight": "Relations"
+    },
     "services": {
-      "delegations": { "title": "Business Delegations", "description": "Organizing business trips and delegations to foreign countries" },
-      "embassies": { "title": "Embassy Relations", "description": "Communication with foreign embassies and trade missions" },
-      "translation": { "title": "Translation Services", "description": "Professional translation and localization services" },
-      "documents": { "title": "International Documents", "description": "Export-import document processing and legalization" }
+      "delegations": {
+        "title": "Business Delegations",
+        "description": "Organization of international business trips and official business delegations"
+      },
+      "embassies": {
+        "title": "Embassy Relations",
+        "description": "Professional communication with foreign embassies and trade missions"
+      },
+      "translation": {
+        "title": "Global Business Matchmaking",
+        "description": "Identification and verification of high-potential business partners and investors across international markets, facilitating direct B2B engagements and strategic negotiations to drive cross-border collaboration"
+      },
+      "documents": {
+        "title": "International Documents",
+        "description": "Processing of export-import documentation and support for legalization procedures"
+      }
     },
-    "regionsSection": { "badge": "Geography", "headline": "Partnership", "headlineHighlight": "Regions" },
+    "regionsSection": {
+      "badge": "Geography",
+      "headline": "Partnership",
+      "headlineHighlight": "Regions"
+    },
     "regions": {
-      "europe": { "name": "Europe", "countries": ["Germany", "France", "Italy", "Spain", "Poland"] },
-      "asia": { "name": "Asia", "countries": ["China", "Japan", "Korea", "India", "Turkey"] },
-      "americas": { "name": "Americas", "countries": ["USA", "Canada", "Brazil", "Mexico", "Argentina"] },
-      "cis": { "name": "CIS", "countries": ["Russia", "Kazakhstan", "Azerbaijan", "Georgia", "Belarus"] }
+      "europe": {
+        "name": "Europe",
+        "countries": [
+          "Germany",
+          "France",
+          "Italy",
+          "Spain",
+          "Poland"
+        ]
+      },
+      "asia": {
+        "name": "Asia",
+        "countries": [
+          "China",
+          "Japan",
+          "Korea",
+          "India",
+          "Turkey"
+        ]
+      },
+      "americas": {
+        "name": "Americas",
+        "countries": [
+          "USA",
+          "Canada",
+          "Brazil",
+          "Mexico",
+          "Argentina"
+        ]
+      },
+      "cis": {
+        "name": "CIS",
+        "countries": [
+          "Russia",
+          "Kazakhstan",
+          "Azerbaijan",
+          "Georgia",
+          "Belarus"
+        ]
+      }
     },
     "partnersTitle": "International Partners",
-    "partnerships": ["Foreign Trade Chambers", "International Business Associations", "Export Agencies", "Investment Funds", "International Organizations", "Diplomatic Missions"],
-    "cta": { "headline": "Enter", "headlineHighlight": "Global Markets", "description": "Expand international partnerships and export opportunities. FR team will help you.", "contactButton": "Contact", "membershipButton": "Become a Member" }
+    "partnerships": [
+      "Foreign Chambers of Commerce and Industry",
+      "International Business Associations",
+      "Export Agencies",
+      "Investment Funds",
+      "International Organizations",
+      "Diplomatic Missions"
+    ],
+    "cta": {
+      "headline": "Enter",
+      "headlineHighlight": "Global Markets",
+      "description": "Expand your international partnerships and export opportunities with the support of the FR team.",
+      "contactButton": "Contact",
+      "membershipButton": "Become a Member"
+    }
   },
   "businessRelationsPage": {
     "backToServices": "All Services",
     "hero": {
       "badge": "BR — Partnership",
       "activeBadge": "Active",
-      "description": "B2B partnerships and business relations development platform. Find suppliers, distributors, and strategic partners. Join a network of 500+ companies.",
+      "description": "A platform for developing B2B partnerships and business connections. Search for suppliers, distributors, and strategic partners, as well as access to a network of more than 35,000 companies.",
       "findPartnerButton": "Find Partner",
       "howItWorksButton": "How It Works"
     },
     "stats": {
-      "companies": { "label": "Companies", "description": "In Network" },
-      "meetings": { "label": "Meetings", "description": "Organized" },
-      "contracts": { "label": "Contracts", "description": "Results" },
-      "sectors": { "label": "Sectors", "description": "Coverage" }
+      "companies": {
+        "label": "Companies",
+        "description": "In Network"
+      },
+      "meetings": {
+        "label": "Meetings",
+        "description": "Organized"
+      },
+      "contracts": {
+        "label": "Contracts",
+        "description": "Results"
+      },
+      "sectors": {
+        "label": "Sectors",
+        "description": "Coverage"
+      }
     },
-    "servicesSection": { "badge": "BR Services", "headline": "Business", "headlineHighlight": "Partnership" },
+    "servicesSection": {
+      "badge": "BR Services",
+      "headline": "Business",
+      "headlineHighlight": "Partnership"
+    },
     "services": {
-      "matching": { "title": "B2B Matching", "description": "Service to find and connect partners suitable for your business" },
-      "meetings": { "title": "Business Meetings", "description": "Organizing meetings with potential partners" },
-      "supplyChain": { "title": "Supply Chains", "description": "Establishing connections with suppliers and buyers" },
-      "negotiation": { "title": "Business Negotiation", "description": "Professional negotiation and contract assistance" }
+      "matching": {
+        "title": "B2B Matching",
+        "description": "A professional service for finding and establishing business partnerships to grow your business."
+      },
+      "meetings": {
+        "title": "Business Meetings",
+        "description": "Organization of targeted meetings with potential business partners"
+      },
+      "supplyChain": {
+        "title": "Supply Chains",
+        "description": "Formation and development of sustainable links with suppliers and buyers"
+      },
+      "negotiation": {
+        "title": "Business Negotiation",
+        "description": "Professional negotiation support and assistance in concluding contracts"
+      }
     },
-    "processSection": { "badge": "B2B Matching", "headline": "How It", "headlineHighlight": "Works" },
+    "processSection": {
+      "badge": "B2B Matching",
+      "headline": "How It",
+      "headlineHighlight": "Works"
+    },
     "process": {
-      "step1": { "title": "Create Profile", "description": "Gather detailed information about your business and identify needs" },
-      "step2": { "title": "Partner Search", "description": "Select and analyze suitable partners from our database" },
-      "step3": { "title": "Arrange Meeting", "description": "Plan meetings with potential partners" },
-      "step4": { "title": "Results", "description": "Sign contracts and start long-term partnerships" }
+      "step1": {
+        "title": "Create Profile",
+        "description": "Collection and analysis of detailed information about your business to identify key needs and goals"
+      },
+      "step2": {
+        "title": "Partner Search",
+        "description": "Selection and analysis of the most suitable partners from our business contact database"
+      },
+      "step3": {
+        "title": "Arrange Meeting",
+        "description": "Planning and coordination of meetings with potential business partners"
+      },
+      "step4": {
+        "title": "Results",
+        "description": "Conclusion of a contract and the beginning of a long-term and mutually beneficial partnership"
+      }
     },
-    "partnerTypesSection": { "headline": "Partner", "headlineHighlight": "Types" },
+    "partnerTypesSection": {
+      "headline": "Partner",
+      "headlineHighlight": "Types"
+    },
     "partnerTypes": {
-      "suppliers": { "title": "Suppliers", "description": "Find raw material and material suppliers" },
-      "distributors": { "title": "Distributors", "description": "Partners to distribute your products" },
-      "manufacturers": { "title": "Manufacturers", "description": "Custom manufacturing partners" },
-      "serviceProviders": { "title": "Service Providers", "description": "Business service partners" }
+      "suppliers": {
+        "title": "Suppliers",
+        "description": "Search for reliable suppliers of raw materials"
+      },
+      "distributors": {
+        "title": "Distributors",
+        "description": "Search and attraction of partners for the distribution of your products"
+      },
+      "manufacturers": {
+        "title": "Manufacturers",
+        "description": "Selection of partners for contract manufacturing of products"
+      },
+      "serviceProviders": {
+        "title": "Service Providers",
+        "description": "Selection of reliable partners for the provision of business services"
+      }
     },
     "sectorsTitle": "Covered Sectors",
-    "sectors": ["Food Industry", "Textiles", "Construction Materials", "IT & Technology", "Agriculture", "Chemical Industry", "Machinery", "Pharmaceuticals", "Furniture Manufacturing", "Plastic Products", "Electrical Engineering", "Logistics"],
-    "cta": { "headline": "Join the Partner", "headlineHighlight": "Network", "description": "Join a network of 500+ companies and find the best partners for your business.", "registerButton": "Register", "membershipButton": "Become a Member" }
+    "sectors": [
+      "Food Industry",
+      "Textiles",
+      "Construction Materials",
+      "IT & Technology",
+      "Agriculture",
+      "Chemical Industry",
+      "Machinery",
+      "Pharmaceuticals",
+      "Furniture Manufacturing",
+      "Plastic Products",
+      "Electrical Engineering",
+      "Logistics"
+    ],
+    "cta": {
+      "headline": "Join the Partner",
+      "headlineHighlight": "Network",
+      "description": "Become part of a network of more than 35,000 companies and find reliable partners to grow your business.",
+      "registerButton": "Register",
+      "membershipButton": "Become a Member"
+    }
   },
   "smartCityPage": {
     "backToServices": "All Services",
@@ -1132,54 +1549,176 @@
       "zonesButton": "Zones"
     },
     "stats": {
-      "area": { "label": "Hectares", "description": "Total Area" },
-      "investment": { "label": "Investment", "description": "Project Volume" },
-      "jobs": { "label": "Jobs", "description": "To be Created" },
-      "completion": { "label": "Year", "description": "Completion" }
+      "area": {
+        "label": "Hectares",
+        "description": "Total Area"
+      },
+      "investment": {
+        "label": "Investment",
+        "description": "Project Volume"
+      },
+      "jobs": {
+        "label": "Jobs",
+        "description": "To be Created"
+      },
+      "completion": {
+        "label": "Year",
+        "description": "Completion"
+      }
     },
-    "zonesSection": { "badge": "Master Plan", "headline": "City", "headlineHighlight": "Zones" },
+    "zonesSection": {
+      "badge": "Master Plan",
+      "headline": "City",
+      "headlineHighlight": "Zones"
+    },
     "zones": {
-      "industrial": { "name": "Industrial Zone", "description": "Modern manufacturing complexes" },
-      "commercial": { "name": "Commercial Zone", "description": "Business centers and offices" },
-      "residential": { "name": "Residential Zone", "description": "Modern homes and apartments" },
-      "green": { "name": "Green Zones", "description": "Gardens, parks, and recreation areas" }
+      "industrial": {
+        "name": "Industrial Zone",
+        "description": "Modern manufacturing complexes"
+      },
+      "commercial": {
+        "name": "Commercial Zone",
+        "description": "Business centers and offices"
+      },
+      "residential": {
+        "name": "Residential Zone",
+        "description": "Modern homes and apartments"
+      },
+      "green": {
+        "name": "Green Zones",
+        "description": "Gardens, parks, and recreation areas"
+      }
     },
-    "infrastructureSection": { "badge": "Smart Infrastructure", "headline": "Modern", "headlineHighlight": "Infrastructure" },
+    "infrastructureSection": {
+      "badge": "Smart Infrastructure",
+      "headline": "Modern",
+      "headlineHighlight": "Infrastructure"
+    },
     "infrastructure": {
-      "transport": { "title": "Transport", "items": ["Modern roads", "Metro connection", "Electric buses", "Bicycle lanes"] },
-      "energy": { "title": "Energy", "items": ["Solar panels", "Smart grid system", "Green energy", "Energy saving"] },
-      "digital": { "title": "Digital", "items": ["5G coverage", "IoT infrastructure", "Smart management", "Digital services"] },
-      "utilities": { "title": "Utilities", "items": ["Water treatment", "Waste recycling", "Central heating", "Sewerage"] }
+      "transport": {
+        "title": "Transport",
+        "items": [
+          "Modern roads",
+          "Metro connection",
+          "Electric buses",
+          "Bicycle lanes"
+        ]
+      },
+      "energy": {
+        "title": "Energy",
+        "items": [
+          "Solar panels",
+          "Smart grid system",
+          "Green energy",
+          "Energy saving"
+        ]
+      },
+      "digital": {
+        "title": "Digital",
+        "items": [
+          "5G coverage",
+          "IoT infrastructure",
+          "Smart management",
+          "Digital services"
+        ]
+      },
+      "utilities": {
+        "title": "Utilities",
+        "items": [
+          "Water treatment",
+          "Waste recycling",
+          "Central heating",
+          "Sewerage"
+        ]
+      }
     },
-    "investmentSection": { "badge": "Invest", "headline": "Investment", "headlineHighlight": "Opportunities" },
+    "investmentSection": {
+      "badge": "Invest",
+      "headline": "Investment",
+      "headlineHighlight": "Opportunities"
+    },
     "investment": {
-      "industrial": { "title": "Industrial Enterprises", "description": "Ready sites for manufacturing enterprises", "benefits": ["Tax benefits", "Ready infrastructure", "Logistics convenience"] },
-      "commercial": { "title": "Commercial Properties", "description": "Construction of shopping and service centers", "benefits": ["High traffic", "Modern design", "Parking areas"] },
-      "residential": { "title": "Residential Construction", "description": "Housing projects of various classes", "benefits": ["Green environment", "Smart home", "Social infrastructure"] }
+      "industrial": {
+        "title": "Industrial Enterprises",
+        "description": "Ready sites for manufacturing enterprises",
+        "benefits": [
+          "Tax benefits",
+          "Ready infrastructure",
+          "Logistics convenience"
+        ]
+      },
+      "commercial": {
+        "title": "Commercial Properties",
+        "description": "Construction of shopping and service centers",
+        "benefits": [
+          "High traffic",
+          "Modern design",
+          "Parking areas"
+        ]
+      },
+      "residential": {
+        "title": "Residential Construction",
+        "description": "Housing projects of various classes",
+        "benefits": [
+          "Green environment",
+          "Smart home",
+          "Social infrastructure"
+        ]
+      }
     },
     "timelineTitle": "Project Timeline",
     "timeline": {
-      "step1": { "title": "Project Started", "description": "Infrastructure construction begins" },
-      "step2": { "title": "Phase One", "description": "Industrial zone launch" },
-      "step3": { "title": "Phase Two", "description": "Commercial and residential zones" },
-      "step4": { "title": "Completion", "description": "Full project launch" }
+      "step1": {
+        "title": "Project Started",
+        "description": "Infrastructure construction begins"
+      },
+      "step2": {
+        "title": "Phase One",
+        "description": "Industrial zone launch"
+      },
+      "step3": {
+        "title": "Phase Two",
+        "description": "Commercial and residential zones"
+      },
+      "step4": {
+        "title": "Completion",
+        "description": "Full project launch"
+      }
     },
-    "cta": { "headline": "Secure Your Place in", "headlineHighlight": "the City of the Future", "description": "Invest in the Central Asia Smart City project and participate in building the region's most advanced city.", "investButton": "Invest", "investHubButton": "Invest Hub" }
+    "cta": {
+      "headline": "Secure Your Place in",
+      "headlineHighlight": "the City of the Future",
+      "description": "Invest in the Central Asia Smart City project and participate in building the region's most advanced city.",
+      "investButton": "Invest",
+      "investHubButton": "Invest Hub"
+    }
   },
   "networkingPage": {
     "backToServices": "All Services",
     "hero": {
-      "badge": "05 — Networking",
+      "badge": "Networking",
       "exclusiveBadge": "Exclusive",
-      "description": "Mashvarat club and cross-sector integration platform. Exclusive networking and strategic partnership opportunities for executives.",
+      "description": "The Mashvarat Club and cross-sector integration platform, providing exclusive networking opportunities and strategic partnerships for business leaders and top executives.",
       "joinButton": "Join",
       "pricingButton": "Pricing"
     },
     "stats": {
-      "members": { "label": "Members", "description": "Top executives" },
-      "sectors": { "label": "Sectors", "description": "Coverage" },
-      "meetings": { "label": "Meetings", "description": "Per year" },
-      "projects": { "label": "Projects", "description": "In partnership" }
+      "members": {
+        "label": "Members",
+        "description": "Top executives"
+      },
+      "sectors": {
+        "label": "Sectors",
+        "description": "Coverage"
+      },
+      "meetings": {
+        "label": "Meetings",
+        "description": "Per year"
+      },
+      "projects": {
+        "label": "Projects",
+        "description": "In partnership"
+      }
     },
     "featuresSection": {
       "badge": "Mashvarat Club",
@@ -1189,19 +1728,19 @@
     "features": {
       "exclusiveMeetings": {
         "title": "Exclusive Meetings",
-        "description": "Closed-format meetings exclusively for top management"
+        "description": "Private meetings designed exclusively for business owners, CEOs, and top management"
       },
       "crossSectorProjects": {
         "title": "Cross-Sector Projects",
-        "description": "Forming strategic partnership projects between various sectors"
+        "description": "Initiating and developing strategic partnership projects between various sectors of the economy"
       },
       "vipNetworking": {
         "title": "VIP Networking",
-        "description": "Direct communication with leading business executives and investors"
+        "description": "Direct and confidential interaction with leading business figures and high-profile investors"
       },
       "strategicPartnerships": {
         "title": "Strategic Partnerships",
-        "description": "Developing long-term strategic partnerships and business connections"
+        "description": "Development and strengthening of long-term strategic partnerships and sustainable business relations"
       }
     },
     "benefitsSection": {
@@ -1212,11 +1751,11 @@
     "benefits": {
       "mashvaratMeetings": {
         "title": "Mashvarat Meetings",
-        "description": "Monthly strategic advisory meetings"
+        "description": "Monthly strategic consulting meetings for knowledge sharing and solution development"
       },
       "businessMatching": {
         "title": "Business Matching",
-        "description": "Service to find partners matching your needs"
+        "description": "A professional service for selecting business partners that best align with your goals and needs"
       },
       "priorityAccess": {
         "title": "Priority Access",
@@ -1240,30 +1779,44 @@
     ],
     "membershipSection": {
       "headline": "Membership",
-      "headlineHighlight": "Levels",
+      "headlineHighlight": "Packages",
       "recommended": "Recommended"
     },
     "membershipLevels": {
       "standard": {
         "name": "Standard",
         "description": "For new members",
-        "features": ["Monthly meeting access", "Networking platform", "Newsletter"]
+        "features": [
+          "Monthly meeting access",
+          "Networking platform",
+          "Newsletter"
+        ]
       },
       "premium": {
         "name": "Premium",
         "description": "For active participants",
-        "features": ["All Standard benefits", "VIP event access", "Business matching", "Mentorship program"]
+        "features": [
+          "All Standard benefits",
+          "VIP event access",
+          "Business matching",
+          "Mentorship program"
+        ]
       },
       "elite": {
         "name": "Elite",
         "description": "For top executives",
-        "features": ["All Premium benefits", "Individual consulting", "Board meetings", "Global networking"]
+        "features": [
+          "All Premium benefits",
+          "Individual consulting",
+          "Board meetings",
+          "Global networking"
+        ]
       }
     },
     "cta": {
       "headline": "Join the",
       "headlineHighlight": "Mashvarat Club",
-      "description": "Join the community of Uzbekistan's most influential business leaders and discover new opportunities.",
+      "description": "Become part of Uzbekistan's most influential business leadership community and unlock new strategic opportunities for your growth.",
       "joinButton": "Join",
       "detailsButton": "Details"
     }
@@ -1271,16 +1824,29 @@
   "internationalPage": {
     "backToServices": "All Services",
     "hero": {
-      "badge": "04 — International",
+      "badge": "International ",
+      "badge2": " Diplomacy",
       "activeBadge": "Active",
-      "description": "Enhancing the reputation of Uzbek enterprises on a global scale. Media production, international event organization, and diplomatic relations.",
+      "description": "Enhancing the international reputation of Uzbek enterprises through media production, the organization of international events, and the development of diplomatic business relations.",
       "partnershipButton": "Partnership"
     },
     "stats": {
-      "countries": { "label": "Countries", "description": "Presence" },
-      "audience": { "label": "Audience", "description": "Reach" },
-      "events": { "label": "Events", "description": "Organized" },
-      "media": { "label": "Media Partners", "description": "Globally" }
+      "countries": {
+        "label": "Countries",
+        "description": "Presence"
+      },
+      "audience": {
+        "label": "Audience",
+        "description": "Reach"
+      },
+      "events": {
+        "label": "Events",
+        "description": "Organized"
+      },
+      "media": {
+        "label": "Media Partners",
+        "description": "Globally"
+      }
     },
     "featuresSection": {
       "headline": "Global",
@@ -1289,39 +1855,54 @@
     "features": {
       "mediaContent": {
         "title": "Media Content",
-        "description": "Professional video production and content creation for global audiences"
+        "description": "Professional video production and high-quality content creation for global audiences"
       },
       "internationalEvents": {
         "title": "International Events",
-        "description": "Organization and support of business events on the international stage"
+        "description": "Organization and comprehensive support of business events at an international level"
       },
       "diplomaticRelations": {
         "title": "Diplomatic Relations",
-        "description": "Building bridges with foreign business communities and governments"
+        "description": "Building sustainable partnerships with foreign business communities and government entities"
       },
       "brandStrategy": {
         "title": "Brand Strategy",
-        "description": "Strategic brand positioning and reputation management globally"
+        "description": "Strategic brand positioning and reputation management on an international scale"
       }
     },
     "mediaSection": {
-      "description": "Comprehensive media services for promoting Uzbek businesses on the world stage through professional content production and distribution."
+      "description": "Comprehensive media and PR services for promoting Uzbek business on the international stage through professional production and effective content distribution."
     },
     "mediaServices": {
       "assemblyMedia": {
         "title": "Assembly Media",
         "description": "Professional video production and content creation platform",
-        "items": ["Corporate documentaries", "Event coverage", "Promotional content", "Interview series"]
+        "items": [
+          "Corporate documentaries",
+          "Event coverage",
+          "Promotional content",
+          "Interview series"
+        ]
       },
       "internationalPR": {
         "title": "International PR",
         "description": "Global press relations and media outreach services",
-        "items": ["Press releases", "Media relations", "Crisis communication", "Brand monitoring"]
+        "items": [
+          "Press releases",
+          "Media relations",
+          "Crisis communication",
+          "Brand monitoring"
+        ]
       },
       "events": {
         "title": "Event Management",
         "description": "Full-cycle international event organization",
-        "items": ["Business forums", "Trade missions", "Networking events", "Official ceremonies"]
+        "items": [
+          "Business forums",
+          "Trade missions",
+          "Networking events",
+          "Official ceremonies"
+        ]
       }
     },
     "partnersTitle": "Diplomatic Partners",
@@ -1336,7 +1917,7 @@
     "cta": {
       "headline": "Go",
       "headlineHighlight": "Global",
-      "description": "Contact us to enhance your international presence and establish connections with global partners.",
+      "description": "Contact us to strengthen your business's international presence and establish reliable connections with global partners.",
       "contactButton": "Contact Us",
       "membershipButton": "Become a Member"
     }
@@ -1382,7 +1963,7 @@
       "badge": "Associations",
       "headline": "Business",
       "headlineHighlight": "Associations",
-      "description": "Industry associations within the Uzbekistan Economic Assembly — a strong partner and support system for your business in every sector."
+      "description": "The industry associations within the Economic Assembly of Uzbekistan serve as reliable partners, establishing a comprehensive business support ecosystem across all key sectors of the economy."
     },
     "stats": {
       "associations": "Associations",
@@ -1417,44 +1998,134 @@
       "pharma": "Pharmaceuticals"
     },
     "associations": {
-      "foodIndustry": { "name": "Food Industry Association", "description": "Leading association uniting food manufacturers in Uzbekistan" },
-      "textile": { "name": "Textile Industry Association", "description": "Union of textile and sewing enterprises" },
-      "agroindustry": { "name": "Agro-Industrial Complex Association", "description": "Union of agriculture and agro-industrial enterprises" },
-      "itPark": { "name": "IT Park Association", "description": "Supporting IT companies and startups" },
-      "pharma": { "name": "Pharmaceutical Association", "description": "Association of pharmaceutical manufacturers" },
-      "construction": { "name": "Construction Materials Association", "description": "Construction materials manufacturers" },
-      "greenEnergy": { "name": "Green Energy Association", "description": "Renewable energy sources" },
-      "logistics": { "name": "Logistics and Transport Association", "description": "Logistics and transport services" },
-      "machinery": { "name": "Machinery Association", "description": "Machinery and equipment manufacturing" },
-      "dairy": { "name": "Dairy Products Association", "description": "Dairy products manufacturers" },
-      "fruitsVegetables": { "name": "Fruits & Vegetables Exporters Association", "description": "Fruits and vegetables export enterprises" },
-      "leatherFootwear": { "name": "Leather and Footwear Association", "description": "Leather and footwear manufacturers" },
-      "plastics": { "name": "Plastics Products Association", "description": "Plastics and polymer products" },
-      "electrical": { "name": "Electrical Engineering Association", "description": "Electrical equipment manufacturing" },
-      "furniture": { "name": "Furniture Manufacturers Association", "description": "Furniture and wood products" },
-      "confectionery": { "name": "Confectionery Products Association", "description": "Sweets and confectionery products" },
-      "meat": { "name": "Meat Products Association", "description": "Meat processing enterprises" },
-      "beverages": { "name": "Beverages Industry Association", "description": "Beverages manufacturers" },
-      "itOutsourcing": { "name": "IT Outsourcing Association", "description": "IT services and outsourcing companies" },
-      "fintech": { "name": "FinTech Association", "description": "Financial technology startups" },
-      "agriTech": { "name": "Agricultural Machinery Association", "description": "Agricultural machinery and equipment" },
-      "cotton": { "name": "Cotton Processing Association", "description": "Cotton and textile industry" },
-      "cementConcrete": { "name": "Cement and Concrete Association", "description": "Cement and concrete products" },
-      "solar": { "name": "Solar Energy Association", "description": "Solar energy projects" }
+      "foodIndustry": {
+        "name": "Food Industry Association",
+        "description": "Leading association uniting food manufacturers in Uzbekistan"
+      },
+      "textile": {
+        "name": "Textile Industry Association",
+        "description": "Union of textile and sewing enterprises"
+      },
+      "agroindustry": {
+        "name": "Agro-Industrial Complex Association",
+        "description": "Union of agriculture and agro-industrial enterprises"
+      },
+      "itPark": {
+        "name": "IT Park Association",
+        "description": "Supporting IT companies and startups"
+      },
+      "pharma": {
+        "name": "Pharmaceutical Association",
+        "description": "Association of pharmaceutical manufacturers"
+      },
+      "construction": {
+        "name": "Construction Materials Association",
+        "description": "Construction materials manufacturers"
+      },
+      "greenEnergy": {
+        "name": "Green Energy Association",
+        "description": "Renewable energy sources"
+      },
+      "logistics": {
+        "name": "Logistics and Transport Association",
+        "description": "Logistics and transport services"
+      },
+      "machinery": {
+        "name": "Machinery Association",
+        "description": "Machinery and equipment manufacturing"
+      },
+      "dairy": {
+        "name": "Dairy Products Association",
+        "description": "Dairy products manufacturers"
+      },
+      "fruitsVegetables": {
+        "name": "Fruits & Vegetables Exporters Association",
+        "description": "Fruits and vegetables export enterprises"
+      },
+      "leatherFootwear": {
+        "name": "Leather and Footwear Association",
+        "description": "Leather and footwear manufacturers"
+      },
+      "plastics": {
+        "name": "Plastics Products Association",
+        "description": "Plastics and polymer products"
+      },
+      "electrical": {
+        "name": "Electrical Engineering Association",
+        "description": "Electrical equipment manufacturing"
+      },
+      "furniture": {
+        "name": "Furniture Manufacturers Association",
+        "description": "Furniture and wood products"
+      },
+      "confectionery": {
+        "name": "Confectionery Products Association",
+        "description": "Sweets and confectionery products"
+      },
+      "meat": {
+        "name": "Meat Products Association",
+        "description": "Meat processing enterprises"
+      },
+      "beverages": {
+        "name": "Beverages Industry Association",
+        "description": "Beverages manufacturers"
+      },
+      "itOutsourcing": {
+        "name": "IT Outsourcing Association",
+        "description": "IT services and outsourcing companies"
+      },
+      "fintech": {
+        "name": "FinTech Association",
+        "description": "Financial technology startups"
+      },
+      "agriTech": {
+        "name": "Agricultural Machinery Association",
+        "description": "Agricultural machinery and equipment"
+      },
+      "cotton": {
+        "name": "Cotton Processing Association",
+        "description": "Cotton and textile industry"
+      },
+      "cementConcrete": {
+        "name": "Cement and Concrete Association",
+        "description": "Cement and concrete products"
+      },
+      "solar": {
+        "name": "Solar Energy Association",
+        "description": "Solar energy projects"
+      }
     },
     "benefitsSection": {
       "badge": "Membership Benefits",
       "headline": "Why",
       "headlineHighlight": "Become a Member?",
-      "description": "Companies that join the Assembly benefit from the following opportunities"
+      "description": "Companies that join the Assembly gain access to the following opportunities and strategic advantages"
     },
     "benefits": {
-      "network": { "title": "Wide Network", "description": "Direct contact with 1500+ member companies" },
-      "privileges": { "title": "Special Privileges", "description": "Discounts and preferential rates" },
-      "international": { "title": "International Relations", "description": "Partnership opportunities with 30+ countries" },
-      "professional": { "title": "Professional Services", "description": "GR, FR, BR services available" },
-      "development": { "title": "Development", "description": "Training programs and workshops" },
-      "legal": { "title": "Legal Support", "description": "Legal consultation and protection" }
+      "network": {
+        "title": "Extensive network",
+        "description": "Direct access to a network of over 1,500 member companies"
+      },
+      "privileges": {
+        "title": "Special Privileges",
+        "description": "Exclusive discounts and preferential terms reserved for Assembly members"
+      },
+      "international": {
+        "title": "International Relations",
+        "description": "Broad opportunities for business collaboration and strategic partnerships with more than 30 countries worldwide"
+      },
+      "professional": {
+        "title": "Professional Services",
+        "description": "Access to comprehensive professional services including Government Relations, Foreign Relations, and Business Relations to ensure effective business development and strategic support"
+      },
+      "development": {
+        "title": "Development",
+        "description": "Access to educational programs, specialized training courses, and professional workshops"
+      },
+      "legal": {
+        "title": "Legal Support",
+        "description": "Access to professional legal consultations and comprehensive legal protection of business interests"
+      }
     },
     "common": {
       "members": "members",
@@ -1474,7 +2145,7 @@
       "headline": "Major",
       "headlineHighlight": "Investment",
       "headlineSuffix": "Projects",
-      "description": "Economic Assembly of Uzbekistan's strategic projects — the most attractive investment opportunities in the region."
+      "description": "The strategic projects of the Economic Assembly of Uzbekistan represent some of the most attractive investment opportunities in the region."
     },
     "stats": {
       "investment": "Total Investment",
@@ -1499,12 +2170,32 @@
         "fullDescription": "A major infrastructure project aimed at developing public transport in Tashkent. The project involves construction of 56 km of tram lines, procurement of 60 modern trams, and building passenger infrastructure. The project will improve transport accessibility and reduce environmental pollution.",
         "location": "Tashkent City",
         "status": "Active",
-        "partners": ["Islamic Development Bank", "Tashkent City Municipality", "Ministry of Transport"],
-        "benefits": ["Reduction of traffic congestion", "Eco-friendly transport", "Affordable fares", "Modern infrastructure", "Job creation", "Urban development"],
+        "partners": [
+          "Islamic Development Bank",
+          "Tashkent City Municipality",
+          "Ministry of Transport"
+        ],
+        "benefits": [
+          "Reduction of traffic congestion",
+          "Eco-friendly transport",
+          "Affordable fares",
+          "Modern infrastructure",
+          "Job creation",
+          "Urban development"
+        ],
         "stats": [
-          { "label": "Trams", "value": "60" },
-          { "label": "Lines", "value": "56 km" },
-          { "label": "Stations", "value": "80+" }
+          {
+            "label": "Trams",
+            "value": "60"
+          },
+          {
+            "label": "Lines",
+            "value": "56 km"
+          },
+          {
+            "label": "Stations",
+            "value": "80+"
+          }
         ]
       },
       "ringRoad": {
@@ -1514,27 +2205,70 @@
         "fullDescription": "Construction of a 160 km long 6-lane ring road around Tashkent city. The project will significantly reduce traffic congestion in the city center, improve transport logistics, and serve as an important corridor for regional trade.",
         "location": "Tashkent Region",
         "status": "Planned",
-        "partners": ["Ministry of Transport", "Dovus Group", "DSAK Group"],
-        "benefits": ["Reduction of city traffic", "Logistics convenience", "Regional trade", "Economic growth", "Transport safety", "Modern roads"],
+        "partners": [
+          "Ministry of Transport",
+          "Dovus Group",
+          "DSAK Group"
+        ],
+        "benefits": [
+          "Reduction of city traffic",
+          "Logistics convenience",
+          "Regional trade",
+          "Economic growth",
+          "Transport safety",
+          "Modern roads"
+        ],
         "stats": [
-          { "label": "Length", "value": "160 km" },
-          { "label": "Lanes", "value": "6" },
-          { "label": "Interchanges", "value": "12" }
+          {
+            "label": "Length",
+            "value": "160 km"
+          },
+          {
+            "label": "Lanes",
+            "value": "6"
+          },
+          {
+            "label": "Interchanges",
+            "value": "12"
+          }
         ]
       },
       "smartCity": {
         "title": "Central Asia Smart City",
         "titleEn": "Smart City Ohangaron",
-        "description": "The largest smart city in the region on 6,400 hectares. All world-class city infrastructure.",
-        "fullDescription": "The most advanced smart city in Central Asia being built on 6,400 hectares in Ohangaron district. The project includes world-class industrial zones, modern residential areas, commercial centers, and green spaces. The city will feature 5G infrastructure, smart management systems, and green energy technologies.",
+        "description": "The largest and most high-tech 'smart city' in Central Asia is being developed in the Ohangaron district.",
+        "fullDescription": "The most advanced smart city in Central Asia, being developed on a 6,400-hectare site in the Ohangaron district. The project envisions the creation of world-class industrial zones, modern residential quarters, commercial centers, and green public spaces. The city will be equipped with 5G infrastructure, intelligent management systems, and green energy technologies.",
         "location": "Ohangaron, Tashkent Region",
         "status": "Active",
-        "partners": ["MIG", "Quwwat Group", "Ministry of Economy", "International Investors"],
-        "benefits": ["Modern infrastructure", "Green technologies", "Job creation", "Attracting foreign investments", "Regional development", "Smart management"],
+        "partners": [
+          "ND imar LLC",
+          "Byuro Veritas",
+          "KPMG",
+          "LYNKOS",
+          "Orama Consult",
+          "Uz Capital Japan Co., LTD"
+        ],
+        "benefits": [
+          "Modern infrastructure",
+          "Green technologies",
+          "Job creation",
+          "Attracting foreign investments",
+          "Regional development",
+          "Smart management"
+        ],
         "stats": [
-          { "label": "Area", "value": "6,400 ha" },
-          { "label": "Investment", "value": "$20B" },
-          { "label": "Jobs", "value": "50K+" }
+          {
+            "label": "Area",
+            "value": "6,400 ha"
+          },
+          {
+            "label": "Investment",
+            "value": "$20B"
+          },
+          {
+            "label": "Jobs",
+            "value": "50K+"
+          }
         ]
       },
       "industrialPark": {
@@ -1544,12 +2278,31 @@
         "fullDescription": "A modern industrial park with ready infrastructure for manufacturing enterprises, located in Ohangaron district. The project offers tax benefits, ready logistics infrastructure, and cheap energy for investors.",
         "location": "Ohangaron, Tashkent Region",
         "status": "Active",
-        "partners": ["Ministry of Investment and Industry", "UZELTECHSANOAT"],
-        "benefits": ["Tax benefits", "Ready infrastructure", "Logistics convenience", "Cheap energy", "Qualified workforce", "Export opportunities"],
+        "partners": [
+          "Ministry of Investment and Industry",
+          "UZELTECHSANOAT"
+        ],
+        "benefits": [
+          "Tax benefits",
+          "Ready infrastructure",
+          "Logistics convenience",
+          "Cheap energy",
+          "Qualified workforce",
+          "Export opportunities"
+        ],
         "stats": [
-          { "label": "Area", "value": "500 ha" },
-          { "label": "Enterprises", "value": "50+" },
-          { "label": "Jobs", "value": "10K+" }
+          {
+            "label": "Area",
+            "value": "500 ha"
+          },
+          {
+            "label": "Enterprises",
+            "value": "50+"
+          },
+          {
+            "label": "Jobs",
+            "value": "10K+"
+          }
         ]
       },
       "stateHospital": {
@@ -1559,12 +2312,31 @@
         "fullDescription": "Construction of a modern 1,000-bed multi-profile hospital equipped with world-class medical equipment. The project aims to improve the quality of medical services for the population of Tashkent and surrounding regions.",
         "location": "Tashkent City",
         "status": "Planned",
-        "partners": ["Ministry of Health", "International Medical Organizations"],
-        "benefits": ["Quality medical services", "Modern equipment", "Qualified doctors", "Scientific research", "Medical tourism", "Public health"],
+        "partners": [
+          "Ministry of Health",
+          "International Medical Organizations"
+        ],
+        "benefits": [
+          "Quality medical services",
+          "Modern equipment",
+          "Qualified doctors",
+          "Scientific research",
+          "Medical tourism",
+          "Public health"
+        ],
         "stats": [
-          { "label": "Beds", "value": "1,000" },
-          { "label": "Departments", "value": "25+" },
-          { "label": "Staff", "value": "2,000+" }
+          {
+            "label": "Beds",
+            "value": "1,000"
+          },
+          {
+            "label": "Departments",
+            "value": "25+"
+          },
+          {
+            "label": "Staff",
+            "value": "2,000+"
+          }
         ]
       },
       "privateClinic": {
@@ -1574,12 +2346,31 @@
         "fullDescription": "Construction of an international standard private clinic in Tashkent offering premium medical services. The clinic will be equipped with the latest diagnostic and treatment equipment and staffed with qualified international doctors.",
         "location": "Tashkent City",
         "status": "Active",
-        "partners": ["International Medical Groups", "Private Investors"],
-        "benefits": ["Premium services", "International doctors", "Modern equipment", "Medical tourism", "VIP service", "24/7 operation"],
+        "partners": [
+          "International Medical Groups",
+          "Private Investors"
+        ],
+        "benefits": [
+          "Premium services",
+          "International doctors",
+          "Modern equipment",
+          "Medical tourism",
+          "VIP service",
+          "24/7 operation"
+        ],
         "stats": [
-          { "label": "Beds", "value": "200" },
-          { "label": "Departments", "value": "15" },
-          { "label": "Doctors", "value": "100+" }
+          {
+            "label": "Beds",
+            "value": "200"
+          },
+          {
+            "label": "Departments",
+            "value": "15"
+          },
+          {
+            "label": "Doctors",
+            "value": "100+"
+          }
         ]
       },
       "solarEnergy": {
@@ -1589,12 +2380,32 @@
         "fullDescription": "Construction of a 200 MW capacity solar power plant. The project contributes to improving the country's energy independence and increasing the share of renewable energy. Modern solar panels and energy storage systems will be used.",
         "location": "Navoi Region",
         "status": "Active",
-        "partners": ["Ministry of Energy", "International Investors", "MASDAR"],
-        "benefits": ["Green energy", "Energy independence", "Cost-effective electricity", "Reduced emissions", "Modern technologies", "Long-term contracts"],
+        "partners": [
+          "Ministry of Energy",
+          "International Investors",
+          "MASDAR"
+        ],
+        "benefits": [
+          "Green energy",
+          "Energy independence",
+          "Cost-effective electricity",
+          "Reduced emissions",
+          "Modern technologies",
+          "Long-term contracts"
+        ],
         "stats": [
-          { "label": "Capacity", "value": "200 MW" },
-          { "label": "Panels", "value": "500K+" },
-          { "label": "Homes", "value": "100K+" }
+          {
+            "label": "Capacity",
+            "value": "200 MW"
+          },
+          {
+            "label": "Panels",
+            "value": "500K+"
+          },
+          {
+            "label": "Homes",
+            "value": "100K+"
+          }
         ]
       },
       "eduJob": {
@@ -1604,12 +2415,32 @@
         "fullDescription": "A large-scale educational center for training young people in modern professions and employment. The center offers courses in IT, digital marketing, business management and other in-demand professions, providing direct connections with employers.",
         "location": "Tashkent City",
         "status": "Active",
-        "partners": ["Assembly", "Private Companies", "Educational Institutions"],
-        "benefits": ["Modern professions", "Employment guarantee", "Practical skills", "Industry connections", "Career guidance", "International certificates"],
+        "partners": [
+          "Assembly",
+          "Private Companies",
+          "Educational Institutions"
+        ],
+        "benefits": [
+          "Modern professions",
+          "Employment guarantee",
+          "Practical skills",
+          "Industry connections",
+          "Career guidance",
+          "International certificates"
+        ],
         "stats": [
-          { "label": "Students", "value": "5K+" },
-          { "label": "Courses", "value": "50+" },
-          { "label": "Employment", "value": "85%" }
+          {
+            "label": "Students",
+            "value": "5K+"
+          },
+          {
+            "label": "Courses",
+            "value": "50+"
+          },
+          {
+            "label": "Employment",
+            "value": "85%"
+          }
         ]
       },
       "kidsTime": {
@@ -1619,12 +2450,31 @@
         "fullDescription": "A modern educational center for children's creative and intellectual development. The center offers courses in foreign languages, programming, music, art and other directions. Modern teaching methods and an experienced team of educators.",
         "location": "Tashkent City",
         "status": "Active",
-        "partners": ["Assembly", "Educational Programs"],
-        "benefits": ["Modern methodology", "Experienced teachers", "Creative development", "Foreign languages", "Interactive learning", "Safe environment"],
+        "partners": [
+          "Assembly",
+          "Educational Programs"
+        ],
+        "benefits": [
+          "Modern methodology",
+          "Experienced teachers",
+          "Creative development",
+          "Foreign languages",
+          "Interactive learning",
+          "Safe environment"
+        ],
         "stats": [
-          { "label": "Students", "value": "1K+" },
-          { "label": "Programs", "value": "20+" },
-          { "label": "Teachers", "value": "50+" }
+          {
+            "label": "Students",
+            "value": "1K+"
+          },
+          {
+            "label": "Programs",
+            "value": "20+"
+          },
+          {
+            "label": "Teachers",
+            "value": "50+"
+          }
         ]
       }
     },
@@ -1653,7 +2503,7 @@
       "badge": "Trusted Partners",
       "headline": "Project",
       "headlineHighlight": "Partners",
-      "description": "We work in partnership with government organizations, international financial institutions, and leading private companies.",
+      "description": "We implement projects in partnership with government entities, international financial institutions, and leading private corporations.",
       "list": [
         "Islamic Development Bank",
         "Tashkent City Municipality",
@@ -1667,9 +2517,15 @@
     "cta": {
       "headline": "Join",
       "headlineHighlight": "the Projects",
-      "description": "Contact us to participate in our strategic projects and explore investment opportunities.",
+      "description": "Contact us to become a part of our strategic projects and discover new investment opportunities.",
       "contactButton": "Contact Us",
-      "membershipButton": "Become a Member"
+      "membershipButton": "Become a Member",
+      "invest": "Invest in Project",
+      "share": "Share",
+      "save": "Save",
+      "interested": "Interested in this project?",
+      "interestedDescription": "Contact us for more information about investment opportunities and partnership.",
+      "contactUs": "Contact Us"
     },
     "modal": {
       "aboutProject": "About the Project",
@@ -1678,7 +2534,17 @@
       "close": "Close"
     },
     "common": {
-      "details": "Details"
+      "details": "Details",
+      "notFound": "Project Not Found",
+      "notFoundDescription": "The project you are looking for does not exist.",
+      "backToProjects": "Back to Projects",
+      "home": "Home",
+      "projects": "Projects",
+      "investmentDetails": "Investment Details",
+      "totalInvestment": "Total Investment",
+      "previousProject": "Previous Project",
+      "nextProject": "Next Project",
+      "allProjects": "All Projects"
     }
   },
   "newsPage": {
@@ -1686,7 +2552,7 @@
       "badge": "News Center",
       "headline": "News and",
       "headlineHighlight": "Events",
-      "description": "Latest news from the Economic Assembly of Uzbekistan's activities, projects, international cooperation, and business environment.",
+      "description": "Latest updates on the Economy of the Assembly of the Republic of Uzbekistan's activities, ongoing projects, international cooperation, and the overall evolution of the business ecosystem",
       "searchPlaceholder": "Search news..."
     },
     "months": {
@@ -1768,7 +2634,11 @@
         "excerpt": "International consortium announces significant financing milestone for Central Asia's largest urban development project — a key step in Uzbekistan's economic modernization.",
         "content": "A group of international investors has signed an agreement to invest $5 billion in Uzbekistan's flagship Smart City project. This financing covers the project's second phase and will be implemented by 2030.",
         "readTime": "5 min",
-        "tags": ["Smart City", "Investment", "Infrastructure"],
+        "tags": [
+          "Smart City",
+          "Investment",
+          "Infrastructure"
+        ],
         "author": "Assembly Press"
       },
       "economicForum": {
@@ -1776,7 +2646,11 @@
         "excerpt": "Leaders from 15 countries gathered in Tashkent for a three-day summit on regional economic integration. Over 50 memorandums were signed during the forum.",
         "content": "The Central Asia Economic Forum held in Tashkent has concluded successfully. The event was attended by 500+ delegates from 15 countries and over 50 cooperation memorandums were signed.",
         "readTime": "4 min",
-        "tags": ["Forum", "International", "Cooperation"],
+        "tags": [
+          "Forum",
+          "International",
+          "Cooperation"
+        ],
         "author": "Assembly Press"
       },
       "euTradeAgreement": {
@@ -1784,7 +2658,11 @@
         "excerpt": "Uzbekistan signed comprehensive trade partnership with the EU, significantly reducing tariffs in key export sectors.",
         "content": "A new trade agreement has been signed between Uzbekistan and the European Union. The agreement reduces tariffs for textiles, agriculture, and industrial products.",
         "readTime": "4 min",
-        "tags": ["European Union", "Trade", "Export"],
+        "tags": [
+          "European Union",
+          "Trade",
+          "Export"
+        ],
         "author": "Assembly Press"
       },
       "textileExport": {
@@ -1792,7 +2670,11 @@
         "excerpt": "Member association celebrates 40% year-on-year growth in textile and apparel exports.",
         "content": "The Uzbekistan Textile Industry Association achieved record results in 2024. Export volume increased by 40% and reached $3.5 billion.",
         "readTime": "3 min",
-        "tags": ["Textile", "Export", "Industry"],
+        "tags": [
+          "Textile",
+          "Export",
+          "Industry"
+        ],
         "author": "Assembly Press"
       },
       "skillsDevelopment": {
@@ -1800,7 +2682,11 @@
         "excerpt": "Assembly signs comprehensive workforce development agreement with Ministry of Education.",
         "content": "Under the new national skills development initiative, more than 100,000 specialists will be trained. The program covers IT, industry, and service sectors.",
         "readTime": "4 min",
-        "tags": ["Education", "Workforce", "Skills"],
+        "tags": [
+          "Education",
+          "Workforce",
+          "Skills"
+        ],
         "author": "Assembly Press"
       },
       "dubaiPartnership": {
@@ -1808,7 +2694,11 @@
         "excerpt": "Memorandum signed with Dubai Chamber opens business opportunities for Uzbek companies in the UAE.",
         "content": "A strategic partnership memorandum has been signed between the Economic Assembly of Uzbekistan and the Dubai Chamber of Commerce. This opens new markets for Uzbek companies.",
         "readTime": "3 min",
-        "tags": ["Dubai", "UAE", "Partnership"],
+        "tags": [
+          "Dubai",
+          "UAE",
+          "Partnership"
+        ],
         "author": "Assembly Press"
       },
       "industrialParkPhase": {
@@ -1816,7 +2706,11 @@
         "excerpt": "The industrial park in Chirchik district has started operations. First 10 resident companies launched.",
         "content": "The first phase of the Chirchik industrial park has been successfully completed. 10 resident companies have started production and more than 2,000 jobs have been created.",
         "readTime": "3 min",
-        "tags": ["Industrial Park", "Manufacturing", "Jobs"],
+        "tags": [
+          "Industrial Park",
+          "Manufacturing",
+          "Jobs"
+        ],
         "author": "Assembly Press"
       },
       "membershipProgram": {
@@ -1824,7 +2718,11 @@
         "excerpt": "Special preferential membership program announced for small and medium businesses. Annual fee reduced by 50%.",
         "content": "The Assembly has introduced a new membership program for small and medium businesses. Under the program, membership fee has been reduced by 50% and additional services are provided.",
         "readTime": "2 min",
-        "tags": ["Membership", "SME", "Benefits"],
+        "tags": [
+          "Membership",
+          "SME",
+          "Benefits"
+        ],
         "author": "Assembly Press"
       },
       "tramwayConstruction": {
@@ -1832,7 +2730,11 @@
         "excerpt": "Construction of the Tashkent tramway line has officially started. The first phase will be completed in 2026.",
         "content": "Construction of the tramway line connecting Tashkent region with the city center has begun. The project is being financed by the Islamic Development Bank.",
         "readTime": "4 min",
-        "tags": ["Tramway", "Transport", "Infrastructure"],
+        "tags": [
+          "Tramway",
+          "Transport",
+          "Infrastructure"
+        ],
         "author": "Assembly Press"
       },
       "solarStation": {
@@ -1840,7 +2742,11 @@
         "excerpt": "100 MW solar power station launched in Tashkent region. Will produce energy for 50,000 homes annually.",
         "content": "A new solar power station in Tashkent region has been successfully launched. The station has 100 MW capacity and will power more than 50,000 homes annually.",
         "readTime": "3 min",
-        "tags": ["Solar energy", "Green energy", "Ecology"],
+        "tags": [
+          "Solar energy",
+          "Green energy",
+          "Ecology"
+        ],
         "author": "Assembly Press"
       },
       "itParkResidents": {
@@ -1848,7 +2754,11 @@
         "excerpt": "Uzbekistan IT Parks reached 500 residents. Sector exports totaled $500 million.",
         "content": "The number of resident companies in Uzbekistan IT Parks has reached 500. Sector exports totaled $500 million and more than 15,000 developers are active.",
         "readTime": "3 min",
-        "tags": ["IT", "Technology", "Export"],
+        "tags": [
+          "IT",
+          "Technology",
+          "Export"
+        ],
         "author": "Assembly Press"
       },
       "investorsForum": {
@@ -1856,7 +2766,11 @@
         "excerpt": "$2 billion worth of agreements signed at the international investors forum in Tashkent.",
         "content": "The international investors forum has concluded successfully. Agreements worth $2 billion were signed for 30 projects during the forum.",
         "readTime": "5 min",
-        "tags": ["Forum", "Investment", "Agreements"],
+        "tags": [
+          "Forum",
+          "Investment",
+          "Agreements"
+        ],
         "author": "Assembly Press"
       },
       "agroCluster": {
@@ -1864,7 +2778,11 @@
         "excerpt": "New agro-industrial cluster established in Fergana Valley. The cluster unites 50 enterprises.",
         "content": "A new agro-industrial cluster has started operations in the Fergana Valley. The cluster unites 50 agricultural and processing enterprises.",
         "readTime": "3 min",
-        "tags": ["Agriculture", "Cluster", "Fergana"],
+        "tags": [
+          "Agriculture",
+          "Cluster",
+          "Fergana"
+        ],
         "author": "Assembly Press"
       },
       "eduJobPlatform": {
@@ -1872,7 +2790,11 @@
         "excerpt": "EDU-JOB education platform celebrated 10,000 graduates. 70% were employed.",
         "content": "The EDU-JOB platform has reached 10,000 graduates. More than 70% of graduates have been employed.",
         "readTime": "3 min",
-        "tags": ["EDU-JOB", "Education", "Employment"],
+        "tags": [
+          "EDU-JOB",
+          "Education",
+          "Employment"
+        ],
         "author": "Assembly Press"
       },
       "turkeyPartnership": {
@@ -1880,7 +2802,11 @@
         "excerpt": "New economic cooperation program signed between Uzbekistan and Turkey.",
         "content": "A new economic cooperation program has been signed between Uzbekistan and Turkey. The program covers trade, investment, and tourism sectors.",
         "readTime": "3 min",
-        "tags": ["Turkey", "Partnership", "Trade"],
+        "tags": [
+          "Turkey",
+          "Partnership",
+          "Trade"
+        ],
         "author": "Assembly Press"
       },
       "taxBenefits": {
@@ -1888,7 +2814,11 @@
         "excerpt": "New tax benefits introduced for exporting companies. Profit tax reduced by 50%.",
         "content": "The government has introduced new tax benefits for exporting enterprises. The profit tax rate has been reduced by 50%.",
         "readTime": "2 min",
-        "tags": ["Tax", "Benefits", "Export"],
+        "tags": [
+          "Tax",
+          "Benefits",
+          "Export"
+        ],
         "author": "Assembly Press"
       }
     }
@@ -1898,7 +2828,7 @@
       "badge": "Contact Us",
       "headline": "Contact",
       "headlineHighlight": "Information",
-      "description": "Have questions? Get in touch with us — our team is ready to help you."
+      "description": "Do you have any questions or proposals? Feel free to reach out — our team is always ready to assist you and respond to your inquiries."
     },
     "cards": {
       "address": {
@@ -1992,7 +2922,7 @@
       },
       "membershipFee": {
         "question": "What is the membership fee?",
-        "answer": "The membership fee varies depending on the company size and selected plan. For detailed information, please contact the membership department."
+        "answer": "The membership fee varies depending on the company size and selected plan. For detailed information, please contact us."
       },
       "services": {
         "question": "What services are provided?",

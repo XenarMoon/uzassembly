@@ -79,8 +79,8 @@ const teamMembersConfig = [
 const keyFactsConfig = [
   { key: 'founded', value: '2021', icon: Calendar },
   { key: 'associations', value: '46+', icon: Building2 },
-  { key: 'members', value: '30+', icon: Users },
-  { key: 'team', value: '8', icon: Globe2 },
+  { key: 'members', value: '100+', icon: Users },
+  { key: 'team', value: '25', icon: Globe2 },
 ]
 
 // Pillars config
@@ -759,7 +759,7 @@ export default function AboutPage() {
                     transition={{ duration: 0.5, delay: 1.2 }}
                     className="font-mono text-3xl lg:text-4xl font-bold text-violet-400 block"
                   >
-                    30+
+                    100+
                   </motion.span>
                   <span className="text-white/50 text-sm">{t('timeline.stats.members')}</span>
                 </div>
@@ -771,7 +771,7 @@ export default function AboutPage() {
                     transition={{ duration: 0.5, delay: 1.3 }}
                     className="font-mono text-3xl lg:text-4xl font-bold text-emerald-400 block"
                   >
-                    100+
+                    20+
                   </motion.span>
                   <span className="text-white/50 text-sm">{t('timeline.stats.projects')}</span>
                 </div>

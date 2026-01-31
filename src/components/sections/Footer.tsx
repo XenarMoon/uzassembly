@@ -39,7 +39,6 @@ const organizationLinks = [
   { key: 'projects', href: '/projects' },
   { key: 'news', href: '/news' },
   { key: 'leadership', href: '/about#leadership' },
-  { key: 'careers', href: '/careers' },
 ]
 
 const membersLinks = [
@@ -47,7 +46,7 @@ const membersLinks = [
   { key: 'pricing', href: '/membership#pricing' },
   { key: 'benefits', href: '/membership#benefits' },
   { key: 'forInvestors', href: '/investors' },
-  { key: 'faq', href: '/faq' },
+  { key: 'faq', href: '/contact#faq' },
 ]
 
 export default function Footer() {
@@ -96,13 +95,13 @@ export default function Footer() {
 
             {/* Contact Info */}
             <div className="space-y-3">
-              <a href="tel:+998917741416" className="flex items-center gap-3 text-white/60 hover:text-white transition-colors text-sm">
+              <a href="tel:+998777365560" className="flex items-center gap-3 text-white/60 hover:text-white transition-colors text-sm">
                 <Phone className="w-4 h-4 flex-shrink-0" />
-                <span>+998 91 774 14 16</span>
+                <span>+99877 736 55 60</span>
               </a>
               <a href="mailto:info@uzassembly.uz" className="flex items-center gap-3 text-white/60 hover:text-white transition-colors text-sm">
                 <Mail className="w-4 h-4 flex-shrink-0" />
-                <span>info@uzassembly.uz</span>
+                <span>info@assembly.uz</span>
               </a>
               <div className="flex items-start gap-3 text-white/60 text-sm">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />

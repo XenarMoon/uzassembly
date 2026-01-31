@@ -111,7 +111,7 @@ export default function Services() {
   const featuredService = {
     ...services[0],
     stats: { value: t('items.smartCity.stats.area'), label: t('items.smartCity.stats.unit') },
-    location: 'Ohangaron, Toshkent',
+    location: t('items.smartCity.location'),
   }
   const otherServices = services.slice(1)
 

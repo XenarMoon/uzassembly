@@ -141,8 +141,8 @@ export default function InternationalPage() {
                 </div>
 
                 <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-semibold text-white leading-tight mb-4">
-                  International{' '}
-                  <span className="text-gradient-gold font-display">Diplomacy</span>
+                   {t('hero.badge') }{' '}
+                  <span className="text-gradient-gold font-display"> {t('hero.badge2') }</span>
                 </h1>
 
                 <p className="text-lg text-white/50 mb-6 leading-relaxed">
@@ -154,30 +154,11 @@ export default function InternationalPage() {
                     <span>{t('hero.partnershipButton')}</span>
                     <ArrowRight className="w-5 h-5" />
                   </Link>
-                  <Link href="#media" className="btn-secondary">
-                    Media
-                  </Link>
+                  
                 </div>
               </motion.div>
 
-              {/* Stats */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="grid grid-cols-2 gap-4"
-              >
-                {internationalStats.map((stat) => (
-                  <div
-                    key={stat.key}
-                    className="p-5 rounded-2xl bg-white/[0.03] border border-white/5"
-                  >
-                    <p className="font-mono text-3xl font-bold text-indigo-400">{stat.value}</p>
-                    <p className="text-white font-medium">{stat.label}</p>
-                    <p className="text-white/40 text-sm">{stat.description}</p>
-                  </div>
-                ))}
-              </motion.div>
+             
             </div>
           </div>
         </section>

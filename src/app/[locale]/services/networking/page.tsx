@@ -170,25 +170,6 @@ export default function NetworkingPage() {
                   </Link>
                 </div>
               </motion.div>
-
-              {/* Stats */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="grid grid-cols-2 gap-4"
-              >
-                {networkingStats.map((stat) => (
-                  <div
-                    key={stat.key}
-                    className="p-5 rounded-2xl bg-white/[0.03] border border-white/5"
-                  >
-                    <p className="font-mono text-3xl font-bold text-amber-400">{stat.value}</p>
-                    <p className="text-white font-medium">{stat.label}</p>
-                    <p className="text-white/40 text-sm">{stat.description}</p>
-                  </div>
-                ))}
-              </motion.div>
             </div>
           </div>
         </section>
@@ -303,88 +284,6 @@ export default function NetworkingPage() {
                     {sector}
                   </div>
                 ))}
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Membership Levels */}
-        <section id="membership" className="relative py-16">
-          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-
-          <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="font-heading text-2xl lg:text-3xl font-semibold text-white mb-4">
-                {t('membershipSection.headline')}{' '}
-                <span className="text-gradient-gold font-display">{t('membershipSection.headlineHighlight')}</span>
-              </h2>
-            </motion.div>
-
-            <div className="grid lg:grid-cols-3 gap-6">
-              {membershipLevels.map((level, index) => (
-                <motion.div
-                  key={level.key}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className={`p-6 rounded-2xl border ${
-                    level.highlighted
-                      ? 'bg-gradient-to-br from-gold-500/10 to-amber-500/5 border-gold-500/30'
-                      : 'bg-white/[0.02] border-white/5'
-                  }`}
-                >
-                  {level.highlighted && (
-                    <span className="inline-block px-3 py-1 rounded-full bg-gold-500/20 text-gold-400 text-xs font-medium mb-4">
-                      {t('membershipSection.recommended')}
-                    </span>
-                  )}
-                  <h3 className="font-semibold text-white text-xl mb-1">{level.name}</h3>
-                  <p className="text-white/50 text-sm mb-4">{level.description}</p>
-                  <ul className="space-y-2">
-                    {level.features.map((feature) => (
-                      <li key={feature} className="flex items-center gap-2 text-white/70 text-sm">
-                        <CheckCircle2 className={`w-4 h-4 flex-shrink-0 ${level.highlighted ? 'text-gold-400' : 'text-amber-400'}`} />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA */}
-        <section className="relative py-16">
-          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-
-          <div className="relative z-10 max-w-2xl mx-auto px-6 lg:px-8 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="font-heading text-2xl lg:text-3xl font-semibold text-white mb-4">
-                {t('cta.headline')}{' '}
-                <span className="text-gradient-gold font-display">{t('cta.headlineHighlight')}</span>
-              </h2>
-              <p className="text-white/50 mb-8">
-                {t('cta.description')}
-              </p>
-              <div className="flex flex-wrap justify-center gap-3">
-                <Link href="/contact" className="btn-primary">
-                  <span>{t('cta.joinButton')}</span>
-                  <ArrowUpRight className="w-5 h-5" />
-                </Link>
-                <Link href="/membership" className="btn-secondary">
-                  {t('cta.detailsButton')}
-                </Link>
               </div>
             </motion.div>
           </div>

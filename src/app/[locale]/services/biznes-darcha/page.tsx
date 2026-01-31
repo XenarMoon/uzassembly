@@ -361,9 +361,7 @@ export default function BiznesDarchaPage() {
                   <span>{t('cta.contactButton')}</span>
                   <ArrowUpRight className="w-5 h-5" />
                 </Link>
-                <Link href="/membership" className="btn-secondary">
-                  {t('cta.membershipButton')}
-                </Link>
+                
               </div>
             </motion.div>
           </div>

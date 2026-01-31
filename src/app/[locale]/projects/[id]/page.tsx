@@ -1,6 +1,5 @@
 'use client'
 
-import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from '@/lib/navigation'
 import { useTranslations } from 'next-intl'
@@ -10,7 +9,6 @@ import {
   MapPin,
   DollarSign,
   Calendar,
-  Building2,
   Train,
   Car,
   Cpu,
@@ -19,10 +17,7 @@ import {
   Sun,
   GraduationCap,
   Baby,
-  Users,
-  Target,
   CheckCircle2,
-  ExternalLink,
   Share2,
   Bookmark,
   TrendingUp,
@@ -100,11 +95,11 @@ export default function ProjectDetailPage() {
         <Header />
         <div className="pt-32 pb-20">
           <div className="container-custom text-center">
-            <h1 className="text-4xl font-bold text-white mb-4">Project Not Found</h1>
-            <p className="text-white/60 mb-8">The project you're looking for doesn't exist.</p>
+            <h1 className="text-4xl font-bold text-white mb-4">{t('common.notFound')}</h1>
+            <p className="text-white/60 mb-8">{t('common.notFoundDescription')}</p>
             <Link href="/projects" className="btn-primary inline-flex">
               <ArrowLeft className="w-5 h-5" />
-              <span>Back to Projects</span>
+              <span>{t('common.backToProjects')}</span>
             </Link>
           </div>
         </div>
@@ -176,9 +171,9 @@ export default function ProjectDetailPage() {
             transition={{ duration: 0.5 }}
             className="flex items-center gap-2 text-white/50 text-sm mb-8"
           >
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            <Link href="/" className="hover:text-white transition-colors">{t('common.home')}</Link>
             <span>/</span>
-            <Link href="/projects" className="hover:text-white transition-colors">Projects</Link>
+            <Link href="/projects" className="hover:text-white transition-colors">{t('common.projects')}</Link>
             <span>/</span>
             <span className="text-white">{title}</span>
           </motion.div>
@@ -226,7 +221,7 @@ export default function ProjectDetailPage() {
                     <DollarSign className={cn('w-6 h-6', colors.text)} />
                   </div>
                   <div>
-                    <p className="text-white/50 text-sm">Investment</p>
+                    <p className="text-white/50 text-sm">{t('labels.investment')}</p>
                     <p className="text-white font-bold text-xl">{projectConfig.investment}</p>
                   </div>
                 </div>
@@ -235,7 +230,7 @@ export default function ProjectDetailPage() {
                     <Calendar className={cn('w-6 h-6', colors.text)} />
                   </div>
                   <div>
-                    <p className="text-white/50 text-sm">Timeline</p>
+                    <p className="text-white/50 text-sm">{t('labels.duration')}</p>
                     <p className="text-white font-bold text-xl">{projectConfig.year}</p>
                   </div>
                 </div>
@@ -244,7 +239,7 @@ export default function ProjectDetailPage() {
                     <MapPin className={cn('w-6 h-6', colors.text)} />
                   </div>
                   <div>
-                    <p className="text-white/50 text-sm">Location</p>
+                    <p className="text-white/50 text-sm">{t('labels.location')}</p>
                     <p className="text-white font-bold text-xl">{location}</p>
                   </div>
                 </div>
@@ -253,12 +248,12 @@ export default function ProjectDetailPage() {
               {/* CTA Buttons */}
               <div className="flex flex-wrap gap-4">
                 <Link href="/contact" className="btn-primary">
-                  <span>Invest in Project</span>
+                  <span>{t('cta.invest')}</span>
                   <ArrowRight className="w-5 h-5" />
                 </Link>
                 <button className="btn-secondary">
                   <Share2 className="w-5 h-5" />
-                  <span>Share Project</span>
+                  <span>{t('cta.share')}</span>
                 </button>
               </div>
             </motion.div>
@@ -355,23 +350,23 @@ export default function ProjectDetailPage() {
               <div className={cn('glass rounded-2xl p-6 border', colors.border)}>
                 <h4 className="font-heading text-lg font-semibold text-white mb-4 flex items-center gap-2">
                   <TrendingUp className={cn('w-5 h-5', colors.text)} />
-                  Investment Details
+                  {t('common.investmentDetails')}
                 </h4>
                 <div className="space-y-4">
                   <div className="flex justify-between items-center py-3 border-b border-white/10">
-                    <span className="text-white/60">Total Investment</span>
+                    <span className="text-white/60">{t('common.totalInvestment')}</span>
                     <span className="text-white font-bold">{projectConfig.investment}</span>
                   </div>
                   <div className="flex justify-between items-center py-3 border-b border-white/10">
-                    <span className="text-white/60">Timeline</span>
+                    <span className="text-white/60">{t('labels.duration')}</span>
                     <span className="text-white font-bold">{projectConfig.year}</span>
                   </div>
                   <div className="flex justify-between items-center py-3 border-b border-white/10">
-                    <span className="text-white/60">Status</span>
+                    <span className="text-white/60">{t('labels.status')}</span>
                     <span className={cn('font-bold', colors.text)}>{status}</span>
                   </div>
                   <div className="flex justify-between items-center py-3">
-                    <span className="text-white/60">Location</span>
+                    <span className="text-white/60">{t('labels.location')}</span>
                     <span className="text-white font-bold">{location}</span>
                   </div>
                 </div>
@@ -381,13 +376,13 @@ export default function ProjectDetailPage() {
               <div className="glass rounded-2xl p-6">
                 <h4 className="font-heading text-lg font-semibold text-white mb-4 flex items-center gap-2">
                   <Globe2 className="w-5 h-5 text-sky-400" />
-                  Interested in this project?
+                  {t('cta.interested')}
                 </h4>
                 <p className="text-white/60 text-sm mb-4">
-                  Contact us for more information about investment opportunities and partnership.
+                  {t('cta.interestedDescription')}
                 </p>
                 <Link href="/contact" className="btn-primary w-full justify-center">
-                  <span>Contact Us</span>
+                  <span>{t('cta.contactUs')}</span>
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </div>
@@ -396,11 +391,11 @@ export default function ProjectDetailPage() {
               <div className="flex gap-3">
                 <button className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-white/[0.05] border border-white/10 text-white/70 hover:bg-white/10 transition-colors">
                   <Share2 className="w-4 h-4" />
-                  <span className="text-sm">Share</span>
+                  <span className="text-sm">{t('cta.share')}</span>
                 </button>
                 <button className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-white/[0.05] border border-white/10 text-white/70 hover:bg-white/10 transition-colors">
                   <Bookmark className="w-4 h-4" />
-                  <span className="text-sm">Save</span>
+                  <span className="text-sm">{t('cta.save')}</span>
                 </button>
               </div>
             </motion.div>
@@ -419,7 +414,7 @@ export default function ProjectDetailPage() {
               >
                 <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
                 <div className="text-left">
-                  <p className="text-xs uppercase tracking-wider mb-1">Previous Project</p>
+                  <p className="text-xs uppercase tracking-wider mb-1">{t('common.previousProject')}</p>
                   <p className="font-semibold text-white">{t(`projects.${prevProject.key}.title`)}</p>
                 </div>
               </Link>
@@ -431,7 +426,7 @@ export default function ProjectDetailPage() {
               href="/projects"
               className="px-6 py-3 rounded-xl bg-white/[0.05] border border-white/10 text-white/70 hover:bg-white/10 hover:text-white transition-all"
             >
-              All Projects
+              {t('common.allProjects')}
             </Link>
 
             {nextProject ? (
@@ -440,7 +435,7 @@ export default function ProjectDetailPage() {
                 className="group flex items-center gap-4 text-white/60 hover:text-white transition-colors"
               >
                 <div className="text-right">
-                  <p className="text-xs uppercase tracking-wider mb-1">Next Project</p>
+                  <p className="text-xs uppercase tracking-wider mb-1">{t('common.nextProject')}</p>
                   <p className="font-semibold text-white">{t(`projects.${nextProject.key}.title`)}</p>
                 </div>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

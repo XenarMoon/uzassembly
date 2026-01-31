@@ -172,25 +172,6 @@ export default function ReportajGoPage() {
                   </Link>
                 </div>
               </motion.div>
-
-              {/* Stats */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="grid grid-cols-2 gap-4"
-              >
-                {stats.map((stat) => (
-                  <div
-                    key={stat.label}
-                    className="p-5 rounded-2xl bg-white/[0.03] border border-white/5"
-                  >
-                    <p className="font-mono text-3xl font-bold text-red-400">{stat.value}</p>
-                    <p className="text-white font-medium">{stat.label}</p>
-                    <p className="text-white/40 text-sm">{stat.description}</p>
-                  </div>
-                ))}
-              </motion.div>
             </div>
           </div>
         </section>
@@ -297,42 +278,6 @@ export default function ReportajGoPage() {
             </div>
           </div>
         </section>
-
-        {/* Distribution */}
-        <section className="relative py-16">
-          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-
-          <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="p-6 lg:p-8 rounded-2xl bg-white/[0.02] border border-white/5"
-            >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-xl bg-gold-500/10 flex items-center justify-center">
-                  <Globe2 className="w-5 h-5 text-gold-400" />
-                </div>
-                <div>
-                  <h3 className="font-heading text-xl font-semibold text-white">
-                    {t('distributionSection.title')}
-                  </h3>
-                  <p className="text-white/50 text-sm">{t('distributionSection.description')}</p>
-                </div>
-              </div>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                {distribution.map((channel) => (
-                  <div key={channel.name} className="p-4 rounded-xl bg-white/[0.02] border border-white/5">
-                    <channel.icon className="w-8 h-8 text-red-400 mb-3" />
-                    <h4 className="font-semibold text-white mb-1">{channel.name}</h4>
-                    <p className="text-gold-400 text-sm font-mono">{channel.reach}</p>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
         {/* CTA */}
         <section className="relative py-16">
           <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
@@ -355,9 +300,7 @@ export default function ReportajGoPage() {
                   <span>{t('cta.orderButton')}</span>
                   <ArrowUpRight className="w-5 h-5" />
                 </Link>
-                <Link href="/services/international" className="btn-secondary">
-                  {t('cta.mediaButton')}
-                </Link>
+                
               </div>
             </motion.div>
           </div>

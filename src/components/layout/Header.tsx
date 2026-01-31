@@ -36,7 +36,7 @@ export default function Header() {
     },
     { name: t('associations'), href: '/associations' },
     { name: t('projects'), href: '/projects' },
-    { name: t('news'), href: '/news' },
+    // { name: t('news'), href: '/news' },
     { name: t('contact'), href: '/contact' },
   ]
 

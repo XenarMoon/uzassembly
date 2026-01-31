@@ -40,10 +40,10 @@ const servicesConfig = [
 ]
 
 const regionsConfig = [
-  { key: 'europe', icon: '🇪🇺' },
-  { key: 'asia', icon: '🌏' },
-  { key: 'americas', icon: '🌎' },
-  { key: 'cis', icon: '🌍' },
+  { key: 'europe', icon: 'EU' },
+  { key: 'asia', icon: 'AS' },
+  { key: 'americas', icon: 'USE' },
+  { key: 'cis', icon: 'CS' },
 ]
 
 export default function ForeignRelationsPage() {
@@ -323,9 +323,7 @@ export default function ForeignRelationsPage() {
                   <span>{t('cta.contactButton')}</span>
                   <ArrowUpRight className="w-5 h-5" />
                 </Link>
-                <Link href="/membership" className="btn-secondary">
-                  {t('cta.membershipButton')}
-                </Link>
+                
               </div>
             </motion.div>
           </div>

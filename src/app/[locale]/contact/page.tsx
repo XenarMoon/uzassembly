@@ -29,6 +29,7 @@ import {
 import Header from '@/components/layout/Header'
 import Footer from '@/components/sections/Footer'
 import { cn } from '@/lib/utils'
+import { h5 } from 'framer-motion/client'
 
 // Official contact information from assembly.uz
 const contactInfo = {
@@ -135,11 +136,37 @@ export default function ContactPage() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500))
+    try {
+      const selectedReason = contactReasons.find(r => r.id === formData.reason)
 
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+      // Send to API route
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          company: formData.company,
+          reason: formData.reason,
+          reasonTitle: selectedReason?.title,
+          message: formData.message,
+        }),
+      })
+
+      if (!response.ok) {
+        throw new Error('API error')
+      }
+
+      setIsSubmitted(true)
+    } catch (error) {
+      console.error('Error sending message:', error)
+      alert('Xatolik yuz berdi. Iltimos qaytadan urinib ko\'ring.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -152,7 +179,7 @@ export default function ContactPage() {
   return (
     <>
       <Header />
-      <main ref={containerRef} className="relative bg-navy-900 overflow-hidden">
+      <main ref={containerRef} className="relative bg-navy-900 overflow-hidden mt-20">
 
         {/* === BACKGROUND === */}
         <div className="fixed inset-0 pointer-events-none">
@@ -616,7 +643,7 @@ export default function ContactPage() {
           <div className="absolute inset-0">
             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
           </div>
-
+<div className={cn("h-8 mb-28")} id='faq' ></div>
           <div className="relative z-10 max-w-3xl mx-auto px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -632,7 +659,7 @@ export default function ContactPage() {
               </h2>
             </motion.div>
 
-            <div className="space-y-3">
+            <div className="space-y-3" >
               {faqItems.map((faq, index) => (
                 <motion.div
                   key={index}

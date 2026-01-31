@@ -26,7 +26,7 @@ import Header from '@/components/layout/Header'
 import Footer from '@/components/sections/Footer'
 
 const statsConfig = [
-  { key: 'companies', value: '500+' },
+  { key: 'companies', value: '3500+' },
   { key: 'meetings', value: '1000+' },
   { key: 'contracts', value: '300+' },
   { key: 'sectors', value: '35+' },
@@ -365,9 +365,7 @@ export default function BusinessRelationsPage() {
                   <span>{t('cta.registerButton')}</span>
                   <ArrowUpRight className="w-5 h-5" />
                 </Link>
-                <Link href="/membership" className="btn-secondary">
-                  {t('cta.membershipButton')}
-                </Link>
+                
               </div>
             </motion.div>
           </div>
