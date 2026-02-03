@@ -41,13 +41,13 @@ const contactInfo = {
     postal: "100066",
   },
   phone: {
-    main: "+998 91 774 14 16",
-    formatted: "+998 (91) 774-14-16",
+    main: "+998 77 736 55 60",
+    formatted: "+998 (77) 736 55 60",
   },
   email: {
-    main: "info@uzassembly.uz",
-    membership: "membership@uzassembly.uz",
-    press: "press@uzassembly.uz",
+    main: "info@assembly.uz",
+    membership: "membership@assembly.uz",
+    press: "press@assembly.uz",
   },
   hours: {
     weekdays: "Dushanba - Shanba",
