@@ -195,50 +195,7 @@ export default function News() {
           </motion.div>
 
           {/* Other News */}
-          <div className="lg:col-span-5 xl:col-span-4 grid gap-4">
-            {otherNews.map((item, index) => (
-              <motion.div
-                key={item.id}
-                initial={{ opacity: 0, y: 40 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
-                transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-              >
-                <Link href={`/news/${item.id}`} className="group block">
-                  <div className={cn(
-                    'bg-white/[0.03] rounded-2xl p-5 lg:p-6',
-                    'border border-white/10 hover:border-sky-500/30 transition-all duration-300',
-                    'hover:bg-white/[0.06] backdrop-blur-sm'
-                  )}>
-                    <div className="flex items-center gap-3 mb-3">
-                      <span className="px-2.5 py-1 rounded-full bg-sky-500/20 text-sky-400 text-xs font-medium">
-                        {item.category}
-                      </span>
-                      <span className="text-white/40 text-xs flex items-center gap-1">
-                        <Clock className="w-3 h-3" />
-                        {item.readTime} {t('readTime')}
-                      </span>
-                    </div>
-
-                    <h3 className="font-heading text-lg font-semibold text-white mb-2 group-hover:text-sky-400 transition-colors line-clamp-2">
-                      {item.title}
-                    </h3>
-
-                    <p className="text-white/50 text-sm line-clamp-2 mb-3">
-                      {item.excerpt}
-                    </p>
-
-                    <div className="flex items-center justify-between">
-                      <span className="text-white/40 text-xs flex items-center gap-1">
-                        <Calendar className="w-3 h-3" />
-                        {formatDate(item.date)}
-                      </span>
-                      <ArrowRight className="w-4 h-4 text-white/30 group-hover:text-sky-400 group-hover:translate-x-1 transition-all" />
-                    </div>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
+          
         </div>
       </div>
     </section>
