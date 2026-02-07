@@ -559,7 +559,7 @@
       "badge": "Our Mission",
       "title": "Trusted partner",
       "titleHighlight": "for entrepreneurs",
-      "description": "We are committed to supporting businesses of all sizes and fostering sustainable economic growth in the Republic of Uzbekistan. <br>Key Areas of Our Activity:",
+      "description": "We are committed to supporting businesses of all sizes and fostering sustainable economic growth in the Republic of Uzbekistan. Key Areas of Our Activity:",
       "points": [
         "Protecting the interests of entrepreneurs",
         "Attracting and protecting investments",
@@ -2585,7 +2585,9 @@
       "badge": "All News",
       "headline": "News",
       "headlineHighlight": "Archive",
-      "newsCount": "news items"
+      "newsCount": "news items",
+      "noNews": "No news found",
+      "noNewsDescription": "There are no news articles available yet"
     },
     "mediaSection": {
       "badge": "Media Library",

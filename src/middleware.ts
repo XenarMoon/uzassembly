@@ -1,26 +1,46 @@
-import createMiddleware from 'next-intl/middleware';
-import { locales, defaultLocale } from './i18n/config';
+// middleware.ts
+import { NextResponse } from 'next/server'
+import type { NextRequest } from 'next/server'
+import createMiddleware from 'next-intl/middleware'
+import { locales, defaultLocale } from './i18n/config'
 
-export default createMiddleware({
-  // A list of all locales that are supported
+const intlMiddleware = createMiddleware({
   locales,
-
-  // Used when no locale matches
   defaultLocale,
-
-  // Enable browser language detection
   localeDetection: true,
-
-  // Always show locale in URL (/uz, /ru, /en)
   localePrefix: 'always',
-});
+})
+
+export default async function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl
+  
+  const pathnameHasLocale = locales.some(
+    locale => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
+  )
+  
+  const locale = pathnameHasLocale 
+    ? pathname.split('/')[1] 
+    : defaultLocale
+  
+  const isAdminRoute = pathname.includes('/admin') && 
+                      !pathname.includes('/admin/login')
+  
+  if (isAdminRoute) {
+    // ✅ Next.js 15: cookies.get() ishlatamiz
+    const token = request.cookies.get('token')?.value
+    
+    if (!token) {
+      const url = request.nextUrl.clone()
+      url.pathname = `/${locale}/admin/login`
+      return NextResponse.redirect(url)
+    }
+  }
+  
+  return intlMiddleware(request)
+}
 
 export const config = {
-  // Match all pathnames except for
-  // - /api (API routes)
-  // - /_next (Next.js internals)
-  // - /_vercel (Vercel internals)
-  // - /static (inside /public)
-  // - all root files like favicon.ico, robots.txt
-  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)'],
-};
+  matcher: [
+    '/((?!api|_next|_vercel|static|.*\\..*|favicon).*)',
+  ],
+}

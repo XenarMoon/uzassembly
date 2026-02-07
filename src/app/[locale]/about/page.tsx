@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { motion, useScroll, useTransform, useSpring, useInView } from 'framer-motion'
 import Image from 'next/image'
 import { Link } from '@/lib/navigation'
@@ -17,7 +17,7 @@ import {
   ArrowUpRight,
   CheckCircle2
 } from 'lucide-react'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/sections/Footer'
 import { cn } from '@/lib/utils'
@@ -101,6 +101,8 @@ const milestonesConfig = [
 
 export default function AboutPage() {
   const t = useTranslations('aboutPage')
+  const locale = useLocale()
+  const [dynamicTeam, setDynamicTeam] = useState<any[]>([])
   const containerRef = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -118,11 +120,56 @@ export default function AboutPage() {
     quote: t('chairman.quote'),
   }
 
-  const teamMembers = teamMembersConfig.map((member) => ({
-    ...member,
-    role: t(`team.members.${member.key}.role`),
-    roleEn: t(`team.members.${member.key}.roleEn`),
-  }))
+  useEffect(() => {
+    let active = true
+    fetch('/api/public/team')
+      .then((res) => (res.ok ? res.json() : []))
+      .then((data) => {
+        if (!active) return
+        setDynamicTeam(Array.isArray(data) ? data : [])
+      })
+      .catch(() => {
+        if (active) setDynamicTeam([])
+      })
+    return () => {
+      active = false
+    }
+  }, [])
+
+  const teamMembers = useMemo(() => {
+    if (dynamicTeam.length) {
+      return dynamicTeam.map((member: any, index: number) => {
+        const name = locale === 'ru'
+          ? member.nameRu
+          : locale === 'en'
+            ? member.nameEn
+            : member.nameUz
+        const position = locale === 'ru'
+          ? (member.positionRu || member.position)
+          : locale === 'en'
+            ? (member.positionEn || member.position)
+            : (member.positionUz || member.position)
+        return {
+          name: name || '—',
+          image: member.photoUrl || chairmanConfig.image,
+          role: position || '',
+          roleEn: member.positionEn || member.position || '',
+          featured: index < 3,
+          category: member.category || 'member',
+          phone: member.phone || '',
+          socialLink: member.socialLink || '',
+        }
+      })
+    }
+    return teamMembersConfig.map((member) => ({
+      ...member,
+      role: t(`team.members.${member.key}.role`),
+      roleEn: t(`team.members.${member.key}.roleEn`),
+      category: 'member',
+      phone: '',
+      socialLink: '',
+    }))
+  }, [dynamicTeam, locale, t])
 
   const keyFacts = keyFactsConfig.map((fact) => ({
     ...fact,
@@ -431,7 +478,7 @@ export default function AboutPage() {
 
             {/* Other Team Members */}
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {teamMembers.filter(m => !m.featured).map((member, index) => (
+              {teamMembers.filter(m => !m.featured && m.category === 'member').map((member, index) => (
                 <motion.div
                   key={member.name}
                   initial={{ opacity: 0, y: 20 }}
@@ -465,6 +512,58 @@ export default function AboutPage() {
                 </motion.div>
               ))}
             </div>
+
+            {/* Foreign Advisors Section */}
+            {teamMembers.some(m => m.category === 'advisor') && (
+              <div className="mt-16">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="text-center mb-8"
+                >
+                  <span className="text-sky-400 font-mono text-xs tracking-widest uppercase mb-3 block">
+                    {locale === 'uz' ? 'Xalqaro maslahatchilar' : locale === 'ru' ? 'Международные советники' : 'International Advisors'}
+                  </span>
+                  <h3 className="font-heading text-xl lg:text-2xl font-semibold text-white">
+                    {locale === 'uz' ? 'Chet ellik maslahatchilar' : locale === 'ru' ? 'Иностранные советники' : 'Foreign Advisors'}
+                  </h3>
+                </motion.div>
+
+                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                  {teamMembers.filter(m => m.category === 'advisor').map((member, index) => (
+                    <motion.div
+                      key={member.name}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: index * 0.1 }}
+                      className="group"
+                    >
+                      <div className="relative rounded-xl overflow-hidden bg-white/[0.02] border border-sky-500/10 hover:border-sky-500/30 transition-all">
+                        <div className="relative aspect-square overflow-hidden">
+                          <Image
+                            src={member.image}
+                            alt={member.name}
+                            fill
+                            className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/30 to-transparent" />
+                        </div>
+                        <div className="absolute bottom-0 left-0 right-0 p-4">
+                          <h3 className="font-semibold text-white text-sm mb-0.5 group-hover:text-sky-400 transition-colors">
+                            {member.name}
+                          </h3>
+                          <p className="text-sky-400/70 text-xs line-clamp-2">
+                            {member.role}
+                          </p>
+                        </div>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </section>
 

@@ -1,0 +1,125 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  password  String
+  role      String   @default("admin")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model SiteSettings {
+  id    Int    @id @default(autoincrement())
+  key   String @unique
+  value String
+}
+
+model Page {
+  id          Int      @id @default(autoincrement())
+  slug        String   @unique
+  titleEn     String
+  titleRu     String
+  titleUz     String
+  contentEn   String
+  contentRu   String
+  contentUz   String
+  bannerImage String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model News {
+  id          Int       @id @default(autoincrement())
+  titleEn     String
+  titleRu     String
+  titleUz     String
+  summaryEn   String    @default("")
+  summaryRu   String    @default("")
+  summaryUz   String    @default("")
+  contentEn   String
+  contentRu   String
+  contentUz   String
+  imageUrl    String?
+  videoUrl    String?
+  publishedAt DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model TeamMember {
+  id         Int      @id @default(autoincrement())
+  nameEn     String
+  nameRu     String
+  nameUz     String
+  positionEn String   @default("")
+  positionRu String   @default("")
+  positionUz String   @default("")
+  position   String   @default("")
+  bioEn      String
+  bioRu      String
+  bioUz      String
+  photoUrl   String?
+  phone      String?
+  socialLink String?
+  category   String   @default("member")
+  order      Int      @default(0)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model Partner {
+  id        Int      @id @default(autoincrement())
+  name      String
+  logo      String?
+  link      String?
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Statistic {
+  id        Int      @id @default(autoincrement())
+  labelEn   String
+  labelRu   String
+  labelUz   String
+  value     String
+  icon      String
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Application {
+  id          Int      @id @default(autoincrement())
+  name        String?
+  email       String
+  phone       String?
+  company     String?
+  subject     String?
+  reason      String?
+  reasonTitle String?
+  message     String
+  status      String   @default("New")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model PageView {
+  id        Int      @id @default(autoincrement())
+  path      String
+  locale    String   @default("uz")
+  userAgent String?
+  ip        String?
+  createdAt DateTime @default(now())
+}

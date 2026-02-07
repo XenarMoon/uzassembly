@@ -16,13 +16,14 @@ import { useTranslations, useLocale } from 'next-intl'
 import { cn } from '@/lib/utils'
 import type { Locale } from '@/i18n/config'
 import { Linkedin } from 'lucide-react'
+import { useEffect, useState } from 'react'
 
-const socialLinks = [
-  { name: 'Telegram', icon: Send, href: 'https://t.me/uzassembly' },
-  { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/assemblyuz' },
-  { name: 'Facebook', icon: Facebook, href: 'https://facebook.com/uzeconomyassembly' },
-  { name: 'YouTube', icon: Youtube, href: 'https://youtube.com/@assemblyuz' },
-  { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/assemblyuz' },
+const defaultSocialLinks = [
+  { name: 'Telegram', icon: Send, key: 'telegram', href: 'https://t.me/uzassembly' },
+  { name: 'Instagram', icon: Instagram, key: 'instagram', href: 'https://instagram.com/assemblyuz' },
+  { name: 'Facebook', icon: Facebook, key: 'facebook', href: 'https://facebook.com/uzeconomyassembly' },
+  { name: 'YouTube', icon: Youtube, key: 'youtube', href: 'https://youtube.com/@assemblyuz' },
+  { name: 'LinkedIn', icon: Linkedin, key: 'linkedin', href: 'https://linkedin.com/company/assemblyuz' },
 ]
 
 const servicesLinks = [
@@ -52,6 +53,26 @@ const membersLinks = [
 export default function Footer() {
   const t = useTranslations('footer')
   const locale = useLocale() as Locale
+  const [settings, setSettings] = useState<Record<string, string>>({})
+
+  useEffect(() => {
+    fetch('/api/public/settings')
+      .then(r => r.ok ? r.json() : {})
+      .then(data => setSettings(data))
+      .catch(() => {})
+  }, [])
+
+  const phone1 = settings.phone1 || '+99877 736 55 60'
+  const phone2 = settings.phone2
+  const email = settings.email || 'info@assembly.uz'
+  const address = locale === 'en' ? (settings.addressEn || settings.address || "Toshkent sh., Furqat ko'chasi 1/1") :
+                  locale === 'ru' ? (settings.addressRu || settings.address || "Toshkent sh., Furqat ko'chasi 1/1") :
+                  (settings.address || "Toshkent sh., Furqat ko'chasi 1/1")
+
+  const socialLinks = defaultSocialLinks.map(s => ({
+    ...s,
+    href: settings[s.key] || s.href,
+  })).filter(s => s.href)
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -95,17 +116,23 @@ export default function Footer() {
 
             {/* Contact Info */}
             <div className="space-y-3">
-              <a href="tel:+998777365560" className="flex items-center gap-3 text-white/60 hover:text-white transition-colors text-sm">
+              <a href={`tel:${phone1.replace(/\s/g, '')}`} className="flex items-center gap-3 text-white/60 hover:text-white transition-colors text-sm">
                 <Phone className="w-4 h-4 flex-shrink-0" />
-                <span>+99877 736 55 60</span>
+                <span>{phone1}</span>
               </a>
-              <a href="mailto:info@uzassembly.uz" className="flex items-center gap-3 text-white/60 hover:text-white transition-colors text-sm">
+              {phone2 && (
+                <a href={`tel:${phone2.replace(/\s/g, '')}`} className="flex items-center gap-3 text-white/60 hover:text-white transition-colors text-sm">
+                  <Phone className="w-4 h-4 flex-shrink-0" />
+                  <span>{phone2}</span>
+                </a>
+              )}
+              <a href={`mailto:${email}`} className="flex items-center gap-3 text-white/60 hover:text-white transition-colors text-sm">
                 <Mail className="w-4 h-4 flex-shrink-0" />
-                <span>info@assembly.uz</span>
+                <span>{email}</span>
               </a>
               <div className="flex items-start gap-3 text-white/60 text-sm">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <span>Toshkent sh., Furqat ko'chasi 1/1</span>
+                <span>{address}</span>
               </div>
             </div>
 

@@ -1,4 +1,4 @@
-{
+﻿{
   "metadata": {
     "title": "O'zbekiston Iqtisodiyot Assambleyasi | Tadbirkorlar Uchun Yagona Ekotizim",
     "description": "O'zbekiston Iqtisodiyot Assambleyasi — 46+ sanoat assotsiatsiyasini birlashtiruvchi, 8 ta strategik xizmat yo'nalishi va $20B+ investitsiya loyihalarini boshqaruvchi tashkilot.",
@@ -559,7 +559,7 @@
       "badge": "Missiyamiz",
       "title": "Tadbirkorlar uchun",
       "titleHighlight": "ishonchli hamkor",
-      "description": "Biz barcha hajmdagi biznesga yordam berish va O'zbekistonda iqtisodiy o'sishni oldinga surishga sodiqmiz. <br>Faoliyatimizning asosiy yo‘nalishlari:",
+      "description": "Biz barcha hajmdagi biznesga yordam berish va O'zbekistonda iqtisodiy o'sishni oldinga surishga sodiqmiz. Faoliyatimizning asosiy yo‘nalishlari:",
       "points": [
         "Tadbirkorlar manfaatlarini himoya qilish",
         "Investitsiyalarni jalb qilish va himoya qilish",
@@ -2588,7 +2588,9 @@
       "badge": "Barcha Yangiliklar",
       "headline": "Yangiliklar",
       "headlineHighlight": "Arxivi",
-      "newsCount": "ta yangilik"
+      "newsCount": "ta yangilik",
+      "noNews": "Yangiliklar topilmadi",
+      "noNewsDescription": "Hozircha yangiliklar mavjud emas"
     },
     "mediaSection": {
       "badge": "Media Kutubxonasi",

@@ -1,8 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server'
+import prisma from '@/lib/prisma'
 
-const TELEGRAM_BOT_TOKEN = '8065145975:AAESCd86MlkW03Ujj7k4cI7P_VgatkbYSWQ'
-const TELEGRAM_CHAT_ID = '7634630022' // test qilinmoqda with your actual chat ID
+// Read Telegram credentials from environment variables (do NOT commit secrets)
+const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN
+const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID
 
+// Note: If these are missing the API will return 500 — set them in your .env
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
@@ -14,6 +17,24 @@ export async function POST(request: NextRequest) {
         { error: 'Missing required fields' },
         { status: 400 }
       )
+    }
+
+    // Save to database
+    await prisma.application.create({
+      data: {
+        name,
+        email,
+        phone: phone || null,
+        company: company || null,
+        reason: reason || null,
+        reasonTitle: reasonTitle || null,
+        message,
+      },
+    })
+
+    if (!TELEGRAM_BOT_TOKEN || !TELEGRAM_CHAT_ID) {
+      console.error('Telegram configuration missing: set TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID')
+      return NextResponse.json({ success: true, warning: 'Telegram configuration missing' })
     }
 
     // Format message for Telegram
@@ -52,10 +73,7 @@ ${message}
     if (!telegramResponse.ok) {
       const errorData = await telegramResponse.json()
       console.error('Telegram API error:', errorData)
-      return NextResponse.json(
-        { error: 'Failed to send message' },
-        { status: 500 }
-      )
+      return NextResponse.json({ success: true, warning: 'Failed to send Telegram message' })
     }
 
     return NextResponse.json({ success: true })

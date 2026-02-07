@@ -17,6 +17,7 @@ export default function Home() {
       <About />
       <Associations />
       <Projects />
+      <News />
       <Contact />
       <Footer />
     </main>

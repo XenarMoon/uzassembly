@@ -1,9 +1,9 @@
 'use client'
 
-import { useState, useRef, useMemo } from 'react'
+import { useState, useRef, useMemo, useEffect } from 'react'
 import { motion, useScroll, useTransform, useSpring, AnimatePresence } from 'framer-motion'
 import { Link } from '@/lib/navigation'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 import {
   ArrowRight,
   ArrowUpRight,
@@ -41,13 +41,13 @@ import { cn } from '@/lib/utils'
 
 // News categories config (with translation keys)
 const categoriesConfig = [
-  { id: 'all', key: 'all', icon: Newspaper, count: 24 },
-  { id: 'investment', key: 'investment', icon: TrendingUp, count: 6 },
-  { id: 'events', key: 'events', icon: Users, count: 5 },
-  { id: 'projects', key: 'projects', icon: Building2, count: 4 },
-  { id: 'international', key: 'international', icon: Globe2, count: 4 },
-  { id: 'education', key: 'education', icon: GraduationCap, count: 3 },
-  { id: 'announcements', key: 'announcements', icon: Bell, count: 2 },
+  { id: 'all', key: 'all', icon: Newspaper },
+  { id: 'investment', key: 'investment', icon: TrendingUp },
+  { id: 'events', key: 'events', icon: Users },
+  { id: 'projects', key: 'projects', icon: Building2 },
+  { id: 'international', key: 'international', icon: Globe2 },
+  { id: 'education', key: 'education', icon: GraduationCap },
+  { id: 'announcements', key: 'announcements', icon: Bell },
 ]
 
 // Month keys for translation
@@ -66,25 +66,7 @@ const monthKeys: Record<string, string> = {
   '12': 'december',
 }
 
-// News articles config (with translation keys)
-const newsArticlesConfig = [
-  { id: 1, key: 'smartCityInvestment', category: 'investment', date: '2025-01-02', views: 12500, featured: true, type: 'article' },
-  { id: 2, key: 'economicForum', category: 'events', date: '2024-12-28', views: 8900, featured: true, type: 'article' },
-  { id: 3, key: 'euTradeAgreement', category: 'international', date: '2024-12-20', views: 7200, featured: false, type: 'article' },
-  { id: 4, key: 'textileExport', category: 'investment', date: '2024-12-15', views: 5400, featured: false, type: 'article' },
-  { id: 5, key: 'skillsDevelopment', category: 'education', date: '2024-12-10', views: 6100, featured: false, type: 'article' },
-  { id: 6, key: 'dubaiPartnership', category: 'international', date: '2024-12-05', views: 4800, featured: false, type: 'article' },
-  { id: 7, key: 'industrialParkPhase', category: 'projects', date: '2024-12-01', views: 4200, featured: false, type: 'article' },
-  { id: 8, key: 'membershipProgram', category: 'announcements', date: '2024-11-28', views: 3900, featured: false, type: 'announcement' },
-  { id: 9, key: 'tramwayConstruction', category: 'projects', date: '2024-11-25', views: 5600, featured: false, type: 'article' },
-  { id: 10, key: 'solarStation', category: 'projects', date: '2024-11-20', views: 4100, featured: false, type: 'article' },
-  { id: 11, key: 'itParkResidents', category: 'investment', date: '2024-11-15', views: 3800, featured: false, type: 'article' },
-  { id: 12, key: 'investorsForum', category: 'events', date: '2024-11-10', views: 6800, featured: false, type: 'article' },
-  { id: 13, key: 'agroCluster', category: 'investment', date: '2024-11-05', views: 3200, featured: false, type: 'article' },
-  { id: 14, key: 'eduJobPlatform', category: 'education', date: '2024-11-01', views: 4500, featured: false, type: 'article' },
-  { id: 15, key: 'turkeyPartnership', category: 'international', date: '2024-10-28', views: 3600, featured: false, type: 'article' },
-  { id: 16, key: 'taxBenefits', category: 'announcements', date: '2024-10-25', views: 5200, featured: false, type: 'announcement' },
-]
+
 
 // Media items config (with translation keys)
 const mediaItemsConfig = [
@@ -113,8 +95,20 @@ export default function NewsPage() {
   const [currentPage, setCurrentPage] = useState(1)
   const [isSubscribed, setIsSubscribed] = useState(false)
   const [email, setEmail] = useState('')
+  const [dbNews, setDbNews] = useState<any[]>([])
 
+  const locale = useLocale()
   const itemsPerPage = 9
+
+  // Fetch news from database
+  useEffect(() => {
+    let active = true
+    fetch('/api/public/news')
+      .then(res => res.ok ? res.json() : [])
+      .then(data => { if (active) setDbNews(Array.isArray(data) ? data : []) })
+      .catch(() => { if (active) setDbNews([]) })
+    return () => { active = false }
+  }, [])
 
   // Build translated categories
   const categories = categoriesConfig.map((cat) => ({
@@ -122,16 +116,50 @@ export default function NewsPage() {
     name: t(`categories.${cat.key}`),
   }))
 
-  // Build translated news articles
-  const newsArticles = newsArticlesConfig.map((article) => ({
-    ...article,
-    title: t(`articles.${article.key}.title`),
-    excerpt: t(`articles.${article.key}.excerpt`),
-    content: t(`articles.${article.key}.content`),
-    readTime: t(`articles.${article.key}.readTime`),
-    tags: t.raw(`articles.${article.key}.tags`) as string[],
-    author: t(`articles.${article.key}.author`),
-  }))
+  // Helper: get localized field from DB item
+  const getLocalized = (item: any, base: 'title' | 'content') => {
+    if (locale === 'ru') return item[`${base}Ru`] || item[`${base}Uz`] || ''
+    if (locale === 'en') return item[`${base}En`] || item[`${base}Uz`] || ''
+    return item[`${base}Uz`] || ''
+  }
+
+  const stripHtml = (html: string) => html?.replace(/<[^>]*>/g, '') || ''
+
+  // Convert DB news to same shape as static articles
+  const dbNewsArticles = useMemo(() => {
+    return dbNews.map((item, index) => {
+      const title = getLocalized(item, 'title')
+      const content = getLocalized(item, 'content')
+      const plainContent = stripHtml(content)
+      const excerpt = plainContent.slice(0, 200)
+      const words = plainContent.split(/\s+/).filter(Boolean).length
+      const readTime = `${Math.max(1, Math.ceil(words / 200))} min`
+      const d = item.publishedAt ? new Date(item.publishedAt) : new Date(item.createdAt)
+      const dateStr = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`
+
+      return {
+        id: `db-${item.id}`,
+        dbId: item.id,
+        key: `db-${item.id}`,
+        category: 'announcements',
+        date: dateStr,
+        views: 0,
+        featured: index === 0,
+        type: 'article',
+        title,
+        excerpt,
+        content: plainContent,
+        readTime,
+        tags: [] as string[],
+        author: '',
+        imageUrl: item.imageUrl || '',
+        isFromDb: true,
+      }
+    })
+  }, [dbNews, locale])
+
+  // Only DB news
+  const newsArticles = dbNewsArticles
 
   // Build translated media items
   const mediaItems = mediaItemsConfig.map((item) => ({
@@ -177,12 +205,12 @@ export default function NewsPage() {
       filtered = filtered.filter(a =>
         a.title.toLowerCase().includes(query) ||
         a.excerpt.toLowerCase().includes(query) ||
-        a.tags.some(t => t.toLowerCase().includes(query))
+        a.tags.some(tag => tag.toLowerCase().includes(query))
       )
     }
 
     return filtered
-  }, [activeCategory, searchQuery])
+  }, [activeCategory, searchQuery, newsArticles])
 
   // Pagination
   const totalPages = Math.ceil(filteredArticles.length / itemsPerPage)
@@ -377,7 +405,7 @@ export default function NewsPage() {
                         ? 'bg-navy-900/20 text-navy-900'
                         : 'bg-white/10 text-white/40'
                     )}>
-                      {category.count}
+                      {category.id === 'all' ? newsArticles.length : newsArticles.filter(a => a.category === category.id).length}
                     </span>
                   </button>
                 )
@@ -385,6 +413,17 @@ export default function NewsPage() {
             </motion.div>
 
             {/* Articles Grid/List */}
+            {paginatedArticles.length === 0 ? (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="flex flex-col items-center justify-center py-20 text-center"
+              >
+                <Newspaper className="w-12 h-12 text-white/20 mb-4" />
+                <h3 className="font-heading text-xl font-semibold text-white/40 mb-2">{t('allNewsSection.noNews')}</h3>
+                <p className="text-white/30 text-sm">{t('allNewsSection.noNewsDescription')}</p>
+              </motion.div>
+            ) : (
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeCategory + viewMode + currentPage}
@@ -448,10 +487,12 @@ export default function NewsPage() {
 
                               {/* Meta */}
                               <div className="hidden lg:flex items-center gap-6 flex-shrink-0">
-                                <div className="flex items-center gap-1.5 text-white/40 text-sm">
-                                  <Eye className="w-4 h-4" />
-                                  <span>{article.views.toLocaleString()}</span>
-                                </div>
+                                {article.views > 0 && (
+                                  <div className="flex items-center gap-1.5 text-white/40 text-sm">
+                                    <Eye className="w-4 h-4" />
+                                    <span>{article.views.toLocaleString()}</span>
+                                  </div>
+                                )}
                                 <ArrowRight className="w-5 h-5 text-white/30 group-hover:text-gold-400 group-hover:translate-x-1 transition-all" />
                               </div>
                             </div>
@@ -475,6 +516,13 @@ export default function NewsPage() {
                         'bg-white/[0.02] border border-white/5 hover:border-white/15 transition-all duration-300',
                         'hover:bg-white/[0.04]'
                       )}>
+                        {/* Image for DB news */}
+                        {article.imageUrl && (
+                          <div className="relative h-48 overflow-hidden">
+                            <img src={article.imageUrl} alt={article.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-navy-900/80 to-transparent" />
+                          </div>
+                        )}
                         <div className="p-6">
                           {/* Header */}
                           <div className="flex items-center justify-between mb-4">
@@ -511,10 +559,12 @@ export default function NewsPage() {
                                 <Calendar className="w-3 h-3" />
                                 {formatDateShort(article.date)}
                               </span>
-                              <span className="flex items-center gap-1">
-                                <Eye className="w-3 h-3" />
-                                {article.views.toLocaleString()}
-                              </span>
+                              {article.views > 0 && (
+                                <span className="flex items-center gap-1">
+                                  <Eye className="w-3 h-3" />
+                                  {article.views.toLocaleString()}
+                                </span>
+                              )}
                             </div>
                             <ArrowRight className="w-4 h-4 text-white/30 group-hover:text-gold-400 group-hover:translate-x-1 transition-all" />
                           </div>
@@ -525,6 +575,7 @@ export default function NewsPage() {
                 })}
               </motion.div>
             </AnimatePresence>
+            )}
 
             {/* Pagination */}
             {totalPages > 1 && (
@@ -811,6 +862,13 @@ export default function NewsPage() {
 
                   return (
                     <>
+                      {/* Image for DB articles */}
+                      {selectedArticle.imageUrl && (
+                        <div className="relative h-64 overflow-hidden">
+                          <img src={selectedArticle.imageUrl} alt={selectedArticle.title} className="w-full h-full object-cover" />
+                          <div className="absolute inset-0 bg-gradient-to-t from-[#0c1929] to-transparent" />
+                        </div>
+                      )}
                       {/* Header */}
                       <div className="relative p-6 lg:p-8 bg-gradient-to-br from-gold-500/20 via-[#0c1929] to-[#0c1929]">
                         {/* Close Button */}
@@ -845,10 +903,12 @@ export default function NewsPage() {
                             <Calendar className="w-4 h-4" />
                             {formatDate(selectedArticle.date)}
                           </span>
-                          <span className="flex items-center gap-1.5">
-                            <Eye className="w-4 h-4" />
-                            {selectedArticle.views.toLocaleString()} {t('modal.views')}
-                          </span>
+                          {selectedArticle.views > 0 && (
+                            <span className="flex items-center gap-1.5">
+                              <Eye className="w-4 h-4" />
+                              {selectedArticle.views.toLocaleString()} {t('modal.views')}
+                            </span>
+                          )}
                         </div>
                       </div>
 
@@ -865,6 +925,7 @@ export default function NewsPage() {
                         </p>
 
                         {/* Tags */}
+                        {selectedArticle.tags.length > 0 && (
                         <div>
                           <h4 className="text-white/40 text-xs uppercase tracking-wider mb-3">{t('modal.tags')}</h4>
                           <div className="flex flex-wrap gap-2">
@@ -878,6 +939,7 @@ export default function NewsPage() {
                             ))}
                           </div>
                         </div>
+                        )}
 
                         {/* Share & Actions */}
                         <div className="flex items-center justify-between pt-6 border-t border-white/10">

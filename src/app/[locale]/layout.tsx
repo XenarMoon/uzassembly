@@ -3,6 +3,7 @@ import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { locales, localeMap, type Locale } from '@/i18n/config';
 import type { Metadata } from 'next';
+import PageViewTracker from '@/components/PageViewTracker';
 
 type Props = {
   children: React.ReactNode;
@@ -62,6 +63,7 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <NextIntlClientProvider messages={messages}>
+      <PageViewTracker locale={locale} />
       {children}
     </NextIntlClientProvider>
   );
