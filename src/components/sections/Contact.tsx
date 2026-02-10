@@ -1,24 +1,43 @@
 'use client'
 
-import { useRef } from 'react'
+import { useRef, useEffect, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { Link } from '@/lib/navigation'
 import { MapPin, Phone, Mail, Clock, ArrowRight, Globe2 } from 'lucide-react'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 import { cn } from '@/lib/utils'
+import type { Locale } from '@/i18n/config'
 
 export default function Contact() {
   const t = useTranslations('contact')
+  const locale = useLocale() as Locale
   const sectionRef = useRef<HTMLElement>(null)
   const isInView = useInView(sectionRef, { once: true, amount: 0.2 })
+
+  // ─── Dynamic settings from admin panel ───
+  const [settings, setSettings] = useState<Record<string, string>>({})
+
+  useEffect(() => {
+    fetch('/api/public/settings')
+      .then(r => r.ok ? r.json() : {})
+      .then(data => setSettings(data))
+      .catch(() => {})
+  }, [])
+
+  // Use settings with translation fallback
+  const address = locale === 'en' ? (settings.addressEn || t('info.address.value')) :
+                  locale === 'ru' ? (settings.addressRu || t('info.address.value')) :
+                  (settings.address || t('info.address.value'))
+  const phone = settings.phone1 || t('info.phone.value')
+  const email = settings.email || t('info.email.value')
 
   const offices = [
     {
       city: t('info.city'),
       country: t('info.country'),
-      address: t('info.address.value'),
-      phone: t('info.phone.value'),
-      email: t('info.email.value'),
+      address,
+      phone,
+      email,
       hours: t('info.hours.value'),
       main: true,
     },

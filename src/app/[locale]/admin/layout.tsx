@@ -1,18 +1,22 @@
+'use client'
+
+import { usePathname } from 'next/navigation'
 import AdminSidebar from '@/components/admin/AdminSidebar'
 
-export const metadata = {
-  title: 'Admin Panel - Assembly.uz',
-}
-
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname()
+  const isLoginPage = pathname?.includes('/admin/login')
+
+  if (isLoginPage) {
+    return <>{children}</>
+  }
+
   return (
-    <div className="min-h-screen bg-primary-950 text-white">
+    <div className="min-h-screen bg-[#f0f4f8] text-gray-900">
       <div className="flex min-h-screen">
         <AdminSidebar />
         <div className="flex-1 min-w-0">
-          <div className="text-gray-900">
-            {children}
-          </div>
+          {children}
         </div>
       </div>
     </div>

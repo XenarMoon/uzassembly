@@ -46,6 +46,9 @@ export default function NewsDetailPage() {
     // YouTube
     const ytMatch = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]+)/)
     if (ytMatch) return `https://www.youtube.com/embed/${ytMatch[1]}`
+    // YouTube Shorts
+    const ytShortMatch = url.match(/youtube\.com\/shorts\/([a-zA-Z0-9_-]+)/)
+    if (ytShortMatch) return `https://www.youtube.com/embed/${ytShortMatch[1]}`
     return null
   }
 

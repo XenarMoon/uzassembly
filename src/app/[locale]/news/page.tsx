@@ -117,7 +117,7 @@ export default function NewsPage() {
   }))
 
   // Helper: get localized field from DB item
-  const getLocalized = (item: any, base: 'title' | 'content') => {
+  const getLocalized = (item: any, base: 'title' | 'content' | 'summary') => {
     if (locale === 'ru') return item[`${base}Ru`] || item[`${base}Uz`] || ''
     if (locale === 'en') return item[`${base}En`] || item[`${base}Uz`] || ''
     return item[`${base}Uz`] || ''
@@ -129,9 +129,10 @@ export default function NewsPage() {
   const dbNewsArticles = useMemo(() => {
     return dbNews.map((item, index) => {
       const title = getLocalized(item, 'title')
+      const summary = getLocalized(item, 'summary')
       const content = getLocalized(item, 'content')
       const plainContent = stripHtml(content)
-      const excerpt = plainContent.slice(0, 200)
+      const excerpt = summary || plainContent.slice(0, 200)
       const words = plainContent.split(/\s+/).filter(Boolean).length
       const readTime = `${Math.max(1, Math.ceil(words / 200))} min`
       const d = item.publishedAt ? new Date(item.publishedAt) : new Date(item.createdAt)
@@ -145,7 +146,7 @@ export default function NewsPage() {
         date: dateStr,
         views: 0,
         featured: index === 0,
-        type: 'article',
+        type: item.videoUrl ? 'video' : 'article',
         title,
         excerpt,
         content: plainContent,
@@ -153,6 +154,7 @@ export default function NewsPage() {
         tags: [] as string[],
         author: '',
         imageUrl: item.imageUrl || '',
+        videoUrl: item.videoUrl || '',
         isFromDb: true,
       }
     })

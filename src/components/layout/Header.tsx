@@ -17,6 +17,7 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null)
+  const [settings, setSettings] = useState<Record<string, string>>({})
 
   const navLinks = [
     { name: t('about'), href: '/about' },
@@ -46,6 +47,14 @@ export default function Header() {
     }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  // Fetch site settings for dynamic logo
+  useEffect(() => {
+    fetch('/api/public/settings')
+      .then(r => r.ok ? r.json() : {})
+      .then(data => setSettings(data))
+      .catch(() => {})
   }, [])
 
   // Close menu on escape key
@@ -80,7 +89,11 @@ export default function Header() {
               className="relative h-12 w-40 sm:h-16 sm:w-52 md:h-20 md:w-64 lg:h-24 lg:w-80 xl:h-28 xl:w-[380px]"
             >
               <Image
-                src={locale === 'en' ? '/images/logo/assembly-logo-en.png' : '/images/logo/assembly-logo-uz.png'}
+                src={
+                  locale === 'en'
+                    ? (settings.logoEn || '/images/logo/assembly-logo-en.png')
+                    : (settings.logo || '/images/logo/assembly-logo-uz.png')
+                }
                 alt="Iqtisodiyot Assambleyasi"
                 fill
                 sizes="(max-width: 640px) 160px, (max-width: 768px) 208px, (max-width: 1024px) 256px, (max-width: 1280px) 320px, 380px"

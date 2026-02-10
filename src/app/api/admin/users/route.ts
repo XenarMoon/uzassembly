@@ -20,11 +20,13 @@ export async function POST(request: NextRequest) {
   if ((maybeUser as any)?.status === 401) return maybeUser as any
   try {
     const { email, password, role } = await request.json()
-    if (!email || !password) return NextResponse.json({ error: 'Missing' }, { status: 400 })
+    if (!email || !password) return NextResponse.json({ error: 'missing' }, { status: 400 })
+    if (password.length < 6) return NextResponse.json({ error: 'shortPassword' }, { status: 400 })
     const hashed = await hashPassword(password)
     const user = await prisma.user.create({ data: { email, password: hashed, role: role || 'admin' } })
     return NextResponse.json({ id: user.id, email: user.email, role: user.role }, { status: 201 })
-  } catch (err) {
+  } catch (err: any) {
+    if (err?.code === 'P2002') return NextResponse.json({ error: 'emailTaken' }, { status: 400 })
     console.error('Create user error', err)
     return NextResponse.json({ error: 'Internal' }, { status: 500 })
   }

@@ -1,9 +1,9 @@
 'use client'
 
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion'
 import { Link } from '@/lib/navigation'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 import {
   MapPin,
   Phone,
@@ -29,10 +29,10 @@ import {
 import Header from '@/components/layout/Header'
 import Footer from '@/components/sections/Footer'
 import { cn } from '@/lib/utils'
-import { h5 } from 'framer-motion/client'
+import type { Locale } from '@/i18n/config'
 
-// Official contact information from assembly.uz
-const contactInfo = {
+// Default contact info (fallback when settings are not loaded yet)
+const defaultContactInfo = {
   address: {
     full: "100066, 1/1, Furqat ko'chasi, Toshkent shahri, O'zbekiston",
     street: "Furqat ko'chasi 1/1",
@@ -64,26 +64,8 @@ const contactInfo = {
   map: {
     lat: 41.311081,
     lng: 69.279737,
-    embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.8!2d69.279737!3d41.311081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDE4JzM5LjkiTiA2OcKwMTYnNDcuMSJF!5e0!3m2!1sen!2s!4v1704067200000!5m2!1sen!2s",
   }
 }
-
-// Social links with icons
-const socialLinks = [
-  { name: 'Telegram', icon: Send, href: contactInfo.social.telegram, color: 'hover:bg-[#0088cc]/20 hover:text-[#0088cc]' },
-  { name: 'Instagram', icon: Instagram, href: contactInfo.social.instagram, color: 'hover:bg-[#E4405F]/20 hover:text-[#E4405F]' },
-  { name: 'Facebook', icon: Facebook, href: contactInfo.social.facebook, color: 'hover:bg-[#1877F2]/20 hover:text-[#1877F2]' },
-  { name: 'YouTube', icon: Youtube, href: contactInfo.social.youtube, color: 'hover:bg-[#FF0000]/20 hover:text-[#FF0000]' },
-  { name: 'LinkedIn', icon: Linkedin, href: contactInfo.social.linkedin, color: 'hover:bg-[#0A66C2]/20 hover:text-[#0A66C2]' },
-]
-
-// Contact reasons config (with translation keys)
-const contactReasonsConfig = [
-  { id: 'membership', key: 'membership', icon: Users, email: contactInfo.email.membership },
-  { id: 'business', key: 'business', icon: Briefcase, email: contactInfo.email.main },
-  { id: 'press', key: 'press', icon: MessageSquare, email: contactInfo.email.press },
-  { id: 'general', key: 'general', icon: HelpCircle, email: contactInfo.email.main },
-]
 
 // FAQ items config (with translation keys)
 const faqItemsConfig = [
@@ -95,6 +77,64 @@ const faqItemsConfig = [
 
 export default function ContactPage() {
   const t = useTranslations('contactPage')
+  const locale = useLocale() as Locale
+
+  // ─── Dynamic settings from admin panel ───
+  const [siteSettings, setSiteSettings] = useState<Record<string, string>>({})
+
+  useEffect(() => {
+    fetch('/api/public/settings')
+      .then(r => r.ok ? r.json() : {})
+      .then(data => setSiteSettings(data))
+      .catch(() => {})
+  }, [])
+
+  // Build dynamic contactInfo from settings with fallbacks
+  const contactInfo = {
+    address: {
+      full: locale === 'en' ? (siteSettings.addressEn || defaultContactInfo.address.full) :
+            locale === 'ru' ? (siteSettings.addressRu || defaultContactInfo.address.full) :
+            (siteSettings.address || defaultContactInfo.address.full),
+      street: locale === 'en' ? (siteSettings.addressEn || defaultContactInfo.address.street) :
+              locale === 'ru' ? (siteSettings.addressRu || defaultContactInfo.address.street) :
+              (siteSettings.address || defaultContactInfo.address.street),
+    },
+    phone: {
+      main: siteSettings.phone1 || defaultContactInfo.phone.main,
+      formatted: siteSettings.phone1 || defaultContactInfo.phone.formatted,
+    },
+    email: {
+      main: siteSettings.email || defaultContactInfo.email.main,
+    },
+    social: {
+      telegram: siteSettings.telegram || defaultContactInfo.social.telegram,
+      instagram: siteSettings.instagram || defaultContactInfo.social.instagram,
+      facebook: siteSettings.facebook || defaultContactInfo.social.facebook,
+      youtube: siteSettings.youtube || defaultContactInfo.social.youtube,
+      linkedin: siteSettings.linkedin || defaultContactInfo.social.linkedin,
+    },
+    map: {
+      lat: parseFloat(siteSettings.mapLat) || defaultContactInfo.map.lat,
+      lng: parseFloat(siteSettings.mapLng) || defaultContactInfo.map.lng,
+    },
+  }
+
+  // Dynamic social links
+  const socialLinks = [
+    { name: 'Telegram', icon: Send, href: contactInfo.social.telegram, color: 'hover:bg-[#0088cc]/20 hover:text-[#0088cc]' },
+    { name: 'Instagram', icon: Instagram, href: contactInfo.social.instagram, color: 'hover:bg-[#E4405F]/20 hover:text-[#E4405F]' },
+    { name: 'Facebook', icon: Facebook, href: contactInfo.social.facebook, color: 'hover:bg-[#1877F2]/20 hover:text-[#1877F2]' },
+    { name: 'YouTube', icon: Youtube, href: contactInfo.social.youtube, color: 'hover:bg-[#FF0000]/20 hover:text-[#FF0000]' },
+    { name: 'LinkedIn', icon: Linkedin, href: contactInfo.social.linkedin, color: 'hover:bg-[#0A66C2]/20 hover:text-[#0A66C2]' },
+  ].filter(s => s.href)
+
+  // Dynamic contact reasons
+  const contactReasonsConfig = [
+    { id: 'membership', key: 'membership', icon: Users, email: contactInfo.email.main },
+    { id: 'business', key: 'business', icon: Briefcase, email: contactInfo.email.main },
+    { id: 'press', key: 'press', icon: MessageSquare, email: contactInfo.email.main },
+    { id: 'general', key: 'general', icon: HelpCircle, email: contactInfo.email.main },
+  ]
 
   const [formData, setFormData] = useState({
     name: '',
@@ -260,12 +300,10 @@ export default function ContactPage() {
                 </div>
                 <h3 className="font-semibold text-white mb-2">{t('cards.address.title')}</h3>
                 <p className="text-white/50 text-sm leading-relaxed">
-                  {contactInfo.address.street}<br />
-                  {t('cards.address.city')}<br />
-                  {contactInfo.address.postal}
+                  {contactInfo.address.full}
                 </p>
                 <a
-                  href={`https://maps.google.com/?q=${contactInfo.address.full}`}
+                  href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address.full)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 mt-3 text-gold-400 text-sm font-medium hover:text-gold-300 transition-colors"
@@ -337,7 +375,7 @@ export default function ContactPage() {
                   {t('cards.hours.weekdays')}
                 </p>
                 <p className="text-white font-medium">
-                  {contactInfo.hours.time}
+                  09:00 - 18:00
                 </p>
                 <p className="text-white/30 text-xs mt-2">
                   {t('cards.hours.closed')}

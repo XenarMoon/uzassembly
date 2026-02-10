@@ -101,7 +101,11 @@ export default function Footer() {
             <Link href="/" className="inline-block">
               <div className="relative h-24 w-72">
                 <Image
-                  src={locale === 'en' ? '/images/logo/assembly-logo-en.png' : '/images/logo/assembly-logo-uz.png'}
+                  src={
+                    locale === 'en'
+                      ? (settings.logoEn || '/images/logo/assembly-logo-en.png')
+                      : (settings.logo || '/images/logo/assembly-logo-uz.png')
+                  }
                   alt="Assembly"
                   fill
                   className="object-contain object-left"
