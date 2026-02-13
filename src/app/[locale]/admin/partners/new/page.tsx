@@ -1,6 +1,10 @@
 "use client"
-import PartnerForm from '@/components/admin/PartnerForm'
+import dynamic from 'next/dynamic'
 import { useAdminTranslations } from '@/hooks/useAdminTranslations'
+
+const PartnerForm = dynamic(() => import('@/components/admin/PartnerForm'), {
+  loading: () => <div className="animate-pulse space-y-4"><div className="h-10 bg-gray-200 rounded" /><div className="h-40 bg-gray-200 rounded" /><div className="h-10 bg-gray-200 rounded w-1/3" /></div>
+})
 
 export default function NewPartnerPage() {
   const { t } = useAdminTranslations()

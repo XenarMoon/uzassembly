@@ -504,6 +504,15 @@
     "titleHighlight": "Partners",
     "description": "We collaborate with leading organizations and companies"
   },
+  "statisticsSection": {
+    "badge": "In Numbers",
+    "title": "Our",
+    "titleHighlight": "Results",
+    "description": "Key indicators and achievements at a glance",
+    "viewsLabel": "Site views",
+    "loading": "Loading...",
+    "empty": "No statistics yet"
+  },
   "common": {
     "readMore": "Read More",
     "contactUs": "Contact Us",

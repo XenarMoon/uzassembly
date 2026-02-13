@@ -1,8 +1,12 @@
 "use client"
 import Link from 'next/link'
 import { useParams } from 'next/navigation'
-import TeamForm from '@/components/admin/TeamForm'
+import dynamic from 'next/dynamic'
 import { useAdminTranslations } from '@/hooks/useAdminTranslations'
+
+const TeamForm = dynamic(() => import('@/components/admin/TeamForm'), {
+  loading: () => <div className="animate-pulse space-y-4"><div className="h-10 bg-gray-200 rounded" /><div className="h-40 bg-gray-200 rounded" /><div className="h-10 bg-gray-200 rounded w-1/3" /></div>
+})
 
 export default function NewTeamPage() {
   const { t } = useAdminTranslations()

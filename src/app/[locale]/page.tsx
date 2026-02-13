@@ -1,27 +1,28 @@
-import Header from '@/components/layout/Header'
+import dynamic from 'next/dynamic'
 import Hero from '@/components/sections/Hero'
-import About from '@/components/sections/About'
-import Services from '@/components/sections/Services'
-import Associations from '@/components/sections/Associations'
-import Projects from '@/components/sections/Projects'
-import News from '@/components/sections/News'
-import Partners from '@/components/sections/Partners'
-import Contact from '@/components/sections/Contact'
-import Footer from '@/components/sections/Footer'
+
+// Below-fold sections - lazy loaded for faster initial page load
+const Services = dynamic(() => import('@/components/sections/Services'))
+const About = dynamic(() => import('@/components/sections/About'))
+const Associations = dynamic(() => import('@/components/sections/Associations'))
+const Projects = dynamic(() => import('@/components/sections/Projects'))
+const News = dynamic(() => import('@/components/sections/News'))
+const Statistics = dynamic(() => import('@/components/sections/Statistics'))
+const Partners = dynamic(() => import('@/components/sections/Partners'))
+const Contact = dynamic(() => import('@/components/sections/Contact'))
 
 export default function Home() {
   return (
     <main className="min-h-screen relative bg-primary-500">
-      <Header />
       <Hero />
       <Services />
       <About />
       <Associations />
       <Projects />
       <News />
+      <Statistics />
       <Partners />
       <Contact />
-      <Footer />
     </main>
   )
 }

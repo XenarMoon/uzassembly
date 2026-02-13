@@ -1,8 +1,12 @@
 "use client"
 import Link from 'next/link'
 import { useParams } from 'next/navigation'
-import NewsForm from '@/components/admin/NewsForm'
+import dynamic from 'next/dynamic'
 import { useAdminTranslations } from '@/hooks/useAdminTranslations'
+
+const NewsForm = dynamic(() => import('@/components/admin/NewsForm'), {
+  loading: () => <div className="animate-pulse space-y-4"><div className="h-10 bg-gray-200 rounded" /><div className="h-40 bg-gray-200 rounded" /><div className="h-10 bg-gray-200 rounded w-1/3" /></div>
+})
 
 export default function NewNewsPage() {
   const { t } = useAdminTranslations()

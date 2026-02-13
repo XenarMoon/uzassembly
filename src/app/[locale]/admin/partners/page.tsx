@@ -113,11 +113,11 @@ export default function PartnersListPage() {
                 className="grid grid-cols-1 md:grid-cols-[auto_2fr_2fr_1fr_auto] gap-3 md:gap-4 px-6 py-4 border-b border-gray-50 hover:bg-gray-50/50 transition-colors items-center group"
               >
                 {/* Logo */}
-                <div className="w-16 h-11 flex items-center justify-center">
+                <div className="w-16 h-11 flex items-center justify-center bg-gray-50 border border-gray-100 rounded-xl p-1">
                   {p.logo ? (
-                    <img src={p.logo} alt={p.name} className="h-10 max-w-[60px] object-contain rounded-lg" />
+                    <img src={p.logo} alt={p.name} className="h-9 max-w-[60px] object-contain" />
                   ) : (
-                    <div className="w-14 h-10 rounded-lg bg-violet-50 flex items-center justify-center">
+                    <div className="w-14 h-9 rounded-lg bg-violet-50 flex items-center justify-center">
                       <svg className="w-5 h-5 text-violet-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z" />
                       </svg>

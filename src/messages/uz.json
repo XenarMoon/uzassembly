@@ -504,6 +504,15 @@
     "titleHighlight": "Hamkorlarimiz",
     "description": "Biz yetakchi tashkilotlar va kompaniyalar bilan hamkorlikda ishlaymiz"
   },
+  "statisticsSection": {
+    "badge": "Raqamlarda",
+    "title": "Bizning",
+    "titleHighlight": "Natijalar",
+    "description": "Muhim ko'rsatkichlar va asosiy yutuqlar bilan tanishing",
+    "viewsLabel": "Sayt ko'rishlari",
+    "loading": "Yuklanmoqda...",
+    "empty": "Hozircha statistika mavjud emas"
+  },
   "common": {
     "readMore": "Batafsil",
     "contactUs": "Bog'lanish",

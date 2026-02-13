@@ -55,7 +55,13 @@ export default function StatisticsListPage() {
             <tbody className="divide-y divide-gray-50">
               {items.map((stat) => (
                 <tr key={stat.id} className="hover:bg-gray-50/50 transition-colors group">
-                  <td className="px-5 py-3.5 text-2xl">{stat.icon}</td>
+                  <td className="px-5 py-3.5 text-2xl">
+                    {typeof stat.icon === 'string' && (stat.icon.startsWith('http') || stat.icon.startsWith('/')) ? (
+                      <img src={stat.icon} alt="icon" className="h-10 w-10 object-contain" />
+                    ) : (
+                      <span>{stat.icon}</span>
+                    )}
+                  </td>
                   <td className="px-5 py-3.5 font-semibold text-gray-900">{stat.labelUz}</td>
                   <td className="px-5 py-3.5"><span className="text-gray-700 font-bold bg-gray-50 px-3 py-1 rounded-lg">{stat.value}</span></td>
                   <td className="px-5 py-3.5"><span className="text-xs text-gray-400 bg-gray-50 px-2.5 py-1 rounded-lg font-medium">#{stat.order}</span></td>

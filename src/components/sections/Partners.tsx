@@ -1,7 +1,7 @@
 'use client'
 
-import { useEffect, useState, useRef, useMemo } from 'react'
-import { motion, useInView } from 'framer-motion'
+import { useEffect, useState, useMemo } from 'react'
+import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import { Handshake } from 'lucide-react'
 
@@ -14,19 +14,31 @@ interface Partner {
 }
 
 function PartnerLogo({ partner }: { partner: Partner }) {
+  // ✅ Logo URL ni to'g'rilash
+  const logoSrc = partner.logo 
+    ? (partner.logo.startsWith('http') || partner.logo.startsWith('/') 
+        ? partner.logo 
+        : `/uploads/partners/${partner.logo}`)
+    : null
+
   const inner = (
-    <div className="glass rounded-xl sm:rounded-2xl border border-white/10 hover:border-sky-500/30 transition-all duration-300 group flex items-center justify-center h-20 sm:h-24 md:h-28 px-6 sm:px-8">
-      {partner.logo ? (
+    <div className="rounded-xl sm:rounded-2xl border border-white/20 bg-white/90 shadow-[0_10px_30px_rgba(0,0,0,0.15)] hover:border-sky-500/40 transition-all duration-300 group flex items-center justify-center h-20 sm:h-24 md:h-28 px-6 sm:px-8">
+      {logoSrc ? (
         <img
-          src={partner.logo}
+          src={logoSrc}
           alt={partner.name}
-          className="h-10 sm:h-12 md:h-14 max-w-[140px] md:max-w-[180px] object-contain brightness-0 invert opacity-40 group-hover:opacity-90 transition-all duration-300"
+          className="h-10 sm:h-12 md:h-14 max-w-[140px] md:max-w-[180px] object-contain opacity-90 group-hover:opacity-100 transition-all duration-300"
+          onError={(e) => {
+            // ✅ Agar rasm yuklanmasa, text ko'rsat
+            console.error('Failed to load partner logo:', partner.name, logoSrc)
+            e.currentTarget.style.display = 'none'
+            e.currentTarget.nextElementSibling?.classList.remove('hidden')
+          }}
         />
-      ) : (
-        <span className="text-sm sm:text-base md:text-lg font-semibold text-white/40 group-hover:text-white/90 transition-colors whitespace-nowrap font-heading">
-          {partner.name}
-        </span>
-      )}
+      ) : null}
+      <span className={`text-sm sm:text-base md:text-lg font-semibold text-primary-700/80 group-hover:text-primary-700 transition-colors whitespace-nowrap font-heading ${logoSrc ? 'hidden' : ''}`}>
+        {partner.name}
+      </span>
     </div>
   )
 
@@ -44,17 +56,31 @@ export default function Partners() {
   const t = useTranslations('partnersSection')
   const [partners, setPartners] = useState<Partner[]>([])
   const [loaded, setLoaded] = useState(false)
-  const sectionRef = useRef<HTMLElement>(null)
-  const isInView = useInView(sectionRef, { once: true, amount: 0.2 })
+  const [error, setError] = useState<string | null>(null) // ✅ Error state
 
   useEffect(() => {
+    // ✅ Debug logging
+    console.log('Fetching partners...')
+    
     fetch('/api/public/partners')
-      .then(r => r.ok ? r.json() : [])
-      .then(data => { setPartners(Array.isArray(data) ? data : []); setLoaded(true) })
-      .catch(() => setLoaded(true))
+      .then(r => {
+        console.log('Partners response status:', r.status)
+        if (!r.ok) throw new Error(`HTTP ${r.status}`)
+        return r.json()
+      })
+      .then(data => {
+        console.log('Partners data:', data)
+        setPartners(Array.isArray(data) ? data : [])
+        setLoaded(true)
+      })
+      .catch(err => {
+        console.error('Partners fetch error:', err)
+        setError(err.message)
+        setLoaded(true)
+      })
   }, [])
 
-  // Duplicate partners enough to fill the marquee (min 8 items per set)
+  // Duplicate partners
   const marqueeItems = useMemo(() => {
     if (partners.length === 0) return []
     const repeatCount = Math.max(Math.ceil(8 / partners.length), 2)
@@ -63,15 +89,24 @@ export default function Partners() {
     return items
   }, [partners])
 
-  if (loaded && partners.length === 0) return null
-  if (!loaded) return null
+  // ✅ Loading state
+  if (!loaded) {
+    return (
+      <section className="relative py-20 lg:py-32 bg-gradient-to-b from-primary-700 via-primary-600 to-primary-700">
+        <div className="container-custom text-center">
+          <p className="text-white/40">Loading partners...</p>
+        </div>
+      </section>
+    )
+  }
+
+  const hasPartners = partners.length > 0
 
   const speed = Math.max(marqueeItems.length * 3, 20)
 
   return (
     <section
       id="partners"
-      ref={sectionRef}
       className="relative py-20 lg:py-32 bg-gradient-to-b from-primary-700 via-primary-600 to-primary-700"
     >
       {/* Background */}
@@ -103,12 +138,7 @@ export default function Partners() {
 
       <div className="container-custom relative z-10">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12 lg:mb-16"
-        >
+        <div className="text-center mb-12 lg:mb-16">
           <span className="badge-primary mb-6">
             <span className="w-2 h-2 rounded-full bg-sky-400 animate-pulse" />
             {t('badge')}
@@ -122,46 +152,49 @@ export default function Partners() {
           <p className="text-lg lg:text-xl text-white/60 max-w-2xl mx-auto">
             {t('description')}
           </p>
-        </motion.div>
+        </div>
       </div>
 
-      {/* Marquee */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-        transition={{ duration: 0.6, delay: 0.3 }}
-        className="relative"
-      >
-        {/* Fade edges */}
-        <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-24 md:w-40 bg-gradient-to-r from-primary-700 to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-24 md:w-40 bg-gradient-to-l from-primary-700 to-transparent z-10 pointer-events-none" />
+      {hasPartners ? (
+        <div className="relative">
+          {/* Fade edges */}
+          <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-24 md:w-40 bg-gradient-to-r from-primary-700 to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-24 md:w-40 bg-gradient-to-l from-primary-700 to-transparent z-10 pointer-events-none" />
 
-        <div className="partners-marquee-wrap overflow-hidden">
-          <div className="partners-marquee-track flex items-center gap-4 sm:gap-6 md:gap-8 py-2 w-max">
-            {marqueeItems.map((p, i) => (
-              <PartnerLogo key={`a-${i}`} partner={p} />
-            ))}
-            {marqueeItems.map((p, i) => (
-              <PartnerLogo key={`b-${i}`} partner={p} />
-            ))}
+          <div className="partners-marquee-wrap overflow-hidden">
+            <div className="partners-marquee-track flex items-center gap-4 sm:gap-6 md:gap-8 py-2 w-max">
+              {marqueeItems.map((p, i) => (
+                <PartnerLogo key={`a-${i}`} partner={p} />
+              ))}
+              {marqueeItems.map((p, i) => (
+                <PartnerLogo key={`b-${i}`} partner={p} />
+              ))}
+            </div>
           </div>
         </div>
-      </motion.div>
-
-      {/* Partner count */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-        transition={{ duration: 0.6, delay: 0.5 }}
-        className="container-custom relative z-10 mt-10 lg:mt-14"
-      >
-        <div className="flex items-center justify-center gap-3 text-white/30">
-          <Handshake className="w-5 h-5" />
-          <span className="text-sm font-medium">
-            {partners.length}+ {t('badge')}
-          </span>
+      ) : (
+        <div className="container-custom relative z-10">
+          <div className="mx-auto max-w-2xl text-center text-white/60">
+            <p className="text-base">
+              {error ? 'Partners data load failed.' : 'No partners found yet.'}
+            </p>
+            {error && (
+              <p className="text-sm text-white/40 mt-2">Check /api/public/partners and server logs.</p>
+            )}
+          </div>
         </div>
-      </motion.div>
+      )}
+
+      {hasPartners && (
+        <div className="container-custom relative z-10 mt-10 lg:mt-14">
+          <div className="flex items-center justify-center gap-3 text-white/30">
+            <Handshake className="w-5 h-5" />
+            <span className="text-sm font-medium">
+              {partners.length}+ {t('badge')}
+            </span>
+          </div>
+        </div>
+      )}
 
       <style dangerouslySetInnerHTML={{ __html: `
         @keyframes partnerScroll {

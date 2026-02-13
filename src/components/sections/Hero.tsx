@@ -5,8 +5,14 @@ import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
 import { Link } from '@/lib/navigation'
 import { ArrowRight, ChevronDown, Building2, Compass, MapPin, Globe2, Play, X } from 'lucide-react'
 import { useTranslations } from 'next-intl'
-import ParticleGlobe from '@/components/animations/ParticleGlobe'
+import dynamic from 'next/dynamic'
 import { cn, formatNumber } from '@/lib/utils'
+
+// Heavy canvas animation - lazy loaded, no SSR
+const ParticleGlobe = dynamic(() => import('@/components/animations/ParticleGlobe'), {
+  ssr: false,
+  loading: () => <div className="w-full h-full" />,
+})
 
 const YOUTUBE_VIDEO_ID = 'pwGThTieavI'
 
