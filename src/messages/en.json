@@ -3015,6 +3015,7 @@
     "login": {
       "title": "Admin Panel",
       "subtitle": "Assembly of Economy of Uzbekistan",
+      "login": "Login",
       "email": "Email Address",
       "password": "Password",
       "submit": "Sign In",

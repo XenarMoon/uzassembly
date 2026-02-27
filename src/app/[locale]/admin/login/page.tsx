@@ -128,15 +128,15 @@ export default function LoginPage() {
         <div className="space-y-5">
           <div>
             <label className="block text-sm font-semibold text-gray-700 mb-2">
-              {t('login', 'email')}
+              {t('login', 'login')}
             </label>
             <input
-              type="email"
+              type="text"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               disabled={loading}
               placeholder="admin@example.com"
-              className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#005E85]/30 focus:border-[#005E85] disabled:bg-gray-50 disabled:cursor-not-allowed transition-all bg-gray-50/50"
+              className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#005E85]/30 focus:border-[#005E85] disabled:bg-gray-50 disabled:cursor-not-allowed transition-all bg-gray-50/50"
             />
           </div>
 
@@ -150,7 +150,7 @@ export default function LoginPage() {
               onChange={(e) => setPassword(e.target.value)}
               disabled={loading}
               placeholder="••••••••"
-              className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#005E85]/30 focus:border-[#005E85] disabled:bg-gray-50 disabled:cursor-not-allowed transition-all bg-gray-50/50"
+              className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#005E85]/30 focus:border-[#005E85] disabled:bg-gray-50 disabled:cursor-not-allowed transition-all bg-gray-50/50"
             />
           </div>
 

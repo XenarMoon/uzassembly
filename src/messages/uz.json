@@ -3018,6 +3018,7 @@
     "login": {
       "title": "Admin Panel",
       "subtitle": "O'zbekiston Iqtisodiyot Assambleyasi",
+      "login": "Login",
       "email": "Email Manzili",
       "password": "Parol",
       "submit": "Kirish",
